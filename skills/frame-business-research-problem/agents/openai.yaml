@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frame Business Research Problem"
+  short_description: "Frame faithful OM, IS, and OR business problems"
+  default_prompt: "Use $frame-business-research-problem to turn this research model into a faithful, managerially concrete business problem."
