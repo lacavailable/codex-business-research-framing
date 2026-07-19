@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using this metadata."
+title: "Codex Business Research Framing"
+type: software
+authors:
+  - name: "Codex Business Research Framing Contributors"
+version: 0.1.0-alpha
+date-released: 2026-07-19
+license: MIT
+keywords:
+  - operations management
+  - information systems
+  - operations research
+  - research framing
+  - agent skill

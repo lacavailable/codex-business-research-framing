@@ -41,7 +41,7 @@ def tracked_files(root: Path) -> list[Path]:
 
 def public_files(root: Path) -> list[Path]:
     ignored = {
-        ".git", ".local-eval", ".venv", "venv", "__pycache__",
+        ".git", ".local-eval", ".local-tools", ".venv", "venv", "__pycache__",
         ".pytest_cache", "build", "dist", "runs-private",
     }
     files: list[Path] = []
