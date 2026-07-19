@@ -1,0 +1,48 @@
+name: Bug report
+description: Report reproducible incorrect behavior or a fidelity failure
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include private data, copyrighted source text, credentials, or unpublished research details.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Release tag, commit, or archive name.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Skill behavior or output contract
+        - Model-fidelity gate
+        - Brief validator
+        - Benchmark or rubric
+        - Packaging or installation
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal synthetic reproduction
+      description: Provide invented or redistributable inputs and exact commands.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: safe
+    attributes:
+      label: Public-data confirmation
+      options:
+        - label: This report contains no confidential, proprietary, paywalled, or personal data.
+          required: true

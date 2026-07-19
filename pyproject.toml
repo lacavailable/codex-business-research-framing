@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-business-research-framing-tools"
+version = "0.1.0a0"
+description = "Validation and release tooling for the frame-business-research-problem Agent Skill"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Codex Business Research Framing Contributors"}]
+dependencies = ["PyYAML>=6.0,<7"]
+
+[project.optional-dependencies]
+dev = [
+  "jsonschema>=4.23,<5",
+  "pytest>=8.0,<9",
+]
+
+[tool.setuptools]
+py-modules = []
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+testpaths = ["tests"]

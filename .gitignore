@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Build and release artifacts
+build/
+dist/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local secrets and private source analysis
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+research-private/
+
+# Local evaluation scratch space
+.local-eval/
+.local-tools/
+evals/runs-private/

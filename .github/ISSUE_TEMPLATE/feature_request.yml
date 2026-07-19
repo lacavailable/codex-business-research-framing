@@ -1,0 +1,26 @@
+name: Feature request
+description: Propose a framework, domain, contract, or evaluation improvement
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Research-framing problem
+      description: Explain the missing capability using a synthetic example.
+    validations:
+      required: true
+  - type: textarea
+    id: fidelity
+    attributes:
+      label: Fidelity invariant
+      description: State what mathematical, informational, behavioral, or evidentiary meaning must be preserved.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Describe deterministic checks or benchmark cases that would demonstrate the improvement.
+    validations:
+      required: true
