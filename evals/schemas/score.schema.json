@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/score.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "blind_id", "judge_id", "rubric_version", "category_scores", "hard_failures", "rationale", "raw_total", "capped_total", "pass"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "blind_id": {"type": "string", "pattern": "^B[0-9a-f]{12}$"},
+    "judge_id": {"type": "string", "minLength": 1},
+    "rubric_version": {"type": "string"},
+    "category_scores": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "hard_failures": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "rationale": {"type": "object", "additionalProperties": {"type": "string"}},
+    "raw_total": {"type": "integer", "minimum": 0, "maximum": 100},
+    "capped_total": {"type": "integer", "minimum": 0, "maximum": 100},
+    "pass": {"type": "boolean"}
+  }
+}

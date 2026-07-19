@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "passing_score": 70,
+  "hard_failure_cap": 69,
+  "categories": [
+    {"id": "model_fidelity", "label": "Model fidelity", "weight": 25, "anchors": {"zero": "Contradicts the supplied model or changes its meaning.", "half": "Mostly aligned but omits or blurs a material model element.", "full": "Every narrative claim preserves decisions, information, timing, objective, constraints, and mechanism."}},
+    {"id": "decision_specificity", "label": "Decision specificity", "weight": 15, "anchors": {"zero": "No identifiable actor or decision.", "half": "Actor and choice appear but timing, information, or stakes are vague.", "full": "Actor, trigger, choices, decision-time information, stakes, and counterfactual are concrete."}},
+    {"id": "nontrivial_tradeoff", "label": "Nontrivial managerial trade-off", "weight": 15, "anchors": {"zero": "Presents a free improvement or no tension.", "half": "Names competing considerations without explaining why both matter.", "full": "Explains the binding tension and how choices move competing outcomes."}},
+    {"id": "mechanism", "label": "Mechanism explanation", "weight": 10, "anchors": {"zero": "No mechanism or a contradictory one.", "half": "Mechanism is asserted but incompletely connected to outcomes.", "full": "A precise behavioral or operational chain links choices to outcomes."}},
+    {"id": "evidence_discipline", "label": "Evidence discipline", "weight": 10, "anchors": {"zero": "Invents facts or presents unsupported claims as established.", "half": "Uses cautious language but labels evidence inconsistently.", "full": "Separates facts, assumptions, inferences, and unsupported claims and flags citation needs."}},
+    {"id": "boundaries", "label": "Boundary conditions", "weight": 10, "anchors": {"zero": "Conceals major limitations.", "half": "Lists generic limitations without tying them to scope.", "full": "States operational, behavioral, evidentiary, and model boundaries that delimit conclusions."}},
+    {"id": "model_mapping", "label": "Model-to-reality mapping", "weight": 10, "anchors": {"zero": "No mapping or an incorrect mapping.", "half": "Maps major variables but misses timing, constraints, or outcomes.", "full": "Maps actors, decisions, states, parameters, constraints, objective, uncertainty, and outputs."}},
+    {"id": "managerial_clarity", "label": "Managerial clarity", "weight": 5, "anchors": {"zero": "Incomprehensible or purely mathematical.", "half": "Understandable but abstract or verbose.", "full": "Concise, concrete, and accessible without sacrificing precision."}}
+  ],
+  "hard_failures": [
+    {"id": "invented_company_fact", "description": "Invents a company, deployment, performance result, or observed fact."},
+    {"id": "unsupported_market_claim", "description": "States a market size, prevalence, trend, or commercial claim without supplied evidence."},
+    {"id": "future_or_hidden_information", "description": "Gives the actor information unavailable when the modeled decision is made."},
+    {"id": "objective_mismatch", "description": "Substitutes a narrative objective for the mathematical objective."},
+    {"id": "state_as_decision", "description": "Treats an exogenous or realized state as a controllable decision."},
+    {"id": "model_changed_for_story", "description": "Adds or changes decisions, mechanisms, constraints, or outcomes to improve the story."},
+    {"id": "unsupported_causal_claim", "description": "Claims causal impact without identification or evidence."},
+    {"id": "hidden_major_assumption", "description": "Omits a major assumption needed for the narrative to hold."},
+    {"id": "welfare_claim_from_revenue", "description": "Claims social-welfare improvement when the model optimizes only revenue or profit."}
+  ]
+}

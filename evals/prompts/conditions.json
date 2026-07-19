@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "shared_task": "Create a concrete, managerially meaningful business-problem framing from the benchmark case. Preserve the supplied model. Return a concise diagnosis or brief, a proposed narrative, a model-to-reality mapping, unverified claims, boundary conditions, and the most important remaining weakness.",
+  "conditions": {
+    "no_skill": {"instruction": "Complete the task using only the case material below. Do not assume facts not supplied in the case."},
+    "generic_business_writing": {"instruction": "Write for a managerial research audience. Be concrete, concise, engaging, and organized around a practical problem, decision maker, stakes, and implications. Avoid jargon and unsupported factual claims. Use only the case material below."},
+    "full_skill": {"instruction": "Use the installed `frame-business-research-problem` Skill at `skills/frame-business-research-problem/`. Follow its fidelity gates, evidence labels, boundaries, and output contract. Use only the case material below."}
+  }
+}

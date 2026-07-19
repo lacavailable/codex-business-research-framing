@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/output.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "run_id", "blind_id", "case_id", "response", "generator"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "run_id": {"type": "string", "pattern": "^[a-zA-Z0-9._-]+$"},
+    "blind_id": {"type": "string", "pattern": "^B[0-9a-f]{12}$"},
+    "case_id": {"type": "string", "pattern": "^(om|is|or)-[0-9]{2}$"},
+    "response": {"type": "string", "minLength": 1},
+    "generator": {
+      "type": "object", "additionalProperties": false,
+      "required": ["model", "temperature", "completed_at"],
+      "properties": {
+        "model": {"type": "string", "minLength": 1},
+        "temperature": {"type": "number", "minimum": 0},
+        "completed_at": {"type": "string", "format": "date-time"}
+      }
+    }
+  }
+}
