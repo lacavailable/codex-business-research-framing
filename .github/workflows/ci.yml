@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  deterministic-validation:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install development dependencies
+        run: python -m pip install -e ".[dev]"
+      - name: Run deterministic tests
+        run: pytest
+      - name: Audit tracked publication content
+        run: python tools/audit_repository.py --tracked
+      - name: Check local Markdown links
+        run: python tools/check_links.py
+      - name: Build and verify installable Skill
+        run: |
+          python tools/package_skill.py --version 0.1.0-alpha --output-dir dist
+          python tools/package_skill.py --verify dist/frame-business-research-problem-v0.1.0-alpha.zip
+      - name: Upload package smoke-test artifact
+        if: matrix.python-version == '3.11'
+        uses: actions/upload-artifact@v4
+        with:
+          name: frame-business-research-problem-ci
+          path: |
+            dist/frame-business-research-problem-v0.1.0-alpha.zip
+            dist/frame-business-research-problem-v0.1.0-alpha.zip.sha256
+          if-no-files-found: error

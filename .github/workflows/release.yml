@@ -1,0 +1,70 @@
+name: Release Skill
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  validate-package-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install development dependencies
+        run: python -m pip install -e ".[dev]"
+      - name: Validate release tag
+        shell: bash
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z]+([.-][0-9A-Za-z]+)*)?$ ]]; then
+            echo "Unsupported tag: $GITHUB_REF_NAME" >&2
+            exit 1
+          fi
+      - name: Run deterministic release gates
+        run: |
+          pytest
+          python tools/audit_repository.py --tracked
+          python tools/check_links.py
+      - name: Build and verify archive
+        shell: bash
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          python tools/package_skill.py --version "$version" --output-dir dist
+          python tools/package_skill.py --verify "dist/frame-business-research-problem-v${version}.zip"
+      - name: Stage release notes
+        shell: bash
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          cp CHANGELOG.md dist/CHANGELOG.md
+          cp README.md dist/INSTALLATION.md
+          if [[ -f "evals/reports/v${version}.md" ]]; then
+            cp "evals/reports/v${version}.md" dist/EVALUATION-SUMMARY.md
+          fi
+          if [[ -f "evals/reports/v${version}.status.json" ]]; then
+            cp "evals/reports/v${version}.status.json" dist/EVALUATION-STATUS.json
+          fi
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ github.ref_name }}
+          path: dist/
+          if-no-files-found: error
+      - name: Create GitHub prerelease or release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          prerelease=()
+          if [[ "$version" == *-* ]]; then prerelease=(--prerelease); fi
+          gh release create "$GITHUB_REF_NAME" dist/* \
+            --title "$GITHUB_REF_NAME" \
+            --generate-notes \
+            "${prerelease[@]}"
