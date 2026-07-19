@@ -1,36 +1,65 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.org/frame-business-research-problem/rubric.schema.json",
+  "title": "Business framing evaluation rubric v2",
   "type": "object",
   "additionalProperties": false,
-  "required": ["version", "passing_score", "hard_failure_cap", "categories", "hard_failures"],
+  "required": [
+    "version",
+    "passing_score",
+    "hard_failure_cap",
+    "automatic_failure_on_fidelity_hard_failure",
+    "categories",
+    "hard_failures"
+  ],
   "properties": {
-    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
-    "passing_score": {"type": "integer", "minimum": 1, "maximum": 100},
-    "hard_failure_cap": {"type": "integer", "minimum": 0, "maximum": 99},
+    "$schema": {"type": "string"},
+    "version": {"const": "2.0.0"},
+    "passing_score": {"const": 70},
+    "hard_failure_cap": {"const": 69},
+    "automatic_failure_on_fidelity_hard_failure": {"const": true},
     "categories": {
-      "type": "array", "minItems": 8, "maxItems": 8,
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
       "items": {
-        "type": "object", "additionalProperties": false,
-        "required": ["id", "label", "weight", "anchors"],
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "weight", "minimum", "applicability", "anchors"],
         "properties": {
-          "id": {"type": "string", "pattern": "^[a-z_]+$"},
-          "label": {"type": "string"},
-          "weight": {"type": "integer", "minimum": 1},
+          "id": {"enum": ["fidelity", "managerial_framing", "scholarly_positioning", "evidence_discipline", "prose_clarity"]},
+          "label": {"type": "string", "minLength": 1},
+          "weight": {"type": "integer", "minimum": 1, "maximum": 100},
+          "minimum": {"type": "integer", "minimum": 0, "maximum": 100},
+          "applicability": {
+            "enum": ["always", "when_managerial_framing_is_requested_or_claimed", "when_scholarly_positioning_is_requested_or_claimed"]
+          },
           "anchors": {
-            "type": "object", "additionalProperties": false,
+            "type": "object",
+            "additionalProperties": false,
             "required": ["zero", "half", "full"],
-            "properties": {"zero": {"type": "string"}, "half": {"type": "string"}, "full": {"type": "string"}}
+            "properties": {
+              "zero": {"type": "string", "minLength": 1},
+              "half": {"type": "string", "minLength": 1},
+              "full": {"type": "string", "minLength": 1}
+            }
           }
         }
       }
     },
     "hard_failures": {
-      "type": "array", "minItems": 9, "maxItems": 9,
+      "type": "array",
+      "minItems": 6,
+      "uniqueItems": true,
       "items": {
-        "type": "object", "additionalProperties": false,
-        "required": ["id", "description"],
-        "properties": {"id": {"type": "string", "pattern": "^[a-z_]+$"}, "description": {"type": "string"}}
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "gate", "description"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z_]+$"},
+          "gate": {"enum": ["actor", "timing", "information", "behavior", "constraints", "objective", "evidence"]},
+          "description": {"type": "string", "minLength": 1}
+        }
       }
     }
   }
