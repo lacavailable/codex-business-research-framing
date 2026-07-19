@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/codex-business-research-framing/literature/manifest.schema.json",
+  "title": "Canonical literature manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "redistribution_default", "sources"],
+  "properties": {
+    "manifest_version": {"const": "1.0"},
+    "redistribution_default": {"const": "metadata_and_original_notes_only"},
+    "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}}
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id", "complete_citation", "authors", "title", "year", "outlet",
+        "doi", "official_url", "source_type", "domain", "source_tier",
+        "inclusion_rationale", "authority_rationale", "access_status", "access_date",
+        "content_reviewed", "copyright_holder", "license", "license_url",
+        "redistribution_status", "committed_source_path", "private_local_path", "checksum",
+        "card_path", "coded_concepts", "supported_rule_ids", "limitations",
+        "verification_status"
+      ],
+      "properties": {
+        "source_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "complete_citation": {"type": "string", "minLength": 12},
+        "authors": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 2}},
+        "title": {"type": "string", "minLength": 2},
+        "year": {"type": ["integer", "null"], "minimum": 1900, "maximum": 2100},
+        "outlet": {"type": "string", "minLength": 2},
+        "doi": {"oneOf": [{"type": "null"}, {"type": "string", "pattern": "^10\\.[0-9]{4,9}/\\S+$"}]},
+        "official_url": {"type": "string", "format": "uri"},
+        "source_type": {"enum": ["peer_reviewed_article", "practitioner_article", "scholarly_book", "editorial", "official_contributor_guideline", "official_editorial_statement"]},
+        "domain": {"enum": ["practitioner_guidance", "management_and_organization", "information_systems", "operations_management", "operations_research", "scholarly_rhetoric"]},
+        "source_tier": {"enum": ["tier_a_authoritative_guidance", "tier_b_peer_reviewed_scholarship", "tier_c_practitioner_observation"]},
+        "inclusion_rationale": {"type": "string", "minLength": 12},
+        "authority_rationale": {"type": "string", "minLength": 12},
+        "access_status": {"enum": ["official_page_available", "metadata_available", "access_limited", "inaccessible"]},
+        "access_date": {"type": "string", "format": "date"},
+        "content_reviewed": {"enum": ["full_text", "official_guideline", "abstract_only", "publisher_summary_only", "metadata_only", "inaccessible"]},
+        "copyright_holder": {"type": "string", "minLength": 2},
+        "license": {"enum": ["unknown", "all_rights_reserved", "explicit_permissive", "public_domain", "permission_obtained"]},
+        "license_url": {"type": ["string", "null"], "format": "uri"},
+        "redistribution_status": {"enum": ["metadata_and_original_notes_only", "full_text_permitted", "not_redistributable"]},
+        "committed_source_path": {"type": ["string", "null"]},
+        "private_local_path": {"type": ["string", "null"]},
+        "checksum": {"oneOf": [{"type": "null"}, {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"}]},
+        "card_path": {"type": "string", "pattern": "^literature/source-cards/[a-z0-9-]+\\.md$"},
+        "coded_concepts": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+        "supported_rule_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+        "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 4}},
+        "verification_status": {"enum": ["pending_extraction", "pending_audit", "verified", "excluded"]}
+      }
+    }
+  }
+}
