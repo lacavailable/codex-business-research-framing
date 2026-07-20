@@ -38,7 +38,12 @@ def correlation(left: list[float], right: list[float]) -> float | None:
     lm, rm = statistics.mean(left), statistics.mean(right)
     numerator = sum((x - lm) * (y - rm) for x, y in zip(left, right))
     denominator = math.sqrt(sum((x - lm) ** 2 for x in left) * sum((y - rm) ** 2 for y in right))
-    return numerator / denominator if denominator else None
+    return round(numerator / denominator, 12) if denominator else None
+
+
+def stable(value: float) -> float:
+    """Make committed metrics reproducible across supported Python versions."""
+    return round(value, 12)
 
 
 def load_scores(root: Path, judge_id: str, selected: set[str]) -> dict[str, dict]:
@@ -105,7 +110,7 @@ def summarize(score_root: Path) -> dict:
             hard_negative += not left["hard_failures"] and not right["hard_failures"]
     distribution_summary = {
         judge: {
-            group: {"count": len(values), "mean": statistics.mean(values), "median": statistics.median(values)}
+            group: {"count": len(values), "mean": stable(statistics.mean(values)), "median": stable(statistics.median(values))}
             for group, values in groups.items()
         }
         for judge, groups in distributions.items()
@@ -118,18 +123,18 @@ def summarize(score_root: Path) -> dict:
         "cases": len(selected),
         "primary_scores": len(selected) * 2,
         "adjudication_triggered_cases": triggered,
-        "adjudication_trigger_rate": triggered / len(selected),
+        "adjudication_trigger_rate": stable(triggered / len(selected)),
         "adjudication_performed": False,
         "stop_reason": "The preregistered adjudication-rate gate (<=0.30) failed irreversibly; expert inputs are also absent.",
         "trigger_reasons": dict(sorted(reasons.items())),
-        "applicability_agreement": applicability_equal / applicability_total,
+        "applicability_agreement": stable(applicability_equal / applicability_total),
         "normalized_score_spearman": correlation(ranks(totals_a), ranks(totals_b)),
-        "normalized_score_mean_absolute_difference": statistics.mean(absolute_differences),
+        "normalized_score_mean_absolute_difference": stable(statistics.mean(absolute_differences)),
         "category_score_correlations": {
             category: correlation(*values) for category, values in categories.items()
         },
-        "positive_hard_failure_agreement": hard_positive / hard_positive_total,
-        "negative_hard_failure_agreement": hard_negative / hard_negative_total,
+        "positive_hard_failure_agreement": stable(hard_positive / hard_positive_total),
+        "negative_hard_failure_agreement": stable(hard_negative / hard_negative_total),
         "score_distributions": distribution_summary,
         "release_eligible": False,
         "limitations": [

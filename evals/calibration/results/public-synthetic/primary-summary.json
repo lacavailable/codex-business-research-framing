@@ -9,7 +9,7 @@
   "cases": 112,
   "primary_scores": 224,
   "adjudication_triggered_cases": 107,
-  "adjudication_trigger_rate": 0.9553571428571429,
+  "adjudication_trigger_rate": 0.955357142857,
   "adjudication_performed": false,
   "stop_reason": "The preregistered adjudication-rate gate (<=0.30) failed irreversibly; expert inputs are also absent.",
   "trigger_reasons": {
@@ -23,15 +23,15 @@
     "hard_failure_disagreement": 23,
     "normalized_total_difference": 34
   },
-  "applicability_agreement": 0.8089285714285714,
-  "normalized_score_spearman": 0.7121061290046876,
+  "applicability_agreement": 0.808928571429,
+  "normalized_score_spearman": 0.712106129005,
   "normalized_score_mean_absolute_difference": 8.453125,
   "category_score_correlations": {
-    "fidelity": 0.9078660096586204,
-    "managerial_framing": 0.5570761703709374,
-    "scholarly_positioning": 0.5977381790212802,
-    "evidence_discipline": 0.8752529207774901,
-    "prose_clarity": 0.6232744597155441
+    "fidelity": 0.907866009659,
+    "managerial_framing": 0.557076170371,
+    "scholarly_positioning": 0.597738179021,
+    "evidence_discipline": 0.875252920777,
+    "prose_clarity": 0.623274459716
   },
   "positive_hard_failure_agreement": 0.96875,
   "negative_hard_failure_agreement": 0.6,
