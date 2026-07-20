@@ -2,6 +2,8 @@
 
 `frame-business-research-problem` is an open-source Codex Agent Skill that helps Operations Management (OM), Information Systems (IS), and Operations Research (OR) researchers turn models and early ideas into concrete, defensible business-research problems.
 
+> **v0.3 calibration work is preliminary and release-blocked.** The public evaluator infrastructure and synthetic controls are available on the calibration branch, but no real expert annotations or lawful private passage corpus are present. The locked holdout, Skill revision, tag, and release therefore remain intentionally undone. See the [v0.3 calibration results](docs/top-journal-calibration-results.md) and [evaluation report](docs/v0.3-evaluation-report.md).
+
 ## Contents
 
 1. [Project summary](#1-project-summary)

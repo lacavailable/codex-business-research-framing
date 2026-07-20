@@ -4,6 +4,18 @@ All notable changes are documented here. This project follows Semantic Versionin
 
 ## [Unreleased]
 
+### Added
+
+- Versioned v3 generator-visible, judge-only, score, candidate, and expert-annotation interfaces.
+- Applicability-aware decimal scoring, deterministic leakage detection, and authoritative adjudication.
+- Ignored private calibration ingestion, hashing, anonymization safeguards, and copyright fingerprint auditing.
+- A balanced 168-case public synthetic calibration suite, preregistered gates, freeze hashes, and blinded packet harness.
+- Calibration, contrast, expert-review, prestige-bias, methodology, results, and blocked-release documentation.
+
+### Release status
+
+- `v0.3.0-rc.1` is blocked because lawful private passages and real blinded expert annotations are unavailable. The locked holdout, Skill 2.1 revision, production benchmark, tag, and release remain intentionally undone.
+
 ## [0.2.0-beta] - 2026-07-20
 
 ### Added
@@ -30,6 +42,6 @@ All notable changes are documented here. This project follows Semantic Versionin
 - Thirty-case benchmark, scoring rubric, comparison harness, and evaluation report format.
 - Deterministic repository tests, corpus auditing, reproducible packaging, CI, and release automation.
 
-[Unreleased]: https://github.com/lacavailable/codex-business-research-framing/compare/v0.1.0-alpha...HEAD
+[Unreleased]: https://github.com/lacavailable/codex-business-research-framing/compare/v0.2.0-beta...HEAD
 [0.2.0-beta]: https://github.com/lacavailable/codex-business-research-framing/compare/v0.1.0-alpha...v0.2.0-beta
 [0.1.0-alpha]: https://github.com/lacavailable/codex-business-research-framing/releases/tag/v0.1.0-alpha
