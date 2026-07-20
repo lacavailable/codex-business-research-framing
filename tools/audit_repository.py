@@ -4,10 +4,13 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import os
 import subprocess
 import sys
 from pathlib import Path
+
+import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -41,14 +44,54 @@ def tracked_files(root: Path) -> list[Path]:
 
 def public_files(root: Path) -> list[Path]:
     ignored = {
-        ".git", ".local-eval", ".local-tools", ".venv", "venv", "__pycache__",
-        ".pytest_cache", "build", "dist", "runs-private",
+        ".git", ".agents", ".codex", ".local-eval", ".local-tools", ".official-skills", ".venv",
+        "venv", "__pycache__", ".pytest_cache", "build", "dist",
+        "research-private", "runs-private",
     }
     files: list[Path] = []
     for directory, names, filenames in os.walk(root):
         names[:] = [name for name in names if name not in ignored]
         files.extend(Path(directory) / filename for filename in filenames)
     return files
+
+
+def permitted_literature_file(path: Path, relative: str, root: Path) -> tuple[bool, str]:
+    """Accept a staged full source only when every publication record agrees."""
+    if not relative.startswith("literature/open-access/"):
+        return False, "outside literature/open-access"
+    manifest_path = root / "literature" / "manifest.yaml"
+    try:
+        manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, yaml.YAMLError) as exc:
+        return False, f"cannot read canonical manifest: {exc}"
+    records = [
+        item for item in manifest.get("sources", [])
+        if item.get("committed_source_path") == relative
+    ]
+    if len(records) != 1:
+        return False, "requires exactly one manifest record with this committed_source_path"
+    record = records[0]
+    allowed_statuses = {"redistributable_explicit_license", "public_domain"}
+    if record.get("redistribution_status") not in allowed_statuses:
+        return False, "manifest redistribution_status does not permit a committed full source"
+    if record.get("license") in {None, "unknown", "all_rights_reserved"}:
+        return False, "manifest lacks an explicit redistributable license"
+    if not record.get("license_url"):
+        return False, "manifest lacks a license URL"
+    expected = record.get("checksum")
+    actual = hashlib.sha256(path.read_bytes()).hexdigest()
+    if not expected or expected.removeprefix("sha256:").casefold() != actual:
+        return False, "SHA-256 checksum does not match the manifest"
+    source_id = record.get("source_id")
+    license_record = root / "literature" / "licenses" / f"{source_id}.md"
+    if not license_record.is_file():
+        return False, "license record is missing"
+    notices = (root / "THIRD_PARTY_NOTICES.md").read_text(encoding="utf-8")
+    if source_id not in notices or relative not in notices:
+        return False, "third-party notice lacks source ID and committed path"
+    if not record.get("complete_citation") or not record.get("copyright_holder"):
+        return False, "attribution metadata is incomplete"
+    return True, ""
 
 
 def audit(paths: list[Path], root: Path = ROOT) -> list[str]:
@@ -63,7 +106,11 @@ def audit(paths: list[Path], root: Path = ROOT) -> list[str]:
         if parts & PRIVATE_PARTS:
             violations.append(f"{relative}: private-corpus path is not publishable")
         if suffix in FORBIDDEN_EXTENSIONS:
-            violations.append(f"{relative}: forbidden document/archive/credential extension {suffix}")
+            permitted, reason = permitted_literature_file(path, relative, root)
+            if not permitted:
+                violations.append(
+                    f"{relative}: forbidden document/archive/credential extension {suffix} ({reason})"
+                )
         if name in FORBIDDEN_NAMES or (name.startswith(".env.") and name != ".env.example"):
             violations.append(f"{relative}: credential-like filename")
         if (

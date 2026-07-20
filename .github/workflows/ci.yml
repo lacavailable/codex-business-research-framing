@@ -15,6 +15,12 @@ jobs:
         python-version: ["3.11", "3.12"]
     steps:
       - uses: actions/checkout@v4
+      - name: Check out pinned official Skill validator
+        uses: actions/checkout@v4
+        with:
+          repository: openai/skills
+          ref: 49f948faa9258a0c61caceaf225e179651397431
+          path: .official-skills
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
@@ -23,20 +29,31 @@ jobs:
         run: python -m pip install -e ".[dev]"
       - name: Run deterministic tests
         run: pytest
+      - name: Check generated documents and literature records
+        run: |
+          python tools/generate_rubric.py --check
+          python tools/generate_rule_matrix.py --check
+          python tools/validate_literature.py --require-complete
+          python tools/evaluate_benchmark.py validate
+          python tools/evaluate_benchmark.py validate-artifacts
       - name: Audit tracked publication content
         run: python tools/audit_repository.py --tracked
       - name: Check local Markdown links
         run: python tools/check_links.py
+      - name: Run pinned official Skill validation
+        run: python .official-skills/skills/.system/skill-creator/scripts/quick_validate.py skills/frame-business-research-problem
       - name: Build and verify installable Skill
         run: |
-          python tools/package_skill.py --version 0.1.0-alpha --output-dir dist
-          python tools/package_skill.py --verify dist/frame-business-research-problem-v0.1.0-alpha.zip
+          python tools/package_skill.py --version 0.2.0-beta --output-dir dist
+          python tools/package_skill.py --verify dist/frame-business-research-problem-v0.2.0-beta.zip
+          python -m zipfile -e dist/frame-business-research-problem-v0.2.0-beta.zip .clean-install
+          python .official-skills/skills/.system/skill-creator/scripts/quick_validate.py .clean-install/frame-business-research-problem
       - name: Upload package smoke-test artifact
         if: matrix.python-version == '3.11'
         uses: actions/upload-artifact@v4
         with:
           name: frame-business-research-problem-ci
           path: |
-            dist/frame-business-research-problem-v0.1.0-alpha.zip
-            dist/frame-business-research-problem-v0.1.0-alpha.zip.sha256
+            dist/frame-business-research-problem-v0.2.0-beta.zip
+            dist/frame-business-research-problem-v0.2.0-beta.zip.sha256
           if-no-files-found: error

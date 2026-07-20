@@ -13,7 +13,10 @@ from urllib.parse import unquote
 ROOT = Path(__file__).resolve().parents[1]
 LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 REMOTE_PREFIXES = ("http://", "https://", "mailto:", "tel:")
-SKIP_PARTS = {".git", ".venv", "venv", "build", "dist", "research-private"}
+SKIP_PARTS = {
+    ".git", ".agents", ".codex", ".local-eval", ".local-tools", ".official-skills", ".pytest_cache",
+    ".venv", "venv", "build", "dist", "research-private", "runs-private",
+}
 
 
 def markdown_files(root: Path) -> list[Path]:
