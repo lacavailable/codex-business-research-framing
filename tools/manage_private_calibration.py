@@ -52,7 +52,7 @@ def ingest(source_id: str, input_path: Path, metadata_path: Path) -> dict[str, A
         raise PrivateCalibrationError("input passage and metadata files are required")
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
     required = {
-        "full_citation", "journal", "year", "article_type", "passage_function",
+        "full_citation", "journal", "year", "domain", "control_group", "article_type", "passage_function",
         "access_status", "copyright_status", "recognizability_risk", "contamination_risk",
     }
     missing = sorted(required - set(metadata))
@@ -81,7 +81,13 @@ def ingest(source_id: str, input_path: Path, metadata_path: Path) -> dict[str, A
 def verify() -> dict[str, Any]:
     initialize()
     contexts = sorted((PRIVATE / "model-context").glob("*.json"))
+    if len(contexts) > 36:
+        raise PrivateCalibrationError("candidate limit exceeded: at most 36 sources may be screened")
     reviewers_by_domain: dict[str, set[str]] = {key: set() for key in ("OM", "IS", "OR", "MGMT")}
+    accepted_by_domain_group = {
+        domain: {"positive": 0, "intermediate": 0}
+        for domain in reviewers_by_domain
+    }
     accepted = 0
     errors: list[str] = []
     for context_path in contexts:
@@ -103,15 +109,25 @@ def verify() -> dict[str, Any]:
             if reviewer and domain in reviewers_by_domain:
                 confirmed_reviewers.add(reviewer)
                 reviewers_by_domain[domain].add(reviewer)
-        if len(confirmed_reviewers) >= 2 and record.get("semantic_equivalence_verified") is True:
+        domain = record.get("domain")
+        group = record.get("control_group")
+        if domain not in reviewers_by_domain or group not in {"positive", "intermediate"}:
+            errors.append(f"{source_id}: invalid domain or control group")
+        elif len(confirmed_reviewers) >= 2 and record.get("semantic_equivalence_verified") is True:
             accepted += 1
+            accepted_by_domain_group[domain][group] += 1
     if errors:
         raise PrivateCalibrationError("; ".join(errors))
     return {
         "sources": len(contexts),
         "accepted_passages": accepted,
+        "accepted_by_domain_group": accepted_by_domain_group,
         "reviewers_by_domain": {key: len(value) for key, value in reviewers_by_domain.items()},
-        "release_ready": accepted == 24 and all(len(value) >= 2 for value in reviewers_by_domain.values()),
+        "release_ready": (
+            accepted == 24
+            and all(counts == {"positive": 3, "intermediate": 3} for counts in accepted_by_domain_group.values())
+            and all(len(value) >= 2 for value in reviewers_by_domain.values())
+        ),
     }
 
 
