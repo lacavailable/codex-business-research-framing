@@ -351,11 +351,15 @@ def reconcile_scores(
         elif result["applicability"] == "required":
             missing = True
     normalized = Decimal("100") * earned / available if available else None
+    capped = (
+        min(normalized, decimal(rubric["hard_failure_cap"]))
+        if normalized is not None and shell["hard_failures"] else normalized
+    )
     shell["normalized_score"] = display_number(normalized)
-    shell["capped_score"] = display_number(normalized)
+    shell["capped_score"] = display_number(capped)
     if missing or normalized is None:
         shell["overall_status"] = "incomplete"
-    elif minima_failed or normalized < decimal(rubric["passing_score"]):
+    elif shell["hard_failures"] or minima_failed or capped < decimal(rubric["passing_score"]):
         shell["overall_status"] = "fail"
     else:
         shell["overall_status"] = "pass"

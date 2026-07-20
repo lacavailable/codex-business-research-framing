@@ -48,15 +48,13 @@
   "contrast": {
     "original_case_id": "Cbe79689bb3159153",
     "changed_construct": "contribution",
-    "expected_declines": {
-      "scholarly_positioning": 5
-    },
+    "expected_declines": {},
     "expected_stable": {
       "fidelity": 1,
       "evidence_discipline": 1
     },
     "expected_hard_failure": null,
-    "minimum_total_reduction": 5,
+    "minimum_total_reduction": 0,
     "acceptable_alternatives": [
       "A stricter deduction is acceptable when specifically justified."
     ]

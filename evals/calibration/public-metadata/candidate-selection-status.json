@@ -1,0 +1,12 @@
+{
+  "schema_version": "3.0.0",
+  "status": "awaiting_user_supplied_lawful_passages",
+  "maximum_candidates": 36,
+  "target_accepted": 24,
+  "accepted": 0,
+  "domain_targets": {"OM": 6, "IS": 6, "OR": 6, "MGMT": 6},
+  "quality_targets_per_domain": {"expert_confirmed_positive": 3, "expert_confirmed_intermediate": 3},
+  "maximum_practitioner_passages": 2,
+  "candidate_records": [],
+  "note": "No candidate citation is fabricated and no outlet is treated as a quality proxy. Private candidate records are created only after lawful passage supply."
+}

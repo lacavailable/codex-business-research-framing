@@ -220,6 +220,17 @@ def build_records() -> tuple[list[tuple[Path, dict[str, Any]]], dict[str, Any]]:
         for construct in CONSTRUCTS:
             identifier = case_id(base["key"] + ":contrast:" + construct)
             declines, stable, failure, minimum = contrast_expectation(construct)
+            category_applicability = applicability(base["function"], base["domain"])
+            declines = {
+                category: delta for category, delta in declines.items()
+                if category_applicability[category] != "not_applicable"
+            }
+            stable = {
+                category: tolerance for category, tolerance in stable.items()
+                if category_applicability[category] != "not_applicable"
+            }
+            if not declines and failure is None:
+                minimum = 0
             contrast = {
                 "original_case_id": positive_id,
                 "changed_construct": construct,

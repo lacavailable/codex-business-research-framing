@@ -1,0 +1,19 @@
+{
+  "schema_version": "3.0.0",
+  "status": "blocked_missing_external_inputs",
+  "lawful_private_passages": 0,
+  "accepted_passages": 0,
+  "qualified_reviewers": 0,
+  "expert_annotations": 0,
+  "evaluator_freeze_commit": null,
+  "holdout_opened": false,
+  "production_benchmark_run": false,
+  "release_eligible": false,
+  "blockers": [
+    "No lawfully supplied private source passages are present.",
+    "No real blinded expert annotations are present.",
+    "Development and validation calibration cannot pass expert gates.",
+    "The locked holdout must remain unopened.",
+    "The Skill revision and production benchmark are downstream of calibration and therefore not authorized yet."
+  ]
+}
