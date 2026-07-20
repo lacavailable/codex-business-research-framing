@@ -10,16 +10,20 @@ Map semantics before writing managerial prose. Use one row per material model ob
 | `model_role` | Is it a decision, state, parameter, random variable, observation, constraint, objective, outcome, or derived quantity? |
 | `business_meaning` | What concrete entity, action, limit, or result does it represent? |
 | `decision_time_status` | Is it chosen, observed, estimated, latent, or realized later? |
+| `timing` | At what event or stage is it chosen, observed, or realized? |
+| `units` | What measurement unit or dimension applies? |
+| `planning_horizon` | Over what interval or set of periods is it defined? |
 | `fidelity_note` | What interpretation is permitted, and what tempting interpretation is not? |
 
 ## Mapping order
 
 1. Identify the decision variables and who controls them.
-2. Place observations, random variables, and outcomes on a timeline.
+2. Place states, uncertainty, observations, and outcomes on a timeline.
 3. Translate the objective without expanding its welfare scope.
 4. Translate every binding or conceptually important constraint.
 5. Map transition, response, choice, queueing, or learning mechanisms.
 6. Map outputs and guarantees, distinguishing model results from implementation outcomes.
+7. Verify units, aggregation, and planning horizon for every material row.
 
 ## Role tests
 

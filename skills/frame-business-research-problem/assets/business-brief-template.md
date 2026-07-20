@@ -1,8 +1,21 @@
 # {{decision-focused title}}
 
-**Mode:** `{{mode}}`  
-**Domain:** `{{OM | IS | OR | cross-domain}}`  
-**Eligibility:** `{{eligible | ineligible}}`
+**BusinessBrief schema:** `2.0`
+
+**Mode:** `{{mode}}`
+
+**Domain:** `{{OM | IS | OR | cross-domain}}`
+
+**Eligibility:** `{{eligible | ineligible | not_assessed}}`
+
+## Input readiness
+
+| Field | Value |
+|---|---|
+| Stage | {{1 | 2 | 3 | 4}} |
+| Basis | {{supplied material supporting this stage}} |
+| Missing information | {{explicit list; none only when complete for the requested maturity}} |
+| Maturity ceiling | {{1 | 2 | 3 | 4}} |
 
 ## Diagnosis or business brief
 
@@ -33,18 +46,38 @@
 
 | Gate | Status | Reason |
 |---|---|---|
-| Actor | {{pass/fail}} | {{...}} |
-| Timing | {{pass/fail}} | {{...}} |
-| Information | {{pass/fail}} | {{...}} |
-| Behavior | {{pass/fail}} | {{...}} |
-| Constraints | {{pass/fail}} | {{...}} |
-| Objective | {{pass/fail}} | {{...}} |
+| Actor | {{pass/fail/unknown/not_assessed}} | {{...}} |
+| Timing | {{pass/fail/unknown/not_assessed}} | {{...}} |
+| Information | {{pass/fail/unknown/not_assessed}} | {{...}} |
+| Behavior | {{pass/fail/unknown/not_assessed}} | {{...}} |
+| Constraints | {{pass/fail/unknown/not_assessed}} | {{...}} |
+| Objective | {{pass/fail/unknown/not_assessed}} | {{...}} |
+
+## Mode-specific result
+
+{{Use the exact version 2.0 contract for the selected mode.}}
+
+## Layer audits
+
+| Layer | Status | Findings | Required actions |
+|---|---|---|---|
+| Fidelity | {{pass/fail/not_assessed}} | {{...}} | {{...}} |
+| Managerial framing | {{pass/fail/not_assessed}} | {{...}} | {{...}} |
+| Scholarly positioning | {{pass/fail/not_assessed}} | {{...}} | {{...}} |
+| Evidence | {{pass/fail/not_assessed}} | {{...}} | {{...}} |
+| Prose | {{pass/fail/not_assessed}} | {{...}} | {{...}} |
+
+## Model-to-reality mapping
+
+| Model object | Role | Business meaning | Decision-time status | Timing | Units | Horizon | Fidelity note |
+|---|---|---|---|---|---|---|---|
+| {{...}} | {{decision_variable/state_variable/parameter/etc.}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
 
 ## Unsupported or unverified claims
 
-| Claim | Evidence status | Source | Action |
-|---|---|---|---|
-| {{...}} | {{unsupported_claim}} | {{none}} | {{verify, qualify, synthesize, or remove}} |
+| Claim | Evidence status | Source | Scope | Action |
+|---|---|---|---|---|
+| {{...}} | {{unsupported_claim}} | {{null or traceable source}} | {{...}} | {{verify, qualify, synthesize, or remove}} |
 
 ## Boundary conditions
 
