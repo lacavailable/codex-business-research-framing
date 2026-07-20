@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C904bfc47e9ab0b90",
+  "domain": "MGMT",
+  "anonymized_passage": "when local units propose exceptions to a common policy, before whether local adaptation improves fit or conceals self-serving behavior is known, a multiunit firm's senior team chooses how much discretion to delegate using unit conditions, coordination needs, and observable performance signals. The stated objective is to balance local responsiveness with cross-unit coordination, subject to the condition that headquarters cannot directly observe every local motive or consequence. Delegation improves local fit while common rules limit coordination and agency losses. The decision should improve every relevant outcome without a meaningful sacrifice. The theory concerns multiunit settings with partial observability and does not imply that decentralization always improves performance. The study explains delegation as a response to joint adaptation and observability conditions rather than as a generic best practice.",
+  "passage_function": "contribution",
+  "context": {
+    "model_or_study_facts": [
+      "headquarters cannot directly observe every local motive or consequence",
+      "whether local adaptation improves fit or conceals self-serving behavior"
+    ],
+    "actor": "a multiunit firm's senior team",
+    "decisions": [
+      "chooses how much discretion to delegate"
+    ],
+    "objective": "balance local responsiveness with cross-unit coordination",
+    "timing": "when local units propose exceptions to a common policy",
+    "decision_time_information": [
+      "unit conditions, coordination needs, and observable performance signals"
+    ],
+    "constraints": [
+      "headquarters cannot directly observe every local motive or consequence"
+    ],
+    "mechanism": "Delegation improves local fit while common rules limit coordination and agency losses",
+    "supplied_evidence": [
+      "Synthetic illustration; no external empirical evidence supplied."
+    ]
+  },
+  "intended_audience": "business and research readers",
+  "requested_evaluation_profile": "standard"
+}

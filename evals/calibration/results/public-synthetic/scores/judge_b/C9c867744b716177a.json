@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C9c867744b716177a",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "business_problem",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 30, "reason": "The decision setting, timing, information, objective, constraint, and pre-positioning mechanism are retained.", "evidence_spans": ["a regional inventory planner allocates a fixed stock across service zones", "stock cannot be transferred after orders arrive"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 20, "reason": "The operating trade-off is concrete, but the later universal-superiority claim conflicts with its nontrivial tension.", "evidence_spans": ["Concentration pools scarce stock, while broader coverage protects more zones.", "The universally superior policy will transform the market and guarantee better performance."]},
+    "scholarly_positioning": {"applicability": "required", "assessment_status": "assessed", "score": 16, "reason": "It gives a bounded intended contribution but no explicit relationship to prior knowledge.", "evidence_spans": ["The study clarifies when pre-positioning coverage is worth the loss of inventory concentration."]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 0, "reason": "The passage makes an unsupported universal performance guarantee and market-transformation claim.", "evidence_spans": ["The universally superior policy will transform the market and guarantee better performance."]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 10, "reason": "The prose is clear despite the unsupported claim.", "evidence_spans": ["Pre-positioning determines which realized orders can be served in each zone."]}
+  },
+  "hard_failures": ["unsupported_causal_claim"],
+  "normalized_score": 76,
+  "capped_score": 69,
+  "overall_status": "fail",
+  "overall_reason": "The universal performance guarantee is unsupported and conflicts with the stated allocation trade-off.",
+  "higher_than_both_justification": null
+}

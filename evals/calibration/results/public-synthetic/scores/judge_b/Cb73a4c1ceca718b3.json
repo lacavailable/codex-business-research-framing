@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cb73a4c1ceca718b3",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "business_problem",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 30, "reason": "The actor, timing, allocation decision, objective, information, and no-transfer constraint match the supplied setting.", "evidence_spans": ["a regional inventory planner allocates a fixed stock across service zones", "stock cannot be transferred after orders arrive"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 15, "reason": "The allocation decision and operating pathway are concrete, but the asserted absence of sacrifice removes the central concentration-versus-coverage tension.", "evidence_spans": ["The decision should improve every relevant outcome without a meaningful sacrifice."]},
+    "scholarly_positioning": {"applicability": "required", "assessment_status": "assessed", "score": 16, "reason": "It states a bounded question about coverage and concentration but leaves the relationship to prior knowledge unstated.", "evidence_spans": ["The study clarifies when pre-positioning coverage is worth the loss of inventory concentration."]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 0, "reason": "It asserts unqualified improvement in every relevant outcome without supplied evidence and without acknowledging the stated trade-off.", "evidence_spans": ["The decision should improve every relevant outcome without a meaningful sacrifice."]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 10, "reason": "The prose is concise and readable.", "evidence_spans": ["Pre-positioning determines which realized orders can be served in each zone."]}
+  },
+  "hard_failures": ["unsupported_causal_claim"],
+  "normalized_score": 71,
+  "capped_score": 69,
+  "overall_status": "fail",
+  "overall_reason": "The unsupported no-sacrifice improvement claim is a hard evidence-discipline failure.",
+  "higher_than_both_justification": null
+}

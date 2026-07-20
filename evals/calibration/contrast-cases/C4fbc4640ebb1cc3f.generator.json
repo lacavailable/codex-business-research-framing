@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C4fbc4640ebb1cc3f",
+  "domain": "OM",
+  "anonymized_passage": "before the weekly allocation cutoff, before regional orders is known, an outside observer who does not control the decision allocates a fixed stock across service zones using current stock, zone cost coefficients, and demand distributions. The stated objective is to minimize expected shortage and leftover cost, subject to the condition that stock cannot be transferred after orders arrive. Pre-positioning determines which realized orders can be served in each zone. Concentration pools scarce stock, while broader coverage protects more zones. The claim concerns one-period allocation under the supplied distributions, not live deployment. The study clarifies when pre-positioning coverage is worth the loss of inventory concentration.",
+  "passage_function": "business_problem",
+  "context": {
+    "model_or_study_facts": [
+      "stock cannot be transferred after orders arrive",
+      "regional orders"
+    ],
+    "actor": "a regional inventory planner",
+    "decisions": [
+      "allocates a fixed stock across service zones"
+    ],
+    "objective": "minimize expected shortage and leftover cost",
+    "timing": "before the weekly allocation cutoff",
+    "decision_time_information": [
+      "current stock, zone cost coefficients, and demand distributions"
+    ],
+    "constraints": [
+      "stock cannot be transferred after orders arrive"
+    ],
+    "mechanism": "Pre-positioning determines which realized orders can be served in each zone",
+    "supplied_evidence": [
+      "Synthetic illustration; no external empirical evidence supplied."
+    ]
+  },
+  "intended_audience": "business and research readers",
+  "requested_evaluation_profile": "standard"
+}

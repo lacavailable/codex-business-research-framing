@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C32a312b73e18b8e2",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 8, "reason": "The malformed statement about what is known in a deterministic instance obscures the supplied decision-time information set.", "evidence_spans": ["before none in the stated deterministic instance is known"]},
+    "managerial_framing": {"applicability": "optional", "assessment_status": "assessed", "score": 17, "reason": "The dispatch choice, release deadline, and search-quality trade-off are concrete, but the no-sacrifice assertion weakens the stated tension.", "evidence_spans": ["trades additional search time for better incumbents and stronger bounds", "without a meaningful sacrifice"]},
+    "scholarly_positioning": {"applicability": "not_applicable", "assessment_status": "not_applicable", "score": null, "reason": "The passage sets a routing model and its computational scope without positioning it against prior scholarship.", "evidence_spans": []},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 8, "reason": "It appropriately limits computational value to tested conditions, but the claim that every outcome improves without sacrifice is unsupported and conflicts with the search-time trade-off.", "evidence_spans": ["Computational value is limited to tested instances, hardware, and the specified deadline", "improve every relevant outcome without a meaningful sacrifice"]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 5, "reason": "Most sentences are readable, but the opening information clause is materially confusing.", "evidence_spans": ["before none in the stated deterministic instance is known"]}
+  },
+  "hard_failures": ["information_gate_failure"],
+  "normalized_score": 47.5,
+  "capped_score": 47.5,
+  "overall_status": "fail",
+  "overall_reason": "The passage obscures the deterministic decision-time information set and makes an unsupported no-trade-off claim.",
+  "higher_than_both_justification": null
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cfd02b4c17d909caa",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 5, "reason": "It reverses both the decision timing and information set by making the substitution path observed before selection.", "evidence_spans": ["after the arriving customer's initial product and subsequent substitution path has been fully observed"]},
+    "managerial_framing": {"applicability": "optional", "assessment_status": "assessed", "score": 23, "reason": "The planner, slot choice, revenue objective, substitution mechanism, and variety trade-off are concrete.", "evidence_spans": ["selects products under a fixed display-slot limit", "Adding variety captures more first choices but consumes slots"]},
+    "scholarly_positioning": {"applicability": "not_applicable", "assessment_status": "not_applicable", "score": null, "reason": "This model-setting passage does not make a claim about its relationship to prior scholarship.", "evidence_spans": []},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 14, "reason": "It explicitly marks the objective and substitution process as stated model inputs and bounds the model's scope.", "evidence_spans": ["The stated objective", "not nearest-store search or stockout dynamics"]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 9, "reason": "Apart from the material timing error, the prose is concise and readable.", "evidence_spans": ["The model represents within-assortment Markov substitution"]}
+  },
+  "hard_failures": ["timing_gate_failure", "information_gate_failure"],
+  "normalized_score": 63.75,
+  "capped_score": 63.75,
+  "overall_status": "fail",
+  "overall_reason": "The observed-path timing changes a noncompensatory decision-time information gate.",
+  "higher_than_both_justification": null
+}

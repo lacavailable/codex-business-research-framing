@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/calibration/expert-annotation.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "reviewer_id", "case_id", "domain", "passage_function", "applicable_categories", "category_scores", "hard_failures", "pairwise_preferences", "rationale", "confidence", "publication_status_was_hidden"],
+  "properties": {
+    "schema_version": {"const": "3.0.0"},
+    "reviewer_id": {"type": "string", "pattern": "^R[0-9a-f]{12}$"},
+    "case_id": {"type": "string", "pattern": "^C[0-9a-f]{16}$"},
+    "domain": {"enum": ["OM", "IS", "OR", "MGMT"]},
+    "passage_function": {"enum": ["phenomenon_motivation", "business_problem", "model_setting", "research_opportunity", "contribution", "managerial_implications"]},
+    "applicable_categories": {"type": "object", "additionalProperties": {"enum": ["required", "optional", "not_applicable"]}},
+    "category_scores": {"type": "object", "additionalProperties": {"type": ["number", "null"], "minimum": 0}},
+    "hard_failures": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "pairwise_preferences": {"type": "array", "items": {"type": "object", "required": ["other_case_id", "preference"], "properties": {"other_case_id": {"type": "string"}, "preference": {"enum": ["self", "other", "tie"]}}, "additionalProperties": false},
+    "rationale": {"type": "string", "minLength": 10},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "publication_status_was_hidden": {"const": true}
+  }
+}

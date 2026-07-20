@@ -1,0 +1,62 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cfaa60e1b057afee9",
+  "domain": "OR",
+  "passage_function": "model_setting",
+  "group": "contrast",
+  "control_origin": "derived_contrast",
+  "split": "validation",
+  "applicable_categories": {
+    "fidelity": "required",
+    "managerial_framing": "required",
+    "scholarly_positioning": "not_applicable",
+    "evidence_discipline": "required",
+    "prose_clarity": "required"
+  },
+  "gold_fidelity_facts": [
+    "a capacity planner",
+    "chooses first-stage capacity and a recourse policy",
+    "minimize capacity, recourse, and unmet-demand cost",
+    "recourse actions occur only after demand is observed and must respect installed capacity"
+  ],
+  "acceptable_interpretations": [
+    "Equivalent concise wording is acceptable.",
+    "Explicit rubric labels are unnecessary."
+  ],
+  "prohibited_model_changes": [
+    "Do not add unavailable future facts.",
+    "Do not replace the stated objective."
+  ],
+  "evidence_boundaries": [
+    "Synthetic case only.",
+    "No field outcome is supplied."
+  ],
+  "expected_strengths": [
+    "Concrete decision structure.",
+    "Bounded claim."
+  ],
+  "expected_weaknesses": [
+    "Incomplete mechanism and scope."
+  ],
+  "case_specific_anchors": {
+    "high": "Faithful and functionally complete.",
+    "medium": "Competent but incomplete.",
+    "low": "Material defect or generic framing."
+  },
+  "expert_quality_level": "low",
+  "expert_review_status": "pending",
+  "contrast": {
+    "original_case_id": "C6b326981dbd766f7",
+    "changed_construct": "contribution",
+    "expected_declines": {},
+    "expected_stable": {
+      "fidelity": 1,
+      "evidence_discipline": 1
+    },
+    "expected_hard_failure": null,
+    "minimum_total_reduction": 0,
+    "acceptable_alternatives": [
+      "A stricter deduction is acceptable when specifically justified."
+    ]
+  }
+}

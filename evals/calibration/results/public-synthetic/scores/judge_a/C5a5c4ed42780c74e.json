@@ -1,0 +1,62 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C5a5c4ed42780c74e",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "phenomenon_motivation",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 23,
+      "reason": "The transfer decision is preserved, but the no-sacrifice claim obscures the adaptation trade-off.",
+      "evidence_spans": [
+        "chooses whether and how to adapt the practice"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 12,
+      "reason": "The actor and mechanism are concrete, while the passage erases the nontrivial tension between imitation and local fit.",
+      "evidence_spans": [
+        "The decision should improve every relevant outcome without a meaningful sacrifice."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 18,
+      "reason": "The passage gives a bounded mechanism-based shift from copying to preserving complementary routines.",
+      "evidence_spans": [
+        "The study shifts attention from copying practices to preserving their enabling mechanism."
+      ]
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 5,
+      "reason": "The all-outcomes assertion lacks supplied support despite a later scope caveat.",
+      "evidence_spans": [
+        "The argument applies to transfers with observable routines and does not establish universal causality."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "The prose is readable, but the no-sacrifice sentence is misleading.",
+      "evidence_spans": [
+        "Transfer succeeds when the receiving unit recreates the complementary routines that produced the original effect."
+      ]
+    }
+  },
+  "hard_failures": [
+    "unsupported_causal_claim"
+  ],
+  "normalized_score": 66.0,
+  "capped_score": 66.0,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C618350ee5289297e",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "business_problem",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 7,
+      "reason": "The allocation decision improperly uses future realized outcomes and latent types unavailable before orders.",
+      "evidence_spans": [
+        "using current stock, zone cost coefficients, and demand distributions, the future realized outcome, and any latent type"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 19,
+      "reason": "The concentration-versus-coverage trade-off remains concrete under an invalid information set.",
+      "evidence_spans": [
+        "Concentration pools scarce stock, while broader coverage protects more zones."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this business problem passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 6,
+      "reason": "The future-information clause contradicts the passage's own pre-order uncertainty.",
+      "evidence_spans": [
+        "before regional orders is known"
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "The prose is readable, although the information mapping is internally inconsistent.",
+      "evidence_spans": [
+        "The claim concerns one-period allocation under the supplied distributions, not live deployment."
+      ]
+    }
+  },
+  "hard_failures": [
+    "information_gate_failure",
+    "undeclared_model_change"
+  ],
+  "normalized_score": 50.0,
+  "capped_score": 50.0,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

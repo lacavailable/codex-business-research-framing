@@ -1,0 +1,58 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C754f18d8446f55e3",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "business_problem",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 23,
+      "reason": "The threshold decision is preserved, but the false-rejection and harmful-admission mechanism is left unconnected.",
+      "evidence_spans": [
+        "The setting contains several relevant operational details, but the passage does not connect the choice to the outcome."
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 14,
+      "reason": "The error trade-off is visible while the operational pathway remains incomplete.",
+      "evidence_spans": [
+        "A stricter threshold blocks more harmful accounts but rejects more benign participants."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this business problem passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 13,
+      "reason": "The passage clearly limits the claim to assumed distributions rather than field effectiveness.",
+      "evidence_spans": [
+        "The result is conditional on the assumed score distributions and does not establish field effectiveness."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "The prose is readable despite the mechanism gap.",
+      "evidence_spans": [
+        "The analysis identifies when a common score rule should become more selective."
+      ]
+    }
+  },
+  "hard_failures": [],
+  "normalized_score": 72.5,
+  "capped_score": 72.5,
+  "overall_status": "fail",
+  "overall_reason": "A required category falls below its minimum.",
+  "higher_than_both_justification": null
+}

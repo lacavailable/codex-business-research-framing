@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cd3e344376277ecf3",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 30, "reason": "The decision timing, planner, recourse condition, objective, and capacity mechanism align with the supplied setting.", "evidence_spans": ["a capacity planner chooses first-stage capacity and a recourse policy", "recourse actions occur only after demand is observed and must respect installed capacity"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 25, "reason": "It specifies the actor, decision, uncertainty, cost objective, operational mechanism, and advance-capacity versus recourse trade-off.", "evidence_spans": ["More advance capacity is expensive but reduces shortage and emergency recourse exposure"]},
+    "scholarly_positioning": {"applicability": "required", "assessment_status": "assessed", "score": 17, "reason": "The passage states a bounded analytical contribution about substitution between flexibility and advance capacity, though it gives little explicit prior-literature comparison.", "evidence_spans": ["The analysis isolates when flexible recourse substitutes for advance capacity"]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 2, "reason": "The final universal performance promises are presented without evidence and exceed the stated synthetic model setting.", "evidence_spans": ["will transform the industry, guarantee profit growth, and work in every market"]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 9, "reason": "The core explanation is concise and logically sequenced, despite the unsupported promotional sentence.", "evidence_spans": ["First-stage capacity changes the feasible and costly adjustments available after demand realization"]}
+  },
+  "hard_failures": ["unsupported_causal_claim"],
+  "normalized_score": 83,
+  "capped_score": 69,
+  "overall_status": "fail",
+  "overall_reason": "The model is well specified, but unsupported universal claims trigger a hard failure and cap the result.",
+  "higher_than_both_justification": null
+}

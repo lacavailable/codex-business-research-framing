@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cfe8d59172f5e16e9",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 0, "reason": "The selection decision is assigned to an observer who does not control it, rather than the assortment planner.", "evidence_spans": ["an outside observer who does not control the decision selects products"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 20, "reason": "The choice, objective, mechanism, and variety-versus-substitution trade-off are concrete, but the responsible actor is wrong.", "evidence_spans": ["Adding variety captures more first choices but consumes slots that could support stronger substitution paths."]},
+    "scholarly_positioning": {"applicability": "required", "assessment_status": "assessed", "score": 16, "reason": "It identifies a bounded analytic focus but offers no explicit relationship to prior knowledge.", "evidence_spans": ["The analysis identifies which transition patterns make a scarce slot most valuable."]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 15, "reason": "The model boundary is stated directly and does not overclaim beyond the defined substitution process.", "evidence_spans": ["not nearest-store search or stockout dynamics"]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 10, "reason": "The prose is concise and clear.", "evidence_spans": ["When a preferred product is absent, the stated transition matrix redirects demand among displayed alternatives or to exit."]}
+  },
+  "hard_failures": ["actor_gate_failure"],
+  "normalized_score": 61,
+  "capped_score": 61,
+  "overall_status": "fail",
+  "overall_reason": "The actor gate fails because the passage substitutes a noncontrolling observer for the assortment planner.",
+  "higher_than_both_justification": null
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/calibration/candidate-metadata.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "source_id", "full_citation", "journal", "year", "domain", "control_group", "article_type", "passage_function", "access_status", "copyright_status", "recognizability_risk", "contamination_risk"],
+  "properties": {
+    "schema_version": {"const": "3.0.0"},
+    "source_id": {"type": "string", "pattern": "^S[0-9A-Za-z_-]{3,40}$"},
+    "full_citation": {"type": "string", "minLength": 1},
+    "journal": {"enum": ["Management Science", "Manufacturing & Service Operations Management", "Operations Research", "Information Systems Research", "MIS Quarterly", "Academy of Management Review", "Academy of Management Journal", "Organization Science", "Strategic Management Journal", "Harvard Business Review", "MIT Sloan Management Review"]},
+    "year": {"type": "integer", "minimum": 1900, "maximum": 2100},
+    "domain": {"enum": ["OM", "IS", "OR", "MGMT"]},
+    "control_group": {"enum": ["positive", "intermediate"]},
+    "article_type": {"enum": ["empirical", "analytical", "computational", "conceptual", "design_science", "practitioner"]},
+    "passage_function": {"enum": ["phenomenon_motivation", "business_problem", "model_setting", "research_opportunity", "contribution", "managerial_implications"]},
+    "access_status": {"enum": ["lawfully_supplied", "licensed_open_access", "unavailable"]},
+    "copyright_status": {"enum": ["copyrighted_private_use", "permissive_redistribution_verified", "unknown_no_ingestion"]},
+    "recognizability_risk": {"enum": ["low", "medium", "high"]},
+    "contamination_risk": {"enum": ["low", "medium", "high"]}
+  }
+}

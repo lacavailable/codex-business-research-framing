@@ -1,0 +1,1591 @@
+{
+  "schema_version": "3.0.0",
+  "suite": "public-synthetic-calibration-v3",
+  "status": "synthetic_only_not_expert_validated",
+  "records": [
+    {
+      "case_id": "C00059427eb898128",
+      "domain": "OR",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "C6b326981dbd766f7",
+      "changed_construct": "timing"
+    },
+    {
+      "case_id": "C002c1aa2f5b030f6",
+      "domain": "OM",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "Cc170de9460a43cb3",
+      "changed_construct": "unsupported_hype"
+    },
+    {
+      "case_id": "C00dce53d68147047",
+      "domain": "OR",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C01d9a605b24c22f7",
+      "changed_construct": "verbosity"
+    },
+    {
+      "case_id": "C01d9a605b24c22f7",
+      "domain": "OR",
+      "split": "holdout",
+      "group": "positive",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "managerial_implications"
+    },
+    {
+      "case_id": "C03515d0d7e10bc0d",
+      "domain": "IS",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "C6522bb769a3df89a",
+      "changed_construct": "information"
+    },
+    {
+      "case_id": "C03538870d7459959",
+      "domain": "OR",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "C6b326981dbd766f7",
+      "changed_construct": "verbosity"
+    },
+    {
+      "case_id": "C0372818311a7b64c",
+      "domain": "IS",
+      "split": "validation",
+      "group": "intermediate",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "research_opportunity"
+    },
+    {
+      "case_id": "C098989117ecd9508",
+      "domain": "MGMT",
+      "split": "validation",
+      "group": "intermediate",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "contribution"
+    },
+    {
+      "case_id": "C0ceabac5f9fa342f",
+      "domain": "OM",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "Cc170de9460a43cb3",
+      "changed_construct": "boundaries"
+    },
+    {
+      "case_id": "C0edde6f312d0217b",
+      "domain": "OR",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C01d9a605b24c22f7",
+      "changed_construct": "contribution"
+    },
+    {
+      "case_id": "C0ee4bcea219c86da",
+      "domain": "MGMT",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "contribution",
+      "original_case_id": "C8e6a96d0b1f23d1b",
+      "changed_construct": "verbosity"
+    },
+    {
+      "case_id": "C0f2802cbb920f7dd",
+      "domain": "OM",
+      "split": "development",
+      "group": "intermediate",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "business_problem"
+    },
+    {
+      "case_id": "C0f944e7b8f54f63f",
+      "domain": "OR",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Cbe79689bb3159153",
+      "changed_construct": "contribution"
+    },
+    {
+      "case_id": "C10b9445584d58e6f",
+      "domain": "OR",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "C6b326981dbd766f7",
+      "changed_construct": "actor"
+    },
+    {
+      "case_id": "C122788a813221c9a",
+      "domain": "OM",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "Cc170de9460a43cb3",
+      "changed_construct": "mechanism"
+    },
+    {
+      "case_id": "C127109151dcb2bea",
+      "domain": "IS",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "C6522bb769a3df89a",
+      "changed_construct": "objective"
+    },
+    {
+      "case_id": "C173fc82e7195049f",
+      "domain": "MGMT",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "phenomenon_motivation",
+      "original_case_id": "Cabef43cef957de90",
+      "changed_construct": "timing"
+    },
+    {
+      "case_id": "C1976c893e1876cb8",
+      "domain": "IS",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "Cdb839c5dd28bd2ee",
+      "changed_construct": "boundaries"
+    },
+    {
+      "case_id": "C1bec103b367ac2ec",
+      "domain": "MGMT",
+      "split": "development",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "phenomenon_motivation"
+    },
+    {
+      "case_id": "C1ebccbf273a00ea2",
+      "domain": "OR",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Cbe79689bb3159153",
+      "changed_construct": "unsupported_hype"
+    },
+    {
+      "case_id": "C235190de9f274330",
+      "domain": "IS",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "C4edddd89dc02c4d0",
+      "changed_construct": "unsupported_hype"
+    },
+    {
+      "case_id": "C246687905045e3b8",
+      "domain": "IS",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "Cdb839c5dd28bd2ee",
+      "changed_construct": "unsupported_hype"
+    },
+    {
+      "case_id": "C252c495372c110c8",
+      "domain": "OR",
+      "split": "development",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "model_setting"
+    },
+    {
+      "case_id": "C281a8a96ebb69022",
+      "domain": "OM",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "Cc170de9460a43cb3",
+      "changed_construct": "verbosity"
+    },
+    {
+      "case_id": "C2a4e6db9f5b680a8",
+      "domain": "OM",
+      "split": "validation",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "model_setting"
+    },
+    {
+      "case_id": "C2a77cc868d4a5afa",
+      "domain": "OR",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "C6b326981dbd766f7",
+      "changed_construct": "boundaries"
+    },
+    {
+      "case_id": "C2b3f700e3d833a62",
+      "domain": "IS",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "Cdb839c5dd28bd2ee",
+      "changed_construct": "verbosity"
+    },
+    {
+      "case_id": "C2b67fccc1242f34e",
+      "domain": "OM",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Ca1e4974bfb3df807",
+      "changed_construct": "verbosity"
+    },
+    {
+      "case_id": "C2e731d3eed56d628",
+      "domain": "IS",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "C4edddd89dc02c4d0",
+      "changed_construct": "objective"
+    },
+    {
+      "case_id": "C309a0070c1483d7f",
+      "domain": "IS",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "C4edddd89dc02c4d0",
+      "changed_construct": "information"
+    },
+    {
+      "case_id": "C30e1f7a75bb7a9f9",
+      "domain": "OR",
+      "split": "validation",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "model_setting"
+    },
+    {
+      "case_id": "C31c418c0ea22ab33",
+      "domain": "MGMT",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "Cd525a2c38c33e6c5",
+      "changed_construct": "contribution"
+    },
+    {
+      "case_id": "C32a312b73e18b8e2",
+      "domain": "OR",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Cbe79689bb3159153",
+      "changed_construct": "trade_off"
+    },
+    {
+      "case_id": "C35c00438dc272cb4",
+      "domain": "OM",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "Cc170de9460a43cb3",
+      "changed_construct": "timing"
+    },
+    {
+      "case_id": "C37079a661d75a7b9",
+      "domain": "IS",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "C4edddd89dc02c4d0",
+      "changed_construct": "trade_off"
+    },
+    {
+      "case_id": "C39bf11afdce2e106",
+      "domain": "OR",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C01d9a605b24c22f7",
+      "changed_construct": "timing"
+    },
+    {
+      "case_id": "C3a81a364d615ed48",
+      "domain": "OM",
+      "split": "holdout",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "managerial_implications"
+    },
+    {
+      "case_id": "C3c37a4a15eca706a",
+      "domain": "MGMT",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "Cd525a2c38c33e6c5",
+      "changed_construct": "actor"
+    },
+    {
+      "case_id": "C3ee3a2126fe8580e",
+      "domain": "MGMT",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "phenomenon_motivation",
+      "original_case_id": "Cabef43cef957de90",
+      "changed_construct": "mechanism"
+    },
+    {
+      "case_id": "C3f96ac0372bacbd5",
+      "domain": "OR",
+      "split": "development",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "model_setting"
+    },
+    {
+      "case_id": "C401619dfce329f84",
+      "domain": "OM",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C6696d9894278f594",
+      "changed_construct": "objective"
+    },
+    {
+      "case_id": "C426b0c30d493ade1",
+      "domain": "OR",
+      "split": "validation",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "model_setting"
+    },
+    {
+      "case_id": "C436328cc96f629fa",
+      "domain": "IS",
+      "split": "validation",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "research_opportunity"
+    },
+    {
+      "case_id": "C442d7917ad86b162",
+      "domain": "OR",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "C6b326981dbd766f7",
+      "changed_construct": "information"
+    },
+    {
+      "case_id": "C44fddb14a1810430",
+      "domain": "MGMT",
+      "split": "holdout",
+      "group": "intermediate",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "research_opportunity"
+    },
+    {
+      "case_id": "C45c38522525c0616",
+      "domain": "OR",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Cbe79689bb3159153",
+      "changed_construct": "actor"
+    },
+    {
+      "case_id": "C46a564f980589de9",
+      "domain": "OM",
+      "split": "holdout",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "managerial_implications"
+    },
+    {
+      "case_id": "C481d5378f73de913",
+      "domain": "MGMT",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "phenomenon_motivation",
+      "original_case_id": "Cabef43cef957de90",
+      "changed_construct": "contribution"
+    },
+    {
+      "case_id": "C48b5e620afec0bf9",
+      "domain": "IS",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "C6522bb769a3df89a",
+      "changed_construct": "verbosity"
+    },
+    {
+      "case_id": "C4ad4c49a632f8a2f",
+      "domain": "MGMT",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "Cd525a2c38c33e6c5",
+      "changed_construct": "information"
+    },
+    {
+      "case_id": "C4c488fa726b5ef69",
+      "domain": "MGMT",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "contribution",
+      "original_case_id": "C8e6a96d0b1f23d1b",
+      "changed_construct": "contribution"
+    },
+    {
+      "case_id": "C4dedfdf720708ea0",
+      "domain": "OM",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Ca1e4974bfb3df807",
+      "changed_construct": "objective"
+    },
+    {
+      "case_id": "C4edddd89dc02c4d0",
+      "domain": "IS",
+      "split": "development",
+      "group": "positive",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "business_problem"
+    },
+    {
+      "case_id": "C4fa2f112dbfbeb6d",
+      "domain": "IS",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "Cdb839c5dd28bd2ee",
+      "changed_construct": "information"
+    },
+    {
+      "case_id": "C4fbc4640ebb1cc3f",
+      "domain": "OM",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "Cc170de9460a43cb3",
+      "changed_construct": "actor"
+    },
+    {
+      "case_id": "C57750bf7b58bd04a",
+      "domain": "MGMT",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "Cd525a2c38c33e6c5",
+      "changed_construct": "boundaries"
+    },
+    {
+      "case_id": "C5a5c4ed42780c74e",
+      "domain": "MGMT",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "phenomenon_motivation",
+      "original_case_id": "Cabef43cef957de90",
+      "changed_construct": "trade_off"
+    },
+    {
+      "case_id": "C5aef2dcd20669ba6",
+      "domain": "OM",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Ca1e4974bfb3df807",
+      "changed_construct": "information"
+    },
+    {
+      "case_id": "C5f110ac0f036b41b",
+      "domain": "MGMT",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "phenomenon_motivation",
+      "original_case_id": "Cabef43cef957de90",
+      "changed_construct": "verbosity"
+    },
+    {
+      "case_id": "C60ec86ffb79de413",
+      "domain": "OM",
+      "split": "validation",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "model_setting"
+    },
+    {
+      "case_id": "C613a7302bc0b40a0",
+      "domain": "IS",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "C4edddd89dc02c4d0",
+      "changed_construct": "boundaries"
+    },
+    {
+      "case_id": "C618350ee5289297e",
+      "domain": "OM",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "Cc170de9460a43cb3",
+      "changed_construct": "information"
+    },
+    {
+      "case_id": "C6315e8a363d1401f",
+      "domain": "IS",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "C6522bb769a3df89a",
+      "changed_construct": "trade_off"
+    },
+    {
+      "case_id": "C63dda2e95a450c7b",
+      "domain": "IS",
+      "split": "development",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "business_problem"
+    },
+    {
+      "case_id": "C6513a114e49a5cce",
+      "domain": "MGMT",
+      "split": "holdout",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "research_opportunity"
+    },
+    {
+      "case_id": "C6522bb769a3df89a",
+      "domain": "IS",
+      "split": "validation",
+      "group": "positive",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "research_opportunity"
+    },
+    {
+      "case_id": "C6555fd8fe2e29877",
+      "domain": "MGMT",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "phenomenon_motivation",
+      "original_case_id": "Cabef43cef957de90",
+      "changed_construct": "boundaries"
+    },
+    {
+      "case_id": "C6696d9894278f594",
+      "domain": "OM",
+      "split": "holdout",
+      "group": "positive",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "managerial_implications"
+    },
+    {
+      "case_id": "C6760df789b3e0a96",
+      "domain": "MGMT",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "Cd525a2c38c33e6c5",
+      "changed_construct": "trade_off"
+    },
+    {
+      "case_id": "C6b326981dbd766f7",
+      "domain": "OR",
+      "split": "validation",
+      "group": "positive",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "model_setting"
+    },
+    {
+      "case_id": "C6be3aa61ce8d7fd9",
+      "domain": "OM",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "Cc170de9460a43cb3",
+      "changed_construct": "objective"
+    },
+    {
+      "case_id": "C6c1a289492c954f2",
+      "domain": "MGMT",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "contribution",
+      "original_case_id": "C8e6a96d0b1f23d1b",
+      "changed_construct": "boundaries"
+    },
+    {
+      "case_id": "C6cb9acd341f8e878",
+      "domain": "OR",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C01d9a605b24c22f7",
+      "changed_construct": "unsupported_hype"
+    },
+    {
+      "case_id": "C6dc781af5704cc55",
+      "domain": "OM",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C6696d9894278f594",
+      "changed_construct": "information"
+    },
+    {
+      "case_id": "C6eb4a65af41a4edf",
+      "domain": "OM",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Ca1e4974bfb3df807",
+      "changed_construct": "mechanism"
+    },
+    {
+      "case_id": "C711f50a2f1ba40c0",
+      "domain": "OR",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Cbe79689bb3159153",
+      "changed_construct": "information"
+    },
+    {
+      "case_id": "C71f2c3f2351322c3",
+      "domain": "IS",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "Cdb839c5dd28bd2ee",
+      "changed_construct": "objective"
+    },
+    {
+      "case_id": "C73aa1f1071ca221e",
+      "domain": "OM",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C6696d9894278f594",
+      "changed_construct": "contribution"
+    },
+    {
+      "case_id": "C74030e84f8e7cd50",
+      "domain": "MGMT",
+      "split": "holdout",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "research_opportunity"
+    },
+    {
+      "case_id": "C741cc2da1da8703e",
+      "domain": "OR",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C01d9a605b24c22f7",
+      "changed_construct": "trade_off"
+    },
+    {
+      "case_id": "C7526d00647a3e5f0",
+      "domain": "IS",
+      "split": "development",
+      "group": "intermediate",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "business_problem"
+    },
+    {
+      "case_id": "C754f18d8446f55e3",
+      "domain": "IS",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "C4edddd89dc02c4d0",
+      "changed_construct": "mechanism"
+    },
+    {
+      "case_id": "C7968e8e52287a68a",
+      "domain": "MGMT",
+      "split": "development",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "phenomenon_motivation"
+    },
+    {
+      "case_id": "C7d6e3feb28cba582",
+      "domain": "MGMT",
+      "split": "validation",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "contribution"
+    },
+    {
+      "case_id": "C7dbeae27fdff445b",
+      "domain": "IS",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "C4edddd89dc02c4d0",
+      "changed_construct": "verbosity"
+    },
+    {
+      "case_id": "C81895a4d7b5324f1",
+      "domain": "OR",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "C6b326981dbd766f7",
+      "changed_construct": "trade_off"
+    },
+    {
+      "case_id": "C83f0159372332f43",
+      "domain": "MGMT",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "Cd525a2c38c33e6c5",
+      "changed_construct": "mechanism"
+    },
+    {
+      "case_id": "C845e3eedf9865de1",
+      "domain": "OM",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Ca1e4974bfb3df807",
+      "changed_construct": "boundaries"
+    },
+    {
+      "case_id": "C846599aa3c3d25b8",
+      "domain": "IS",
+      "split": "holdout",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "managerial_implications"
+    },
+    {
+      "case_id": "C85a33a600a4418f2",
+      "domain": "IS",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "Cdb839c5dd28bd2ee",
+      "changed_construct": "actor"
+    },
+    {
+      "case_id": "C85a83741532e33ce",
+      "domain": "OR",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Cbe79689bb3159153",
+      "changed_construct": "mechanism"
+    },
+    {
+      "case_id": "C85d31395ac3f3a9c",
+      "domain": "OR",
+      "split": "holdout",
+      "group": "intermediate",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "managerial_implications"
+    },
+    {
+      "case_id": "C85dd809e37abd641",
+      "domain": "OR",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C01d9a605b24c22f7",
+      "changed_construct": "information"
+    },
+    {
+      "case_id": "C888f9f41680781cd",
+      "domain": "IS",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "Cdb839c5dd28bd2ee",
+      "changed_construct": "mechanism"
+    },
+    {
+      "case_id": "C89573bc65df419cb",
+      "domain": "OR",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "C6b326981dbd766f7",
+      "changed_construct": "mechanism"
+    },
+    {
+      "case_id": "C8c901a0e6e7ddc07",
+      "domain": "OR",
+      "split": "holdout",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "managerial_implications"
+    },
+    {
+      "case_id": "C8e6a96d0b1f23d1b",
+      "domain": "MGMT",
+      "split": "validation",
+      "group": "positive",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "contribution"
+    },
+    {
+      "case_id": "C8fac2911b003d16f",
+      "domain": "MGMT",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "contribution",
+      "original_case_id": "C8e6a96d0b1f23d1b",
+      "changed_construct": "objective"
+    },
+    {
+      "case_id": "C904bfc47e9ab0b90",
+      "domain": "MGMT",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "contribution",
+      "original_case_id": "C8e6a96d0b1f23d1b",
+      "changed_construct": "trade_off"
+    },
+    {
+      "case_id": "C90ca75d5253cff2c",
+      "domain": "OR",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "C6b326981dbd766f7",
+      "changed_construct": "objective"
+    },
+    {
+      "case_id": "C91741f5a15968eab",
+      "domain": "IS",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "C6522bb769a3df89a",
+      "changed_construct": "unsupported_hype"
+    },
+    {
+      "case_id": "C9255a26519b91ba3",
+      "domain": "OM",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Ca1e4974bfb3df807",
+      "changed_construct": "unsupported_hype"
+    },
+    {
+      "case_id": "C96c0e4eec48f1793",
+      "domain": "OR",
+      "split": "validation",
+      "group": "intermediate",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "model_setting"
+    },
+    {
+      "case_id": "C9729fe108d4f4257",
+      "domain": "MGMT",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "Cd525a2c38c33e6c5",
+      "changed_construct": "timing"
+    },
+    {
+      "case_id": "C9765be2b93c0f563",
+      "domain": "OM",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C6696d9894278f594",
+      "changed_construct": "mechanism"
+    },
+    {
+      "case_id": "C97e7eaf4a0df2da4",
+      "domain": "OR",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C01d9a605b24c22f7",
+      "changed_construct": "actor"
+    },
+    {
+      "case_id": "C9aae07b5f6a920f3",
+      "domain": "MGMT",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "contribution",
+      "original_case_id": "C8e6a96d0b1f23d1b",
+      "changed_construct": "unsupported_hype"
+    },
+    {
+      "case_id": "C9be279648521c4fc",
+      "domain": "MGMT",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "contribution",
+      "original_case_id": "C8e6a96d0b1f23d1b",
+      "changed_construct": "information"
+    },
+    {
+      "case_id": "C9bf088463f5904d1",
+      "domain": "IS",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "C6522bb769a3df89a",
+      "changed_construct": "contribution"
+    },
+    {
+      "case_id": "C9c867744b716177a",
+      "domain": "OM",
+      "split": "development",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "business_problem"
+    },
+    {
+      "case_id": "C9c99bc7df015bda7",
+      "domain": "OM",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C6696d9894278f594",
+      "changed_construct": "timing"
+    },
+    {
+      "case_id": "C9e40b42879a375cd",
+      "domain": "MGMT",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "Cd525a2c38c33e6c5",
+      "changed_construct": "verbosity"
+    },
+    {
+      "case_id": "C9e52af3396b82b69",
+      "domain": "OM",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C6696d9894278f594",
+      "changed_construct": "actor"
+    },
+    {
+      "case_id": "C9ed50a7a4126c4a9",
+      "domain": "IS",
+      "split": "holdout",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "managerial_implications"
+    },
+    {
+      "case_id": "Ca0a9a23bc3a58c3a",
+      "domain": "MGMT",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "Cd525a2c38c33e6c5",
+      "changed_construct": "unsupported_hype"
+    },
+    {
+      "case_id": "Ca1e4974bfb3df807",
+      "domain": "OM",
+      "split": "validation",
+      "group": "positive",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "model_setting"
+    },
+    {
+      "case_id": "Ca35db4bf75c0c0d6",
+      "domain": "IS",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "C4edddd89dc02c4d0",
+      "changed_construct": "contribution"
+    },
+    {
+      "case_id": "Ca3a6adcc7acd8b65",
+      "domain": "IS",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "C6522bb769a3df89a",
+      "changed_construct": "boundaries"
+    },
+    {
+      "case_id": "Ca46705b5b2dbcfa5",
+      "domain": "IS",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "C6522bb769a3df89a",
+      "changed_construct": "timing"
+    },
+    {
+      "case_id": "Ca5a0ed51bb117528",
+      "domain": "OM",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Ca1e4974bfb3df807",
+      "changed_construct": "contribution"
+    },
+    {
+      "case_id": "Ca8645444834764e8",
+      "domain": "IS",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "Cdb839c5dd28bd2ee",
+      "changed_construct": "timing"
+    },
+    {
+      "case_id": "Cabef43cef957de90",
+      "domain": "MGMT",
+      "split": "development",
+      "group": "positive",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "phenomenon_motivation"
+    },
+    {
+      "case_id": "Cad48b9d65fcaa6ac",
+      "domain": "IS",
+      "split": "validation",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "research_opportunity"
+    },
+    {
+      "case_id": "Cad4fb9142c18de06",
+      "domain": "IS",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "C6522bb769a3df89a",
+      "changed_construct": "actor"
+    },
+    {
+      "case_id": "Cb032664168e41d25",
+      "domain": "IS",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "C6522bb769a3df89a",
+      "changed_construct": "mechanism"
+    },
+    {
+      "case_id": "Cb1ca93a802d1b41e",
+      "domain": "OR",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Cbe79689bb3159153",
+      "changed_construct": "timing"
+    },
+    {
+      "case_id": "Cb73a4c1ceca718b3",
+      "domain": "OM",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "Cc170de9460a43cb3",
+      "changed_construct": "trade_off"
+    },
+    {
+      "case_id": "Cb7f6a88a877cde50",
+      "domain": "IS",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "Cdb839c5dd28bd2ee",
+      "changed_construct": "trade_off"
+    },
+    {
+      "case_id": "Cb9bfafb057722255",
+      "domain": "MGMT",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "phenomenon_motivation",
+      "original_case_id": "Cabef43cef957de90",
+      "changed_construct": "unsupported_hype"
+    },
+    {
+      "case_id": "Cbc78dff767657905",
+      "domain": "MGMT",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "phenomenon_motivation",
+      "original_case_id": "Cabef43cef957de90",
+      "changed_construct": "objective"
+    },
+    {
+      "case_id": "Cbcc70f8d0eba2985",
+      "domain": "OR",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C01d9a605b24c22f7",
+      "changed_construct": "mechanism"
+    },
+    {
+      "case_id": "Cbe79689bb3159153",
+      "domain": "OR",
+      "split": "development",
+      "group": "positive",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "model_setting"
+    },
+    {
+      "case_id": "Cbf9c0a3f45f65e40",
+      "domain": "IS",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "C4edddd89dc02c4d0",
+      "changed_construct": "timing"
+    },
+    {
+      "case_id": "Cc170de9460a43cb3",
+      "domain": "OM",
+      "split": "development",
+      "group": "positive",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "business_problem"
+    },
+    {
+      "case_id": "Cc64f2002d511b008",
+      "domain": "OM",
+      "split": "validation",
+      "group": "intermediate",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "model_setting"
+    },
+    {
+      "case_id": "Cc8fc6f95dbe1138f",
+      "domain": "OR",
+      "split": "development",
+      "group": "intermediate",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "model_setting"
+    },
+    {
+      "case_id": "Cca4c0dd65f725cde",
+      "domain": "OR",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Cbe79689bb3159153",
+      "changed_construct": "verbosity"
+    },
+    {
+      "case_id": "Ccb6942b7523c3b95",
+      "domain": "OR",
+      "split": "holdout",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "managerial_implications"
+    },
+    {
+      "case_id": "Ccbd17034c5337e0c",
+      "domain": "IS",
+      "split": "development",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "business_problem"
+    },
+    {
+      "case_id": "Cce430e24c6c1afe5",
+      "domain": "OM",
+      "split": "development",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "business_problem"
+    },
+    {
+      "case_id": "Ccfc805b886ba7506",
+      "domain": "IS",
+      "split": "holdout",
+      "group": "intermediate",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "managerial_implications"
+    },
+    {
+      "case_id": "Cd0b02b3eab774a31",
+      "domain": "MGMT",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "research_opportunity",
+      "original_case_id": "Cd525a2c38c33e6c5",
+      "changed_construct": "objective"
+    },
+    {
+      "case_id": "Cd242f1f1042e8d2a",
+      "domain": "OM",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C6696d9894278f594",
+      "changed_construct": "unsupported_hype"
+    },
+    {
+      "case_id": "Cd3e344376277ecf3",
+      "domain": "OR",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "C6b326981dbd766f7",
+      "changed_construct": "unsupported_hype"
+    },
+    {
+      "case_id": "Cd525a2c38c33e6c5",
+      "domain": "MGMT",
+      "split": "holdout",
+      "group": "positive",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "research_opportunity"
+    },
+    {
+      "case_id": "Cd5ca5e4f2061f987",
+      "domain": "OR",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Cbe79689bb3159153",
+      "changed_construct": "boundaries"
+    },
+    {
+      "case_id": "Cd6b011e32300dfcc",
+      "domain": "OM",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C6696d9894278f594",
+      "changed_construct": "trade_off"
+    },
+    {
+      "case_id": "Cdb839c5dd28bd2ee",
+      "domain": "IS",
+      "split": "holdout",
+      "group": "positive",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "managerial_implications"
+    },
+    {
+      "case_id": "Cdd6e7a1b95127902",
+      "domain": "OM",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "Cc170de9460a43cb3",
+      "changed_construct": "contribution"
+    },
+    {
+      "case_id": "Cddf690a00536df2a",
+      "domain": "OR",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C01d9a605b24c22f7",
+      "changed_construct": "objective"
+    },
+    {
+      "case_id": "Ce2adc948d3122b61",
+      "domain": "IS",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "business_problem",
+      "original_case_id": "C4edddd89dc02c4d0",
+      "changed_construct": "actor"
+    },
+    {
+      "case_id": "Ce7f9cb824fe9fe95",
+      "domain": "MGMT",
+      "split": "validation",
+      "group": "negative",
+      "control_origin": "original_negative",
+      "passage_function": "contribution"
+    },
+    {
+      "case_id": "Ce84e52c6fec019d7",
+      "domain": "OR",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C01d9a605b24c22f7",
+      "changed_construct": "boundaries"
+    },
+    {
+      "case_id": "Ce8e57f3e923d66db",
+      "domain": "OM",
+      "split": "holdout",
+      "group": "intermediate",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "managerial_implications"
+    },
+    {
+      "case_id": "Cea5d8048af36ab67",
+      "domain": "MGMT",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "contribution",
+      "original_case_id": "C8e6a96d0b1f23d1b",
+      "changed_construct": "timing"
+    },
+    {
+      "case_id": "Ceb15f3767d170803",
+      "domain": "MGMT",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "contribution",
+      "original_case_id": "C8e6a96d0b1f23d1b",
+      "changed_construct": "actor"
+    },
+    {
+      "case_id": "Cf1958145797e24d5",
+      "domain": "OM",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C6696d9894278f594",
+      "changed_construct": "boundaries"
+    },
+    {
+      "case_id": "Cf41e93bede7f38e9",
+      "domain": "IS",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "Cdb839c5dd28bd2ee",
+      "changed_construct": "contribution"
+    },
+    {
+      "case_id": "Cf581b58d97ce7fee",
+      "domain": "MGMT",
+      "split": "development",
+      "group": "intermediate",
+      "control_origin": "synthetic_analogue",
+      "passage_function": "phenomenon_motivation"
+    },
+    {
+      "case_id": "Cf5a2d2c982dffd96",
+      "domain": "OM",
+      "split": "holdout",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "managerial_implications",
+      "original_case_id": "C6696d9894278f594",
+      "changed_construct": "verbosity"
+    },
+    {
+      "case_id": "Cf955a53037073b69",
+      "domain": "MGMT",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "phenomenon_motivation",
+      "original_case_id": "Cabef43cef957de90",
+      "changed_construct": "information"
+    },
+    {
+      "case_id": "Cfaa60e1b057afee9",
+      "domain": "OR",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "C6b326981dbd766f7",
+      "changed_construct": "contribution"
+    },
+    {
+      "case_id": "Cfac0f2aa0cc7edfc",
+      "domain": "MGMT",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "phenomenon_motivation",
+      "original_case_id": "Cabef43cef957de90",
+      "changed_construct": "actor"
+    },
+    {
+      "case_id": "Cfc8633b1c040eaee",
+      "domain": "MGMT",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "contribution",
+      "original_case_id": "C8e6a96d0b1f23d1b",
+      "changed_construct": "mechanism"
+    },
+    {
+      "case_id": "Cfd02b4c17d909caa",
+      "domain": "OM",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Ca1e4974bfb3df807",
+      "changed_construct": "timing"
+    },
+    {
+      "case_id": "Cfe8d59172f5e16e9",
+      "domain": "OM",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Ca1e4974bfb3df807",
+      "changed_construct": "actor"
+    },
+    {
+      "case_id": "Cffc876e34bdeb708",
+      "domain": "OR",
+      "split": "development",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Cbe79689bb3159153",
+      "changed_construct": "objective"
+    },
+    {
+      "case_id": "Cffd33edeb0da26ab",
+      "domain": "OM",
+      "split": "validation",
+      "group": "contrast",
+      "control_origin": "derived_contrast",
+      "passage_function": "model_setting",
+      "original_case_id": "Ca1e4974bfb3df807",
+      "changed_construct": "trade_off"
+    }
+  ]
+}

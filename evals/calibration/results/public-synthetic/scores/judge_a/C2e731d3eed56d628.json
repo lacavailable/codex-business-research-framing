@@ -1,0 +1,61 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C2e731d3eed56d628",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "business_problem",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 7,
+      "reason": "An unmeasured social-welfare objective replaces expected platform value net of admission errors.",
+      "evidence_spans": [
+        "maximize a different social-welfare objective that the model does not measure"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 20,
+      "reason": "The threshold trade-off remains concrete, but its stakes are tied to the wrong objective.",
+      "evidence_spans": [
+        "A stricter threshold blocks more harmful accounts but rejects more benign participants."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this business problem passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 13,
+      "reason": "The passage states an appropriate scope boundary notwithstanding the undeclared objective change.",
+      "evidence_spans": [
+        "The result is conditional on the assumed score distributions and does not establish field effectiveness."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 9,
+      "reason": "The prose is concise and coherent.",
+      "evidence_spans": [
+        "The analysis identifies when a common score rule should become more selective."
+      ]
+    }
+  },
+  "hard_failures": [
+    "objective_gate_failure",
+    "undeclared_model_change"
+  ],
+  "normalized_score": 61.25,
+  "capped_score": 61.25,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C098989117ecd9508",
+  "domain": "MGMT",
+  "passage_function": "contribution",
+  "group": "intermediate",
+  "control_origin": "synthetic_analogue",
+  "split": "validation",
+  "applicable_categories": {
+    "fidelity": "optional",
+    "managerial_framing": "optional",
+    "scholarly_positioning": "required",
+    "evidence_discipline": "required",
+    "prose_clarity": "required"
+  },
+  "gold_fidelity_facts": [
+    "a multiunit firm's senior team",
+    "chooses how much discretion to delegate",
+    "balance local responsiveness with cross-unit coordination",
+    "headquarters cannot directly observe every local motive or consequence"
+  ],
+  "acceptable_interpretations": [
+    "Equivalent concise wording is acceptable.",
+    "Explicit rubric labels are unnecessary."
+  ],
+  "prohibited_model_changes": [
+    "Do not add unavailable future facts.",
+    "Do not replace the stated objective."
+  ],
+  "evidence_boundaries": [
+    "Synthetic case only.",
+    "No field outcome is supplied."
+  ],
+  "expected_strengths": [
+    "Concrete decision structure.",
+    "Bounded claim."
+  ],
+  "expected_weaknesses": [
+    "Incomplete mechanism and scope."
+  ],
+  "case_specific_anchors": {
+    "high": "Faithful and functionally complete.",
+    "medium": "Competent but incomplete.",
+    "low": "Material defect or generic framing."
+  },
+  "expert_quality_level": "medium",
+  "expert_review_status": "pending",
+  "contrast": null
+}

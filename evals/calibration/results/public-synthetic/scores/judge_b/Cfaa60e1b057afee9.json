@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cfaa60e1b057afee9",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 30, "reason": "The planner, first-stage and recourse decisions, timing, objective, information, and installed-capacity restriction are preserved.", "evidence_spans": ["a capacity planner chooses first-stage capacity and a recourse policy", "recourse actions occur only after demand is observed and must respect installed capacity"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 25, "reason": "It clearly establishes the costly advance-capacity versus later shortage-and-recourse trade-off and its decision pathway.", "evidence_spans": ["More advance capacity is expensive but reduces shortage and emergency recourse exposure."]},
+    "scholarly_positioning": {"applicability": "optional", "assessment_status": "assessed", "score": 4, "reason": "The stated contribution rests only on the topic not having been studied in this context, which is generic context novelty rather than a mechanism-based contribution.", "evidence_spans": ["the same topic has not previously been studied in this particular context"]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 15, "reason": "The claim is appropriately limited to the modeled distribution and recourse set rather than forecasting certainty.", "evidence_spans": ["The findings depend on the modeled distribution and recourse set rather than perfect demand foresight."]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 10, "reason": "The model setting and its scope are conveyed economically and in a logical sequence.", "evidence_spans": ["First-stage capacity changes the feasible and costly adjustments available after demand realization."]}
+  },
+  "hard_failures": [],
+  "normalized_score": 84,
+  "capped_score": 84,
+  "overall_status": "pass",
+  "overall_reason": "The model setting is faithful, decision-relevant, and carefully bounded; only the optional contribution statement relies on weak context novelty.",
+  "higher_than_both_justification": null
+}

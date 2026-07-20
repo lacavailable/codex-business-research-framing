@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C6522bb769a3df89a",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "research_opportunity",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 30,
+      "reason": "The review decision and privacy-constrained information set fully match the context.",
+      "evidence_spans": [
+        "sets a review threshold using privacy-permitted signals"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 23,
+      "reason": "The mechanism, classification-error stakes, and reviewer-attention trade-off are concrete.",
+      "evidence_spans": [
+        "More review reduces classification harm but consumes scarce reviewer attention."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 18,
+      "reason": "The opportunity identifies privacy limits as changing the value of selective human review.",
+      "evidence_spans": [
+        "The study asks how privacy limits alter the value of selective human review."
+      ]
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 15,
+      "reason": "The passage distinguishes welfare and signal-access boundaries explicitly.",
+      "evidence_spans": [
+        "The proposal does not treat revenue as welfare or assume unrestricted access to sensitive data."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 10,
+      "reason": "The prose is economical and usable.",
+      "evidence_spans": [
+        "The threshold routes uncertain items to review"
+      ]
+    }
+  },
+  "hard_failures": [],
+  "normalized_score": 96.0,
+  "capped_score": 96.0,
+  "overall_status": "pass",
+  "overall_reason": "The passage meets the applicable thresholds with no hard failure.",
+  "higher_than_both_justification": null
+}

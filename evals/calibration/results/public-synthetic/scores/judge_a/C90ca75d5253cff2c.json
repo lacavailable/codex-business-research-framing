@@ -1,0 +1,61 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C90ca75d5253cff2c",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 7,
+      "reason": "An unmeasured social-welfare objective replaces capacity, recourse, and unmet-demand cost.",
+      "evidence_spans": [
+        "maximize a different social-welfare objective that the model does not measure"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 22,
+      "reason": "The capacity-versus-shortage trade-off remains concrete despite the wrong objective.",
+      "evidence_spans": [
+        "More advance capacity is expensive but reduces shortage and emergency recourse exposure."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this model setting passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 13,
+      "reason": "The model boundary is explicit, although the objective substitution is undeclared.",
+      "evidence_spans": [
+        "The findings depend on the modeled distribution and recourse set rather than perfect demand foresight."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 9,
+      "reason": "The prose is clear and concise.",
+      "evidence_spans": [
+        "The analysis isolates when flexible recourse substitutes for advance capacity."
+      ]
+    }
+  },
+  "hard_failures": [
+    "objective_gate_failure",
+    "undeclared_model_change"
+  ],
+  "normalized_score": 63.75,
+  "capped_score": 63.75,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

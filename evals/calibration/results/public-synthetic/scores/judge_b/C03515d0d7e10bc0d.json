@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C03515d0d7e10bc0d",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "research_opportunity",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 0, "reason": "The passage gives the policy owner future outcomes and latent type at decision time, contrary to the supplied information boundary.", "evidence_spans": ["the future realized outcome, and any latent type", "before the item's harmfulness and classifier error is known"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 20, "reason": "The decision, objective, review-capacity trade-off, and threshold mechanism are concrete, though the decision-time information is invalid.", "evidence_spans": ["More review reduces classification harm but consumes scarce reviewer attention."]},
+    "scholarly_positioning": {"applicability": "required", "assessment_status": "assessed", "score": 20, "reason": "It contrasts constrained privacy-permitted signals with unrestricted access and identifies the resulting research question.", "evidence_spans": ["does not treat revenue as welfare or assume unrestricted access to sensitive data", "asks how privacy limits alter the value of selective human review"]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 3, "reason": "The passage explicitly crosses the stated information boundary by treating unknown outcomes and type as decision inputs.", "evidence_spans": ["using approved signal features, error costs, and reviewer capacity, the future realized outcome, and any latent type"]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 10, "reason": "The prose is economical and understandable.", "evidence_spans": ["The threshold routes uncertain items to review and changes false-positive and false-negative exposure."]}
+  },
+  "hard_failures": ["information_gate_failure"],
+  "normalized_score": 53,
+  "capped_score": 53,
+  "overall_status": "fail",
+  "overall_reason": "The decision-time information gate fails because future realized outcomes and latent type are made available before classification.",
+  "higher_than_both_justification": null
+}

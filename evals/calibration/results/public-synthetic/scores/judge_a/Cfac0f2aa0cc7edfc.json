@@ -1,0 +1,62 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cfac0f2aa0cc7edfc",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "phenomenon_motivation",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "An outside observer replaces the business-unit leader who controls adaptation.",
+      "evidence_spans": [
+        "an outside observer who does not control the decision chooses whether and how to adapt the practice"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 23,
+      "reason": "The imitation-versus-local-fit trade-off and pathway are otherwise concrete.",
+      "evidence_spans": [
+        "Closer imitation preserves tested elements but may fit the receiving unit poorly."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 18,
+      "reason": "The passage gives a bounded mechanism-based shift from copying to preserving routines.",
+      "evidence_spans": [
+        "The study shifts attention from copying practices to preserving their enabling mechanism."
+      ]
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 14,
+      "reason": "It explicitly avoids a universal causal inference.",
+      "evidence_spans": [
+        "does not establish universal causality"
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 9,
+      "reason": "The prose is economical and clear.",
+      "evidence_spans": [
+        "Transfer succeeds when the receiving unit recreates the complementary routines that produced the original effect."
+      ]
+    }
+  },
+  "hard_failures": [
+    "actor_gate_failure"
+  ],
+  "normalized_score": 72.0,
+  "capped_score": 69.0,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

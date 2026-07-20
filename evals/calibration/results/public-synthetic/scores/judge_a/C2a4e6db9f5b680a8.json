@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C2a4e6db9f5b680a8",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 22,
+      "reason": "The assortment model is recognizable, but universal superiority materially overstates it.",
+      "evidence_spans": [
+        "selects products under a fixed display-slot limit"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 20,
+      "reason": "The substitution mechanism and slot trade-off are concrete.",
+      "evidence_spans": [
+        "Adding variety captures more first choices but consumes slots that could support stronger substitution paths."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this model setting passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 2,
+      "reason": "Market transformation and guaranteed performance are asserted without supplied evidence.",
+      "evidence_spans": [
+        "The universally superior policy will transform the market and guarantee better performance."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "The prose is readable, but the universal sentence is misleading.",
+      "evidence_spans": [
+        "The analysis identifies which transition patterns make a scarce slot most valuable."
+      ]
+    }
+  },
+  "hard_failures": [
+    "unsupported_causal_claim"
+  ],
+  "normalized_score": 65.0,
+  "capped_score": 65.0,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

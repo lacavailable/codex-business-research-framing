@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C098989117ecd9508",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "contribution",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 22,
+      "reason": "The core decision is preserved, but the supplied delegation mechanism is explicitly left unspecified.",
+      "evidence_spans": [
+        "Several operational considerations connect the decision to later outcomes, but their relationship is not specified."
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 11,
+      "reason": "The decision is named while the trade-off and operational pathway remain generic.",
+      "evidence_spans": [
+        "The decision is important and involves competing considerations that require further analysis."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 13,
+      "reason": "The closing contribution names joint conditions but does not develop the mechanism in the passage.",
+      "evidence_spans": [
+        "The study explains delegation as a response to joint adaptation and observability conditions rather than as a generic best practice."
+      ]
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 13,
+      "reason": "The passage marks its scope and mechanism as unresolved rather than inventing evidence.",
+      "evidence_spans": [
+        "The scope of the resulting claim remains to be established."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 7,
+      "reason": "The prose is understandable but heavily scaffolded by placeholders.",
+      "evidence_spans": [
+        "Several operational considerations connect the decision to later outcomes"
+      ]
+    }
+  },
+  "hard_failures": [],
+  "normalized_score": 66.0,
+  "capped_score": 66.0,
+  "overall_status": "fail",
+  "overall_reason": "The passage does not reach the normalized passing threshold.",
+  "higher_than_both_justification": null
+}

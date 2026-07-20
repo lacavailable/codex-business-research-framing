@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cb032664168e41d25",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "research_opportunity",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 23,
+      "reason": "The threshold decision is preserved, but the supplied routing-to-review mechanism is not connected to outcomes.",
+      "evidence_spans": [
+        "The setting contains several relevant operational details, but the passage does not connect the choice to the outcome."
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 14,
+      "reason": "The review-capacity trade-off is visible while the operational pathway is incomplete.",
+      "evidence_spans": [
+        "More review reduces classification harm but consumes scarce reviewer attention."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 15,
+      "reason": "The passage identifies privacy limits as changing the value of selective review, though the counterposition is implicit.",
+      "evidence_spans": [
+        "The study asks how privacy limits alter the value of selective human review."
+      ]
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 13,
+      "reason": "Privacy access and welfare boundaries are stated cautiously.",
+      "evidence_spans": [
+        "The proposal does not treat revenue as welfare or assume unrestricted access to sensitive data."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "The prose is clear despite the explicit mechanism gap.",
+      "evidence_spans": [
+        "The setting contains several relevant operational details"
+      ]
+    }
+  },
+  "hard_failures": [],
+  "normalized_score": 73.0,
+  "capped_score": 73.0,
+  "overall_status": "pass",
+  "overall_reason": "The passage meets the applicable thresholds with no hard failure.",
+  "higher_than_both_justification": null
+}

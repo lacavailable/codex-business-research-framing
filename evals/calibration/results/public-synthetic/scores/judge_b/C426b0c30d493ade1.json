@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C426b0c30d493ade1",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 0, "reason": "The passage assigns the choice to an observer who cannot make it, replacing the stated capacity planner.", "evidence_spans": ["an outside observer who cannot make the decision chooses first-stage capacity"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 20, "reason": "Timing, choice, objective, mechanism, and capacity-versus-recourse trade-off are concrete, but the responsible actor is misidentified.", "evidence_spans": ["More advance capacity is expensive but reduces shortage and emergency recourse exposure."]},
+    "scholarly_positioning": {"applicability": "required", "assessment_status": "assessed", "score": 16, "reason": "It states a bounded analytic contribution but does not position it against specific prior knowledge.", "evidence_spans": ["The analysis isolates when flexible recourse substitutes for advance capacity."]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 15, "reason": "The passage clearly limits the finding to the modeled distribution and recourse set.", "evidence_spans": ["The findings depend on the modeled distribution and recourse set rather than perfect demand foresight."]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 10, "reason": "The prose is concise and structurally clear.", "evidence_spans": ["First-stage capacity changes the feasible and costly adjustments available after demand realization."]}
+  },
+  "hard_failures": ["actor_gate_failure"],
+  "normalized_score": 61,
+  "capped_score": 61,
+  "overall_status": "fail",
+  "overall_reason": "The actor gate fails because an outside observer who cannot make the decision is substituted for the capacity planner.",
+  "higher_than_both_justification": null
+}

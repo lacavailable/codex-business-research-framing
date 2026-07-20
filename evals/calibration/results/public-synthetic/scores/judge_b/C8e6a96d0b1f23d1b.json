@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C8e6a96d0b1f23d1b",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "contribution",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 30, "reason": "The senior-team delegation decision, partial observability constraint, adaptation/agency mechanism, and qualified scope all match the supplied setting.", "evidence_spans": ["chooses how much discretion to delegate", "headquarters cannot directly observe every local motive or consequence"]},
+    "managerial_framing": {"applicability": "optional", "assessment_status": "assessed", "score": 22, "reason": "It clearly identifies the delegation choice and trade-off, though it is framed chiefly as a theory contribution.", "evidence_spans": ["balance local responsiveness with cross-unit coordination", "Greater discretion supports adaptation but weakens consistency and oversight"]},
+    "scholarly_positioning": {"applicability": "required", "assessment_status": "assessed", "score": 18, "reason": "It bounds the theory to partial observability and contrasts a joint-conditions explanation with generic best-practice reasoning, but does not identify a specific prior account.", "evidence_spans": ["does not imply that decentralization always improves performance", "rather than as a generic best practice"]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 14, "reason": "The language keeps the theoretical mechanism and scope limitation explicit without claiming universal performance effects.", "evidence_spans": ["The theory concerns multiunit settings with partial observability", "does not imply that decentralization always improves performance"]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 10, "reason": "The passage is direct, cohesive, and tailored to a contribution statement.", "evidence_spans": ["The study explains delegation as a response"]}
+  },
+  "hard_failures": [],
+  "normalized_score": 94,
+  "capped_score": 94,
+  "overall_status": "pass",
+  "overall_reason": "This is a faithful and well-bounded theoretical contribution with a concrete delegation trade-off.",
+  "higher_than_both_justification": null
+}

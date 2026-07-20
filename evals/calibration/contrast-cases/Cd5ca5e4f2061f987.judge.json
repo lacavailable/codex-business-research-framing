@@ -1,0 +1,64 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cd5ca5e4f2061f987",
+  "domain": "OR",
+  "passage_function": "model_setting",
+  "group": "contrast",
+  "control_origin": "derived_contrast",
+  "split": "development",
+  "applicable_categories": {
+    "fidelity": "required",
+    "managerial_framing": "required",
+    "scholarly_positioning": "not_applicable",
+    "evidence_discipline": "required",
+    "prose_clarity": "required"
+  },
+  "gold_fidelity_facts": [
+    "a dispatch planner",
+    "selects a feasible routing plan before the dispatch deadline",
+    "minimize routing cost while meeting service constraints",
+    "an optimality certificate arriving after release cannot guide the decision"
+  ],
+  "acceptable_interpretations": [
+    "Equivalent concise wording is acceptable.",
+    "Explicit rubric labels are unnecessary."
+  ],
+  "prohibited_model_changes": [
+    "Do not add unavailable future facts.",
+    "Do not replace the stated objective."
+  ],
+  "evidence_boundaries": [
+    "Synthetic case only.",
+    "No field outcome is supplied."
+  ],
+  "expected_strengths": [
+    "Concrete decision structure.",
+    "Bounded claim."
+  ],
+  "expected_weaknesses": [
+    "Incomplete mechanism and scope."
+  ],
+  "case_specific_anchors": {
+    "high": "Faithful and functionally complete.",
+    "medium": "Competent but incomplete.",
+    "low": "Material defect or generic framing."
+  },
+  "expert_quality_level": "low",
+  "expert_review_status": "pending",
+  "contrast": {
+    "original_case_id": "Cbe79689bb3159153",
+    "changed_construct": "boundaries",
+    "expected_declines": {
+      "evidence_discipline": 3
+    },
+    "expected_stable": {
+      "fidelity": 1,
+      "prose_clarity": 1
+    },
+    "expected_hard_failure": null,
+    "minimum_total_reduction": 3,
+    "acceptable_alternatives": [
+      "A stricter deduction is acceptable when specifically justified."
+    ]
+  }
+}

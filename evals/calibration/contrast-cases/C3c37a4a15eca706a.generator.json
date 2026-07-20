@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C3c37a4a15eca706a",
+  "domain": "MGMT",
+  "anonymized_passage": "when several uncertain initiatives compete for funding, before technical progress and later commercial evidence is known, an outside observer who does not control the decision selects projects and review milestones using current forecasts, strategic dependencies, and available budget. The stated objective is to build a valuable portfolio while limiting irreversible exposure, subject to the condition that the committee cannot use later milestone evidence in the initial selection. Staged commitments preserve the option to stop weak projects after informative milestones. Early commitment accelerates promising projects but reduces the ability to redirect funds after learning. The argument concerns settings with informative milestones and partially reversible commitments. The study reframes portfolio selection as the joint design of initial commitments and later learning opportunities.",
+  "passage_function": "research_opportunity",
+  "context": {
+    "model_or_study_facts": [
+      "the committee cannot use later milestone evidence in the initial selection",
+      "technical progress and later commercial evidence"
+    ],
+    "actor": "a project portfolio committee",
+    "decisions": [
+      "selects projects and review milestones"
+    ],
+    "objective": "build a valuable portfolio while limiting irreversible exposure",
+    "timing": "when several uncertain initiatives compete for funding",
+    "decision_time_information": [
+      "current forecasts, strategic dependencies, and available budget"
+    ],
+    "constraints": [
+      "the committee cannot use later milestone evidence in the initial selection"
+    ],
+    "mechanism": "Staged commitments preserve the option to stop weak projects after informative milestones",
+    "supplied_evidence": [
+      "Synthetic illustration; no external empirical evidence supplied."
+    ]
+  },
+  "intended_audience": "business and research readers",
+  "requested_evaluation_profile": "standard"
+}

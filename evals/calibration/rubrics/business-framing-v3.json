@@ -1,0 +1,85 @@
+{
+  "schema_version": "3.0.0",
+  "version": "3.0.0-rc.1",
+  "passing_score": 70,
+  "hard_failure_cap": 69,
+  "categories": [
+    {
+      "id": "fidelity",
+      "label": "Decision and model fidelity",
+      "weight": 30,
+      "minimum": 21,
+      "anchors": {
+        "high": "Preserves the actor, timing, information, behavior, constraints, objective, and model-to-reality mapping without a material change.",
+        "medium": "Preserves the core decision but leaves one material mapping or gate ambiguous without contradicting it.",
+        "low": "Changes or obscures a material decision, state, timing, information set, constraint, behavior, or objective.",
+        "hard_failure": "Fails a noncompensatory fidelity gate or makes an undeclared model change."
+      }
+    },
+    {
+      "id": "managerial_framing",
+      "label": "Managerial framing",
+      "weight": 25,
+      "minimum": 15,
+      "anchors": {
+        "high": "Makes the responsible actor, trigger, choice, stakes, mechanism, trade-off, counterfactual, and operational pathway sufficiently concrete, whether explicit or implicit.",
+        "medium": "Identifies a real decision and stakes but leaves the mechanism, counterfactual, trade-off, or pathway incomplete.",
+        "low": "Offers generic importance or trends without an actionable decision or nontrivial tension.",
+        "hard_failure": null
+      }
+    },
+    {
+      "id": "scholarly_positioning",
+      "label": "Scholarly positioning",
+      "weight": 20,
+      "minimum": 12,
+      "anchors": {
+        "high": "States a bounded relationship to prior knowledge, the changed mechanism or assumption, and the resulting contribution without relying on prestige or generic gap spotting.",
+        "medium": "Identifies a literature relationship and difference but leaves the mechanism, counterposition, or contribution type generic.",
+        "low": "Claims novelty from a new context, missing study, or publication status alone.",
+        "hard_failure": null
+      }
+    },
+    {
+      "id": "evidence_discipline",
+      "label": "Evidence discipline",
+      "weight": 15,
+      "minimum": 9,
+      "anchors": {
+        "high": "Keeps facts, assumptions, inferences, unsupported claims, and access boundaries distinct and traceable.",
+        "medium": "Uses cautious language but leaves at least one material claim or boundary insufficiently classified.",
+        "low": "Invents evidence, conceals uncertainty, or presents unsupported empirical or causal claims as established.",
+        "hard_failure": "Invents a material empirical fact, causal result, or major supporting assumption."
+      }
+    },
+    {
+      "id": "prose_clarity",
+      "label": "Prose clarity",
+      "weight": 10,
+      "minimum": 5,
+      "anchors": {
+        "high": "Delivers economical, usable prose whose structure serves the requested audience without requiring visible rubric scaffolding.",
+        "medium": "Is understandable but repetitive, abstract, overstructured, or longer than the information warrants.",
+        "low": "Is materially confusing, misleading, fragmentary, or dominated by template language.",
+        "hard_failure": null
+      }
+    }
+  ],
+  "hard_failures": [
+    "actor_gate_failure",
+    "timing_gate_failure",
+    "information_gate_failure",
+    "behavior_gate_failure",
+    "constraints_gate_failure",
+    "objective_gate_failure",
+    "state_as_decision",
+    "undeclared_model_change",
+    "invented_empirical_fact",
+    "unsupported_causal_claim",
+    "hidden_major_assumption"
+  ],
+  "adjudication": {
+    "category_fraction": 0.2,
+    "normalized_total_points": 10
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cfe8d59172f5e16e9",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "An outside observer replaces the assortment planner responsible for the decision.",
+      "evidence_spans": [
+        "an outside observer who does not control the decision selects products under a fixed display-slot limit"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 22,
+      "reason": "The substitution pathway and slot trade-off are otherwise concrete.",
+      "evidence_spans": [
+        "Adding variety captures more first choices but consumes slots that could support stronger substitution paths."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this model setting passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 14,
+      "reason": "The model boundary is explicit and disciplined.",
+      "evidence_spans": [
+        "The model represents within-assortment Markov substitution, not nearest-store search or stockout dynamics."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 9,
+      "reason": "The prose is concise and coherent.",
+      "evidence_spans": [
+        "The analysis identifies which transition patterns make a scarce slot most valuable."
+      ]
+    }
+  },
+  "hard_failures": [
+    "actor_gate_failure"
+  ],
+  "normalized_score": 66.25,
+  "capped_score": 66.25,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/calibration/score-v3.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "judge_id", "rubric_version", "passage_function_interpretation", "category_results", "hard_failures", "normalized_score", "capped_score", "overall_status", "overall_reason", "higher_than_both_justification"],
+  "properties": {
+    "schema_version": {"const": "3.0.0"},
+    "case_id": {"type": "string", "pattern": "^C[0-9a-f]{16}$"},
+    "judge_id": {"type": "string", "minLength": 1},
+    "rubric_version": {"const": "3.0.0-rc.1"},
+    "passage_function_interpretation": {"enum": ["phenomenon_motivation", "business_problem", "model_setting", "research_opportunity", "contribution", "managerial_implications"]},
+    "category_results": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fidelity", "managerial_framing", "scholarly_positioning", "evidence_discipline", "prose_clarity"],
+      "properties": {
+        "fidelity": {"$ref": "#/$defs/category"},
+        "managerial_framing": {"$ref": "#/$defs/category"},
+        "scholarly_positioning": {"$ref": "#/$defs/category"},
+        "evidence_discipline": {"$ref": "#/$defs/category"},
+        "prose_clarity": {"$ref": "#/$defs/category"}
+      }
+    },
+    "hard_failures": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "normalized_score": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+    "capped_score": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+    "overall_status": {"enum": ["pass", "fail", "incomplete"]},
+    "overall_reason": {"type": "string", "minLength": 1},
+    "higher_than_both_justification": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "category": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["applicability", "assessment_status", "score", "reason", "evidence_spans"],
+      "properties": {
+        "applicability": {"enum": ["required", "optional", "not_applicable"]},
+        "assessment_status": {"enum": ["assessed", "not_assessed", "not_applicable"]},
+        "score": {"type": ["number", "null"], "minimum": 0},
+        "reason": {"type": "string", "minLength": 1},
+        "evidence_spans": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

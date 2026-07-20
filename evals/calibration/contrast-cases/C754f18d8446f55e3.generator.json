@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C754f18d8446f55e3",
+  "domain": "IS",
+  "anonymized_passage": "when a new account requests admission, before the account's latent benign or malicious type is known, a platform access manager sets one threshold on a noisy risk score using the score distribution and payoff weights. The stated objective is to maximize expected platform value net of malicious harm and rejection loss, subject to the condition that true account type is not observed at admission. The setting contains several relevant operational details, but the passage does not connect the choice to the outcome. A stricter threshold blocks more harmful accounts but rejects more benign participants. The result is conditional on the assumed score distributions and does not establish field effectiveness. The analysis identifies when a common score rule should become more selective.",
+  "passage_function": "business_problem",
+  "context": {
+    "model_or_study_facts": [
+      "true account type is not observed at admission",
+      "the account's latent benign or malicious type"
+    ],
+    "actor": "a platform access manager",
+    "decisions": [
+      "sets one threshold on a noisy risk score"
+    ],
+    "objective": "maximize expected platform value net of malicious harm and rejection loss",
+    "timing": "when a new account requests admission",
+    "decision_time_information": [
+      "the score distribution and payoff weights"
+    ],
+    "constraints": [
+      "true account type is not observed at admission"
+    ],
+    "mechanism": "The threshold changes false rejection and harmful admission rates through the score distributions",
+    "supplied_evidence": [
+      "Synthetic illustration; no external empirical evidence supplied."
+    ]
+  },
+  "intended_audience": "business and research readers",
+  "requested_evaluation_profile": "standard"
+}

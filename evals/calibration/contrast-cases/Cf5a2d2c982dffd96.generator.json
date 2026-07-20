@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cf5a2d2c982dffd96",
+  "domain": "OM",
+  "anonymized_passage": "before staffing a time-limited service window, before customer arrivals and service durations is known, a service-operations manager sets staffing for the window using arrival-rate estimates, service-time estimates, wage cost, and delay penalties. The stated objective is to minimize expected staffing and delay cost, subject to the condition that staff cannot be added after the cutoff in the stated model. Staffing changes congestion, waiting, and abandonment through available service capacity. Extra staff raises labor cost but reduces delay and abandonment exposure. The implication applies near the studied demand and service ranges, not to unobserved demand shocks. The study identifies the conditions under which one additional server has the greatest operational value. This decision is important for organizations because organizations routinely face decisions of this general kind. The issue has practical relevance, managerial relevance, and broader relevance for decision makers. Careful attention to the decision can therefore help managers think carefully about making the decision.",
+  "passage_function": "managerial_implications",
+  "context": {
+    "model_or_study_facts": [
+      "staff cannot be added after the cutoff in the stated model",
+      "customer arrivals and service durations"
+    ],
+    "actor": "a service-operations manager",
+    "decisions": [
+      "sets staffing for the window"
+    ],
+    "objective": "minimize expected staffing and delay cost",
+    "timing": "before staffing a time-limited service window",
+    "decision_time_information": [
+      "arrival-rate estimates, service-time estimates, wage cost, and delay penalties"
+    ],
+    "constraints": [
+      "staff cannot be added after the cutoff in the stated model"
+    ],
+    "mechanism": "Staffing changes congestion, waiting, and abandonment through available service capacity",
+    "supplied_evidence": [
+      "Synthetic illustration; no external empirical evidence supplied."
+    ]
+  },
+  "intended_audience": "business and research readers",
+  "requested_evaluation_profile": "standard"
+}

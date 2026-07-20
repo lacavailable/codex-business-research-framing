@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C2b67fccc1242f34e",
+  "domain": "OM",
+  "anonymized_passage": "before products are displayed for the next selling period, before the arriving customer's initial product and subsequent substitution path is known, an assortment planner selects products under a fixed display-slot limit using product margins and a specified Markov substitution matrix. The stated objective is to maximize expected assortment revenue, subject to the condition that display capacity is distinct from inventory and fulfillment capacity. When a preferred product is absent, the stated transition matrix redirects demand among displayed alternatives or to exit. Adding variety captures more first choices but consumes slots that could support stronger substitution paths. The model represents within-assortment Markov substitution, not nearest-store search or stockout dynamics. The analysis identifies which transition patterns make a scarce slot most valuable. This decision is important for organizations because organizations routinely face decisions of this general kind. The issue has practical relevance, managerial relevance, and broader relevance for decision makers. Careful attention to the decision can therefore help managers think carefully about making the decision.",
+  "passage_function": "model_setting",
+  "context": {
+    "model_or_study_facts": [
+      "display capacity is distinct from inventory and fulfillment capacity",
+      "the arriving customer's initial product and subsequent substitution path"
+    ],
+    "actor": "an assortment planner",
+    "decisions": [
+      "selects products under a fixed display-slot limit"
+    ],
+    "objective": "maximize expected assortment revenue",
+    "timing": "before products are displayed for the next selling period",
+    "decision_time_information": [
+      "product margins and a specified Markov substitution matrix"
+    ],
+    "constraints": [
+      "display capacity is distinct from inventory and fulfillment capacity"
+    ],
+    "mechanism": "When a preferred product is absent, the stated transition matrix redirects demand among displayed alternatives or to exit",
+    "supplied_evidence": [
+      "Synthetic illustration; no external empirical evidence supplied."
+    ]
+  },
+  "intended_audience": "business and research readers",
+  "requested_evaluation_profile": "standard"
+}

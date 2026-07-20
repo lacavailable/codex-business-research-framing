@@ -1,0 +1,63 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C03515d0d7e10bc0d",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "research_opportunity",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 7,
+      "reason": "The review threshold improperly uses future outcomes and latent types unavailable at classification time.",
+      "evidence_spans": [
+        "using approved signal features, error costs, and reviewer capacity, the future realized outcome, and any latent type"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 20,
+      "reason": "The review-capacity trade-off remains visible under an invalid information set.",
+      "evidence_spans": [
+        "More review reduces classification harm but consumes scarce reviewer attention."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 17,
+      "reason": "The privacy-based research opportunity remains identifiable.",
+      "evidence_spans": [
+        "The study asks how privacy limits alter the value of selective human review."
+      ]
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 6,
+      "reason": "The supplied future information contradicts the stated uncertainty and changes the model without support.",
+      "evidence_spans": [
+        "before the item's harmfulness and classifier error is known"
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "The prose is readable but internally inconsistent about available information.",
+      "evidence_spans": [
+        "The proposal does not treat revenue as welfare or assume unrestricted access to sensitive data."
+      ]
+    }
+  },
+  "hard_failures": [
+    "information_gate_failure",
+    "undeclared_model_change"
+  ],
+  "normalized_score": 58.0,
+  "capped_score": 58.0,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

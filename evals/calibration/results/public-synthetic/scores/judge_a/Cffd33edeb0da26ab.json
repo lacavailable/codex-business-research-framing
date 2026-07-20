@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cffd33edeb0da26ab",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 23,
+      "reason": "The assortment decision is preserved, but the no-sacrifice assertion obscures the slot trade-off.",
+      "evidence_spans": [
+        "selects products under a fixed display-slot limit"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 14,
+      "reason": "The actor and mechanism are clear, while the passage removes the nontrivial choice tension.",
+      "evidence_spans": [
+        "The decision should improve every relevant outcome without a meaningful sacrifice."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this model setting passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 5,
+      "reason": "A model boundary is stated, but the all-outcomes claim lacks supplied support.",
+      "evidence_spans": [
+        "The model represents within-assortment Markov substitution, not nearest-store search or stockout dynamics."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "The prose is readable, though one sentence is misleading.",
+      "evidence_spans": [
+        "The analysis identifies which transition patterns make a scarce slot most valuable."
+      ]
+    }
+  },
+  "hard_failures": [
+    "unsupported_causal_claim"
+  ],
+  "normalized_score": 62.5,
+  "capped_score": 62.5,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

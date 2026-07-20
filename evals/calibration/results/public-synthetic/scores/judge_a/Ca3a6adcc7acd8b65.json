@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Ca3a6adcc7acd8b65",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "research_opportunity",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 29,
+      "reason": "The actor, timing, information, objective, privacy constraint, and review mechanism are substantially preserved.",
+      "evidence_spans": [
+        "sets a review threshold using privacy-permitted signals"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 22,
+      "reason": "The classification-harm versus reviewer-attention trade-off is concrete.",
+      "evidence_spans": [
+        "More review reduces classification harm but consumes scarce reviewer attention."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 16,
+      "reason": "The opportunity links privacy constraints to the value of selective review, though its counterposition is implicit.",
+      "evidence_spans": [
+        "The study asks how privacy limits alter the value of selective human review."
+      ]
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "The broadly useful managerial conclusion is insufficiently bounded by the synthetic evidence.",
+      "evidence_spans": [
+        "The analysis therefore provides a broadly useful conclusion for managers."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 9,
+      "reason": "The prose is compact and readable.",
+      "evidence_spans": [
+        "The threshold routes uncertain items to review"
+      ]
+    }
+  },
+  "hard_failures": [],
+  "normalized_score": 84.0,
+  "capped_score": 84.0,
+  "overall_status": "fail",
+  "overall_reason": "A required category falls below its minimum.",
+  "higher_than_both_justification": null
+}

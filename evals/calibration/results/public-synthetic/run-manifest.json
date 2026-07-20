@@ -1,0 +1,37 @@
+{
+  "schema_version": "3.0.0",
+  "run_date": "2026-07-20",
+  "suite": "public-synthetic-calibration-v3",
+  "splits": ["development", "validation"],
+  "holdout_excluded": true,
+  "generation": {
+    "type": "deterministic_template_generation",
+    "tool": "tools/generate_public_calibration.py",
+    "seed": 20260720
+  },
+  "primary_judges": [
+    {
+      "judge_id": "judge_a",
+      "model_variant": "gpt-5.6-sol",
+      "fresh_packet_contexts": true,
+      "score_count": 112
+    },
+    {
+      "judge_id": "judge_b",
+      "model_variant": "gpt-5.6-terra",
+      "fresh_packet_contexts": true,
+      "score_count": 112
+    }
+  ],
+  "family_separation": "not_established; both judges are OpenAI GPT-5.6 variants",
+  "isolation_incident": {
+    "description": "One initial judge_b packet-05 context reported viewing unrelated score files during a broad filename audit.",
+    "disposition": "All 21 outputs from that context were deleted. The packet was rerun in fresh contexts without listing or reading existing scores; only replacement outputs are committed."
+  },
+  "adjudication": {
+    "triggered_cases": 107,
+    "performed": false,
+    "reason": "The preregistered <=30% adjudication-rate gate had already failed at 95.5%, and expert-dependent gates were unavailable."
+  },
+  "interpretation": "Automated public-synthetic diagnostic only; not expert calibration and not evidence of release readiness."
+}

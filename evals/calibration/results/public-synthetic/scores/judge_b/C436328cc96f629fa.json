@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C436328cc96f629fa",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "research_opportunity",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 0, "reason": "The passage gives the moderation threshold decision to an outside observer who cannot make it, instead of the supplied moderation policy owner.", "evidence_spans": ["an outside observer who cannot make the decision sets a review threshold", "a moderation policy owner"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 10, "reason": "The review-capacity trade-off is concrete, but it cannot fully frame a managerial decision once the responsible actor is replaced.", "evidence_spans": ["More review reduces classification harm but consumes scarce reviewer attention."]},
+    "scholarly_positioning": {"applicability": "required", "assessment_status": "assessed", "score": 8, "reason": "It identifies a focused privacy-and-review question but lacks a relationship to prior knowledge or a stated theoretical counterposition.", "evidence_spans": ["The study asks how privacy limits alter the value of selective human review."]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 15, "reason": "It maintains both the privacy-access limitation and the welfare boundary without overclaiming.", "evidence_spans": ["The proposal does not treat revenue as welfare or assume unrestricted access to sensitive data."]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 10, "reason": "The explanation is concise, coherent, and readable.", "evidence_spans": ["The threshold routes uncertain items to review and changes false-positive and false-negative exposure."]}
+  },
+  "hard_failures": ["actor_gate_failure"],
+  "normalized_score": 43,
+  "capped_score": 43,
+  "overall_status": "fail",
+  "overall_reason": "The research opportunity is otherwise bounded and clear, but misassigning the decision to an outside observer is a noncompensatory actor-gate failure.",
+  "higher_than_both_justification": null
+}
