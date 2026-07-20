@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Ba0e44c568feb",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 7
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Fully preserves mandatory review, signal-contingent binary approval, latent safety, and the expected approved-utility minus unsafe-harm objective.",
+    "managerial_framing": "Actor, trigger, actions, stakes, mechanism, trade-off, counterfactual, and excluded actions are all explicit and operational.",
+    "scholarly_positioning": "The response neither needs nor attempts scholarly positioning.",
+    "evidence_discipline": "It labels signal informativeness as an assumption, rejects unsupported rewriting and review-choice claims, and states deployment validation needs.",
+    "prose_clarity": "Accurate and readable, but the same content is repeated across many template sections.",
+    "overall": "Substantively excellent and free of model changes, with an economy penalty only."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

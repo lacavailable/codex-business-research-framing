@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bba8c921f84b3",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly separates ex ante unit allocation from later demand, stockouts, and substitutions, preserves the shared budget and conditional substitution mechanism, and retains expected profit net of holding and shortage costs.",
+    "managerial_framing": "Provides the merchant, stocking deadline, unit choices, allocation stakes, protection-versus-leftover trade-off, stockout-redirection mechanism, and a budget-feasible counterfactual.",
+    "scholarly_positioning": "No scholarly positioning is requested or asserted, and the response avoids any unsupported novelty or literature claim.",
+    "evidence_discipline": "Explicitly labels the fixed substitution fraction as an assumption rather than causal evidence, calls for estimation and stability checks, and limits conclusions to conditional expected-profit comparisons.",
+    "prose_clarity": "Well structured and precise, with slight duplication between the canvas and model-mapping sections.",
+    "overall": "A comprehensive and faithful distinction between allocation choices and realized stockout behavior with strong evidence discipline."
+  },
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

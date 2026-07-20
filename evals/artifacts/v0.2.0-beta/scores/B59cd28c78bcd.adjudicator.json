@@ -1,0 +1,27 @@
+{
+    "schema_version":  "1.0.0",
+    "blind_id":  "B59cd28c78bcd",
+    "judge_id":  "adjudicator",
+    "rubric_version":  "2.0.0",
+    "category_scores":  {
+                            "fidelity":  30,
+                            "managerial_framing":  24,
+                            "scholarly_positioning":  9,
+                            "evidence_discipline":  15,
+                            "prose_clarity":  8
+                        },
+    "hard_failures":  [
+
+                      ],
+    "rationale":  {
+                      "fidelity":  "It explicitly preserves all decisions, constraints, objective, deterministic offline timing, and the master-subproblem mechanism, with no adaptive operation added.",
+                      "managerial_framing":  "The actor, trigger, choices, stakes, mechanism, computational trade-off, comparator, operational scale, and boundaries are unusually complete.",
+                      "scholarly_positioning":  "The response does not attempt literature positioning, which was not requested, and avoids novelty claims.",
+                      "evidence_discipline":  "It labels deterministic inputs as assumptions, scalability as an inference, and adaptive operation as unsupported, then defines a credible comparative test.",
+                      "prose_clarity":  "The organization is strong, but pervasive character-encoding corruption and some template density impair readability.",
+                      "overall":  "The response clears the total-score, fidelity, managerial, evidence, and prose requirements but does not meet the universal scholarly-positioning minimum; therefore the rubric-derived result is fail."
+                  },
+    "raw_total":  86,
+    "capped_total":  86,
+    "pass":  false
+}

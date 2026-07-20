@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0", "blind_id": "Ba67d1e9283ee", "judge_id": "judge_a", "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Faithfully preserves the pre-window integer roster, coverage, stochastic arrivals and service times, queue outcomes, and expected labor-plus-waiting-cost objective.",
+    "managerial_framing": "Makes the recurring advance decision, wage-versus-delay stake, congestion mechanism, and modeled roster comparison clear.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed; broader contribution is not asserted.",
+    "evidence_discipline": "Uses only what the supplied log records and explicitly rejects implemented causal savings and generalization beyond observed windows.",
+    "prose_clarity": "Economical, direct, and understandable to a managerial reader.",
+    "overall": "A near-ideal evidence-bounded framing with exact decision fidelity and no hard failure."
+  },
+  "raw_total": 99, "capped_total": 99, "pass": true
+}

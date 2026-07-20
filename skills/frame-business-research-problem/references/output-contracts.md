@@ -1,49 +1,68 @@
 # Output Contracts
 
-Use the shared envelope in [business-brief-schema.md](business-brief-schema.md) for every mode. Keep `diagnosis_or_brief`, `narrative`, claims, boundaries, and the primary weakness visible. Include a mapping whenever a model is supplied.
+Use the shared envelope in [business-brief-schema.md](business-brief-schema.md) for every mode. New work uses version `2.0`; version `1.0` briefs retain the original contracts listed at the end.
 
-## `create`
+## Version 2.0 contracts
 
-Construct one eligible, fidelity-tested setting. Put the concise researchable problem in `mode_result.business_problem`. If no eligible setting can be created from the supplied invariants, return an ineligible brief and identify missing information instead of fabricating fit.
+### `create`
 
-## `diagnose`
+Construct one setting without exceeding the readiness ceiling. Require `readiness`, `setting`, `managerial_question`, `significance`, `mechanism`, and `structural_tension` as nonempty strings, plus nonempty-string arrays `evidence_needs` and `counterconditions`. If fidelity cannot be assessed, return provisional framing with `eligibility_status: not_assessed`; if a gate fails, make the setting ineligible rather than polishing over the failure.
 
-Audit an existing setting. Put `eligible` or `ineligible` in `mode_result.verdict`, list failed gates in `failed_gates`, and list narrative-only repairs in `repairs`. Mark model-changing repairs explicitly as proposed extensions.
+### `diagnose`
 
-## `rewrite`
+Return five separate objects: `fidelity`, `managerial_framing`, `scholarly_positioning`, `evidence`, and `prose`. Each contains `status`, `diagnosis`, and `repairs`. Use `pass`, `fail`, or `not_assessed`; make `diagnosis` nonempty and `repairs` an array of concrete revisions or information needs. Declare model-changing repairs as extensions.
 
-Return the polished text in `mode_result.rewritten_text`. In `fidelity_changes`, list each substantive change and whether it corrected a mismatch, narrowed a claim, clarified a boundary, or only improved expression. Do not silently repair by changing the model.
+### `rewrite`
 
-## `compare-scenarios`
+Return `rewritten_text` and `changes`. `changes` contains arrays for `fidelity`, `evidence`, `scholarly_positioning`, `managerial_framing`, and `prose`. Put every substantive change in the correct layer; do not hide model changes as expression edits.
 
-Evaluate all candidates through the six gates. Put structured candidates in `mode_result.scenarios`; assign `rank: null` to every ineligible candidate. Rank eligible candidates by model fit, then managerial relevance, evidence plausibility, and boundary transparency. State this order in `ranking_basis`; do not compute an compensatory weighted average across gate failures.
+### `compare-scenarios`
 
-## `map-model-to-business`
+Return `scenarios` and `ranking_basis`. Each scenario contains `name`, `eligibility_status`, `failed_gates`, `model_fit`, `managerial_significance`, `structural_tension`, `evidence_plausibility`, `scholarly_contribution_potential`, `boundary_transparency`, and `rank`. Score the six factors from 0 to 100 only after gating. An `ineligible` scenario has at least one failed gate and `rank: null`; an `eligible` scenario has none and a positive contiguous rank; a `not_assessed` scenario has no failed gate and `rank: null`. Rank eligible scenarios lexicographically by the six factors in the order shown, not by a compensatory weighted average.
 
-Put one row per material object in `mode_result.mapping_table` and unresolved semantic conflicts in `mapping_gaps`. Mirror the rows in the shared `model_mapping`. Preserve decision timing, role, units, horizon, and objective scope.
+### `map-model-to-business`
 
-## `audit-assumptions`
+Return `mapping_table`, `mapping_gaps`, `timing_summary`, `units_summary`, and `horizon_summary`. Mirror `mapping_table` in the shared `model_mapping`. Cover supplied decision and auxiliary variables, parameters, states, uncertainty, observations, constraints, objectives, outcomes, and derived variables. Every row states decision-time status, timing, units, horizon, and a fidelity note; record absent or unresolved semantics as gaps.
 
-Put labeled assumptions in `mode_result.assumptions`. For each, state necessity, sensitivity, business interpretation, and evidence need. Put the assumptions most likely to invalidate the interpretation in `material_risks`.
+### `audit-assumptions`
 
-## `draft-introduction`
+Return `assumptions` and `material_risks`. Each assumption contains `assumption`, `type`, `necessity`, `business_interpretation`, `tractability_role`, `evidence_status`, `sensitivity`, `boundary`, `model_effect`, and `narrative_effect`. Distinguish assumptions required by the model from claims added only by the story.
 
-Put a compact introduction in `mode_result.introduction`. Establish the actor and trigger, consequential decision, mechanism and trade-off, research gap, model contribution, and bounded managerial relevance. Put externally checkable or causal statements in `claim_checklist`. Avoid invented urgency or market statistics.
+### `draft-introduction`
 
-## `draft-managerial-implications`
+Return `introduction`, `architecture`, and `claim_checklist`. The flexible nine-part `architecture` records `decision_or_phenomenon`, `stakes`, `mechanism_or_tension`, `limitation`, `research_opportunity`, `research_question`, `method_or_model`, `bounded_contribution`, and `bounded_relevance`. Fields may be combined in prose but must remain explicit in the structured audit. Put externally checkable and causal claims in `claim_checklist`.
 
-Put model-supported actions and insights in `mode_result.implications`. For each implication, name the decision, condition, predicted consequence, and excluded claim. Put required qualifications in `qualification_checklist`. Do not turn comparative statics or computational speed into realized firm impact without an explicit link.
+### `draft-managerial-implications`
+
+Return `implications` and `qualification_checklist`. Each implication contains `actor`, `decision`, `condition`, `mechanism`, `model_supported_consequence`, `evidence_status`, `implementation_requirement`, `excluded_claim`, and `boundary`. If the operational pathway or pre-deadline authority is unresolved, say so rather than issuing a recommendation.
+
+## Version 1.0 contracts
+
+Preserve these keys for v1 briefs:
+
+| Mode | Required keys |
+|---|---|
+| `create` | `business_problem` |
+| `diagnose` | `verdict`, `failed_gates`, `repairs` |
+| `rewrite` | `rewritten_text`, `fidelity_changes` |
+| `compare-scenarios` | `scenarios`, `ranking_basis` |
+| `map-model-to-business` | `mapping_table`, `mapping_gaps` |
+| `audit-assumptions` | `assumptions`, `material_risks` |
+| `draft-introduction` | `introduction`, `claim_checklist` |
+| `draft-managerial-implications` | `implications`, `qualification_checklist` |
 
 ## Presentation order
 
 When emitting Markdown, use this order:
 
-1. Diagnosis or business brief.
-2. Proposed narrative.
-3. Mode-specific result.
-4. Model-to-reality mapping, when applicable.
-5. Unsupported or unverified claims.
-6. Boundary conditions.
-7. Most important remaining weakness.
+1. Input readiness and eligibility.
+2. Diagnosis or business brief.
+3. Proposed narrative.
+4. Mode-specific result.
+5. Layer audits.
+6. Model-to-reality mapping, when applicable.
+7. Unsupported or unverified claims.
+8. Boundary conditions.
+9. Most important remaining weakness.
 
-Prefer short prose and tables over marketing language. Make failure visible rather than burying it in caveats.
+Prefer short prose and tables over marketing language. Make failure and non-assessment visible.

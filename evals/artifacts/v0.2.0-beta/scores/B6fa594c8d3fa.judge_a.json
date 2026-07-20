@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B6fa594c8d3fa",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 24,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly places the binary approve-or-refuse decision after the observed signal, keeps safety latent, and excludes review selection, editing, and escalation.",
+    "managerial_framing": "The intermediary, trigger, actions, utility-versus-harm trade-off, and operational constraints are concrete; the alternative policy counterfactual is only implicit.",
+    "scholarly_positioning": "No scholarly contribution is requested or asserted.",
+    "evidence_discipline": "Signal informativeness is explicitly identified as a model assumption needing empirical validation.",
+    "prose_clarity": "Compact, fluent, and precise.",
+    "overall": "A strong concise framing that covers every material model boundary without adding actions."
+  },
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

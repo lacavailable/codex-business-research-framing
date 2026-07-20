@@ -1,48 +1,50 @@
 ---
 name: frame-business-research-problem
-description: Convert Operations Management, Information Systems, and Operations Research ideas, models, assumptions, algorithms, or findings into concrete business-research problems without changing their mathematical meaning. Use when creating, diagnosing, rewriting, or comparing managerial settings; mapping model objects to reality; auditing assumptions and evidence; or drafting introduction openings and managerial implications for OM, IS, or OR research.
+description: Frame, diagnose, compare, map, audit, or rewrite Operations Management, Information Systems, and Operations Research models as concrete business-research problems without changing their mathematical meaning. Use for model-to-business settings, research questions, introductions, assumption audits, scenario rankings, evidence-aware managerial narratives, or managerial implications in OM, IS, OR, and cross-domain analytical research.
 ---
 
 # Frame Business Research Problem
 
-Preserve research meaning before improving narrative appeal. Treat a plausible story as a candidate, not as proof of model fit.
+Preserve research meaning before improving narrative appeal. Treat every plausible story as a candidate, not proof of fit.
 
-## Run the workflow
+## Execute in order
 
-1. Select exactly one mode: `create`, `diagnose`, `rewrite`, `compare-scenarios`, `map-model-to-business`, `audit-assumptions`, `draft-introduction`, or `draft-managerial-implications`.
-2. Extract the mathematical or conceptual invariants that the narrative must not change. Separate decisions, states, parameters, observations, outcomes, and derived quantities.
-3. Build all twelve DFC-12 fields. Read [framework.md](references/framework.md) and apply every consistency gate.
-4. Mark a scenario ineligible if any actor, timing, information, behavior, constraint, or objective gate fails. Do not rescue it through polished prose.
-5. Map supplied model objects to business meanings using [model-to-reality-mapping.md](references/model-to-reality-mapping.md). Do not turn a state into a choice or hidden information into decision-time information.
-6. Apply the relevant domain playbook: [om-framing.md](references/om-framing.md), [is-framing.md](references/is-framing.md), or [or-framing.md](references/or-framing.md). Read more than one when the research crosses domains.
-7. Label every externally checkable claim and every assumption using [evidence-and-attribution.md](references/evidence-and-attribution.md). Never invent company, market, performance, or causal facts.
-8. Produce the selected mode contract from [output-contracts.md](references/output-contracts.md) inside the shared `BusinessBrief` envelope in [business-brief-schema.md](references/business-brief-schema.md).
-9. Check [anti-patterns.md](references/anti-patterns.md), then report boundary conditions and the most important remaining weakness even when the result is strong.
+1. Select one mode: `create`, `diagnose`, `rewrite`, `compare-scenarios`, `map-model-to-business`, `audit-assumptions`, `draft-introduction`, or `draft-managerial-implications`.
+2. Classify readiness with [input-readiness.md](references/input-readiness.md). Record missing information; never invent it.
+3. Freeze objective, decisions, states, parameters, uncertainty, observations, constraints, timing, mechanism, outcomes, and derived quantities.
+4. Complete the unchanged DFC-12 and all six gates using [framework.md](references/framework.md).
+5. Set `ineligible` if any gate fails. Set `not_assessed` if any gate is unknown or unassessed. Continue to later layers only when every gate passes.
+6. Map every supplied model using [model-to-reality-mapping.md](references/model-to-reality-mapping.md).
+7. Apply managerial framing from [literature-grounded-framing.md](references/literature-grounded-framing.md) only after fidelity is eligible.
+8. Apply [scholarly-positioning.md](references/scholarly-positioning.md) when the mode concerns a paper, research question, introduction, or contribution.
+9. Apply the domain playbook: [om-framing.md](references/om-framing.md), [is-framing.md](references/is-framing.md), or [or-framing.md](references/or-framing.md). Load multiple playbooks for cross-domain work.
+10. Label claims with [evidence-and-attribution.md](references/evidence-and-attribution.md). Do not invent company, market, performance, causal, or prevalence facts.
+11. Produce the selected contract from [output-contracts.md](references/output-contracts.md) in the versioned [business-brief-schema.md](references/business-brief-schema.md).
+12. Check [anti-patterns.md](references/anti-patterns.md), audit boundaries, and state the primary remaining weakness.
 
-## Rank scenarios
+## Load specialized execution references
 
-Gate scenarios before scoring them. Rank eligible candidates lexicographically by:
+- Load [introduction-architecture.md](references/introduction-architecture.md) only for `draft-introduction` or an introduction-focused rewrite.
+- Load [managerial-implications.md](references/managerial-implications.md) only for `draft-managerial-implications` or implication-focused diagnosis/rewrite.
+- Consult the canonical [rule-registry.yaml](references/rule-registry.yaml) when applying a literature-derived rule; use the generated [source-to-rule-matrix.md](references/source-to-rule-matrix.md) when traceability is requested.
+- Use [evaluation-rubric.md](references/evaluation-rubric.md) only to evaluate an output; preserve raw scores and apply layer minima and hard-failure policy separately.
+
+## Enforce noncompensation
+
+Do not let managerial appeal, scholarly novelty, evidence volume, or polished prose compensate for a fidelity failure. Do not rank an ineligible scenario. Rank eligible scenarios in this order:
 
 1. model fit;
-2. managerial relevance;
-3. evidence plausibility;
-4. boundary transparency.
+2. managerial significance;
+3. structural tension;
+4. evidence plausibility;
+5. scholarly contribution potential;
+6. boundary transparency.
 
-List ineligible candidates separately with failed gates. Never let commercial attractiveness offset a fidelity failure.
+## Use bundled assets and validation
 
-## Use bundled resources
+- Start user intake from [research-framing-input-template.md](assets/research-framing-input-template.md) or [research-framing-input-template.json](assets/research-framing-input-template.json).
+- Use [business-brief-template.md](assets/business-brief-template.md) for readable output.
+- Use [model-mapping-template.md](assets/model-mapping-template.md), [scenario-comparison-template.md](assets/scenario-comparison-template.md), or [manuscript-sections-template.md](assets/manuscript-sections-template.md) only for the corresponding mode.
+- Run `python scripts/validate_brief.py BRIEF.json` for deterministic BusinessBrief 1.0 or 2.0 validation.
 
-- Copy and fill [business-brief-template.md](assets/business-brief-template.md) for a readable brief.
-- Copy [model-mapping-template.md](assets/model-mapping-template.md) when a model is supplied.
-- Copy [scenario-comparison-template.md](assets/scenario-comparison-template.md) for ranked alternatives.
-- Copy [manuscript-sections-template.md](assets/manuscript-sections-template.md) for introduction or implications drafts.
-- Run `python scripts/validate_brief.py BRIEF.json` for deterministic structural validation of a JSON `BusinessBrief`.
-- Use [evaluation-rubric.md](references/evaluation-rubric.md) to score output quality; preserve the raw score and apply hard-failure caps separately.
-
-## Apply final safeguards
-
-- Keep examples synthetic unless the user supplies verifiable sources.
-- Mark missing evidence as `unsupported_claim`; do not fabricate a citation.
-- State when an inference is interpretive rather than model-implied.
-- Preserve the model's decision timing, feasible set, mechanism, and objective.
-- Distinguish what the analysis establishes from what remains outside scope.
+Keep examples synthetic unless the user supplies verifiable evidence. Mark interpretive inferences. Preserve the model's timing, feasible set, mechanism, information, and objective. State what the analysis does not establish.

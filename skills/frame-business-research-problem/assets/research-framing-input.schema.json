@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lacavailable/codex-business-research-framing/schemas/research-framing-input-v1.json",
+  "title": "Research Framing Input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "research_domain", "research_objective", "model_objective",
+    "decision_maker", "decisions", "states", "parameters", "uncertainty",
+    "constraints", "decision_sequence", "decision_time_information", "mechanism",
+    "principal_results", "proposed_contribution", "rough_business_setting",
+    "doubts_about_setting", "supplied_evidence", "target_output_mode",
+    "target_manuscript_section", "target_outlet_or_reader",
+    "length_and_language_requirements"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "research_domain": {"enum": ["OM", "IS", "OR", "cross-domain", "unknown"]},
+    "research_objective": {"$ref": "#/$defs/textOrUnknown"},
+    "model_objective": {"$ref": "#/$defs/textOrUnknown"},
+    "decision_maker": {"$ref": "#/$defs/textOrUnknown"},
+    "decisions": {"$ref": "#/$defs/stringArray"},
+    "states": {"$ref": "#/$defs/stringArray"},
+    "parameters": {"$ref": "#/$defs/stringArray"},
+    "uncertainty": {"$ref": "#/$defs/stringArray"},
+    "constraints": {"$ref": "#/$defs/stringArray"},
+    "decision_sequence": {"$ref": "#/$defs/stringArray"},
+    "decision_time_information": {"$ref": "#/$defs/stringArray"},
+    "mechanism": {"$ref": "#/$defs/textOrUnknown"},
+    "principal_results": {"$ref": "#/$defs/stringArray"},
+    "proposed_contribution": {"$ref": "#/$defs/textOrUnknown"},
+    "rough_business_setting": {"$ref": "#/$defs/textOrUnknown"},
+    "doubts_about_setting": {"$ref": "#/$defs/stringArray"},
+    "supplied_evidence": {"$ref": "#/$defs/stringArray"},
+    "target_output_mode": {"enum": ["create", "diagnose", "rewrite", "compare-scenarios", "map-model-to-business", "audit-assumptions", "draft-introduction", "draft-managerial-implications"]},
+    "target_manuscript_section": {"$ref": "#/$defs/nullableText"},
+    "target_outlet_or_reader": {"$ref": "#/$defs/nullableText"},
+    "length_and_language_requirements": {"$ref": "#/$defs/nullableText"}
+  },
+  "$defs": {
+    "textOrUnknown": {"type": "string", "minLength": 1},
+    "nullableText": {"type": ["string", "null"], "minLength": 1},
+    "stringArray": {"type": "array", "items": {"type": "string", "minLength": 1}}
+  }
+}

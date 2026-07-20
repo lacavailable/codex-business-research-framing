@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bed59821076b6",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 12,
+    "managerial_framing": 23,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 14,
+    "prose_clarity": 9
+  },
+  "hard_failures": [
+    "undeclared_model_change"
+  ],
+  "rationale": {
+    "fidelity": "Correctly bounds robustness to the uncertainty set, but repeatedly makes the uncertainty budget a planner choice even though the specified model's only decisions are supplier order quantities.",
+    "managerial_framing": "Actor, timing, stakes, conservatism trade-off, counterfactual, and operational boundary are concrete.",
+    "scholarly_positioning": "Not requested or claimed; no unsupported novelty assertion is introduced.",
+    "evidence_discipline": "Correctly treats calibration as an assumption needing validation and rejects an all-futures guarantee.",
+    "prose_clarity": "Well structured and precise, albeit longer than necessary.",
+    "overall": "Strong boundary and evidence handling cannot compensate for the material undeclared addition of the uncertainty budget to the planner's decision set."
+  },
+  "raw_total": 78,
+  "capped_total": 69,
+  "pass": false
+}

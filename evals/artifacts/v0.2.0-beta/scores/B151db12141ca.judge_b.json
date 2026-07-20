@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B151db12141ca",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 20,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Faithfully preserves the single epsilon decision, approved interval, objective, noise mechanism, and absence of churn or legal terms.",
+    "managerial_framing": "The trade-off and decision are concrete, though the trigger, counterfactual, and operational pathway are only implicit.",
+    "scholarly_positioning": "Not requested or claimed; the response makes no unsupported novelty claim.",
+    "evidence_discipline": "Explicitly identifies retention as requiring external evidence and rejects regulatory-compliance inference.",
+    "prose_clarity": "Concise, precise, and accessible.",
+    "overall": "A highly faithful and disciplined formulation with only modestly compressed managerial detail."
+  },
+  "raw_total": 95,
+  "capped_total": 95,
+  "pass": true
+}

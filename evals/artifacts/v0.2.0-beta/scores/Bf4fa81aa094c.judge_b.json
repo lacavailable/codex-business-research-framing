@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bf4fa81aa094c",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 14, "evidence_discipline": 14, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {"fidelity": "The repair exactly separates advance allocation decisions from exogenous demand and served-demand outcomes and retains the timing, supply constraint, and expected-value objective.", "managerial_framing": "It makes the actor, ex ante trigger, regional scarcity trade-off, mechanism, and feasible-policy counterfactual concrete without expanding the model.", "scholarly_positioning": "It avoids unsupported positioning and explicitly notes that no novelty basis is available.", "evidence_discipline": "Distributional validity and service values are bounded as assumptions, with no claims of guaranteed service, demand control, or broader welfare effects.", "prose_clarity": "The explanation is accurate but repetitive, overstructured, and affected by distracting encoding errors.", "overall": "A very strong and faithful state-versus-decision diagnosis with no hard failure; concise delivery would materially improve it."},
+  "raw_total": 89,
+  "capped_total": 89,
+  "pass": true
+}

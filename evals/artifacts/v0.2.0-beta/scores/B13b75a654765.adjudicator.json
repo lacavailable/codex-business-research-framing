@@ -1,0 +1,27 @@
+{
+    "schema_version":  "1.0.0",
+    "blind_id":  "B13b75a654765",
+    "judge_id":  "adjudicator",
+    "rubric_version":  "2.0.0",
+    "category_scores":  {
+                            "fidelity":  30,
+                            "managerial_framing":  22,
+                            "scholarly_positioning":  9,
+                            "evidence_discipline":  15,
+                            "prose_clarity":  10
+                        },
+    "hard_failures":  [
+
+                      ],
+    "rationale":  {
+                      "fidelity":  "It cleanly distinguishes the executable incumbent available at 08:00 from the 08:30 certificate and preserves the routing decisions, deadline, constraints, objective, and branch-and-bound mechanism.",
+                      "managerial_framing":  "The operational actor, deadline, executable choice, and value of pre-deadline quality are clear; the trade-off and counterfactual are present but not fully developed.",
+                      "scholarly_positioning":  "No literature positioning is requested or asserted, so the response correctly refrains from making a contribution claim.",
+                      "evidence_discipline":  "It marks routine pre-deadline certification as unsupported and requests instance-level runtime evidence without overstating the supplied case fact.",
+                      "prose_clarity":  "The distinction between solution quality and proof is economical and accessible.",
+                      "overall":  "The response clears the total-score, fidelity, managerial, evidence, and prose requirements but does not meet the universal scholarly-positioning minimum; therefore the rubric-derived result is fail."
+                  },
+    "raw_total":  86,
+    "capped_total":  86,
+    "pass":  false
+}

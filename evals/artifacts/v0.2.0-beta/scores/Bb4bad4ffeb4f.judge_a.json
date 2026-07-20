@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bb4bad4ffeb4f",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 7
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Maintains the binary platform rule, platform-first sequence, latent seller quality, strategic seller participation, buyer belief updating, and transaction-revenue objective.",
+    "managerial_framing": "The actor, commitment trigger, two choices, stakes, mechanism, strategic trade-off, and binary counterfactual are fully concrete.",
+    "scholarly_positioning": "No scholarly positioning is requested or claimed.",
+    "evidence_discipline": "Equilibrium play is explicitly labeled an assumption, and the response avoids claims of quality observation, realized gains, or welfare.",
+    "prose_clarity": "Conceptually clear, but repetitive across the narrative, DFC, gate, mapping, and boundary sections.",
+    "overall": "A complete and sequence-faithful strategic framing with no substantive defect."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

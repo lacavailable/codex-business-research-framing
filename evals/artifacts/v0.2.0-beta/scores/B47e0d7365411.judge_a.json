@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B47e0d7365411",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 22,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves the exact feasible set, objective, decisions, constraints, and relaxation-strength mechanism.",
+    "managerial_framing": "Makes the computational pathway and possible planning uses concrete, though the actor, trigger, and formulation-overhead trade-off are only implicit.",
+    "scholarly_positioning": "Not requested or claimed; the response makes no unsupported novelty claim and appropriately bounds the contribution.",
+    "evidence_discipline": "Clearly labels faster solving and operational value as unestablished and specifies the comparisons and pathway evidence required.",
+    "prose_clarity": "Concise, precise, and accessible.",
+    "overall": "A faithful and well-bounded computational-value framing with only minor managerial-detail omissions."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

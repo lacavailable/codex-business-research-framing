@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B2c9be61ababb",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 29, "managerial_framing": 23, "scholarly_positioning": 20, "evidence_discipline": 14, "prose_clarity": 10},
+  "hard_failures": [],
+  "raw_total": 96,
+  "capped_total": 96,
+  "pass": true,
+  "rationale": {
+    "fidelity": "Correctly preserves platform-first commitment, binary disclosure, unknown quality, subsequent seller participation, buyer belief updating, and transaction-revenue objective; detailed state mapping is concise.",
+    "managerial_framing": "The decision, timing, mechanism, strategic responses, stakes, and binary alternative are clear, though operational implications are brief.",
+    "scholarly_positioning": "No novelty or literature claim is requested or introduced.",
+    "evidence_discipline": "Identifies equilibrium play and structural inputs as assumptions and rejects platform observation of quality, with limited further evidence-boundary discussion.",
+    "prose_clarity": "Exceptionally concise and readable.",
+    "overall": "A compact and faithful description of the sequential governance game; no hard failure applies."
+  }
+}

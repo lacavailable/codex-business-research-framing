@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bd033872c545e",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 23, "scholarly_positioning": 20, "evidence_discipline": 14, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly makes machine availability exogenous, keeps advance assignments prior to failures, and restores capacity-, eligibility-, and limit-constrained recourse.",
+    "managerial_framing": "Actor, two-stage trigger, choices, cost stakes, corrective-action mechanism, and operational question are concrete; the counterfactual is not explicit.",
+    "scholarly_positioning": "Not requested or claimed; the response does not overstate a contribution.",
+    "evidence_discipline": "Flags scenario representativeness as requiring calibration, though the proposed improvement question leaves its comparator implicit.",
+    "prose_clarity": "Compact, clear, and accessible.",
+    "overall": "A faithful restoration of both stages with only minor comparator and evidence-detail omissions."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

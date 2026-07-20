@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B3a05fae9da76",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 29, "managerial_framing": 23, "scholarly_positioning": 20, "evidence_discipline": 14, "prose_clarity": 10},
+  "hard_failures": [],
+  "raw_total": 96,
+  "capped_total": 96,
+  "pass": true,
+  "rationale": {
+    "fidelity": "Correctly states one common threshold, latent type, noisy score, expected platform payoff, and the absence of downstream review; mapping detail is concise rather than exhaustive.",
+    "managerial_framing": "The choice, actor, stakes, mechanism, and screening trade-off are concrete, though trigger and counterfactual are implicit.",
+    "scholarly_positioning": "No scholarly claim is requested or made.",
+    "evidence_discipline": "Labels type-conditioned score distributions as assumptions and rejects perfect intent measurement, with limited discussion of calibration boundaries.",
+    "prose_clarity": "Exceptionally concise and clear.",
+    "overall": "A compact, accurate threshold framing that respects information and objective boundaries; no hard failure applies."
+  }
+}

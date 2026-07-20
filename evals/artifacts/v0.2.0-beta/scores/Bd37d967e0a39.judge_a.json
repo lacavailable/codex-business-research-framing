@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bd37d967e0a39",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 8
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly keeps seller type latent, uses one common score threshold, and maps the noisy-score error trade-off to expected platform payoff.",
+    "managerial_framing": "The actor, trigger, feasible choice, stakes, mechanism, trade-off, counterfactual, and operational boundary are all concrete.",
+    "scholarly_positioning": "Scholarly positioning is neither requested nor claimed; the response appropriately declines to assert novelty.",
+    "evidence_discipline": "It clearly labels type-conditional score differences as assumptions and identifies the calibration and validation evidence still needed.",
+    "prose_clarity": "Precise and well organized, though the repeated DFC and gate restatement is longer than needed.",
+    "overall": "A fully faithful and evidence-bounded framing with only a modest economy-of-expression deduction."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

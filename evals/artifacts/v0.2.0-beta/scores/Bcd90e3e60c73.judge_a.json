@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bcd90e3e60c73",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true,
+  "rationale": {
+    "fidelity": "Accurately diagnoses the proposed story's timing, information, mechanism, and budget violations, then restores consent requests, contingent acquisition, observed-signal restrictions, and the stated objective.",
+    "managerial_framing": "The repair gives a complete actor, trigger, joint choices, information set, stakes, mechanism, trade-off, and operational counterfactual.",
+    "scholarly_positioning": "No scholarly novelty claim is introduced.",
+    "evidence_discipline": "Separates response and signal models from unsupported universal access and non-consent inference, and clearly bounds welfare, legal, and privacy conclusions.",
+    "prose_clarity": "Thorough and precise but much longer than necessary, repetitive, and affected by encoding artifacts.",
+    "overall": "A fully faithful diagnosis and repair; its listed gate failures apply to the proposed story being diagnosed, so the response itself incurs no hard failure."
+  }
+}

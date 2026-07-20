@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B826f1d147e97",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Accurately maps crew assignments, inputs, constraints, objective, and the heuristic's non-certifying mechanism.",
+    "managerial_framing": "Provides actor, trigger, stakes, speed-quality trade-off, counterfactual, and a conditional deadline pathway without asserting operational value.",
+    "scholarly_positioning": "Not requested or claimed; it avoids novelty claims and notes that a reference method is unspecified.",
+    "evidence_discipline": "Explicitly confines results to the supplied synthetic tests and lists evidence needed for a real-deadline claim.",
+    "prose_clarity": "Precise and well structured, but more elaborate than necessary.",
+    "overall": "An excellent heuristic-value framing that preserves all stated limits."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

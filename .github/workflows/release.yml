@@ -13,6 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Check out pinned official Skill validator
+        uses: actions/checkout@v4
+        with:
+          repository: openai/skills
+          ref: 49f948faa9258a0c61caceaf225e179651397431
+          path: .official-skills
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -30,22 +36,39 @@ jobs:
       - name: Run deterministic release gates
         run: |
           pytest
+          python tools/generate_rubric.py --check
+          python tools/generate_rule_matrix.py --check
+          python tools/validate_literature.py --require-complete
+          python tools/evaluate_benchmark.py validate
+          python tools/evaluate_benchmark.py validate-artifacts
           python tools/audit_repository.py --tracked
           python tools/check_links.py
+          python .official-skills/skills/.system/skill-creator/scripts/quick_validate.py skills/frame-business-research-problem
       - name: Build and verify archive
         shell: bash
         run: |
           version="${GITHUB_REF_NAME#v}"
           python tools/package_skill.py --version "$version" --output-dir dist
           python tools/package_skill.py --verify "dist/frame-business-research-problem-v${version}.zip"
+          python -m zipfile -e "dist/frame-business-research-problem-v${version}.zip" .clean-install
+          python .official-skills/skills/.system/skill-creator/scripts/quick_validate.py .clean-install/frame-business-research-problem
       - name: Stage release notes
         shell: bash
         run: |
           version="${GITHUB_REF_NAME#v}"
           cp CHANGELOG.md dist/CHANGELOG.md
-          cp README.md dist/INSTALLATION.md
-          if [[ -f "evals/reports/v${version}.md" ]]; then
+          cp docs/user-workflow-guide.md dist/INSTALLATION.md
+          cp literature/manifest.yaml dist/literature-manifest.yaml
+          cp THIRD_PARTY_NOTICES.md dist/THIRD_PARTY_NOTICES.md
+          cp docs/source-selection-and-exclusion-log.md dist/source-selection-and-exclusion-log.md
+          cp docs/v0.2-evaluation-methodology.md dist/EVALUATION-METHODOLOGY.md
+          if [[ "$version" == "0.2.0-beta" ]]; then
+            cp docs/v0.2-evaluation-report.md dist/EVALUATION-SUMMARY.md
+          elif [[ -f "evals/reports/v${version}.md" ]]; then
             cp "evals/reports/v${version}.md" dist/EVALUATION-SUMMARY.md
+          fi
+          if [[ -f "evals/reports/v${version}.summary.json" ]]; then
+            cp "evals/reports/v${version}.summary.json" dist/EVALUATION-SUMMARY.json
           fi
           if [[ -f "evals/reports/v${version}.status.json" ]]; then
             cp "evals/reports/v${version}.status.json" dist/EVALUATION-STATUS.json

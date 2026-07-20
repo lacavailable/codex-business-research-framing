@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bf25c9a466095",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 8
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Accurately diagnoses the hidden-type and common-threshold violations and repairs them with the implementable score-based policy and supplied objective.",
+    "managerial_framing": "Fully develops the actor, trigger, choice, available information, stakes, mechanism, trade-off, counterfactual, and boundaries.",
+    "scholarly_positioning": "Not requested as a contribution claim; the response responsibly states that no novelty is established.",
+    "evidence_discipline": "Clearly labels conditional distributions as assumptions and calls for validation of calibration, payoffs, and stability.",
+    "prose_clarity": "Precise and well organized, with minor encoding artifacts and some avoidable density.",
+    "overall": "A rigorous diagnosis and faithful repair with excellent information discipline and managerial mapping."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

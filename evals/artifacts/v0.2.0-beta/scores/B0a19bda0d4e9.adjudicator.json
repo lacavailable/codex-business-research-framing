@@ -1,0 +1,27 @@
+{
+    "schema_version":  "1.0.0",
+    "blind_id":  "B0a19bda0d4e9",
+    "judge_id":  "adjudicator",
+    "rubric_version":  "2.0.0",
+    "category_scores":  {
+                            "fidelity":  30,
+                            "managerial_framing":  20,
+                            "scholarly_positioning":  9,
+                            "evidence_discipline":  15,
+                            "prose_clarity":  10
+                        },
+    "hard_failures":  [
+
+                      ],
+    "rationale":  {
+                      "fidelity":  "Correctly restores the ex ante allocation, keeps realized demand post-decision, and preserves fixed inventory, nonnegativity, no recourse, and the expected shortage-plus-leftover objective.",
+                      "managerial_framing":  "The actor, choice, mechanism, and consequences are concrete, although stakes, the allocation trade-off, and a decision counterfactual are mostly implicit.",
+                      "scholarly_positioning":  "No scholarly position is requested or claimed; the response appropriately avoids novelty claims but supplies no literature relationship.",
+                      "evidence_discipline":  "It explicitly labels the demand distribution as a model assumption and excludes unsupported advance-information and recourse claims.",
+                      "prose_clarity":  "The diagnosis and repair are concise, readable, and precise.",
+                      "overall":  "The response clears the total-score, fidelity, managerial, evidence, and prose requirements but does not meet the universal scholarly-positioning minimum; therefore the rubric-derived result is fail."
+                  },
+    "raw_total":  84,
+    "capped_total":  84,
+    "pass":  false
+}

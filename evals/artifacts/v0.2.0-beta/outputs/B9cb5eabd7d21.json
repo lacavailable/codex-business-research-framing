@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "om-01.no_skill",
+  "blind_id": "B9cb5eabd7d21",
+  "case_id": "om-01",
+  "response": "The research problem is to determine which products a neighborhood dark store should make orderable for the next shift before customer arrivals and choices are realized. Each included product uses scarce shelf and pick-slot capacity, while excluding a product can redirect some modeled demand toward available substitutes. The decision is a binary inclusion choice for each product, subject to both capacity limits, and the objective is to maximize expected contribution margin using product margins, estimated choice parameters, and uncertain arrival volume and choice. The central trade-off is between using capacity for products with attractive direct margins and preserving a set that captures substitution demand across possible customer choices. Substitution is represented by the estimated choice parameters; the supplied material does not independently establish customer effects. It also does not support claims that the policy raises realized profit at any named firm, causes faster delivery, or improves social welfare. Those outcomes would require additional empirical evidence and are outside this model.",
+  "generator": {
+    "model": "gpt-5.6",
+    "temperature": 0,
+    "completed_at": "2026-07-19T16:31:26Z"
+  }
+}

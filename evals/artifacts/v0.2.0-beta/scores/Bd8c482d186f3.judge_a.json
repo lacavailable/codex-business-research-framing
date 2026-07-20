@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bd8c482d186f3",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 7
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Accurately retains ranking weights, supplied scores and group labels, weight bounds, minimum exposure, and predicted engagement without equating exposure with welfare.",
+    "managerial_framing": "The governance actor, trigger, choice, stakes, constrained trade-off, mechanism, and counterfactual are fully explicit.",
+    "scholarly_positioning": "No literature contribution is requested or asserted.",
+    "evidence_discipline": "Identifies exposure-as-fairness as a model assumption and sharply bounds conclusions about creator welfare and realized outcomes.",
+    "prose_clarity": "The explanation is precise but repeats the same mapping and limits across numerous sections.",
+    "overall": "A complete and faithful governance framing with only a verbosity deduction."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

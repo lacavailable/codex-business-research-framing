@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B59cd28c78bcd",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves the offline deterministic facility-location model and correctly treats Benders cuts, bounds, and runtime as computational rather than business decisions.",
+    "managerial_framing": "Provides a concrete planner, trigger, choices, stakes, computational trade-off, matched comparator, and planning-budget pathway.",
+    "scholarly_positioning": "No scholarly contribution or novelty claim is requested or asserted; the category is therefore not applicable.",
+    "evidence_discipline": "Labels scalability as an inference and specifies the benchmark evidence and common-condition comparisons needed to support it.",
+    "prose_clarity": "Highly structured and precise but more repetitive than necessary, with the same mapping restated in several sections.",
+    "overall": "An excellent model-faithful computational framing with appropriately bounded scalability claims; only economy of presentation is weaker."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

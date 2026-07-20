@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Ba71c4fa8bcd2",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Faithfully distinguishes feasible incumbents, bounds, gaps, and certificates while preserving scheduling decisions, constraints, and makespan objective.", "managerial_framing": "Clearly explains the trade-off between using a schedule early and waiting for improvement or proof, conditioned on a deadline and tolerance.", "scholarly_positioning": "No literature or novelty assertion is introduced.", "evidence_discipline": "Avoids promising certification by a deadline and labels deadline feasibility and acceptable-gap value as unsupported or conditional.", "prose_clarity": "The explanation is precise but repetitive and overformatted, with visible encoding artifacts.", "overall": "A complete and accurate explanation of schedule quality versus certification with excessive scaffolding."},
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

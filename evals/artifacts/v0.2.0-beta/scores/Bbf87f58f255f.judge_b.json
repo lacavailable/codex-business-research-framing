@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bbf87f58f255f",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 29, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 14, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Retains the heuristic's scheduling decisions, feasibility rules, cost objective, and absence of bounds or certificates; the exact algorithmic mechanism is described only broadly.",
+    "managerial_framing": "Makes rapid feasibility and the planning-deadline pathway concrete, although a matched alternative or counterfactual method is not explicit.",
+    "scholarly_positioning": "No scholarly positioning is requested or claimed, making this conditional category not applicable.",
+    "evidence_discipline": "Carefully confines evidence to the small synthetic set and identifies what would be needed for deadline and live-operation claims.",
+    "prose_clarity": "Direct, readable, and well calibrated to a managerial audience.",
+    "overall": "A strong, appropriately bounded heuristic framing that never equates feasibility with optimality or overgeneralizes the tests."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

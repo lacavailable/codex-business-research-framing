@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B25e474fd04cf",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 22, "scholarly_positioning": 14, "evidence_discipline": 15, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {"fidelity": "The answer preserves monetary travel cost, routes, route consolidation, and all capacity, service, and continuity constraints while rejecting the sustainability substitution.", "managerial_framing": "The decision and mechanism are concrete, although the managerial trigger, counterfactual, and operational stakes receive only brief treatment.", "scholarly_positioning": "It makes no unsupported literature or novelty claim, which is appropriate for this diagnosis.", "evidence_discipline": "It explicitly identifies the absent emissions coefficients, constraint, and empirical link and clearly bounds every environmental implication as unsupported.", "prose_clarity": "The response is economical, coherent, and precise without unnecessary scaffolding.", "overall": "A highly effective and concise repair with no hard failure; the only notable limitation is thinner managerial development."},
+  "raw_total": 91,
+  "capped_total": 91,
+  "pass": true
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B5e31d4749b3a",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 23, "scholarly_positioning": 14, "evidence_discipline": 14, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {"fidelity": "It correctly separates the feasible incumbent available at 08:00 from the 08:30 proof and preserves routing decisions, timing, constraints, and monetary objective.", "managerial_framing": "The release trigger and solution-quality-versus-latency tension are concrete; post-deadline value is responsibly conditioned on a real evaluation pathway.", "scholarly_positioning": "It refrains from asserting novelty and notes the missing comparison and literature basis.", "evidence_discipline": "The supplied 08:30 fact is distinguished from unsupported claims about routine pre-deadline certification, with no retroactive causal claim.", "prose_clarity": "The central distinction is clear, but repeated layer diagnostics, self-assessed gates, encoding artifacts, and a stray literal formatting fragment impair economy.", "overall": "A substantively precise diagnosis of the timing trap with no hard failure; the main weakness is presentation quality rather than reasoning."},
+  "raw_total": 88,
+  "capped_total": 88,
+  "pass": true
+}

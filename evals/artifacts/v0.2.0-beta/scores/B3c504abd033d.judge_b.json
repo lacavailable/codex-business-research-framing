@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B3c504abd033d",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 20,
+    "scholarly_positioning": 16,
+    "evidence_discipline": 15,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves the common noisy-score threshold, latent quality, standard error trade-off, and expected-loss objective.",
+    "managerial_framing": "The actor, choice, stakes, and mechanism are clear, though trigger, counterfactual, and implementation pathway are brief.",
+    "scholarly_positioning": "Correctly rejects context-only novelty and identifies substantive contribution routes, but does not position them against traceable literature.",
+    "evidence_discipline": "Flags both novelty and mechanism-change assertions as unsupported and maintains the noisy-score boundary.",
+    "prose_clarity": "Concise, coherent, and accessible.",
+    "overall": "A faithful and appropriately skeptical framing; scholarly positioning is useful but not literature-grounded."
+  },
+  "raw_total": 91,
+  "capped_total": 91,
+  "pass": true
+}

@@ -18,8 +18,10 @@ from pathlib import Path
 from typing import Any, Iterable
 
 SCHEMA_VERSION = "1.0.0"
-CONDITIONS = ("no_skill", "generic_business_writing", "full_skill")
+CONDITIONS = ("no_skill", "v0_1_0_alpha", "v0_2_0_beta")
 DOMAINS = ("OM", "IS", "OR")
+CASES_PER_DOMAIN = 14
+EXPECTED_ADVERSARIAL = 23
 
 
 class EvaluationError(ValueError):
@@ -52,24 +54,30 @@ def repo_root_from_script() -> Path:
 def load_cases(root: Path) -> list[dict[str, Any]]:
     paths = sorted((root / "evals" / "cases").glob("*.json"))
     cases = [read_json(path) for path in paths]
-    if len(cases) != 30:
-        raise EvaluationError(f"Expected exactly 30 cases, found {len(cases)}")
+    expected_cases = CASES_PER_DOMAIN * len(DOMAINS)
+    if len(cases) != expected_cases:
+        raise EvaluationError(f"Expected exactly {expected_cases} cases, found {len(cases)}")
     ids = [case.get("id") for case in cases]
     if len(ids) != len(set(ids)):
         raise EvaluationError("Case IDs are not unique")
     counts = Counter(case.get("domain") for case in cases)
-    if counts != Counter({domain: 10 for domain in DOMAINS}):
-        raise EvaluationError(f"Expected 10 cases per domain, found {dict(counts)}")
+    if counts != Counter({domain: CASES_PER_DOMAIN for domain in DOMAINS}):
+        raise EvaluationError(f"Expected {CASES_PER_DOMAIN} cases per domain, found {dict(counts)}")
+    adversarial = sum(case.get("adversarial") is True for case in cases)
+    if adversarial != EXPECTED_ADVERSARIAL:
+        raise EvaluationError(f"Expected exactly {EXPECTED_ADVERSARIAL} adversarial cases, found {adversarial}")
     return cases
 
 
 def load_rubric(root: Path) -> dict[str, Any]:
-    rubric = read_json(root / "evals" / "rubrics" / "business-framing-v1.json")
+    rubric = read_json(root / "evals" / "rubrics" / "business-framing-v2.json")
     weights = [item["weight"] for item in rubric["categories"]]
     if sum(weights) != 100:
         raise EvaluationError(f"Rubric weights sum to {sum(weights)}, not 100")
     if rubric["hard_failure_cap"] >= rubric["passing_score"]:
         raise EvaluationError("Hard-failure cap must be below the passing score")
+    if any(item["minimum"] > item["weight"] for item in rubric["categories"]):
+        raise EvaluationError("A layer minimum cannot exceed its weight")
     return rubric
 
 
@@ -99,7 +107,7 @@ def validate_repository(root: Path) -> dict[str, Any]:
     validate_with_jsonschema(rubric, schema_dir / "rubric.schema.json", "rubric")
     prompts = read_json(root / "evals" / "prompts" / "conditions.json")
     if tuple(prompts.get("conditions", {}).keys()) != CONDITIONS:
-        raise EvaluationError("Prompt conditions must be ordered no-skill, generic, full-skill")
+        raise EvaluationError("Prompt conditions must be ordered no-skill, v0.1, v0.2")
     return {
         "cases": len(cases),
         "domains": dict(sorted(Counter(case["domain"] for case in cases).items())),
@@ -116,6 +124,67 @@ def _jsonschema_available() -> bool:
     except ImportError:
         return False
     return True
+
+
+def validate_committed_artifacts(root: Path) -> dict[str, Any]:
+    base = root / "evals" / "artifacts" / "v0.2.0-beta"
+    mappings = load_json_files(base / "blind-mappings")
+    prompts = load_json_files(base / "prompts")
+    outputs = load_json_files(base / "outputs")
+    scores = load_json_files(base / "scores")
+    expected_outputs = CASES_PER_DOMAIN * len(DOMAINS) * len(CONDITIONS)
+    if len(mappings) != expected_outputs or len(prompts) != expected_outputs or len(outputs) != expected_outputs:
+        raise EvaluationError(
+            f"Committed artifacts require {expected_outputs} mappings, prompts, and outputs; "
+            f"found {len(mappings)}, {len(prompts)}, and {len(outputs)}"
+        )
+    mapping_by_blind: dict[str, dict[str, Any]] = {}
+    for path, item in mappings:
+        required = {"schema_version", "blind_id", "case_id", "domain", "condition"}
+        if set(item) != required or item["condition"] not in CONDITIONS or item["domain"] not in DOMAINS:
+            raise EvaluationError(f"Invalid blind mapping: {path}")
+        if item["blind_id"] in mapping_by_blind:
+            raise EvaluationError(f"Duplicate mapping blind ID: {item['blind_id']}")
+        mapping_by_blind[item["blind_id"]] = item
+    for path, item in prompts:
+        required = {"schema_version", "blind_id", "case_id", "domain", "prompt"}
+        if set(item) != required or not isinstance(item["prompt"], str) or not item["prompt"].strip():
+            raise EvaluationError(f"Invalid committed prompt: {path}")
+        if item["blind_id"] not in mapping_by_blind:
+            raise EvaluationError(f"Prompt has unknown blind ID: {path}")
+    output_blinds: set[str] = set()
+    for path, item in outputs:
+        validate_with_jsonschema(item, root / "evals/schemas/output.schema.json", str(path))
+        if item["blind_id"] in output_blinds or item["blind_id"] not in mapping_by_blind:
+            raise EvaluationError(f"Duplicate or unknown output blind ID: {path}")
+        output_blinds.add(item["blind_id"])
+    coverage: dict[str, set[str]] = defaultdict(set)
+    primary_scores = 0
+    for path, item in scores:
+        validate_with_jsonschema(item, root / "evals/schemas/score.schema.json", str(path))
+        if item["blind_id"] not in mapping_by_blind:
+            raise EvaluationError(f"Score has unknown blind ID: {path}")
+        key = item["judge_id"]
+        if key in coverage[item["blind_id"]]:
+            raise EvaluationError(f"Duplicate judge score for {item['blind_id']}: {key}")
+        coverage[item["blind_id"]].add(key)
+        if key in {"judge_a", "judge_b"}:
+            primary_scores += 1
+    missing = [blind for blind in mapping_by_blind if not {"judge_a", "judge_b"} <= coverage[blind]]
+    if missing or primary_scores != expected_outputs * 2:
+        raise EvaluationError(
+            f"Committed scores require {expected_outputs * 2} primary records and two-judge coverage; "
+            f"found {primary_scores} with {len(missing)} incomplete outputs"
+        )
+    status_path = root / "evals/reports/v0.2.0-beta.status.json"
+    status = read_json(status_path)
+    if status.get("status") != "complete" or status.get("outputs") != expected_outputs or status.get("primary_scores") != expected_outputs * 2:
+        raise EvaluationError("Published evaluation status is absent or incomplete")
+    return {
+        "outputs": expected_outputs,
+        "primary_scores": primary_scores,
+        "adjudicator_scores": len(scores) - primary_scores,
+    }
 
 
 def blind_id(seed: str, case_id: str, condition: str) -> str:
@@ -149,7 +218,7 @@ def prepare(root: Path, run_dir: Path, seed: str) -> dict[str, Any]:
     rng.shuffle(records)
     manifest = {
         "schema_version": SCHEMA_VERSION,
-        "benchmark": "business-framing-v1",
+        "benchmark": "business-framing-v2",
         "seed": seed,
         "status": "prepared_not_generated",
         "expected_generations": len(records),
@@ -208,11 +277,23 @@ def create_judge_packets(root: Path, manifest_path: Path, outputs_dir: Path, pac
     missing = set(by_blind) - seen
     if missing and not allow_partial:
         raise EvaluationError(f"Missing {len(missing)} of {len(by_blind)} outputs; use --allow-partial only for debugging")
+    judge_ids = ("judge_a", "judge_b")
     for domain in DOMAINS:
-        rng = random.Random(f"{manifest['seed']}\0judge\0{domain}")
-        rng.shuffle(packets[domain])
-        write_jsonl(packet_dir / f"{domain.lower()}.jsonl", packets[domain])
-    return {"outputs": len(seen), "missing": len(missing), "judge_packets": len(packets)}
+        for judge_id in judge_ids:
+            judge_records = []
+            for record in packets[domain]:
+                copied = dict(record)
+                copied["judge_id"] = judge_id
+                copied["judge_instruction"] = (
+                    "Score independently without inferring the generation condition. "
+                    f"Set judge_id to {judge_id!r} and return one JSON object matching "
+                    "evals/schemas/score.schema.json."
+                )
+                judge_records.append(copied)
+            rng = random.Random(f"{manifest['seed']}\0{judge_id}\0{domain}")
+            rng.shuffle(judge_records)
+            write_jsonl(packet_dir / f"{domain.lower()}.{judge_id}.jsonl", judge_records)
+    return {"outputs": len(seen), "missing": len(missing), "judge_packets": len(DOMAINS) * len(judge_ids)}
 
 
 def normalize_score(score: dict[str, Any], rubric: dict[str, Any], label: str) -> dict[str, Any]:
@@ -229,7 +310,11 @@ def normalize_score(score: dict[str, Any], rubric: dict[str, Any], label: str) -
         raise EvaluationError(f"{label}: unknown hard failure {set(failures) - valid_failures}")
     raw = sum(supplied.values())
     capped = min(raw, rubric["hard_failure_cap"]) if failures else raw
-    passed = capped >= rubric["passing_score"] and not failures
+    minima_pass = all(
+        supplied[category["id"]] >= category["minimum"]
+        for category in rubric["categories"]
+    )
+    passed = capped >= rubric["passing_score"] and minima_pass and not failures
     if score.get("raw_total") != raw or score.get("capped_total") != capped or score.get("pass") != passed:
         raise EvaluationError(f"{label}: reported totals/pass do not reconcile; expected raw={raw}, capped={capped}, pass={passed}")
     if score.get("rubric_version") != rubric["version"]:
@@ -241,29 +326,94 @@ def mean(values: list[int]) -> float | None:
     return round(statistics.fmean(values), 3) if values else None
 
 
+def correlation(xs: list[int], ys: list[int]) -> float | None:
+    if len(xs) < 2 or len(xs) != len(ys):
+        return None
+    mean_x, mean_y = statistics.fmean(xs), statistics.fmean(ys)
+    numerator = sum((x - mean_x) * (y - mean_y) for x, y in zip(xs, ys))
+    denominator = (
+        sum((x - mean_x) ** 2 for x in xs) * sum((y - mean_y) ** 2 for y in ys)
+    ) ** 0.5
+    return round(numerator / denominator, 3) if denominator else None
+
+
+def reconcile_scores(primary: list[dict[str, Any]], adjudicator: dict[str, Any] | None, rubric: dict[str, Any]) -> tuple[dict[str, Any], bool]:
+    categories = {item["id"]: item for item in rubric["categories"]}
+    first, second = primary
+    material_dimension_difference = any(
+        abs(first["category_scores"][key] - second["category_scores"][key]) > 0.2 * details["weight"]
+        for key, details in categories.items()
+    )
+    hard_failure_disagreement = set(first["hard_failures"]) != set(second["hard_failures"])
+    needs_adjudication = material_dimension_difference or hard_failure_disagreement
+    if needs_adjudication and adjudicator is None:
+        raise EvaluationError("A third adjudicator is required for material or hard-failure disagreement")
+    judges = primary + ([adjudicator] if adjudicator is not None and needs_adjudication else [])
+    category_scores = {
+        key: round(statistics.median(score["category_scores"][key] for score in judges))
+        for key in categories
+    }
+    if hard_failure_disagreement and adjudicator is not None:
+        failures = adjudicator["hard_failures"]
+    else:
+        failures = first["hard_failures"] if set(first["hard_failures"]) == set(second["hard_failures"]) else []
+    raw = sum(category_scores.values())
+    capped = min(raw, rubric["hard_failure_cap"]) if failures else raw
+    minima_pass = all(category_scores[key] >= details["minimum"] for key, details in categories.items())
+    return ({
+        "category_scores": category_scores,
+        "hard_failures": failures,
+        "raw_total": raw,
+        "capped_total": capped,
+        "pass": capped >= rubric["passing_score"] and minima_pass and not failures,
+    }, needs_adjudication)
+
+
 def aggregate(root: Path, manifest_path: Path, scores_dir: Path, output_dir: Path, allow_partial: bool) -> dict[str, Any]:
     manifest = read_json(manifest_path)
     rubric = load_rubric(root)
     mapping = {record["blind_id"]: record for record in manifest["records"]}
     score_files = load_json_files(scores_dir)
-    scores: dict[str, dict[str, Any]] = {}
+    score_groups: dict[str, dict[str, dict[str, Any]]] = defaultdict(dict)
     for path, score in score_files:
         validate_with_jsonschema(score, root / "evals" / "schemas" / "score.schema.json", str(path))
         blind = score["blind_id"]
-        if blind in scores:
-            raise EvaluationError(f"Duplicate score blind ID: {blind}")
         if blind not in mapping:
             raise EvaluationError(f"Score has unknown blind ID: {blind}")
-        scores[blind] = normalize_score(score, rubric, str(path))
-    missing = set(mapping) - set(scores)
-    if missing and not allow_partial:
-        raise EvaluationError(f"Missing {len(missing)} of {len(mapping)} scores; refusing to publish incomplete results")
+        judge_id = score["judge_id"]
+        if judge_id in score_groups[blind]:
+            raise EvaluationError(f"Duplicate {judge_id} score for blind ID {blind}")
+        score_groups[blind][judge_id] = normalize_score(score, rubric, str(path))
+
+    missing_primary: list[str] = []
+    combined: dict[str, dict[str, Any]] = {}
+    adjudicated = 0
+    primary_pairs: list[tuple[dict[str, Any], dict[str, Any]]] = []
+    for blind in mapping:
+        group = score_groups.get(blind, {})
+        if "judge_a" not in group or "judge_b" not in group:
+            missing_primary.append(blind)
+            continue
+        primary = [group["judge_a"], group["judge_b"]]
+        primary_pairs.append((primary[0], primary[1]))
+        try:
+            combined[blind], required = reconcile_scores(primary, group.get("adjudicator"), rubric)
+        except EvaluationError:
+            if allow_partial:
+                missing_primary.append(blind)
+                continue
+            raise EvaluationError(f"{blind}: third adjudicator required by disagreement rule")
+        adjudicated += int(required)
+    if missing_primary and not allow_partial:
+        raise EvaluationError(
+            f"Missing complete two-judge coverage for {len(missing_primary)} of {len(mapping)} outputs"
+        )
 
     categories = [category["id"] for category in rubric["categories"]]
     cells: dict[str, dict[str, Any]] = {}
     for domain in DOMAINS:
         for condition in CONDITIONS:
-            selected = [(blind, score) for blind, score in scores.items() if mapping[blind]["domain"] == domain and mapping[blind]["condition"] == condition]
+            selected = [(blind, score) for blind, score in combined.items() if mapping[blind]["domain"] == domain and mapping[blind]["condition"] == condition]
             key = f"{domain}:{condition}"
             cells[key] = {
                 "n": len(selected),
@@ -276,32 +426,47 @@ def aggregate(root: Path, manifest_path: Path, scores_dir: Path, output_dir: Pat
 
     paired: list[dict[str, Any]] = []
     by_case_condition: dict[tuple[str, str], dict[str, Any]] = {}
-    for blind, score in scores.items():
+    for blind, score in combined.items():
         record = mapping[blind]
         by_case_condition[(record["case_id"], record["condition"])] = score
     for case_id in sorted({record["case_id"] for record in mapping.values()}):
         trio = {condition: by_case_condition.get((case_id, condition)) for condition in CONDITIONS}
         if all(trio.values()):
-            full = trio["full_skill"]["capped_total"]
+            full = trio["v0_2_0_beta"]["capped_total"]
             paired.append({
                 "case_id": case_id,
-                "full_skill_minus_no_skill": full - trio["no_skill"]["capped_total"],
-                "full_skill_minus_generic": full - trio["generic_business_writing"]["capped_total"],
+                "v0_2_minus_no_skill": full - trio["no_skill"]["capped_total"],
+                "v0_2_minus_v0_1": full - trio["v0_1_0_alpha"]["capped_total"],
                 "hard_failures": {condition: trio[condition]["hard_failures"] for condition in CONDITIONS},
             })
 
-    status = "complete" if not missing else "partial_not_publishable"
+    hard_agreements = [set(a["hard_failures"]) == set(b["hard_failures"]) for a, b in primary_pairs]
+    category_mad = {
+        category: round(statistics.fmean(abs(a["category_scores"][category] - b["category_scores"][category]) for a, b in primary_pairs), 3)
+        if primary_pairs else None
+        for category in categories
+    }
+    status = "complete" if not missing_primary else "partial_not_publishable"
     report = {
         "schema_version": SCHEMA_VERSION,
         "benchmark": manifest["benchmark"],
         "seed": manifest["seed"],
         "status": status,
-        "expected_scores": len(mapping),
-        "received_scores": len(scores),
-        "missing_scores": len(missing),
+        "expected_primary_scores": len(mapping) * 2,
+        "received_primary_scores": sum("judge_a" in group for group in score_groups.values()) + sum("judge_b" in group for group in score_groups.values()),
+        "missing_output_pairs": len(missing_primary),
+        "adjudicated_outputs": adjudicated,
         "rubric_version": rubric["version"],
         "cells": cells,
         "paired_case_comparisons": paired,
+        "inter_judge_agreement": {
+            "mean_absolute_category_differences": category_mad,
+            "total_score_correlation": correlation(
+                [a["raw_total"] for a, _ in primary_pairs],
+                [b["raw_total"] for _, b in primary_pairs],
+            ),
+            "hard_failure_agreement": round(sum(hard_agreements) / len(hard_agreements), 3) if hard_agreements else None,
+        },
         "limitations": [
             "Language-model generation and judging are nondeterministic even when prompts and seeds are fixed.",
             "A same-family or same-model judge may favor familiar response patterns.",
@@ -311,14 +476,14 @@ def aggregate(root: Path, manifest_path: Path, scores_dir: Path, output_dir: Pat
     }
     write_json(output_dir / "summary.json", report)
     (output_dir / "summary.md").write_text(render_markdown(report), encoding="utf-8", newline="\n")
-    return {"status": status, "scores": len(scores), "missing": len(missing), "paired_cases": len(paired)}
+    return {"status": status, "primary_scores": report["received_primary_scores"], "missing_pairs": len(missing_primary), "paired_cases": len(paired)}
 
 
 def render_markdown(report: dict[str, Any]) -> str:
     lines = [
         "# Benchmark evaluation summary",
         "",
-        f"Status: **{report['status']}**. Received {report['received_scores']} of {report['expected_scores']} blinded scores.",
+        f"Status: **{report['status']}**. Received {report['received_primary_scores']} of {report['expected_primary_scores']} primary blinded scores.",
         "",
         "| Domain | Condition | n | Mean raw | Mean capped | Pass rate | Hard-failure rate |",
         "|---|---|---:|---:|---:|---:|---:|",
@@ -339,9 +504,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--root", type=Path, default=repo_root_from_script(), help="Repository root")
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("validate", help="Validate committed schemas, cases, prompts, and rubric")
+    sub.add_parser("validate-artifacts", help="Validate complete committed v0.2 prompts, outputs, mappings, and two-judge scores")
     prep = sub.add_parser("prepare", help="Create deterministic per-domain/per-condition generator packets")
     prep.add_argument("--run-dir", type=Path, required=True)
-    prep.add_argument("--seed", default="v0.1.0-alpha")
+    prep.add_argument("--seed", default="v0.2.0-beta")
     judge = sub.add_parser("judge-packets", help="Create condition-blind domain packets from generated outputs")
     judge.add_argument("--manifest", type=Path, required=True)
     judge.add_argument("--outputs-dir", type=Path, required=True)
@@ -361,6 +527,8 @@ def main(argv: list[str] | None = None) -> int:
     try:
         if args.command == "validate":
             result = validate_repository(root)
+        elif args.command == "validate-artifacts":
+            result = validate_committed_artifacts(root)
         elif args.command == "prepare":
             result = prepare(root, args.run_dir.resolve(), args.seed)
         elif args.command == "judge-packets":

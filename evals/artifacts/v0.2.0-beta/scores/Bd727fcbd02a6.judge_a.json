@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bd727fcbd02a6",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 24,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 14,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Exactly retains one common daily display set, the eight-item limit, expected margin, and uncertain visitor choice while excluding ranking and personalization.",
+    "managerial_framing": "Clearly identifies the daily choice, scarce display slots, displacement trade-off, and modeled purchase-or-exit mechanism.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed, and no novelty claim is introduced.",
+    "evidence_discipline": "Correctly labels the display limit a simplifying assumption and treats ranking, personalization, and foreknowledge claims as unsupported model changes.",
+    "prose_clarity": "Economical, concrete, and easy to follow.",
+    "overall": "A near-complete and highly readable framing that meets every fidelity requirement without triggering a hard failure."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

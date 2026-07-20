@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0", "blind_id": "B54dfb558b30c", "judge_id": "judge_a", "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Keeps assortment membership as the sole decision, preserves category capacities and expected revenue, and correctly treats Markov transitions and purchases as stochastic states and outcomes.",
+    "managerial_framing": "Makes the pre-demand choice, capacity displacement, substitution-path mechanism, and alternative feasible assortment concrete.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed; the response does not overstate contribution.",
+    "evidence_discipline": "Explicitly treats the transition process as an estimated model assumption and bounds observability, causality, deployment, and transport claims.",
+    "prose_clarity": "Precise and organized, though the repeated canvas, gate, and mapping sections are more elaborate than necessary.",
+    "overall": "A fully faithful and evidence-disciplined explanation that squarely avoids converting transition probabilities into managerial controls."
+  },
+  "raw_total": 97, "capped_total": 97, "pass": true
+}

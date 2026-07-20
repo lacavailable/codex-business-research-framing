@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "om-09.no_skill",
+  "blind_id": "B39c4aadb1984",
+  "case_id": "om-09",
+  "response": "The morning decision is to assign certified technicians to a subset of the listed maintenance jobs so as to maximize total scheduled job value. Each job has a known value and duration, each assignment must respect certification compatibility, technician hours are limited, and a job can receive at most one assignment. The core managerial tension is opportunity cost: using a qualified technician's scarce hours on one job prevents those hours from serving another known job. The optimization is deterministic with respect to the listed jobs and does not include uncertainty. Completion outcomes are states that follow the assignments. Emergency jobs arriving later are explicitly outside the model, so the analysis cannot claim that the schedule remains optimal or robust after such arrivals. The supplied material also does not establish that emergency arrivals are operationally material. Supporting that claim, or extending the policy to reserve capacity for emergencies, would require additional evidence and a different model.",
+  "generator": {
+    "model": "gpt-5.6",
+    "temperature": 0,
+    "completed_at": "2026-07-19T16:31:26Z"
+  }
+}

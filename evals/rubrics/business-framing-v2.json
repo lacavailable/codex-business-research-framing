@@ -1,0 +1,82 @@
+{
+  "$schema": "../schemas/rubric.schema.json",
+  "version": "2.0.0",
+  "passing_score": 70,
+  "hard_failure_cap": 69,
+  "automatic_failure_on_fidelity_hard_failure": true,
+  "categories": [
+    {
+      "id": "fidelity",
+      "label": "Decision and model fidelity",
+      "weight": 30,
+      "minimum": 21,
+      "applicability": "always",
+      "anchors": {
+        "zero": "Contradicts the decision structure or model, or fails a noncompensatory fidelity gate.",
+        "half": "Preserves the broad problem but blurs a material actor, timing, information, behavior, constraint, objective, or mapping detail.",
+        "full": "Preserves DFC-12 and all six fidelity gates, with decisions, states, information, timing, mechanism, constraints, and objective mapped consistently."
+      }
+    },
+    {
+      "id": "managerial_framing",
+      "label": "Managerial framing",
+      "weight": 25,
+      "minimum": 15,
+      "applicability": "when_managerial_framing_is_requested_or_claimed",
+      "anchors": {
+        "zero": "No decision-relevant managerial framing, or the framing substitutes rhetoric for the actual decision problem.",
+        "half": "Names an actor, stakes, and trade-off but leaves the trigger, mechanism, counterfactual, or operational pathway vague.",
+        "full": "Makes the actor, trigger, choices, stakes, mechanism, nontrivial trade-off, counterfactual, and operational implications concrete without exceeding the model."
+      }
+    },
+    {
+      "id": "scholarly_positioning",
+      "label": "Scholarly positioning",
+      "weight": 20,
+      "minimum": 12,
+      "applicability": "when_scholarly_positioning_is_requested_or_claimed",
+      "anchors": {
+        "zero": "Claims novelty or contribution without a defensible literature relationship.",
+        "half": "Identifies a literature and difference but leaves the gap, counterposition, mechanism, or contribution type generic.",
+        "full": "Positions the research against traceable literature, states what changes and why it matters, and bounds the claimed contribution and counterconditions."
+      }
+    },
+    {
+      "id": "evidence_discipline",
+      "label": "Evidence discipline",
+      "weight": 15,
+      "minimum": 9,
+      "applicability": "always",
+      "anchors": {
+        "zero": "Invents facts, conceals evidence limits, or presents unsupported empirical or causal claims as established.",
+        "half": "Uses cautious language but inconsistently distinguishes facts, assumptions, inferences, and unsupported claims.",
+        "full": "Labels empirical facts, model assumptions, simplifying assumptions, inferences, and unsupported claims; gives traceable support and accurate access boundaries."
+      }
+    },
+    {
+      "id": "prose_clarity",
+      "label": "Prose clarity",
+      "weight": 10,
+      "minimum": 5,
+      "applicability": "always",
+      "anchors": {
+        "zero": "Incomprehensible, materially misleading, or dominated by unsupported hype.",
+        "half": "Understandable but abstract, repetitive, structurally weak, or needlessly technical.",
+        "full": "Clear, economical, well structured, and accessible to the intended reader without sacrificing precision."
+      }
+    }
+  ],
+  "hard_failures": [
+    {"id": "actor_gate_failure", "gate": "actor", "description": "Assigns the decision, information, objective, or consequences to the wrong actor."},
+    {"id": "timing_gate_failure", "gate": "timing", "description": "Changes the decision sequence or uses outcomes, certificates, or observations after the decision deadline."},
+    {"id": "information_gate_failure", "gate": "information", "description": "Gives the actor future, hidden, latent, unavailable, or privacy-restricted information at decision time."},
+    {"id": "behavior_gate_failure", "gate": "behavior", "description": "Substitutes behavior inconsistent with the specified response, substitution, demand, or strategic mechanism."},
+    {"id": "constraints_gate_failure", "gate": "constraints", "description": "Removes, conflates, or changes a material feasibility, capacity, policy, or technological constraint."},
+    {"id": "objective_gate_failure", "gate": "objective", "description": "Substitutes a different objective, including treating revenue or profit as welfare."},
+    {"id": "state_as_decision", "gate": "information", "description": "Treats an exogenous, latent, uncertain, or realized state as a controllable choice."},
+    {"id": "undeclared_model_change", "gate": "constraints", "description": "Adds or changes decisions, mechanisms, constraints, information, or outcomes without declaring an extension."},
+    {"id": "invented_empirical_fact", "gate": "evidence", "description": "Invents a company, deployment, performance result, market condition, or other empirical fact."},
+    {"id": "unsupported_causal_claim", "gate": "evidence", "description": "Claims causal impact without an identified design or supplied evidence."},
+    {"id": "hidden_major_assumption", "gate": "evidence", "description": "Omits a major assumption required for the framing or conclusion to hold."}
+  ]
+}

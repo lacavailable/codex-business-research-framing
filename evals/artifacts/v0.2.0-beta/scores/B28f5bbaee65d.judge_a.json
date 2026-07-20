@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B28f5bbaee65d",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true,
+  "rationale": {
+    "fidelity": "Preserves platform commitment before seller and buyer actions, unknown quality, binary disclosure, equilibrium participation and belief responses, and transaction-revenue maximization.",
+    "managerial_framing": "Fully specifies the governance decision, timing, strategic mechanism, composition trade-off, and binary counterfactual.",
+    "scholarly_positioning": "Avoids novelty claims and explicitly limits scholarly conclusions without literature or results.",
+    "evidence_discipline": "Labels equilibrium behavior and parameters as unvalidated assumptions and bounds welfare, quality, and adoption claims.",
+    "prose_clarity": "Clear and cohesive, with modest excess length and minor encoding artifacts.",
+    "overall": "A comprehensive and faithful sequential-rule framing with no timing, information, behavior, or objective failure."
+  }
+}

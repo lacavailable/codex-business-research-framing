@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B49e75031c2db",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Correctly removes demand from the choice set, restores pre-demand allocation timing, and maps served demand as an outcome.", "managerial_framing": "Makes the allocation scarcity trade-off, counterfactual, stakes, and lack of recourse concrete without changing the model.", "scholarly_positioning": "No scholarly contribution claim is requested or asserted.", "evidence_discipline": "Clearly identifies the demand distribution as an assumption requiring validation and rejects demand control or foresight.", "prose_clarity": "The content is clear but the answer repeats the same mapping across several template sections and contains garbled punctuation.", "overall": "A complete and faithful state-versus-decision repair with avoidable verbosity."},
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "om-04.no_skill",
+  "blind_id": "Bd727fcbd02a6",
+  "case_id": "om-04",
+  "response": "The business problem is to choose one common set of products to display above the fold for the day, subject to a limit of eight displayed items. Using product margins and estimated choice probabilities, the seller selects the set that maximizes expected displayed-assortment margin. The displayed set defines the alternatives available to visitors; uncertain visitor preferences then determine whether and what they purchase or whether they exit. The managerial tension is that every display slot used by one product prevents another from being included, while different sets generate different modeled choice and margin outcomes. The eight-item limit is a simplifying assumption in the supplied case. The formulation does not choose product order or screen position, and it does not adapt the display to individual visitors. Claims about ranking effects, personalization, or knowing realized visitor preferences at the start of the day are therefore unsupported and would change the model rather than explain it.",
+  "generator": {
+    "model": "gpt-5.6",
+    "temperature": 0,
+    "completed_at": "2026-07-19T16:31:26Z"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B47e0d7365411",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 21, "scholarly_positioning": 15, "evidence_discipline": 14, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {"fidelity": "It exactly preserves the common feasible integer set, objective, optimum, network decisions, and constraints and attributes strength solely to the tighter relaxation.", "managerial_framing": "Potential deadline, bound, and scale benefits are explained, but no actual planner trigger or operational pathway is supplied, so business value remains conditional.", "scholarly_positioning": "The computational contribution is carefully bounded without claiming novelty or empirical superiority.", "evidence_discipline": "Actual speed is explicitly unestablished and the response names the relevant comparative measures and common limits needed for support.", "prose_clarity": "The answer is concise, coherent, and technically precise.", "overall": "An excellent compact explanation of computational rather than operational improvement, with no hard failure; only the absent concrete business pathway limits the score."},
+  "raw_total": 90,
+  "capped_total": 90,
+  "pass": true
+}

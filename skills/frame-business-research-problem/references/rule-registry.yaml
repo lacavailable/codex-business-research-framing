@@ -1,0 +1,142 @@
+registry_version: "2.0"
+rules:
+  - rule_id: MGR-001
+    imperative_text: Center the frame on a consequential choice owned by a named actor.
+    rationale: A concrete decision gives relevance claims an accountable unit of action and prevents topic-only motivation.
+    layer: managerial_framing
+    applicable_domains: [OM, IS, OR, cross-domain]
+    applicable_modes: [create, diagnose, rewrite, compare-scenarios, draft-introduction, draft-managerial-implications]
+    supporting_source_ids: [hbr-contributor-guidelines]
+    source_tiers: [tier_a_official_guidance_or_editorial]
+    status: official_outlet_guidance
+    counterconditions: [Exploratory framing may leave the actor provisional but must mark it unknown.]
+    limitations: [A named actor does not establish empirical importance or model fidelity.]
+    associated_anti_patterns: [AP-01, AP-07]
+    affected_evaluation_criteria: [fidelity, managerial_framing, prose_clarity]
+    version_introduced: v0.2.0-beta
+  - rule_id: MGR-002
+    imperative_text: Explain the mechanism and structural trade-off before recommending action.
+    rationale: Decision relevance depends on why a feasible choice changes outcomes and why no option dominates every consequence.
+    layer: managerial_framing
+    applicable_domains: [OM, IS, OR, cross-domain]
+    applicable_modes: [create, diagnose, rewrite, compare-scenarios, draft-introduction, draft-managerial-implications]
+    supporting_source_ids: []
+    source_tiers: []
+    status: original_framework_rule
+    counterconditions: [A descriptive study may identify a phenomenon before a causal mechanism is established.]
+    limitations: [A proposed mechanism must be labeled as an assumption or inference when it is not established.]
+    associated_anti_patterns: [AP-06, AP-08, AP-11]
+    affected_evaluation_criteria: [managerial_framing, scholarly_positioning]
+    version_introduced: v0.2.0-beta
+  - rule_id: EVD-001
+    imperative_text: Support importance claims with traceable evidence or label them as unverified.
+    rationale: Confident trend language cannot establish prevalence, magnitude, causality, or organizational stakes.
+    layer: evidence
+    applicable_domains: [OM, IS, OR, cross-domain]
+    applicable_modes: [create, diagnose, rewrite, compare-scenarios, draft-introduction, draft-managerial-implications]
+    supporting_source_ids: [hbr-contributor-guidelines]
+    source_tiers: [tier_a_official_guidance_or_editorial]
+    status: official_outlet_guidance
+    counterconditions: [Purely synthetic illustrations may state modeled stakes without claiming empirical prevalence.]
+    limitations: [Outlet guidance identifies an expectation; it does not validate a particular source or claim.]
+    associated_anti_patterns: [AP-01, AP-02, AP-10, AP-16]
+    affected_evaluation_criteria: [evidence_discipline, managerial_framing, prose_clarity]
+    version_introduced: v0.2.0-beta
+  - rule_id: SCH-001
+    imperative_text: Describe scholarly contribution in relation to prior literature and state its claimed originality and utility without treating the claim as proof.
+    rationale: Contribution claims are constructed relative to a scholarly conversation, while originality and utility provide bounded dimensions for describing what is claimed.
+    layer: scholarly_positioning
+    applicable_domains: [OM, IS, OR, cross-domain]
+    applicable_modes: [diagnose, rewrite, draft-introduction]
+    supporting_source_ids: [corley-gioia-2011, locke-golden-biddle-1997]
+    source_tiers: [tier_b_peer_reviewed_foundational]
+    status: core_triangulated
+    counterconditions: [A context can contribute when it changes a mechanism, boundary, construct, or inference and that change is demonstrated.]
+    limitations: [Contribution remains provisional until the relevant literature has been reviewed.]
+    associated_anti_patterns: [AP-03, AP-04, AP-15]
+    affected_evaluation_criteria: [scholarly_positioning]
+    version_introduced: v0.2.0-beta
+  - rule_id: SCH-002
+    imperative_text: Consider challenging a literature assumption as one route to formulating a research question, and do not promise influence.
+    rationale: The reviewed abstract presents problematization as an assumption-challenging alternative for research-question formulation.
+    layer: scholarly_positioning
+    applicable_domains: [OM, IS, OR, cross-domain]
+    applicable_modes: [create, diagnose, rewrite, draft-introduction]
+    supporting_source_ids: [alvesson-sandberg-2011]
+    source_tiers: [tier_b_peer_reviewed_foundational]
+    status: provisional_single_source
+    counterconditions: [A documented omission can matter when its consequence and mechanism are made explicit.]
+    limitations: [Problematization must not misstate prior work or silently change the focal model.]
+    associated_anti_patterns: [AP-03, AP-04]
+    affected_evaluation_criteria: [scholarly_positioning, evidence_discipline]
+    version_introduced: v0.2.0-beta
+  - rule_id: SCH-003
+    imperative_text: Organize introductions flexibly from territory and tension to question, contribution, and bounded relevance.
+    rationale: A recognizable opportunity-to-response movement can aid comprehension without imposing a publisher style.
+    layer: prose
+    applicable_domains: [OM, IS, OR, cross-domain]
+    applicable_modes: [rewrite, draft-introduction]
+    supporting_source_ids: []
+    source_tiers: []
+    status: original_framework_rule
+    counterconditions: [Section order should adapt to genre, audience, research design, and the evidence supplied.]
+    limitations: [Rhetorical architecture does not establish novelty, importance, or empirical truth.]
+    associated_anti_patterns: [AP-01, AP-03, AP-15]
+    affected_evaluation_criteria: [scholarly_positioning, prose_clarity]
+    version_introduced: v0.2.0-beta
+  - rule_id: IMP-001
+    imperative_text: Express each managerial implication through actor, decision, condition, mechanism, consequence, and implementation requirement.
+    rationale: Conditional operational pathways distinguish model-supported implications from generic advice.
+    layer: managerial_framing
+    applicable_domains: [OM, IS, OR, cross-domain]
+    applicable_modes: [diagnose, rewrite, draft-managerial-implications]
+    supporting_source_ids: []
+    source_tiers: []
+    status: original_framework_rule
+    counterconditions: [Exploratory outputs may identify a pathway as missing instead of supplying an implication.]
+    limitations: [An operational pathway does not establish implementation success.]
+    associated_anti_patterns: [AP-06, AP-07, AP-12]
+    affected_evaluation_criteria: [managerial_framing, evidence_discipline]
+    version_introduced: v0.2.0-beta
+  - rule_id: OR-001
+    imperative_text: Link analytical or computational performance to a decision deadline and operational pathway before claiming value.
+    rationale: Better bounds, runtime, or certificates affect managerial outcomes only when they change an available decision at the relevant time.
+    layer: managerial_framing
+    applicable_domains: [OR, OM]
+    applicable_modes: [create, diagnose, rewrite, map-model-to-business, draft-managerial-implications]
+    supporting_source_ids: []
+    source_tiers: []
+    status: original_framework_rule
+    counterconditions: [A paper may claim computational improvement alone when it does not claim managerial impact.]
+    limitations: [The sources motivate validation and decision use generally; the exact runtime pathway must come from the focal setting.]
+    associated_anti_patterns: [AP-12, AP-13]
+    affected_evaluation_criteria: [fidelity, managerial_framing, evidence_discipline]
+    version_introduced: v0.2.0-beta
+  - rule_id: IS-001
+    imperative_text: Distinguish latent types, observable signals, system actions, private objectives, and welfare outcomes.
+    rationale: IS framing fails when unavailable private information or broader social value is assigned to the platform's decision problem.
+    layer: fidelity
+    applicable_domains: [IS]
+    applicable_modes: [create, diagnose, rewrite, compare-scenarios, map-model-to-business, audit-assumptions]
+    supporting_source_ids: []
+    source_tiers: []
+    status: original_framework_rule
+    counterconditions: [A type can be treated as observed only when the research specification supplies a valid observation process.]
+    limitations: [The exact information and welfare boundaries must be taken from the focal model, not inferred from the sources.]
+    associated_anti_patterns: [AP-05, AP-09, AP-13]
+    affected_evaluation_criteria: [fidelity, managerial_framing]
+    version_introduced: v0.2.0-beta
+  - rule_id: PRAC-001
+    imperative_text: Treat practitioner exemplars as bounded execution observations, never as universal scientific authority.
+    rationale: Exemplars can illustrate decision-centered exposition while remaining context-specific and ordinarily copyrighted.
+    layer: evidence
+    applicable_domains: [OM, IS, OR, cross-domain]
+    applicable_modes: [diagnose, rewrite, draft-introduction]
+    supporting_source_ids: [thomke-manzi-2014, rawson-duncan-jones-2013, drucker-2002]
+    source_tiers: [tier_c_exemplar_execution]
+    status: exemplar_observation
+    counterconditions: [A separately verified empirical source may support a broader claim on its own terms.]
+    limitations: [Do not reproduce voice, anecdotes, structure, phrasing, or long excerpts.]
+    associated_anti_patterns: [AP-10, AP-16]
+    affected_evaluation_criteria: [evidence_discipline, prose_clarity]
+    version_introduced: v0.2.0-beta

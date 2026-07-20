@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B803413d3764d",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 29, "managerial_framing": 22, "scholarly_positioning": 15, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {"fidelity": "The repair preserves routes, monetary travel cost, and all stated feasibility constraints while rejecting the environmental objective substitution.", "managerial_framing": "It identifies the routing planner, choices, capacity tension, and cost mechanism, though the operational stakes and counterfactual remain generic.", "scholarly_positioning": "It appropriately declines unsupported scholarly claims; no literature-based position was requested or supplied.", "evidence_discipline": "It clearly labels emissions and sustainability effects unsupported and specifies the missing model or empirical link.", "prose_clarity": "The repaired frame is precise, but the long diagnostic template, repeated pass/fail language, and encoding artifacts reduce economy and readability.", "overall": "A faithful and evidence-disciplined repair with no hard failure; modest deductions reflect generic managerial detail and unnecessarily elaborate presentation."},
+  "raw_total": 88,
+  "capped_total": 88,
+  "pass": true
+}

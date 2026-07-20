@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B6981fd1b499b",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 15, "evidence_discipline": 14, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Routes, start times, objective, physical constraints, and the five-minute operational cutoff are preserved, and search ordering is correctly limited to incumbent quality.", "managerial_framing": "The response gives a concrete release trigger, speed-quality trade-off, five-minute comparison, and operational reason that only timely incumbents matter.", "scholarly_positioning": "It bounds the possible computational contribution and declines novelty claims absent literature and comparative results.", "evidence_discipline": "The reported tendency is treated as a hypothesis, statistical superiority is not asserted, and the required controlled comparison is clearly specified.", "prose_clarity": "The answer is precise and readable, with minor deductions for repetitive diagnostic scaffolding and encoding artifacts.", "overall": "A strong deadline-aware framing that sharply separates operational hypothesis from evidence and contains no hard failure."},
+  "raw_total": 91,
+  "capped_total": 91,
+  "pass": true
+}

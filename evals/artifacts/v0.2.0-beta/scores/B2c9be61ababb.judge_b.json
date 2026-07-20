@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B2c9be61ababb",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 23,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 14,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves the platform-first sequence, binary disclosure rule, latent seller quality, strategic seller participation, buyer belief updating, and transaction-revenue objective.",
+    "managerial_framing": "Clearly identifies the governance choice, strategic mechanism, stakes, and disclosure-versus-nondisclosure counterfactual, though implementation detail is brief.",
+    "scholarly_positioning": "The response makes no novelty or literature claim, so the conditional scholarly-positioning criterion is not implicated.",
+    "evidence_discipline": "Equilibrium play and parameter validity are expressly treated as assumptions, and the unavailable seller quality is correctly bounded.",
+    "prose_clarity": "Economical, coherent, and technically precise.",
+    "overall": "The response faithfully frames the sequential platform-governance problem without hidden information or model changes; all minima and the passing score are met."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

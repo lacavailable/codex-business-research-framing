@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "om-02.no_skill",
+  "blind_id": "Be35c1aee8541",
+  "case_id": "om-02",
+  "response": "The retailer's decision is which products to include in the assortment before customer demand is realized. Each selected product consumes category-specific capacity, so the retailer must choose a capacity-feasible binary assortment that maximizes expected revenue. Customer behavior supplies the mechanism rather than an additional managerial control: a customer begins in an uncertain product state and, when an alternative is unavailable, follows the estimated Markov transition process among other alternatives until purchasing or exiting. The assortment changes which states are available and therefore the expected distribution of final purchases, but the retailer does not select or steer any individual customer's realized transition path. Revenues, capacity consumption, and the estimated transition matrix are available at decision time. Interpreting the matrix as substitution is a model assumption. The material provides no basis for treating future starting states, transition paths, or final purchases as known when the assortment is chosen.",
+  "generator": {
+    "model": "gpt-5.6",
+    "temperature": 0,
+    "completed_at": "2026-07-19T16:31:26Z"
+  }
+}

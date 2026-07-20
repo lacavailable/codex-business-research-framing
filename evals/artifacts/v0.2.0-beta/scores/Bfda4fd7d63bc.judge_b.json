@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bfda4fd7d63bc",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Accurately preserves the feasible integer set and objective and limits the formulation's effect to relaxation strength and search performance.",
+    "managerial_framing": "Connects computational improvement to incumbents, gaps, or certificates within a planning window and supplies a matched standard-formulation counterfactual.",
+    "scholarly_positioning": "No literature-based novelty claim is requested or advanced, so scholarly positioning is not applicable.",
+    "evidence_discipline": "Treats speed as an unverified inference, enumerates fair comparison evidence, and rejects any lower-than-optimum operational-cost story.",
+    "prose_clarity": "Technically clear but over-structured and repetitive relative to the straightforward business question.",
+    "overall": "A fully faithful account of the computational value of a stronger equivalent formulation, with presentation economy as the only notable weakness."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B6fa594c8d3fa",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 23,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 14,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly preserves mandatory review, signal-contingent binary approval, latent safety, and the expected-utility objective while excluding editing, escalation, and review choice.",
+    "managerial_framing": "The intermediary, trigger, feasible choices, stakes, mechanism, and central approval-versus-harm trade-off are concrete; operational detail beyond the threshold rule is necessarily limited.",
+    "scholarly_positioning": "No scholarly novelty or literature claim is made, so the conditional scholarly-positioning criterion is not implicated.",
+    "evidence_discipline": "Signal informativeness is explicitly labeled a model assumption needing empirical validation, and no empirical or causal result is invented.",
+    "prose_clarity": "Concise, precise, and readily understandable.",
+    "overall": "A faithful and well-bounded framing with no fidelity hard failure; all category minima and the passing score are met."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

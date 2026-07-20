@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B2253b0a153f2",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 24,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Directly rejects use of future labels, retains the ex ante single-threshold decision, weighted-error objective, and residual errors from overlapping distributions.",
+    "managerial_framing": "The platform choice, timing, stakes, mechanism, and central error trade-off are concrete; alternative feasible thresholds are implicit rather than expressly developed.",
+    "scholarly_positioning": "The answer makes no scholarly claim, and none is requested.",
+    "evidence_discipline": "Correctly identifies zero-harm language as unsupported and limits the conclusion to expected weighted classification error.",
+    "prose_clarity": "Exceptionally concise, direct, and accessible without losing necessary precision.",
+    "overall": "An economical and fully faithful diagnosis and repair with no hard failure."
+  },
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

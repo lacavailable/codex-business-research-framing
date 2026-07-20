@@ -23,7 +23,7 @@ Make the trade-off structural. “Managers want better results” is not a trade
 
 ## Six consistency gates
 
-Evaluate each gate as `pass` or `fail` and give a short reason. A single failure makes the scenario ineligible.
+Evaluate each gate as `pass`, `fail`, `unknown`, or `not_assessed` and give a short reason. A single `fail` makes the scenario ineligible. Use `unknown` when a material fact is missing and `not_assessed` when the available input does not permit the test; either status makes overall eligibility `not_assessed`, never eligible.
 
 | Gate | Pass condition | Typical failure |
 |---|---|---|
@@ -44,6 +44,7 @@ Do not average gate results. Do not call a failing scenario “mostly consistent
 4. Test the six gates with a concrete event sequence.
 5. Reject or repair failed scenarios before drafting prose.
 6. Surface uncertainty and boundaries rather than filling gaps with invented realism.
+7. After every gate passes, apply managerial framing and scholarly positioning when the requested output requires them.
 
 ## Minimum fidelity record
 

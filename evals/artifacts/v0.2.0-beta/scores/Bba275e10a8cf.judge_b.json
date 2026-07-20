@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bba275e10a8cf",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves the service's prior common-friction choice, private user types, strategic participation response, type-blind constraint, and platform-payoff objective.",
+    "managerial_framing": "It concretely explains the deterrence-versus-benign-participation tension, alternative friction levels, downstream responses, and policy boundaries.",
+    "scholarly_positioning": "No unsupported contribution is asserted, and positioning is appropriately left provisional without literature.",
+    "evidence_discipline": "Type sensitivities and strategic response are labeled assumptions, while prevalence, deterrence, safety, and welfare claims are explicitly bounded.",
+    "prose_clarity": "Clear and technically accurate, but longer than needed and containing corrupted dash characters.",
+    "overall": "A model-faithful, evidence-disciplined framing with no hard failure and scores above every minimum."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

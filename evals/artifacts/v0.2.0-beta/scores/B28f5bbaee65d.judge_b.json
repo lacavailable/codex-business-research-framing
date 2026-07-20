@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B28f5bbaee65d",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 7
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Completely maps the platform decision, move order, unavailable seller quality, strategic participation and belief states, binary constraint, mechanism, and transaction-revenue objective.",
+    "managerial_framing": "Actor, trigger, choices, stakes, mechanism, trade-off, counterfactual, and operational boundaries are all explicit and model-consistent.",
+    "scholarly_positioning": "It appropriately states that novelty is provisional because no literature comparison or result is supplied; no unsupported contribution is claimed.",
+    "evidence_discipline": "Distinguishes equilibrium behavior and parameters as unvalidated assumptions and carefully bounds welfare, quality, and adoption claims.",
+    "prose_clarity": "The organization is legible and precise, but the response is longer than needed and contains visibly corrupted dash characters.",
+    "overall": "Substantively excellent and fully faithful, with only presentation defects; no hard failure applies and all passing conditions are met."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

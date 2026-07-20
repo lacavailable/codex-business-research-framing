@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bb5ed09e7ee12",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 23,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 9
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves assignments, coverage, rest, availability, the stated objective, and the heuristic's lack of a bound or certificate.",
+    "managerial_framing": "Connects rapid feasibility to a conditional release deadline and states the speed-versus-unknown-quality trade-off; the actual deadline remains unavailable by design.",
+    "scholarly_positioning": "Not requested or claimed; it expressly withholds novelty and broader contribution conclusions.",
+    "evidence_discipline": "Strictly limits performance evidence to the small synthetic set and identifies the validation needed for live operations.",
+    "prose_clarity": "Clear and organized, with modest diagnostic overhead.",
+    "overall": "Faithful, decision-relevant, and unusually careful about both optimality and generalization boundaries."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

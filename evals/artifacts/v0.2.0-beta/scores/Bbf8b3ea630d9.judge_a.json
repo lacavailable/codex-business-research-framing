@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bbf8b3ea630d9",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves the information sequence, exogenous demand, limited recourse pool, flow balance, and exact cost objective.",
+    "managerial_framing": "The advance-hedging versus costly limited-correction tension, actor, counterfactual, and operational implications are concrete.",
+    "scholarly_positioning": "Not requested or claimed; the response correctly withholds a paper-level contribution claim.",
+    "evidence_discipline": "Explicitly identifies scenario calibration and parameter validation as missing and avoids unmodeled outcome claims.",
+    "prose_clarity": "Clear and rigorous, with some avoidable diagnostic scaffolding.",
+    "overall": "A complete and faithful diagnosis of the two-stage recourse problem."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bcd6d6717bd44",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 24,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves the two-message Bayes-plausible signal policy, posterior-based receiver behavior, and expected completed transactions as the objective.",
+    "managerial_framing": "Clearly states the actor's choice, information, mechanism, feasibility restriction, and scope; alternative feasible policies are implicit rather than elaborated.",
+    "scholarly_positioning": "No scholarly contribution is requested or claimed.",
+    "evidence_discipline": "Explicitly treats receiver thresholds as an assumption and refuses to infer accuracy, receiver surplus, or welfare from transactions.",
+    "prose_clarity": "Concise, coherent, and exact.",
+    "overall": "An efficient and highly faithful information-design framing with no hard failure."
+  },
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

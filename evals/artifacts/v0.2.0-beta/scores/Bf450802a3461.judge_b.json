@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bf450802a3461",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 8
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly maps review selection, the 200-item capacity, latent violation status, post-selection review findings, and expected prevented harm.",
+    "managerial_framing": "Provides a concrete actor, trigger, feasible choices, opportunity-cost trade-off, counterfactual, and operational mechanism.",
+    "scholarly_positioning": "No contribution is claimed; the response appropriately says positioning is provisional without a literature baseline.",
+    "evidence_discipline": "Separates model assumptions from operational evidence needs and does not imply perfect ranking or known violations.",
+    "prose_clarity": "Clear and well organized, though substantially more repetitive and template-heavy than necessary.",
+    "overall": "A complete, model-faithful framing; verbosity is the only meaningful weakness."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

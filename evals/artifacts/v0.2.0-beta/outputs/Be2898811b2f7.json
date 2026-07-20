@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "om-05.no_skill",
+  "blind_id": "Be2898811b2f7",
+  "case_id": "om-05",
+  "response": "The business problem is to decide, before regional orders are observed, how a central depot should divide a fixed stock among fulfillment zones. Concentrating units in fewer zones can protect against shortages where demand is likely to be high, but it leaves other zones exposed; spreading stock provides broader coverage but may create costly leftovers in low-demand zones while shortages occur elsewhere. The model therefore chooses units allocated to each zone to minimize expected shortage and holding cost under the regional demand distribution and cost coefficients. Once demand realizes, allocated inventory can serve only its own zone: unmet demand is lost and neither transfers nor other recourse are available. Correlation across regional demands is a model assumption, not an established empirical fact in the supplied material. The case also provides no support for claiming that the depot observes demand before allocation or can rebalance inventory afterward.",
+  "generator": {
+    "model": "gpt-5.6",
+    "temperature": 0,
+    "completed_at": "2026-07-19T16:31:26Z"
+  }
+}

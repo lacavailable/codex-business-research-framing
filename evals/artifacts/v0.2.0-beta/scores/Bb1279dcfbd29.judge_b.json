@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bb1279dcfbd29",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly keeps staffing as the pre-arrival integer decision, service rates fixed, queues and waits as stochastic outcomes, coverage and integrality intact, and the expected labor-plus-waiting-cost objective unchanged.",
+    "managerial_framing": "Provides the scheduler, cutoff, choices, labor-versus-congestion stakes, capacity mechanism, coverage-feasible alternatives, and a bounded operational research question.",
+    "scholarly_positioning": "It appropriately declines to claim novelty without literature, satisfying the boundary for an otherwise nonrequested scholarly dimension.",
+    "evidence_discipline": "Labels waiting-cost weights as assumptions, avoids causal care-improvement claims, identifies missing calibration, and states relevant counterconditions and omitted constraints.",
+    "prose_clarity": "Readable and precise but somewhat overbuilt for the prompt because of readiness language, gate recitation, and multiple mapping summaries.",
+    "overall": "A substantively complete and faithful staffing explanation with strong evidence limits and minor presentational excess."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0", "blind_id": "B67b927b25077", "judge_id": "judge_a", "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 14, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Retains the one-shot pre-demand integer order, budget, uncertain demand, salvage, lost sales, and expected-profit objective exactly.",
+    "managerial_framing": "Makes the irreversible commitment and underage-versus-overage tension concrete and supplies a bounded decision question.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed; novelty is appropriately left unassessed.",
+    "evidence_discipline": "Carefully treats the demand distribution as assumed and avoids realized-profit guarantees, although its calibration wording adds a minor unsupported nuance.",
+    "prose_clarity": "Accurate and accessible in substance, but burdened by mode labels, gate accounting, and extensive boundary detail.",
+    "overall": "Fully faithful and decision-relevant, with small deductions for excess scaffolding and a minor evidence-labeling imprecision."
+  },
+  "raw_total": 96, "capped_total": 96, "pass": true
+}

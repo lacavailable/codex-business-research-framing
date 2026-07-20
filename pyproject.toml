@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "codex-business-research-framing-tools"
-version = "0.1.0a0"
+version = "0.2.0b0"
 description = "Validation and release tooling for the frame-business-research-problem Agent Skill"
 readme = "README.md"
 requires-python = ">=3.11"

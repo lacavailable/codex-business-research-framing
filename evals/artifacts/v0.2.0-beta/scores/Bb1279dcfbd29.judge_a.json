@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0", "blind_id": "Bb1279dcfbd29", "judge_id": "judge_a", "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly keeps integer staffing ex ante, service rates fixed, arrivals stochastic, queues and waits as outcomes, coverage constraints, and the stated cost objective.",
+    "managerial_framing": "Clearly develops the labor-versus-delay tension, operational mechanism, trigger, and bounded staffing question.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed; novelty is explicitly not asserted without literature.",
+    "evidence_discipline": "Separates assumptions and forecasts from realized outcomes and rejects causal care-improvement claims without supplied evidence.",
+    "prose_clarity": "Accurate and readable but substantially longer and more framework-heavy than the prompt requires.",
+    "overall": "An excellent model-grounded explanation with no fidelity or evidence failure; verbosity is the sole material weakness."
+  },
+  "raw_total": 97, "capped_total": 97, "pass": true
+}

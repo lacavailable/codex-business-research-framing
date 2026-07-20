@@ -1,0 +1,27 @@
+{
+    "schema_version":  "1.0.0",
+    "blind_id":  "B5ef57aa90081",
+    "judge_id":  "adjudicator",
+    "rubric_version":  "2.0.0",
+    "category_scores":  {
+                            "fidelity":  30,
+                            "managerial_framing":  24,
+                            "scholarly_positioning":  10,
+                            "evidence_discipline":  15,
+                            "prose_clarity":  10
+                        },
+    "hard_failures":  [
+
+                      ],
+    "rationale":  {
+                      "fidelity":  "It preserves a single common daily set, ex ante choice, the eight-item constraint, expected-margin objective, and visitor choice uncertainty while expressly excluding rank and personalization.",
+                      "managerial_framing":  "The scarce-display trade-off, mechanism, actor, timing, operational question, counterconditions, and boundaries are concrete; the counterfactual is only implicit among alternative sets.",
+                      "scholarly_positioning":  "It correctly calls novelty provisional because no literature is supplied rather than fabricating a contribution.",
+                      "evidence_discipline":  "The display limit is labeled a simplifying assumption, calibration is unsupported, and empirical margin and importance claims are withheld.",
+                      "prose_clarity":  "The response is well organized, economical, and precise.",
+                      "overall":  "The response clears the total-score, fidelity, managerial, evidence, and prose requirements but does not meet the universal scholarly-positioning minimum; therefore the rubric-derived result is fail."
+                  },
+    "raw_total":  89,
+    "capped_total":  89,
+    "pass":  false
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B9a7d95d85056",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Correctly retains supplier quantities as decisions, realized demand as uncertainty, and the robust objective and constraints.", "managerial_framing": "Clearly presents the resilience-versus-conservatism trade-off and the procurement implications of the uncertainty budget.", "scholarly_positioning": "No novelty or literature claim is requested or made.", "evidence_discipline": "States that the guarantee holds only inside the chosen set and identifies calibration and coverage as unsupported assumptions needing evidence.", "prose_clarity": "Focused and accessible, with only minor encoding damage in one possessive.", "overall": "A near-complete robust-optimization framing with exactly the required boundary on protection."},
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

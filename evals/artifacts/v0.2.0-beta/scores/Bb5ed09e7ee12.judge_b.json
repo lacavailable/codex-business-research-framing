@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bb5ed09e7ee12",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 22, "scholarly_positioning": 14, "evidence_discipline": 14, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {"fidelity": "It preserves the crew-assignment model, stated constraints and objective, and correctly says that rapid feasibility supplies neither a bound nor optimality.", "managerial_framing": "The speed-versus-unknown-quality trade-off is clear, but realized deadline value remains conditional because no actual deadline or changed action is supplied.", "scholarly_positioning": "It properly avoids a heuristic novelty claim and identifies missing comparator evidence.", "evidence_discipline": "Results are confined to the small synthetic test set, and live performance, optimality, service, and profit effects are all withheld.", "prose_clarity": "The explanation is clear but longer and more templated than necessary, with some encoding artifacts.", "overall": "A faithful, cautious framing with no hard failure; the score reflects limited operational specificity and unnecessary diagnostic bulk."},
+  "raw_total": 88,
+  "capped_total": 88,
+  "pass": true
+}

@@ -29,4 +29,6 @@ research-private/
 # Local evaluation scratch space
 .local-eval/
 .local-tools/
+.official-skills/
+.clean-install/
 evals/runs-private/

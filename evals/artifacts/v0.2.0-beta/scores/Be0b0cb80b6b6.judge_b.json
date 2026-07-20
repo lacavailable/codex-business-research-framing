@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Be0b0cb80b6b6",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 22, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Correctly keeps facility openings and flows, the capacity and balance constraints, the cost objective, and the offline nature of the unchanged model.", "managerial_framing": "Explains how larger solvable models might matter but appropriately notes that no planning threshold, deadline, or changed action is supplied; trigger and counterfactual remain somewhat generic.", "scholarly_positioning": "It does not claim novelty and explicitly bounds the possible contribution pending comparators and results.", "evidence_discipline": "Correctly treats scalability as an inference requiring controlled computational evidence and rejects universal practical value.", "prose_clarity": "Understandable but overstructured and repetitive, with garbled characters and an unnecessary layer-by-layer preamble.", "overall": "A faithful and cautious computational framing, with weaker managerial concreteness and economy than the strongest responses."},
+  "raw_total": 94,
+  "capped_total": 94,
+  "pass": true
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "is-04.v0_2_0_beta",
+  "blind_id": "Bd65ce0c5fe74",
+  "case_id": "is-04",
+  "response": "Mode: create. Readiness: Stage 2 (model-grounded); the classification-threshold problem is specified, but the classifier distributions, loss weights, and external outcomes lack empirical support. Eligibility: eligible; all six gates pass.\n\nBusiness problem: A platform chooses one score threshold for removing user posts before latent content class is known. It uses a noisy classifier score and estimated conditional score distributions to minimize expected loss from removing benign posts and retaining harmful posts. The managerial question is where to set the common threshold given the relative loss weights. The structural tension is immediate false removal versus harmful retention; because classification is imperfect, moving the threshold reduces one error only by risking more of the other.\n\nDFC-12: Actor—platform moderation-policy owner. Trigger—setting the rule for classifying posts. Choices—one moderation score threshold. Decision-time information—classifier scores when applying the rule, estimated conditional score distributions, and loss weights; true content class is latent. Stakes—expected false-removal and harmful-retention loss. Frictions—one threshold. Mechanism—the threshold partitions noisy scores into removal and retention outcomes. Trade-off—the two immediate classification errors. Counterfactual—another feasible threshold. Mapping—threshold is the decision; latent class and score realization are uncertain; score is observed at classification; removal is the outcome; expected weighted classification loss is the objective. Evidence—the assertion that moderation improves community health is unsupported. Boundaries—the model covers immediate classification loss, not long-run trust, community health, behavior adaptation, or causal social effects. Gates: actor, timing, information, behavior, constraints, and objective all pass.\n\nEvidence and scholarly limits: Empirical claims require validated labels and conditional score distributions, justified loss weights, and out-of-sample error measurement. Long-run community effects require a separate design and outcome model. Scholarly novelty is provisional without literature or results. Primary remaining weakness: the connection from immediate classification decisions to broader community outcomes is not modeled or evidenced.",
+  "generator": {
+    "model": "gpt-5.6",
+    "temperature": 0,
+    "completed_at": "2026-07-19T17:07:19Z"
+  }
+}

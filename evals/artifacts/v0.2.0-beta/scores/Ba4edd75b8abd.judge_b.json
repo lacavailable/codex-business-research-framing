@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Ba4edd75b8abd",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves here-and-now zone allocation, fixed total stock, no transfers, lost sales and leftovers as outcomes, correlated demand uncertainty, and the expected shortage-plus-holding-cost objective.",
+    "managerial_framing": "Makes the advance depot choice, concentrating-versus-covering tension, no-recourse stakes, service mechanism, feasible alternatives, and operational consequences concrete.",
+    "scholarly_positioning": "No literature positioning is required, and the response appropriately states that literature-relative novelty is not established.",
+    "evidence_discipline": "Explicitly treats correlation as a model assumption, avoids realized-savings claims, identifies excluded mechanisms and counterconditions, and flags empirical calibration as the main weakness.",
+    "prose_clarity": "Clear and accurate, though mode/readiness declarations and repeated gate and mapping summaries add avoidable procedural density.",
+    "overall": "A fully faithful and evidence-bounded inventory-allocation framing with excellent managerial substance."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

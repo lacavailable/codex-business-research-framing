@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bc7a8f5f2977d",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 8
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly diagnoses unacquired sensitive information and the bypassed privacy budget, then restores the consent-first acquisition sequence and feasible recommendation rule.",
+    "managerial_framing": "Fully specifies the policy owner, staged choices, available information, budget friction, net-utility stakes, acquisition mechanism, trade-off, and feasible counterfactual.",
+    "scholarly_positioning": "No scholarly contribution is requested; the response appropriately states that novelty cannot be assessed.",
+    "evidence_discipline": "Separates behavioral assumptions from unsupported costless access and lists the consent, informativeness, cost, and response evidence needed.",
+    "prose_clarity": "Clear and rigorous, with modest repetition between diagnosis, repair, DFC, and limits.",
+    "overall": "A thorough and faithful repair of both the information and constraint violations."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

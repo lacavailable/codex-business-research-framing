@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bd4e0c0d296f3",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 24,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 9
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly diagnoses the leaked future demand, restores allocation before realization, preserves fixed inventory, nonnegativity, and no-transfer recourse, and keeps shortages and leftovers as outcomes under the exact expected-cost objective.",
+    "managerial_framing": "Identifies the depot planner, advance deadline, feasible allocations, concentration-versus-coverage trade-off, operational mechanism, and a same-information counterfactual; the stakes are concrete though not quantified.",
+    "scholarly_positioning": "Scholarly positioning is neither requested nor claimed, and the response appropriately avoids novelty or literature assertions while bounding what the model supports.",
+    "evidence_discipline": "Explicitly labels the joint distribution as a model assumption, distinguishes conditional expected-cost comparisons from guaranteed savings, and identifies calibration as the principal evidence weakness.",
+    "prose_clarity": "Clear headings and precise mapping make the repair easy to follow, with only modest repetition of the gate language.",
+    "overall": "A fully faithful and evidence-disciplined repair with strong managerial framing and no hard failure."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "is-08.v0_2_0_beta",
+  "blind_id": "B28f5bbaee65d",
+  "case_id": "is-08",
+  "response": "Mode: create. Readiness: Stage 2 (model-grounded); the sequential game is specified, but equilibrium behavior and parameters are not empirically validated. Eligibility: eligible; all six gates pass.\n\nBusiness problem: Before seller quality is realized or observed, a platform commits to one of two governance rules: require disclosure of a quality signal or do not require it. Sellers then decide whether to participate, and buyers form beliefs from the disclosed information and equilibrium participation before deciding whether to transact. The platform asks which rule maximizes transaction revenue. The structural tension is that mandatory disclosure changes both seller participation incentives and buyer inference; more information can alter market composition rather than mechanically increase transactions.\n\nDFC-12: Actor—the platform. Trigger—setting the disclosure rule before sellers and buyers act. Choices—a binary mandatory-disclosure rule. Decision-time information—quality prior, payoffs, and signal structure; seller quality is unknown. Stakes—platform transaction revenue. Frictions—the rule is disclose-or-not. Mechanism—the rule changes seller participation and the information buyers infer, which affects transactions. Trade-off—information provision versus participation/composition effects. Counterfactual—the alternative binary rule. Mapping—the rule is the platform decision; quality is uncertain; seller participation and buyer belief are strategic downstream states; transactions are outcomes; transaction revenue is the objective. Evidence—equilibrium play is a model assumption. Boundaries—the platform does not observe seller quality when setting the rule, and the model does not establish buyer welfare, quality improvement, or empirical adoption effects. Gates: actor pass; timing pass; information pass; behavior pass under the modeled equilibrium; constraints pass; objective pass.\n\nEvidence and scholarly limits: Empirical claims require evidence on the quality prior, signal informativeness, seller responses, buyer belief formation, and transaction revenue. The case supplies no literature comparison or results, so scholarly novelty is provisional. Primary remaining weakness: the equilibrium response assumptions are unvalidated outside the model.",
+  "generator": {
+    "model": "gpt-5.6",
+    "temperature": 0,
+    "completed_at": "2026-07-19T17:07:19Z"
+  }
+}

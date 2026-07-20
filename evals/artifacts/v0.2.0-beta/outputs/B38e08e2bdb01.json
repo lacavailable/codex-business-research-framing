@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "om-12.no_skill",
+  "blind_id": "B38e08e2bdb01",
+  "case_id": "om-12",
+  "response": "The proposed narrative conflates three different resources. In the supplied model, capacity means only that the common homepage module can contain at most twelve displayed products. The merchant's decision is which products to include in that module, using product margins and estimated choice probabilities to maximize expected margin from the displayed set. The chosen set defines the alternatives from which visitors purchase or exit; realized visitor choice remains uncertain. Displaying a product consumes one of twelve screen positions, not a unit of physical inventory or warehouse or delivery capacity. Inventory quantities and fulfillment resources are fixed outside the model. The twelve-position limit is a simplifying assumption. The supplied material does not support the claim that display selection reduces fulfillment congestion, nor does it permit interpreting the formulation as inventory allocation or fulfillment-capacity planning. Those claims would require additional variables, constraints, mechanisms, and evidence.",
+  "generator": {
+    "model": "gpt-5.6",
+    "temperature": 0,
+    "completed_at": "2026-07-19T16:31:26Z"
+  }
+}

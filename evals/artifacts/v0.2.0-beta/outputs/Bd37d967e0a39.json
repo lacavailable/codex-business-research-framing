@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "is-01.v0_2_0_beta",
+  "blind_id": "Bd37d967e0a39",
+  "case_id": "is-01",
+  "response": "Mode: create. Readiness: Stage 2 (model-grounded); the threshold model is specified, but score and payoff inputs lack empirical validation. Eligibility: eligible; all six gates pass.\n\nBusiness problem: A marketplace selects one risk-score admission threshold for prospective sellers before latent seller type is known. It observes a noisy score, not malicious intent. The managerial question is which common threshold maximizes expected platform payoff from admissions and harms. A stricter threshold can block more malicious sellers but also reject more benign sellers; because no downstream review resource is modeled, this is a screening-error trade-off rather than a review-allocation problem.\n\nDFC-12: Actor—marketplace admission-policy owner. Trigger—setting the seller screening rule. Choices—one common risk-score threshold. Decision-time information—modeled type-conditional score distributions and payoff parameters; individual type remains latent, while score is observed for applying the rule. Stakes—expected platform payoff from admissions and harms. Frictions—one common threshold. Mechanism—the noisy score induces false-positive and false-negative rates as the threshold moves. Trade-off—malicious admission versus benign rejection. Counterfactual—another feasible common threshold. Mapping—threshold is the decision; seller type and signal are uncertain; risk score is the observed signal; admission is the outcome; expected platform payoff is the objective. Evidence—differences in score distributions by type are model assumptions. Boundaries—the score does not reveal intent perfectly; no downstream review, welfare, or real-market performance is modeled. Gates: actor, timing, information, behavior, constraints, and objective all pass.\n\nEvidence and scholarly limits: Operational claims require validation of score distributions, payoff weights, calibration, and population stability. The supplied material establishes no prevalence, causal safety effect, or scholarly novelty. Primary remaining weakness: empirical calibration of the latent-type score model is missing.",
+  "generator": {
+    "model": "gpt-5.6",
+    "temperature": 0,
+    "completed_at": "2026-07-19T17:07:19Z"
+  }
+}

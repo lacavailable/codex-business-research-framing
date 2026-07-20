@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B5689baae2874",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 7
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Accurately diagnoses the welfare-objective mismatch and repairs the framing around one threshold maximizing advertising revenue net of direct moderation cost.",
+    "managerial_framing": "Clearly supplies the actor, timing, feasible threshold, stakes, mechanism, trade-off, counterfactual, and operational limits.",
+    "scholarly_positioning": "No literature contribution is requested or claimed, and the answer avoids manufacturing one.",
+    "evidence_discipline": "Repeatedly and correctly separates modeled net revenue from unsupported welfare, fairness, safety, and community-health claims.",
+    "prose_clarity": "The logic is clear, but multiple sections repeat essentially the same diagnosis and boundary.",
+    "overall": "A correct and complete adversarial diagnosis whose only notable weakness is unnecessary length."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B746809056f83",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Preserves the common feasible set, routing decisions, constraints, objective, and distinct heuristic and exact computational mechanisms.", "managerial_framing": "Fully articulates the latency-quality-certification trade-off, matched counterfactual, and the missing operational pathways.", "scholarly_positioning": "No literature or novelty claim is required, and the computational comparison is carefully bounded.", "evidence_discipline": "Treats early-feasibility value, field impact, and certificate value as unsupported pending explicit actions and deadlines.", "prose_clarity": "Accurate but considerably overstructured and repetitive, with unnecessary diagnostic labels.", "overall": "Substantively complete and fully faithful, with presentation economy as the only notable weakness."},
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

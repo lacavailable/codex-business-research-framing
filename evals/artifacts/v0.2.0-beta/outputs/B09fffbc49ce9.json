@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "is-02.v0_2_0_beta",
+  "blind_id": "B09fffbc49ce9",
+  "case_id": "is-02",
+  "response": "Mode: create. Readiness: Stage 2 (model-grounded); the signal-contingent approval model is specified, but signal informativeness and loss parameters are not empirically validated. Eligibility: eligible for the bounded framing; all six gates pass.\n\nBusiness problem: After receiving an LLM-drafted reply and an observed risk signal, an intermediary chooses whether to approve or refuse the reply under a mandatory-review process. The managerial question is which approve-or-refuse rule, conditional on the signal, maximizes expected utility from approved replies minus harm from unsafe approvals. The structural tension is approving useful replies versus preventing unsafe approvals when reply safety is latent and the signal is noisy. Review cost or review selection is not the trade-off because every reply is already inspected.\n\nDFC-12: Actor—the intermediary reviewer or policy owner. Trigger—receipt of a draft reply and risk signal. Choices—approve or refuse according to a signal-contingent rule. Decision-time information—the draft, risk signal, and modeled loss parameters; latent safety remains unknown. Stakes—expected approved-reply utility net of unsafe-reply harm. Frictions—binary action and mandatory review. Mechanism—the signal updates beliefs about safety and shifts the approval threshold. Trade-off—useful approvals versus unsafe-approval harm. Counterfactual—another feasible binary rule, such as a different signal threshold. Mapping—the rule is the decision; latent safety is uncertainty; risk signal is observed; approval/refusal is the outcome; expected net utility is the objective. Evidence—signal informativeness is a model assumption. Boundaries—there is no edit, rewrite, escalation, or review-allocation action; refusal does not imply correction. Gates: actor, timing, information, behavior, constraints, and objective all pass.\n\nEvidence and scholarly limits: Empirical use requires validation of the risk signal, safety labels, utility, and harm weights. No claim about actual LLM safety performance or causal harm reduction is established. Scholarly novelty remains provisional without literature or results. Primary remaining weakness: the signal and loss model lack empirical calibration.",
+  "generator": {
+    "model": "gpt-5.6",
+    "temperature": 0,
+    "completed_at": "2026-07-19T17:07:19Z"
+  }
+}

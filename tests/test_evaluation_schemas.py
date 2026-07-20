@@ -13,14 +13,11 @@ CASE_FIELDS = {
     "hard_failure_traps", "adversarial", "tags",
 }
 EXPECTED_WEIGHTS = {
-    "model_fidelity": 25,
-    "decision_specificity": 15,
-    "nontrivial_tradeoff": 15,
-    "mechanism": 10,
-    "evidence_discipline": 10,
-    "boundaries": 10,
-    "model_mapping": 10,
-    "managerial_clarity": 5,
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 10,
 }
 
 
@@ -37,11 +34,11 @@ def load_cases() -> list[dict]:
     return cases
 
 
-def test_thirty_case_schema_and_domain_balance() -> None:
+def test_forty_two_case_schema_and_domain_balance() -> None:
     cases = load_cases()
-    assert len(cases) == 30
-    assert len({case.get("id") for case in cases}) == 30
-    assert Counter(case.get("domain") for case in cases) == {"OM": 10, "IS": 10, "OR": 10}
+    assert len(cases) == 42
+    assert len({case.get("id") for case in cases}) == 42
+    assert Counter(case.get("domain") for case in cases) == {"OM": 14, "IS": 14, "OR": 14}
     for case in cases:
         assert CASE_FIELDS <= set(case), f"{case.get('id')} is missing required fields"
         assert isinstance(case["adversarial"], bool)
@@ -53,6 +50,10 @@ def test_thirty_case_schema_and_domain_balance() -> None:
         assert isinstance(case["prompt"], str) and case["prompt"].strip()
         assert isinstance(case["model_specification"], (str, dict)) and case["model_specification"]
     assert any(case["adversarial"] for case in cases)
+    new_cases = [case for case in cases if int(case["id"].rsplit("-", 1)[1]) >= 11]
+    assert len(new_cases) == 12
+    assert Counter(case["domain"] for case in new_cases) == {"OM": 4, "IS": 4, "OR": 4}
+    assert sum(case["adversarial"] for case in new_cases) == 8
 
 
 def normalize_categories(value) -> dict[str, int]:
@@ -73,7 +74,10 @@ def test_rubric_schema_weights_and_hard_failures() -> None:
     rubric = matching[0]
     assert normalize_categories(rubric["categories"]) == EXPECTED_WEIGHTS
     assert sum(EXPECTED_WEIGHTS.values()) == 100
-    assert isinstance(rubric.get("hard_failures"), list) and len(rubric["hard_failures"]) >= 9
+    assert rubric["version"] == "2.0.0"
+    assert isinstance(rubric.get("hard_failures"), list) and len(rubric["hard_failures"]) >= 6
     threshold = rubric.get("passing_threshold", rubric.get("passing_score"))
     cap = rubric.get("hard_failure_cap")
-    assert isinstance(threshold, int) and isinstance(cap, int) and cap < threshold
+    assert threshold == 70 and cap == 69
+    assert rubric["automatic_failure_on_fidelity_hard_failure"] is True
+    assert all(0 <= layer["minimum"] <= layer["weight"] for layer in rubric["categories"])

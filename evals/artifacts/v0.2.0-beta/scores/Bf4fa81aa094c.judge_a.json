@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bf4fa81aa094c",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 28, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "The repaired frame correctly separates advance allocation, exogenous demand, and served-demand outcomes while preserving feasibility and objective; calling the original state error an actor-gate failure is slightly imprecise.",
+    "managerial_framing": "Scarcity, ex ante allocation, competing regional uses, expected-value stakes, and the feasible-policy counterfactual are concrete.",
+    "scholarly_positioning": "Not requested or claimed; it correctly withholds a contribution claim.",
+    "evidence_discipline": "Clearly labels the demand distribution as an assumption and rejects guarantees and broader unmodeled effects.",
+    "prose_clarity": "Clear and organized, though diagnostically elaborate.",
+    "overall": "A strong and faithful repair with a minor gate-labeling imprecision."
+  },
+  "raw_total": 96,
+  "capped_total": 96,
+  "pass": true
+}

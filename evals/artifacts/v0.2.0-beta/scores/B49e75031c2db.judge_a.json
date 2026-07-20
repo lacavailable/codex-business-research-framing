@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B49e75031c2db",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 28, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "The repair correctly restores exogenous demand, advance allocation, served demand as outcome, constraints, and expected-value objective; describing the proposed state error as an actor-gate failure is slightly inaccurate.",
+    "managerial_framing": "Actor, trigger, scarcity trade-off, information boundary, alternative-policy counterfactual, and operational meaning are explicit.",
+    "scholarly_positioning": "Not requested or claimed; no unsupported scholarly contribution is asserted.",
+    "evidence_discipline": "Labels distributional fit as a model assumption and clearly rejects demand control, foresight, and realized-week guarantees.",
+    "prose_clarity": "Clear and precise, albeit longer than needed.",
+    "overall": "A highly effective narrative repair with only a minor diagnostic-label issue."
+  },
+  "raw_total": 96,
+  "capped_total": 96,
+  "pass": true
+}

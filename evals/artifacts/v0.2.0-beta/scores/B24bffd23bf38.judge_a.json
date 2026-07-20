@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0", "blind_id": "B24bffd23bf38", "judge_id": "judge_a", "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Maps pre-shift inclusion, two fixed capacity constraints, uncertain arrivals and choices, substitution, and expected contribution margin without changing the model.",
+    "managerial_framing": "Provides a concrete trigger, actor, capacity-versus-breadth tension, mechanism, bounded question, and relevant counterconditions.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed; the response appropriately says novelty is unassessed.",
+    "evidence_discipline": "Labels substitution as a model assumption and rejects firm-specific profit, delivery-speed, customer-effect, and welfare claims.",
+    "prose_clarity": "Clear and precise, but substantially more procedural and verbose than the accessible framing requires.",
+    "overall": "Comprehensive and fully faithful with strong boundaries; the only notable weakness is template-heavy length."
+  },
+  "raw_total": 97, "capped_total": 97, "pass": true
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bc2436bc82102",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 23,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 9
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly maps the manager, morning assignment, known inputs, certification and hour constraints, completion outcomes, and scheduled-value objective while explicitly excluding emergencies.",
+    "managerial_framing": "The trigger, choice, scarce-hour opportunity cost, feasible counterfactual, and operational boundary are concrete; the practical stakes could be stated slightly more directly.",
+    "scholarly_positioning": "No scholarly contribution or novelty is claimed, so the conditional category is satisfied without an unsupported literature assertion.",
+    "evidence_discipline": "Accurately identifies emergency materiality as unsupported, names the evidence need, and avoids robustness, welfare, and realized-value claims.",
+    "prose_clarity": "Clear and well organized, with only modest repetition across the canvas, mapping, and boundary sections.",
+    "overall": "A highly faithful and evidence-disciplined framing with no hard failure; minor deductions reflect some templated repetition and slightly understated managerial stakes."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

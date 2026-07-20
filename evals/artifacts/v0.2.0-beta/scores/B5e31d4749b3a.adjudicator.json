@@ -1,0 +1,27 @@
+{
+    "schema_version":  "1.0.0",
+    "blind_id":  "B5e31d4749b3a",
+    "judge_id":  "adjudicator",
+    "rubric_version":  "2.0.0",
+    "category_scores":  {
+                            "fidelity":  30,
+                            "managerial_framing":  23,
+                            "scholarly_positioning":  10,
+                            "evidence_discipline":  15,
+                            "prose_clarity":  8
+                        },
+    "hard_failures":  [
+
+                      ],
+    "rationale":  {
+                      "fidelity":  "It identifies the proposed timing and behavior failures, then correctly makes the 08:00 incumbent operational and the 08:30 certificate retrospective only.",
+                      "managerial_framing":  "The deadline, routing decision, costs, latency-quality tension, and possible ex post pathway are concrete and carefully bounded.",
+                      "scholarly_positioning":  "It appropriately marks scholarly positioning not assessed and makes no unsupported contribution claim.",
+                      "evidence_discipline":  "It distinguishes the supplied 08:30 case fact from the unsupported claim about routine pre-release certificates and names the missing evidence.",
+                      "prose_clarity":  "The structure is clear, but encoding artifacts and a stray formatting sequence reduce readability.",
+                      "overall":  "The response clears the total-score, fidelity, managerial, evidence, and prose requirements but does not meet the universal scholarly-positioning minimum; therefore the rubric-derived result is fail."
+                  },
+    "raw_total":  86,
+    "capped_total":  86,
+    "pass":  false
+}

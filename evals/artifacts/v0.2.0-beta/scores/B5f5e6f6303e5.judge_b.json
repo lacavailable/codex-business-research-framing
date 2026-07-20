@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B5f5e6f6303e5",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 21,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly diagnoses unavailable sensitive information and the privacy-budget constraint, then restores the joint consent-request and recommendation decisions.",
+    "managerial_framing": "The choices, mechanism, constraint, objective, and operational rule are concrete, but trigger and counterfactual are compressed.",
+    "scholarly_positioning": "Not requested or claimed; no novelty claim is made.",
+    "evidence_discipline": "Explicitly marks consent-response and sensitive-signal models as assumptions and rejects unsupported free-access claims.",
+    "prose_clarity": "Economical, direct, and precise.",
+    "overall": "A strong diagnosis and faithful repair that cleanly protects information and consent boundaries."
+  },
+  "raw_total": 96,
+  "capped_total": 96,
+  "pass": true
+}

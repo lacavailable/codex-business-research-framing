@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B151db12141ca",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 24,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Keeps one epsilon choice within the approved interval, the privacy-utility objective, and the noise-versus-guarantee mechanism without adding churn or legal penalties.",
+    "managerial_framing": "The platform choice, constraint, stakes, and bidirectional trade-off are concrete; a comparison to another feasible epsilon is implicit.",
+    "scholarly_positioning": "The response makes no scholarly claim and none is requested.",
+    "evidence_discipline": "Correctly rejects retention and compliance conclusions and explains what evidence and model extension a retention claim would require.",
+    "prose_clarity": "Economical and readily understandable.",
+    "overall": "A precise, bounded account of the intended privacy-utility choice."
+  },
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

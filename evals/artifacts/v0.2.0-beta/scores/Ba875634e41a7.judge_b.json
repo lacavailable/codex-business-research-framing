@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Ba875634e41a7",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Preserves all dispatch decisions, known inputs, feasibility constraints, the routing-plus-lateness objective, and the five-minute cutoff.", "managerial_framing": "Directly connects early incumbents to the plan available at release and makes the fixed-budget operational mechanism concrete.", "scholarly_positioning": "No novelty or literature claim is asserted.", "evidence_discipline": "Separates the early-quality hypothesis from proof and specifies comparative testing and statistical assessment before superiority claims.", "prose_clarity": "Compact and clear, with minor encoding damage but no substantive ambiguity.", "overall": "A nearly ideal concise framing of deadline-dependent algorithmic value and evidentiary limits."},
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B0d14f5d7b0de",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 23,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 8
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly rejects the welfare interpretation, retains expected vendor revenue, and maps assortment capacity, choice uncertainty, and offered products consistently.",
+    "managerial_framing": "Makes the capacity trade-off and offered-set mechanism concrete, though the operational trigger and stakes remain somewhat generic.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed; the response appropriately declines to assert novelty without literature.",
+    "evidence_discipline": "Explicitly labels the welfare claim unsupported and bounds all empirical, practical-impact, and literature claims.",
+    "prose_clarity": "Precise and well organized, but longer and more template-heavy than needed for the requested rewrite.",
+    "overall": "A highly faithful, evidence-disciplined rewrite with no hard failure; modest deductions reflect verbosity and slightly generic managerial context."
+  },
+  "raw_total": 96,
+  "capped_total": 96,
+  "pass": true
+}

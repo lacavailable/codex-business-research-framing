@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bf5357934d49f",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly treats class as latent, the score as noisy decision-time information, the common threshold as the sole decision, and immediate weighted classification loss as the objective.",
+    "managerial_framing": "The moderation owner, trigger, threshold alternatives, competing errors, stakes, mechanism, and immediate operational scope are concrete.",
+    "scholarly_positioning": "The response makes no novelty claim; long-run implications are explicitly outside the supplied basis.",
+    "evidence_discipline": "It labels imperfect classification as modeled, identifies unsupported community-health claims, and requests validation of score distributions and loss weights.",
+    "prose_clarity": "The content is accessible and structured but substantially overlong, with some corrupted glyphs and template-heavy repetition.",
+    "overall": "The response precisely respects the threshold model and avoids the prohibited causal claim; no hard failure applies and it passes."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bfda4fd7d63bc",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Fully preserves decisions, constraints, cost objective, integer equivalence, and the relaxation-to-search mechanism.",
+    "managerial_framing": "Gives the planner, trigger, stakes, implementation trade-off, matched counterfactual, and a properly conditional planning-window pathway.",
+    "scholarly_positioning": "Not requested or claimed; the computational contribution is appropriately bounded.",
+    "evidence_discipline": "Labels faster solving as an inference, specifies a sound paired benchmark, and rejects any lower-true-optimum interpretation.",
+    "prose_clarity": "Precise and readable, if more detailed than the prompt requires.",
+    "overall": "An excellent formulation-strength framing with careful evidence boundaries."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

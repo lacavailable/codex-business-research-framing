@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/codex-business-research-framing/literature/source-card.schema.json",
+  "title": "Audited literature source-card frontmatter",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "card_version", "source_id", "verification_status", "access_status",
+    "license", "redistribution_status", "content_reviewed",
+    "evidence_locations", "extraction_pass", "audit_pass"
+  ],
+  "properties": {
+    "card_version": {"const": "1.0"},
+    "source_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "verification_status": {"enum": ["pending_extraction", "pending_audit", "verified", "excluded"]},
+    "access_status": {
+      "enum": ["official_page_available", "metadata_available", "access_limited", "inaccessible"]
+    },
+    "license": {
+      "enum": ["unknown", "all_rights_reserved", "explicit_permissive", "public_domain", "permission_obtained"]
+    },
+    "redistribution_status": {
+      "enum": ["metadata_and_original_notes_only", "full_text_permitted", "not_redistributable"]
+    },
+    "content_reviewed": {"enum": ["full_text", "official_guideline", "abstract_only", "publisher_summary_only", "metadata_only", "inaccessible"]},
+    "evidence_locations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["location", "claim_scope"],
+        "properties": {
+          "location": {"type": "string", "minLength": 2},
+          "claim_scope": {"type": "string", "minLength": 2}
+        }
+      }
+    },
+    "extraction_pass": {"$ref": "#/$defs/pass"},
+    "audit_pass": {"$ref": "#/$defs/pass"}
+  },
+  "$defs": {
+    "pass": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "agent_context", "completed_at"],
+      "properties": {
+        "status": {"enum": ["pending", "pass", "fail"]},
+        "agent_context": {"enum": ["fresh", "not_run"]},
+        "completed_at": {"type": ["string", "null"], "format": "date-time"}
+      }
+    }
+  }
+}

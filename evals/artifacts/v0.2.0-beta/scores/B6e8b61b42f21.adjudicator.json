@@ -1,0 +1,27 @@
+{
+    "schema_version":  "1.0.0",
+    "blind_id":  "B6e8b61b42f21",
+    "judge_id":  "adjudicator",
+    "rubric_version":  "2.0.0",
+    "category_scores":  {
+                            "fidelity":  30,
+                            "managerial_framing":  25,
+                            "scholarly_positioning":  9,
+                            "evidence_discipline":  15,
+                            "prose_clarity":  8
+                        },
+    "hard_failures":  [
+
+                      ],
+    "rationale":  {
+                      "fidelity":  "It explicitly diagnoses availability as an exogenous state, restores first-stage assignments before realization and constrained recourse afterward, and preserves all costs and feasibility limits.",
+                      "managerial_framing":  "The full DFC-12 treatment makes actor, trigger, choices, stakes, mechanism, trade-off, counterfactual, and operational implications concrete and internally consistent.",
+                      "scholarly_positioning":  "No literature positioning is requested or claimed, and the response stays within the model rather than asserting novelty.",
+                      "evidence_discipline":  "It labels scenario representativeness as a model assumption, identifies external validity as unsupported, and makes deployment conditional on calibration and validation.",
+                      "prose_clarity":  "The structure is comprehensive, but encoding corruption and high template density materially reduce readability.",
+                      "overall":  "The response clears the total-score, fidelity, managerial, evidence, and prose requirements but does not meet the universal scholarly-positioning minimum; therefore the rubric-derived result is fail."
+                  },
+    "raw_total":  87,
+    "capped_total":  87,
+    "pass":  false
+}

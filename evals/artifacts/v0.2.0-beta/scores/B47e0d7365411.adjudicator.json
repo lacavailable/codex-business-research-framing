@@ -1,0 +1,27 @@
+{
+    "schema_version":  "1.0.0",
+    "blind_id":  "B47e0d7365411",
+    "judge_id":  "adjudicator",
+    "rubric_version":  "2.0.0",
+    "category_scores":  {
+                            "fidelity":  30,
+                            "managerial_framing":  21,
+                            "scholarly_positioning":  9,
+                            "evidence_discipline":  15,
+                            "prose_clarity":  10
+                        },
+    "hard_failures":  [
+
+                      ],
+    "rationale":  {
+                      "fidelity":  "It preserves the same openings, flows, constraints, objective, feasible integer set, and optimum while locating value in the solution process.",
+                      "managerial_framing":  "The planner-facing pathways of speed, bounds, and scale are concrete and conditional, though actor, trigger, stakes, and counterfactual are not all stated explicitly.",
+                      "scholarly_positioning":  "No scholarly contribution is claimed or requested, and no literature relationship is provided.",
+                      "evidence_discipline":  "The response treats faster solution as unestablished and specifies fair comparative evidence and operational-pathway requirements.",
+                      "prose_clarity":  "The concise explanation separates formulation strength from operational solution quality very clearly.",
+                      "overall":  "The response clears the total-score, fidelity, managerial, evidence, and prose requirements but does not meet the universal scholarly-positioning minimum; therefore the rubric-derived result is fail."
+                  },
+    "raw_total":  85,
+    "capped_total":  85,
+    "pass":  false
+}

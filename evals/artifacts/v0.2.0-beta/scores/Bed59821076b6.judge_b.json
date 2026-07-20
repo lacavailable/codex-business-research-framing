@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bed59821076b6",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves advance supplier orders, exogenous demand, supplier capacity, robust in-set coverage, and the procurement-plus-worst-case-shortage objective.",
+    "managerial_framing": "Fully specifies the actor, commitment trigger, choices, stakes, uncertainty-budget mechanism, conservatism trade-off, and nominal or alternate-budget counterfactual.",
+    "scholarly_positioning": "Scholarly positioning is neither requested nor claimed and is treated as not applicable.",
+    "evidence_discipline": "Labels calibration as an assumption, confines the guarantee to the selected set, and distinguishes model implications from unsupported universal protection.",
+    "prose_clarity": "Comprehensive and precise, but the repeated DFC, gate, mapping, claims, and boundary sections are not economical.",
+    "overall": "An excellent robust-planning brief with explicit resilience boundaries and no hard failure; only presentation economy is weaker."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

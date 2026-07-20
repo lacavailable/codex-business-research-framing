@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bc07cf08cf6bd",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 22,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves the vendor, capacity-feasible assortment, choice mechanism, uncertainty, and exact expected-revenue objective while rejecting welfare substitution.",
+    "managerial_framing": "States the business decision and mechanism clearly, but gives less detail on the trigger, displacement trade-off, and operational counterfactual.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed; the response makes no unsupported novelty assertion.",
+    "evidence_discipline": "Clearly distinguishes modeled revenue effects from unsupported access or welfare claims and states what further measurement would be required.",
+    "prose_clarity": "Concise, direct, and accessible throughout.",
+    "overall": "An excellent concise diagnosis and faithful rewrite; the only meaningful limitation is comparatively light managerial detail."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bd034404c4ace",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Correctly diagnoses availability as an exogenous state and restores advance assignment followed by limited scenario-feasible recourse.", "managerial_framing": "Explains the planner's advance-positioning versus recourse trade-off and operational stakes, with a reasonably concrete repaired frame.", "scholarly_positioning": "It makes no unsupported scholarly claim and explicitly declines to assess absent literature or novelty evidence.", "evidence_discipline": "Properly labels the scenario distribution as a modeling assumption requiring calibration and avoids unmodeled outcome claims.", "prose_clarity": "The repair is clear, but the surrounding readiness and layer template is unnecessarily long and repetitive.", "overall": "A highly accurate repair of the state-as-decision error, weakened only by excess scaffolding."},
+  "raw_total": 96,
+  "capped_total": 96,
+  "pass": true
+}

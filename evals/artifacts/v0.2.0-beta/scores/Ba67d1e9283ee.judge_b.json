@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Ba67d1e9283ee",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Keeps hourly integer staffing as the locked ex ante choice, stochastic arrivals and service times as later states, coverage rules intact, and expected labor plus waiting cost as the exact objective.",
+    "managerial_framing": "Makes the staffing actor, advance deadline, wage-versus-waiting stakes, queueing mechanism, feasible roster comparisons, and operational relevance concrete; the counterfactual is implicit rather than separately developed.",
+    "scholarly_positioning": "No literature or novelty claim is requested or made, and the response does not overstate a scholarly contribution.",
+    "evidence_discipline": "Uses the supplied log only for recorded timing and burdens, clearly distinguishes modeled comparisons from causal realized savings, and refuses generalization beyond the recorded windows.",
+    "prose_clarity": "Concise, cohesive, and accessible prose delivers the managerial significance and limitations without unnecessary structure.",
+    "overall": "An excellent evidence-bounded framing that faithfully connects the roster decision to the queueing cost trade-off."
+  },
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}
