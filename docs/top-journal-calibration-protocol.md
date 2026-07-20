@@ -11,4 +11,3 @@ The ignored `research-private/evaluator-calibration/` hierarchy holds copyrighte
 ## Splits and freeze
 
 Originals, paraphrases, and derivatives remain source-clustered. Development, validation, and holdout each receive four positive, four intermediate, eight negative, and forty variants. Holdout must remain unopened until development and validation pass with real expert data and the evaluator code, prompts, rubric, split manifest, and hashes are frozen in Git.
-

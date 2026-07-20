@@ -7,4 +7,3 @@ Validity is assessed in this order: generator/judge separation; lawful and anony
 Category objects record applicability, assessment status, raw score, reason, and evidence spans. Required-but-unassessed categories make a result incomplete. Nonapplicable categories leave the denominator. Optional assessed categories enter the denominator but have no minimum. Scores retain decimal precision; fidelity hard failures remain noncompensatory and cap the result at 69.
 
 The public synthetic suite tests code paths and construct sensitivity. It cannot establish expert validity. Automated judges are never called experts, and outlet prestige is never treated as a quality label.
-
