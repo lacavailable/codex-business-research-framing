@@ -1,0 +1,11 @@
+{
+  "schema_version": "3.0.0",
+  "status": "blocked_missing_private_sources_and_experts",
+  "accepted_passages": 0,
+  "required_passages": 24,
+  "expert_reviewers": 0,
+  "required_reviewers_per_domain": 2,
+  "domains": ["OM", "IS", "OR", "MGMT"],
+  "release_eligible": false,
+  "reason": "No lawfully supplied private passages or real blinded expert annotations are present. Automated agents are not counted as experts."
+}
