@@ -1,0 +1,40 @@
+{
+  "schema_version": "3.0.0-automated.1",
+  "method": "automated source-grounded triangulation",
+  "fixed_seed": 20260720,
+  "locked_before_validation": true,
+  "tolerances": {
+    "unaffected_category_mean_movement_raw_points": 1.0,
+    "inter_run_mean_absolute_difference_normalized_points": 3.0
+  },
+  "gates": [
+    {"id": "synthetic-applicability", "metric": "synthetic_applicability_agreement", "operator": ">=", "threshold": 0.95},
+    {"id": "private-applicability", "metric": "private_applicability_accept_rate", "operator": ">=", "threshold": 0.90},
+    {"id": "validation-applicability-unresolved", "metric": "validation_unresolved_applicability_rate", "operator": "<", "threshold": 0.10},
+    {"id": "primary-fidelity-detection", "metric": "actor_timing_information_objective_detection_rate", "operator": ">=", "threshold": 0.95},
+    {"id": "constraint-mechanism-detection", "metric": "constraint_mechanism_detection_rate", "operator": ">=", "threshold": 0.90},
+    {"id": "fidelity-false-positive", "metric": "false_positive_hard_failure_rate", "operator": "<=", "threshold": 0.05},
+    {"id": "negative-hard-failure-agreement", "metric": "negative_hard_failure_agreement", "operator": ">=", "threshold": 0.90},
+    {"id": "positive-hard-failure-agreement", "metric": "positive_hard_failure_agreement", "operator": ">=", "threshold": 0.90},
+    {"id": "fidelity-contrast-ordering", "metric": "material_fidelity_contrast_ordering", "operator": ">=", "threshold": 0.90},
+    {"id": "other-contrast-ordering", "metric": "other_contrast_ordering", "operator": ">=", "threshold": 0.85},
+    {"id": "category-localization", "metric": "category_localization_accuracy", "operator": ">=", "threshold": 0.80},
+    {"id": "unaffected-category-stability", "metric": "unaffected_category_mean_movement", "operator": "<", "threshold": 1.0},
+    {"id": "paraphrase-invariance", "metric": "paraphrase_mean_absolute_difference", "operator": "<", "threshold": 3.0},
+    {"id": "prestige-blindness", "metric": "prestige_mean_absolute_effect", "operator": "<", "threshold": 1.0},
+    {"id": "formatting-invariance", "metric": "formatting_substantive_mean_absolute_effect", "operator": "<", "threshold": 1.0},
+    {"id": "repeat-rank-stability", "metric": "repeated_run_rank_correlation", "operator": ">=", "threshold": 0.75},
+    {"id": "repeat-score-stability", "metric": "inter_run_mean_absolute_difference", "operator": "<=", "threshold": 3.0},
+    {"id": "adjudication-rate", "metric": "major_disagreement_adjudication_rate", "operator": "<=", "threshold": 0.30},
+    {"id": "ceiling-rate", "metric": "above_95_rate", "operator": "<", "threshold": 0.40},
+    {"id": "ordered-distributions", "metric": "ordered_control_distributions", "operator": "is", "threshold": true},
+    {"id": "category-variation", "metric": "nonconstant_categories", "operator": "is", "threshold": true},
+    {"id": "evidence-span-integrity", "metric": "valid_evidence_span_rate", "operator": ">=", "threshold": 0.95},
+    {"id": "unsupported-claim-detection", "metric": "unsupported_claim_detection_rate", "operator": ">=", "threshold": 0.90}
+  ],
+  "release_policy": {
+    "tier_a": "Experimental development only after every automated gate passes.",
+    "tier_b": "Formal validation claims require the unchanged real-expert gates.",
+    "holdout": "Open once after evaluator freeze; never tune from holdout details."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/automated-triangulation/applicability-challenge.schema.json",
+  "title": "Evidence-backed applicability decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "category", "proposed_applicability", "decision", "rationale", "evidence_span_ids"],
+  "properties": {
+    "schema_version": {"const": "3.0.0-automated.1"},
+    "case_id": {"type": "string", "pattern": "^AC[0-9a-f]{16}$"},
+    "category": {"enum": ["fidelity", "managerial_framing", "scholarly_positioning", "evidence_discipline", "prose_clarity"]},
+    "proposed_applicability": {"enum": ["required", "optional", "not_applicable"]},
+    "decision": {"enum": ["accept", "challenge_with_evidence"]},
+    "challenged_applicability": {"enum": ["required", "optional", "not_applicable"]},
+    "rationale": {"type": "string", "minLength": 1},
+    "evidence_span_ids": {"type": "array", "items": {"type": "string", "pattern": "^ES-[0-9]{3}$"}, "uniqueItems": true}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"decision": {"const": "challenge_with_evidence"}}, "required": ["decision"]},
+      "then": {"required": ["challenged_applicability"], "properties": {"evidence_span_ids": {"minItems": 1}}},
+      "else": {"not": {"required": ["challenged_applicability"]}}
+    }
+  ]
+}

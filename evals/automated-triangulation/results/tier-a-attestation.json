@@ -1,0 +1,19 @@
+{
+  "schema_version": "3.0.0-automated.1",
+  "authorization_tier": "tier_a",
+  "status": "incomplete",
+  "development_passed": false,
+  "validation_passed": false,
+  "evaluator_frozen": false,
+  "automated_holdout_opened": false,
+  "production_benchmark_complete": false,
+  "experimental_release_eligible": false,
+  "expert_holdout_unopened": true,
+  "no_human_experts": true,
+  "limitations": [
+    "Automated roles are not experts.",
+    "No formal human validation claim is authorized.",
+    "The automated holdout remains unopened."
+  ],
+  "freeze_commit": null
+}

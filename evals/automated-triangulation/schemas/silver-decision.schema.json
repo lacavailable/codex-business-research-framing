@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/automated-triangulation/silver-decision.schema.json",
+  "title": "Automated silver-label decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "decision_id", "case_id", "source_cluster_id", "split", "silver_status", "role_output_ids", "conflicts", "rationale", "evidence_span_ids", "human_expert_review"],
+  "properties": {
+    "schema_version": {"const": "3.0.0-automated.1"},
+    "decision_id": {"type": "string", "pattern": "^ASD-[0-9a-f]{16}$"},
+    "case_id": {"type": "string", "pattern": "^AC[0-9a-f]{16}$"},
+    "source_cluster_id": {"type": "string", "pattern": "^SC-[0-9a-f]{12}$"},
+    "split": {"enum": ["development", "validation", "holdout"]},
+    "silver_status": {"enum": ["silver_high_confidence", "silver_provisional", "unresolved"]},
+    "role_output_ids": {"type": "array", "items": {"type": "string", "pattern": "^ARO-[0-9a-f]{16}$"}, "minItems": 2, "uniqueItems": true},
+    "conflicts": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "rationale": {"type": "string", "minLength": 1},
+    "evidence_span_ids": {"type": "array", "items": {"type": "string", "pattern": "^ES-[0-9]{3}$"}, "minItems": 1, "uniqueItems": true},
+    "human_expert_review": {"const": false}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"split": {"enum": ["validation", "holdout"]}}, "required": ["split"]},
+      "then": {"properties": {"silver_status": {"const": "silver_high_confidence"}}}
+    }
+  ]
+}

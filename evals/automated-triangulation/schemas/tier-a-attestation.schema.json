@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/automated-triangulation/tier-a-attestation.schema.json",
+  "title": "Tier A automated-only experimental release attestation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "authorization_tier", "status", "development_passed", "validation_passed", "evaluator_frozen", "automated_holdout_opened", "production_benchmark_complete", "experimental_release_eligible", "expert_holdout_unopened", "no_human_experts", "limitations", "freeze_commit"],
+  "properties": {
+    "schema_version": {"const": "3.0.0-automated.1"},
+    "authorization_tier": {"const": "tier_a"},
+    "status": {"enum": ["pass", "fail", "incomplete"]},
+    "development_passed": {"type": "boolean"},
+    "validation_passed": {"type": "boolean"},
+    "evaluator_frozen": {"type": "boolean"},
+    "automated_holdout_opened": {"type": "boolean"},
+    "production_benchmark_complete": {"type": "boolean"},
+    "experimental_release_eligible": {"type": "boolean"},
+    "expert_holdout_unopened": {"const": true},
+    "no_human_experts": {"const": true},
+    "limitations": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true},
+    "freeze_commit": {"type": ["string", "null"], "pattern": "^[0-9a-f]{40}$"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"evaluator_frozen": {"const": true}}, "required": ["evaluator_frozen"]},
+      "then": {"properties": {"freeze_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}}},
+      "else": {"properties": {"freeze_commit": {"type": "null"}}}
+    },
+    {
+      "if": {"properties": {"experimental_release_eligible": {"const": true}}, "required": ["experimental_release_eligible"]},
+      "then": {
+        "properties": {
+          "status": {"const": "pass"},
+          "development_passed": {"const": true},
+          "validation_passed": {"const": true},
+          "evaluator_frozen": {"const": true},
+          "automated_holdout_opened": {"const": true},
+          "production_benchmark_complete": {"const": true}
+        }
+      }
+    }
+  ]
+}
