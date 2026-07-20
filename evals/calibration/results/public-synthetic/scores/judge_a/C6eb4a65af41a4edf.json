@@ -1,0 +1,58 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C6eb4a65af41a4edf",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 23,
+      "reason": "The assortment choice is preserved, but the supplied substitution mechanism is explicitly left unconnected.",
+      "evidence_spans": [
+        "The setting contains several relevant operational details, but the passage does not connect the choice to the outcome."
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 14,
+      "reason": "The slot trade-off remains visible while the operational pathway is incomplete.",
+      "evidence_spans": [
+        "Adding variety captures more first choices but consumes slots that could support stronger substitution paths."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this model setting passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 13,
+      "reason": "The passage clearly limits the model to within-assortment substitution.",
+      "evidence_spans": [
+        "The model represents within-assortment Markov substitution, not nearest-store search or stockout dynamics."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "The prose is clear despite the mechanism omission.",
+      "evidence_spans": [
+        "The analysis identifies which transition patterns make a scarce slot most valuable."
+      ]
+    }
+  },
+  "hard_failures": [],
+  "normalized_score": 72.5,
+  "capped_score": 72.5,
+  "overall_status": "pass",
+  "overall_reason": "The passage meets the applicable thresholds with no hard failure.",
+  "higher_than_both_justification": null
+}

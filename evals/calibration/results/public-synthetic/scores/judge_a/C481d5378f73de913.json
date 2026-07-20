@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C481d5378f73de913",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "phenomenon_motivation",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 30,
+      "reason": "The transfer decision, information, objective, constraint, and mechanism match the context.",
+      "evidence_spans": [
+        "chooses whether and how to adapt the practice"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 23,
+      "reason": "The imitation-versus-local-fit trade-off and complementary-routine mechanism are concrete.",
+      "evidence_spans": [
+        "Closer imitation preserves tested elements but may fit the receiving unit poorly."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 5,
+      "reason": "The novelty claim relies only on a new context and does not state a bounded relationship to prior knowledge.",
+      "evidence_spans": [
+        "The contribution is that the same topic has not previously been studied in this particular context."
+      ]
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 14,
+      "reason": "The passage explicitly avoids a universal causal inference.",
+      "evidence_spans": [
+        "does not establish universal causality"
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 9,
+      "reason": "The prose is concise and coherent.",
+      "evidence_spans": [
+        "Transfer succeeds when the receiving unit recreates the complementary routines that produced the original effect."
+      ]
+    }
+  },
+  "hard_failures": [],
+  "normalized_score": 81.0,
+  "capped_score": 81.0,
+  "overall_status": "fail",
+  "overall_reason": "A required category falls below its minimum.",
+  "higher_than_both_justification": null
+}

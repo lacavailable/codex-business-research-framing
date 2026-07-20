@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C481d5378f73de913",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "phenomenon_motivation",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 30, "reason": "The transfer decision, unobserved mechanism-survival condition, complementary-routines mechanism, and imitation trade-off are preserved.", "evidence_spans": ["Transfer succeeds when the receiving unit recreates the complementary routines", "Closer imitation preserves tested elements but may fit the receiving unit poorly"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 24, "reason": "The leader's adaptation choice, performance stakes, constraint, mechanism, and trade-off are all concrete.", "evidence_spans": ["chooses whether and how to adapt the practice", "improve unit performance without disrupting complementary routines"]},
+    "scholarly_positioning": {"applicability": "optional", "assessment_status": "assessed", "score": 3, "reason": "Its claimed contribution rests only on the topic not having been studied in this context, not on a changed mechanism or bounded theoretical relationship.", "evidence_spans": ["has not previously been studied in this particular context"]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 7, "reason": "The scope and causality caveats are useful, but the unsubstantiated novelty claim is presented as fact.", "evidence_spans": ["does not establish universal causality", "has not previously been studied in this particular context"]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 9, "reason": "The passage is readable and economical, with a clearly signposted final claim.", "evidence_spans": ["The contribution is that the same topic"]}
+  },
+  "hard_failures": [],
+  "normalized_score": 73,
+  "capped_score": 73,
+  "overall_status": "fail",
+  "overall_reason": "The unsupported context-only novelty claim leaves required evidence discipline below its minimum.",
+  "higher_than_both_justification": null
+}

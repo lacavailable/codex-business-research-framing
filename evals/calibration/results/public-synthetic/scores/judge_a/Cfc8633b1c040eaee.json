@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cfc8633b1c040eaee",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "contribution",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 22,
+      "reason": "The core delegation decision is preserved, but its supplied mechanism is explicitly left unconnected.",
+      "evidence_spans": [
+        "The setting contains several relevant operational details, but the passage does not connect the choice to the outcome."
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 12,
+      "reason": "A trade-off is named while the operational pathway remains incomplete.",
+      "evidence_spans": [
+        "Greater discretion supports adaptation but weakens consistency and oversight."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 13,
+      "reason": "The closing contribution names joint conditions but does not develop their mechanism in the passage.",
+      "evidence_spans": [
+        "The study explains delegation as a response to joint adaptation and observability conditions rather than as a generic best practice."
+      ]
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 13,
+      "reason": "The scope caveat avoids a universal decentralization inference.",
+      "evidence_spans": [
+        "does not imply that decentralization always improves performance"
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 7,
+      "reason": "The prose is understandable but contains placeholder framing.",
+      "evidence_spans": [
+        "The setting contains several relevant operational details"
+      ]
+    }
+  },
+  "hard_failures": [],
+  "normalized_score": 67.0,
+  "capped_score": 67.0,
+  "overall_status": "fail",
+  "overall_reason": "The passage does not reach the normalized passing threshold.",
+  "higher_than_both_justification": null
+}

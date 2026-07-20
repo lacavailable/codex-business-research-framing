@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C3ee3a2126fe8580e",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "phenomenon_motivation",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 20, "reason": "The decision and constraint are preserved, but the passage explicitly omits the supplied mechanism connecting adaptation to the relevant outcome.", "evidence_spans": ["the passage does not connect the choice to the outcome"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 16, "reason": "It identifies a real transfer choice and imitation trade-off, but leaves the operational pathway from the choice to performance incomplete.", "evidence_spans": ["chooses whether and how to adapt the practice", "may fit the receiving unit poorly"]},
+    "scholarly_positioning": {"applicability": "optional", "assessment_status": "assessed", "score": 16, "reason": "It offers a bounded conceptual shift from copying practices to preserving an enabling mechanism, though its counterposition is brief.", "evidence_spans": ["shifts attention from copying practices to preserving their enabling mechanism"]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 14, "reason": "It distinguishes the proposed argument from universal causal evidence and states the observable-routines boundary.", "evidence_spans": ["does not establish universal causality", "applies to transfers with observable routines"]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 9, "reason": "The prose is compact and understandable, even though the mechanism is left incomplete.", "evidence_spans": ["Closer imitation preserves tested elements but may fit the receiving unit poorly"]}
+  },
+  "hard_failures": [],
+  "normalized_score": 75,
+  "capped_score": 75,
+  "overall_status": "fail",
+  "overall_reason": "The missing choice-to-outcome mechanism leaves required fidelity below its minimum despite otherwise clear framing.",
+  "higher_than_both_justification": null
+}

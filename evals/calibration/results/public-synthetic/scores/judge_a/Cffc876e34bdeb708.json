@@ -1,0 +1,61 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cffc876e34bdeb708",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 7,
+      "reason": "The routing-cost objective is replaced by an unmeasured social-welfare objective.",
+      "evidence_spans": [
+        "maximize a different social-welfare objective that the model does not measure"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 22,
+      "reason": "The search-time and release-deadline trade-off remains concrete.",
+      "evidence_spans": [
+        "Longer search may improve cost but can make the certified plan operationally late."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this model setting passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 13,
+      "reason": "The computational boundary is explicit, but the objective change is undeclared.",
+      "evidence_spans": [
+        "Computational value is limited to tested instances, hardware, and the specified deadline."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 9,
+      "reason": "The prose is clear and compact.",
+      "evidence_spans": [
+        "The study connects solution quality and certificate timing to the actual release decision."
+      ]
+    }
+  },
+  "hard_failures": [
+    "objective_gate_failure",
+    "undeclared_model_change"
+  ],
+  "normalized_score": 63.75,
+  "capped_score": 63.75,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

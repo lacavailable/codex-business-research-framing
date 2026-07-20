@@ -1,0 +1,62 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cad4fb9142c18de06",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "research_opportunity",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "An outside observer replaces the moderation policy owner who controls the review threshold.",
+      "evidence_spans": [
+        "an outside observer who does not control the decision sets a review threshold"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 21,
+      "reason": "The review mechanism and reviewer-attention trade-off are otherwise concrete.",
+      "evidence_spans": [
+        "More review reduces classification harm but consumes scarce reviewer attention."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 17,
+      "reason": "The research opportunity links privacy limits to the value of selective review.",
+      "evidence_spans": [
+        "The study asks how privacy limits alter the value of selective human review."
+      ]
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 14,
+      "reason": "The passage clearly separates permitted signals from unsupported welfare inference.",
+      "evidence_spans": [
+        "The proposal does not treat revenue as welfare or assume unrestricted access to sensitive data."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 9,
+      "reason": "The prose is concise and coherent.",
+      "evidence_spans": [
+        "The threshold routes uncertain items to review"
+      ]
+    }
+  },
+  "hard_failures": [
+    "actor_gate_failure"
+  ],
+  "normalized_score": 69.0,
+  "capped_score": 69.0,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

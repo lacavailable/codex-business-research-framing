@@ -1,0 +1,58 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C281a8a96ebb69022",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "business_problem",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 30,
+      "reason": "The allocation decision and model mapping fully match the supplied context.",
+      "evidence_spans": [
+        "allocates a fixed stock across service zones"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 24,
+      "reason": "The mechanism, concentration-versus-coverage trade-off, and modeled scope are concrete.",
+      "evidence_spans": [
+        "Concentration pools scarce stock, while broader coverage protects more zones."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this business problem passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 15,
+      "reason": "The passage clearly distinguishes a one-period modeled claim from live deployment.",
+      "evidence_spans": [
+        "The claim concerns one-period allocation under the supplied distributions, not live deployment."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 5,
+      "reason": "The core passage is usable, but the appended relevance material is repetitive and needlessly inflated.",
+      "evidence_spans": [
+        "This decision is important for organizations because organizations routinely face decisions of this general kind."
+      ]
+    }
+  },
+  "hard_failures": [],
+  "normalized_score": 92.5,
+  "capped_score": 92.5,
+  "overall_status": "pass",
+  "overall_reason": "The passage meets the applicable thresholds with no hard failure.",
+  "higher_than_both_justification": null
+}

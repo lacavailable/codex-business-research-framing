@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C30e1f7a75bb7a9f9",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 30, "reason": "The decision, timing, information set, objective, recourse restriction, and capacity-recourse mechanism remain faithful to the stated model.", "evidence_spans": ["before uncertain demand is realized", "recourse actions occur only after demand is observed and must respect installed capacity"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 25, "reason": "It articulates a responsible planner, a pre-demand decision, and the economic trade-off between advance capacity and later exposure.", "evidence_spans": ["More advance capacity is expensive but reduces shortage and emergency recourse exposure."]},
+    "scholarly_positioning": {"applicability": "optional", "assessment_status": "assessed", "score": 8, "reason": "It names a conditional analytical focus but does not relate it to a prior explanation or theory.", "evidence_spans": ["The analysis isolates when flexible recourse substitutes for advance capacity."]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 0, "reason": "The passage presents a universal performance guarantee and market transformation without supplied evidence or a model-qualified basis.", "evidence_spans": ["The universally superior policy will transform the market and guarantee better performance."]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 8, "reason": "The otherwise clear model description is weakened by an inflated, unsupported assertion.", "evidence_spans": ["The universally superior policy will transform the market and guarantee better performance."]}
+  },
+  "hard_failures": ["unsupported_causal_claim"],
+  "normalized_score": 71,
+  "capped_score": 69,
+  "overall_status": "fail",
+  "overall_reason": "Although the model setting is otherwise faithful and concrete, the unsupported universal guarantee is a hard evidence-discipline failure and caps the result.",
+  "higher_than_both_justification": null
+}

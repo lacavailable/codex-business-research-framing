@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C613a7302bc0b40a0",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "business_problem",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 30, "reason": "The admission trigger, unobserved type, score-based threshold, objective, and false-positive/false-negative trade-off are preserved.", "evidence_spans": ["before the account's latent benign or malicious type is known", "maximize expected platform value net of malicious harm and rejection loss"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 24, "reason": "It makes the manager's threshold choice, stakes, mechanism, and stricter-rule trade-off operationally clear.", "evidence_spans": ["sets one threshold on a noisy risk score", "A stricter threshold blocks more harmful accounts but rejects more benign participants"]},
+    "scholarly_positioning": {"applicability": "not_applicable", "assessment_status": "not_applicable", "score": null, "reason": "The passage frames a business problem rather than positioning a scholarly contribution.", "evidence_spans": []},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 11, "reason": "The mechanism is stated as model logic, but the claim of broad usefulness is not bounded or supported.", "evidence_spans": ["The threshold changes false rejection and harmful admission rates", "provides a broadly useful conclusion"]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 9, "reason": "The progression from decision to trade-off to decision rule is clear and compact.", "evidence_spans": ["The analysis identifies when a common score rule should become more selective"]}
+  },
+  "hard_failures": [],
+  "normalized_score": 92.5,
+  "capped_score": 92.5,
+  "overall_status": "pass",
+  "overall_reason": "It presents a faithful, actionable admission decision with a clear mechanism and trade-off; its broad-usefulness claim is the main limitation.",
+  "higher_than_both_justification": null
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C9255a26519b91ba3",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 28,
+      "reason": "The assortment model is preserved, but universal industry and profit claims exceed its mapping.",
+      "evidence_spans": [
+        "selects products under a fixed display-slot limit"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 21,
+      "reason": "The substitution mechanism and slot trade-off are concrete.",
+      "evidence_spans": [
+        "Adding variety captures more first choices but consumes slots that could support stronger substitution paths."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this model setting passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 2,
+      "reason": "The passage guarantees profit and universal effectiveness without external evidence.",
+      "evidence_spans": [
+        "The approach will transform the industry, guarantee profit growth, and work in every market."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "The structure is clear, although the sweeping sentence is misleading.",
+      "evidence_spans": [
+        "The analysis identifies which transition patterns make a scarce slot most valuable."
+      ]
+    }
+  },
+  "hard_failures": [
+    "unsupported_causal_claim"
+  ],
+  "normalized_score": 73.75,
+  "capped_score": 69.0,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C0f944e7b8f54f63f",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 30,
+      "reason": "The dispatch actor, deadline, inputs, objective, constraint, and search mechanism are preserved.",
+      "evidence_spans": [
+        "selects a feasible routing plan before the dispatch deadline"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 23,
+      "reason": "The search-time versus operational-timeliness trade-off is concrete.",
+      "evidence_spans": [
+        "Longer search may improve cost but can make the certified plan operationally late."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this model setting passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 14,
+      "reason": "The passage bounds computational value to the tested environment and deadline.",
+      "evidence_spans": [
+        "Computational value is limited to tested instances, hardware, and the specified deadline."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 9,
+      "reason": "The prose is clear, though the final context-gap sentence is generic.",
+      "evidence_spans": [
+        "The contribution is that the same topic has not previously been studied in this particular context."
+      ]
+    }
+  },
+  "hard_failures": [],
+  "normalized_score": 95.0,
+  "capped_score": 95.0,
+  "overall_status": "pass",
+  "overall_reason": "The passage meets the applicable thresholds with no hard failure.",
+  "higher_than_both_justification": null
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C3f96ac0372bacbd5",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 0, "reason": "The passage assigns the routing decision to an outside observer who cannot make it, rather than to the supplied dispatch planner.", "evidence_spans": ["an outside observer who cannot make the decision selects a feasible routing plan", "a dispatch planner"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 10, "reason": "It describes the release deadline and search-time trade-off, but the responsible decision maker is materially wrong.", "evidence_spans": ["Longer search may improve cost but can make the certified plan operationally late."]},
+    "scholarly_positioning": {"applicability": "optional", "assessment_status": "assessed", "score": 12, "reason": "It offers a bounded connection between solution quality, certificate timing, and the release decision, though it gives no explicit relationship to prior knowledge.", "evidence_spans": ["The study connects solution quality and certificate timing to the actual release decision."]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 15, "reason": "The computational claim is explicitly limited to tested instances, hardware, and the stated deadline.", "evidence_spans": ["Computational value is limited to tested instances, hardware, and the specified deadline."]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 10, "reason": "The trade-off and scope are plainly expressed despite the actor error.", "evidence_spans": ["The algorithm trades additional search time for better incumbents and stronger bounds."]}
+  },
+  "hard_failures": ["actor_gate_failure"],
+  "normalized_score": 47,
+  "capped_score": 47,
+  "overall_status": "fail",
+  "overall_reason": "The passage fails the noncompensatory actor gate by assigning the operational choice to an outside observer, despite otherwise bounded and clear statements.",
+  "higher_than_both_justification": null
+}

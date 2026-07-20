@@ -1,0 +1,61 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C4dedfdf720708ea0",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 7,
+      "reason": "An unmeasured social-welfare objective replaces expected assortment revenue.",
+      "evidence_spans": [
+        "maximize a different social-welfare objective that the model does not measure"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 22,
+      "reason": "The assortment mechanism and slot trade-off remain concrete despite the wrong objective.",
+      "evidence_spans": [
+        "Adding variety captures more first choices but consumes slots that could support stronger substitution paths."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this model setting passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 13,
+      "reason": "The substitution scope is explicit, although the objective substitution is undeclared.",
+      "evidence_spans": [
+        "The model represents within-assortment Markov substitution, not nearest-store search or stockout dynamics."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 9,
+      "reason": "The prose is concise and coherent.",
+      "evidence_spans": [
+        "The analysis identifies which transition patterns make a scarce slot most valuable."
+      ]
+    }
+  },
+  "hard_failures": [
+    "objective_gate_failure",
+    "undeclared_model_change"
+  ],
+  "normalized_score": 63.75,
+  "capped_score": 63.75,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

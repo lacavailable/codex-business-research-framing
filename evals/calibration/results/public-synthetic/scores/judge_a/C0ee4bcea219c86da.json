@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C0ee4bcea219c86da",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "contribution",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 30,
+      "reason": "The complete delegation decision and theory-to-setting mapping are preserved.",
+      "evidence_spans": [
+        "chooses how much discretion to delegate"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 23,
+      "reason": "The adaptation-versus-oversight trade-off and operational mechanism are concrete.",
+      "evidence_spans": [
+        "Greater discretion supports adaptation but weakens consistency and oversight."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 19,
+      "reason": "The passage gives a bounded mechanism-based contribution.",
+      "evidence_spans": [
+        "The study explains delegation as a response to joint adaptation and observability conditions rather than as a generic best practice."
+      ]
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 14,
+      "reason": "The theory is explicitly distinguished from a universal performance claim.",
+      "evidence_spans": [
+        "does not imply that decentralization always improves performance"
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 5,
+      "reason": "The core prose is clear, but the appended relevance sentences are repetitive and unnecessary.",
+      "evidence_spans": [
+        "This decision is important for organizations because organizations routinely face decisions of this general kind."
+      ]
+    }
+  },
+  "hard_failures": [],
+  "normalized_score": 91.0,
+  "capped_score": 91.0,
+  "overall_status": "pass",
+  "overall_reason": "The passage meets the applicable thresholds with no hard failure.",
+  "higher_than_both_justification": null
+}

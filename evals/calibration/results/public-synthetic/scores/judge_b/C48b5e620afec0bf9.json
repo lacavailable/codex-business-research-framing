@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C48b5e620afec0bf9",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "research_opportunity",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 30, "reason": "The decision maker, pre-classification timing, permitted information, privacy constraint, objective, and review-routing mechanism all agree with the supplied setting.", "evidence_spans": ["a moderation policy owner sets a review threshold using privacy-permitted signals", "privacy-restricted attributes are unavailable unless consent and policy permit their use"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 20, "reason": "It gives a concrete threshold decision, harm-versus-review-cost objective, and reviewer-capacity trade-off, but its closing statements add only generic practical importance.", "evidence_spans": ["More review reduces classification harm but consumes scarce reviewer attention.", "This decision is important for organizations because organizations routinely face decisions of this general kind."]},
+    "scholarly_positioning": {"applicability": "required", "assessment_status": "assessed", "score": 8, "reason": "The passage identifies a focused question about privacy limits and selective review, but does not position that question against prior knowledge or state a bounded theoretical difference.", "evidence_spans": ["The study asks how privacy limits alter the value of selective human review."]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 15, "reason": "It explicitly preserves the privacy-access boundary and avoids equating revenue with welfare.", "evidence_spans": ["The proposal does not treat revenue as welfare or assume unrestricted access to sensitive data."]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 8, "reason": "The core explanation is concise and readable, though the final generic-relevance sentences are repetitive.", "evidence_spans": ["The issue has practical relevance, managerial relevance, and broader relevance for decision makers."]}
+  },
+  "hard_failures": [],
+  "normalized_score": 81,
+  "capped_score": 81,
+  "overall_status": "fail",
+  "overall_reason": "A faithful, well-bounded research opportunity with a concrete operational trade-off, but its required scholarly positioning falls below the category minimum and the closing framing is generic.",
+  "higher_than_both_justification": null
+}

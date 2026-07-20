@@ -1,0 +1,62 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Ceb15f3767d170803",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "contribution",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "An outside observer replaces the senior team that controls delegation.",
+      "evidence_spans": [
+        "an outside observer who does not control the decision chooses how much discretion to delegate"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 23,
+      "reason": "The mechanism and adaptation-versus-oversight trade-off are otherwise concrete.",
+      "evidence_spans": [
+        "Greater discretion supports adaptation but weakens consistency and oversight."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 18,
+      "reason": "The contribution is bounded and mechanism-based.",
+      "evidence_spans": [
+        "The study explains delegation as a response to joint adaptation and observability conditions rather than as a generic best practice."
+      ]
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 14,
+      "reason": "The passage explicitly avoids a universal performance inference.",
+      "evidence_spans": [
+        "does not imply that decentralization always improves performance"
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 9,
+      "reason": "The prose is economical and clear.",
+      "evidence_spans": [
+        "Delegation improves local fit while common rules limit coordination and agency losses."
+      ]
+    }
+  },
+  "hard_failures": [
+    "actor_gate_failure"
+  ],
+  "normalized_score": 72.0,
+  "capped_score": 69.0,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

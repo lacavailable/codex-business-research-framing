@@ -1,0 +1,92 @@
+{
+  "schema_version": "3.0.0",
+  "status": "preliminary_primary_judges_failed_reliability_gate",
+  "splits": [
+    "development",
+    "validation"
+  ],
+  "holdout_opened": false,
+  "cases": 112,
+  "primary_scores": 224,
+  "adjudication_triggered_cases": 107,
+  "adjudication_trigger_rate": 0.9553571428571429,
+  "adjudication_performed": false,
+  "stop_reason": "The preregistered adjudication-rate gate (<=0.30) failed irreversibly; expert inputs are also absent.",
+  "trigger_reasons": {
+    "applicability_disagreement:managerial_framing": 42,
+    "applicability_disagreement:scholarly_positioning": 65,
+    "category_difference:evidence_discipline": 27,
+    "category_difference:fidelity": 51,
+    "category_difference:managerial_framing": 14,
+    "category_difference:prose_clarity": 6,
+    "category_difference:scholarly_positioning": 9,
+    "hard_failure_disagreement": 23,
+    "normalized_total_difference": 34
+  },
+  "applicability_agreement": 0.8089285714285714,
+  "normalized_score_spearman": 0.7121061290046876,
+  "normalized_score_mean_absolute_difference": 8.453125,
+  "category_score_correlations": {
+    "fidelity": 0.9078660096586204,
+    "managerial_framing": 0.5570761703709374,
+    "scholarly_positioning": 0.5977381790212802,
+    "evidence_discipline": 0.8752529207774901,
+    "prose_clarity": 0.6232744597155441
+  },
+  "positive_hard_failure_agreement": 0.96875,
+  "negative_hard_failure_agreement": 0.6,
+  "score_distributions": {
+    "judge_a": {
+      "contrast": {
+        "count": 80,
+        "mean": 70.115625,
+        "median": 70.0
+      },
+      "intermediate": {
+        "count": 8,
+        "mean": 61.125,
+        "median": 58.0
+      },
+      "negative": {
+        "count": 16,
+        "mean": 63.28125,
+        "median": 63.5
+      },
+      "positive": {
+        "count": 8,
+        "mean": 94.625,
+        "median": 94.5
+      }
+    },
+    "judge_b": {
+      "contrast": {
+        "count": 80,
+        "mean": 72.759375,
+        "median": 71.5
+      },
+      "intermediate": {
+        "count": 8,
+        "mean": 81.03125,
+        "median": 80.0
+      },
+      "negative": {
+        "count": 16,
+        "mean": 65.84375,
+        "median": 68.0
+      },
+      "positive": {
+        "count": 8,
+        "mean": 98.125,
+        "median": 100.0
+      }
+    }
+  },
+  "release_eligible": false,
+  "limitations": [
+    "Public cases are synthetic and have no real expert annotations.",
+    "Primary judges are OpenAI model variants; independent model-family separation is not established.",
+    "No authoritative reconciled score is reported because 107 cases required adjudication.",
+    "Prestige and paraphrase fixtures were not empirically judged.",
+    "Holdout, Skill revision, and production evaluation remain blocked."
+  ]
+}

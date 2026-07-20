@@ -1,0 +1,61 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C5aef2dcd20669ba6",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 7,
+      "reason": "The assortment decision improperly uses future outcomes and latent types that are unavailable before display.",
+      "evidence_spans": [
+        "using product margins and a specified Markov substitution matrix, the future realized outcome, and any latent type"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 19,
+      "reason": "The slot trade-off remains concrete, but it is paired with an invalid information set.",
+      "evidence_spans": [
+        "Adding variety captures more first choices but consumes slots that could support stronger substitution paths."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this model setting passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 6,
+      "reason": "The passage contradicts its own pre-choice uncertainty and makes an unsupported information change.",
+      "evidence_spans": [
+        "before the arriving customer's initial product and subsequent substitution path is known"
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 8,
+      "reason": "The prose is clear apart from the material information contradiction.",
+      "evidence_spans": [
+        "The model represents within-assortment Markov substitution, not nearest-store search or stockout dynamics."
+      ]
+    }
+  },
+  "hard_failures": [
+    "information_gate_failure",
+    "undeclared_model_change"
+  ],
+  "normalized_score": 50.0,
+  "capped_score": 50.0,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

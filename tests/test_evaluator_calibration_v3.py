@@ -16,6 +16,7 @@ GEN = import_file("generate_public_calibration_v3", ROOT / "tools/generate_publi
 sys.modules.setdefault("generate_public_calibration", GEN)
 HARNESS = import_file("calibration_harness_v3", ROOT / "tools/calibration_harness.py")
 BIAS = import_file("generate_bias_diagnostics_v3", ROOT / "tools/generate_bias_diagnostics.py")
+PRIMARY = import_file("summarize_primary_calibration_v3", ROOT / "tools/summarize_primary_calibration.py")
 RUBRIC = CAL.load_rubric()
 WEIGHTS = {item["id"]: item["weight"] for item in RUBRIC["categories"]}
 
@@ -220,3 +221,15 @@ def test_bias_diagnostics_are_paired_and_randomized() -> None:
     assert len(pairs) == 60
     assert all(sorted(item["randomized_order"] for item in pair) == [0, 1] for pair in pairs.values())
     assert {item["diagnostic"] for item in records} == set(BIAS.DIAGNOSTICS)
+
+
+def test_public_primary_scores_and_summary_recompute() -> None:
+    result_root = ROOT / "evals/calibration/results/public-synthetic"
+    assert len(list((result_root / "scores/judge_a").glob("*.json"))) == 112
+    assert len(list((result_root / "scores/judge_b").glob("*.json"))) == 112
+    expected = json.loads((result_root / "primary-summary.json").read_text(encoding="utf-8"))
+    assert PRIMARY.summarize(result_root / "scores") == expected
+    assert expected["adjudication_triggered_cases"] == 107
+    assert expected["adjudication_trigger_rate"] > 0.30
+    assert expected["holdout_opened"] is False
+    assert expected["release_eligible"] is False

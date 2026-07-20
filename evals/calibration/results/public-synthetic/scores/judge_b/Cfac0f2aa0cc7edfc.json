@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cfac0f2aa0cc7edfc",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "phenomenon_motivation",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 0, "reason": "The passage assigns adaptation to an outside observer who does not control the decision, rather than the business-unit leader.", "evidence_spans": ["an outside observer who does not control the decision chooses whether and how to adapt the practice"]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 20, "reason": "The adaptation choice, mechanism, objective, and imitation-versus-fit trade-off are concrete, but the responsible actor is wrong.", "evidence_spans": ["Closer imitation preserves tested elements but may fit the receiving unit poorly."]},
+    "scholarly_positioning": {"applicability": "required", "assessment_status": "assessed", "score": 20, "reason": "It identifies the counterposition, enabling mechanism, and intended conceptual shift.", "evidence_spans": ["shifts attention from copying practices to preserving their enabling mechanism"]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 15, "reason": "The passage states its observable-routines scope and does not claim universal causality.", "evidence_spans": ["applies to transfers with observable routines and does not establish universal causality"]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 10, "reason": "The prose is direct and economical.", "evidence_spans": ["Transfer succeeds when the receiving unit recreates the complementary routines that produced the original effect."]}
+  },
+  "hard_failures": ["actor_gate_failure"],
+  "normalized_score": 65,
+  "capped_score": 65,
+  "overall_status": "fail",
+  "overall_reason": "The actor gate fails because a noncontrolling observer is substituted for the business-unit leader.",
+  "higher_than_both_justification": null
+}

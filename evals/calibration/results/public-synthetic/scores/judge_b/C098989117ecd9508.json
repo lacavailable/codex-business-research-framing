@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C098989117ecd9508",
+  "judge_id": "judge_b",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "contribution",
+  "category_results": {
+    "fidelity": {"applicability": "required", "assessment_status": "assessed", "score": 18, "reason": "The decision setting is retained, but the passage replaces the supplied delegation mechanism with unspecified considerations.", "evidence_spans": ["Several operational considerations connect the decision to later outcomes, but their relationship is not specified."]},
+    "managerial_framing": {"applicability": "required", "assessment_status": "assessed", "score": 20, "reason": "It specifies the responsible team, choice, objective, information limit, and competing considerations, but leaves the operating pathway unspecified.", "evidence_spans": ["The decision is important and involves competing considerations that require further analysis."]},
+    "scholarly_positioning": {"applicability": "required", "assessment_status": "assessed", "score": 20, "reason": "It gives a bounded counterposition and contribution by explaining delegation through adaptation and observability conditions rather than generic decentralization.", "evidence_spans": ["rather than as a generic best practice"]},
+    "evidence_discipline": {"applicability": "required", "assessment_status": "assessed", "score": 15, "reason": "The passage signals that the resulting claim's scope remains unresolved rather than presenting it as established.", "evidence_spans": ["The scope of the resulting claim remains to be established."]},
+    "prose_clarity": {"applicability": "required", "assessment_status": "assessed", "score": 8, "reason": "The prose is understandable, but its central mechanism is described abstractly and vaguely.", "evidence_spans": ["their relationship is not specified"]}
+  },
+  "hard_failures": [],
+  "normalized_score": 81,
+  "capped_score": 81,
+  "overall_status": "fail",
+  "overall_reason": "The passage falls below the fidelity minimum because it leaves the material delegation mechanism unspecified.",
+  "higher_than_both_justification": null
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cb1ca93a802d1b41e",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "model_setting",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 10,
+      "reason": "The release trigger is replaced by a nonsensical after-observation timing clause, materially changing the stated timing.",
+      "evidence_spans": [
+        "after none in the stated deterministic instance has been fully observed"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 21,
+      "reason": "The search-quality versus operational-lateness trade-off remains visible.",
+      "evidence_spans": [
+        "Longer search may improve cost but can make the certified plan operationally late."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "not_applicable",
+      "assessment_status": "not_applicable",
+      "score": null,
+      "reason": "Scholarly positioning is not part of the assessed function of this model setting passage.",
+      "evidence_spans": []
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 13,
+      "reason": "The passage appropriately bounds computational value to tested conditions.",
+      "evidence_spans": [
+        "Computational value is limited to tested instances, hardware, and the specified deadline."
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 7,
+      "reason": "The prose is mostly clear, but the opening timing clause is materially confusing.",
+      "evidence_spans": [
+        "selects a feasible routing plan before the dispatch deadline"
+      ]
+    }
+  },
+  "hard_failures": [
+    "timing_gate_failure"
+  ],
+  "normalized_score": 63.75,
+  "capped_score": 63.75,
+  "overall_status": "fail",
+  "overall_reason": "A hard fidelity or evidence failure makes the passage fail despite strengths elsewhere.",
+  "higher_than_both_justification": null
+}

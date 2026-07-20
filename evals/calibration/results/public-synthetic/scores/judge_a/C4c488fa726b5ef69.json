@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C4c488fa726b5ef69",
+  "judge_id": "judge_a",
+  "rubric_version": "3.0.0-rc.1",
+  "passage_function_interpretation": "contribution",
+  "category_results": {
+    "fidelity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 30,
+      "reason": "The actor, timing, information, objective, constraint, and delegation mechanism match the context.",
+      "evidence_spans": [
+        "a multiunit firm's senior team chooses how much discretion to delegate"
+      ]
+    },
+    "managerial_framing": {
+      "applicability": "optional",
+      "assessment_status": "assessed",
+      "score": 23,
+      "reason": "The passage makes the adaptation-versus-coordination trade-off operationally concrete.",
+      "evidence_spans": [
+        "Greater discretion supports adaptation but weakens consistency and oversight."
+      ]
+    },
+    "scholarly_positioning": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 5,
+      "reason": "The novelty claim rests only on an unstudied context and does not state a changed mechanism or bounded contribution.",
+      "evidence_spans": [
+        "The contribution is that the same topic has not previously been studied in this particular context."
+      ]
+    },
+    "evidence_discipline": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 14,
+      "reason": "The passage explicitly avoids a universal decentralization inference.",
+      "evidence_spans": [
+        "does not imply that decentralization always improves performance"
+      ]
+    },
+    "prose_clarity": {
+      "applicability": "required",
+      "assessment_status": "assessed",
+      "score": 9,
+      "reason": "The prose is concise and coherent.",
+      "evidence_spans": [
+        "Delegation improves local fit while common rules limit coordination and agency losses."
+      ]
+    }
+  },
+  "hard_failures": [],
+  "normalized_score": 81.0,
+  "capped_score": 81.0,
+  "overall_status": "fail",
+  "overall_reason": "A required category falls below its minimum.",
+  "higher_than_both_justification": null
+}
