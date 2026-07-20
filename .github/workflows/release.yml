@@ -33,19 +33,47 @@ jobs:
             echo "Unsupported tag: $GITHUB_REF_NAME" >&2
             exit 1
           fi
-      - name: Enforce v0.3 calibration attestation
+      - name: Enforce v0.3 authorization tier
         if: startsWith(github.ref_name, 'v0.3.')
         run: |
           python - <<'PY'
           import json
+          import os
           from pathlib import Path
-          path = Path("evals/calibration/public-metadata/private-calibration-attestation.json")
-          data = json.loads(path.read_text(encoding="utf-8"))
-          required = (data.get("release_eligible") is True and data.get("holdout_opened") is True
-                      and data.get("production_benchmark_run") is True
-                      and bool(data.get("evaluator_freeze_commit")))
-          if not required:
-              raise SystemExit("v0.3 release blocked: calibration attestation is incomplete or negative")
+
+          tag = os.environ["GITHUB_REF_NAME"]
+          if tag.startswith("v0.3.0-experimental."):
+              path = Path("evals/automated-triangulation/results/tier-a-attestation.json")
+              data = json.loads(path.read_text(encoding="utf-8"))
+              required = (
+                  data.get("authorization_tier") == "tier_a"
+                  and data.get("status") == "passed"
+                  and data.get("development_passed") is True
+                  and data.get("validation_passed") is True
+                  and data.get("evaluator_frozen") is True
+                  and data.get("automated_holdout_opened") is True
+                  and data.get("production_benchmark_complete") is True
+                  and data.get("experimental_release_eligible") is True
+                  and data.get("expert_holdout_unopened") is True
+                  and data.get("no_human_experts") is True
+                  and bool(data.get("limitations"))
+                  and bool(data.get("freeze_commit"))
+              )
+              if not required:
+                  raise SystemExit("experimental v0.3 release blocked: Tier A attestation is incomplete or negative")
+          else:
+              path = Path("evals/calibration/public-metadata/private-calibration-attestation.json")
+              data = json.loads(path.read_text(encoding="utf-8"))
+              required = (
+                  data.get("release_eligible") is True
+                  and data.get("qualified_reviewers", 0) > 0
+                  and data.get("expert_annotations", 0) > 0
+                  and data.get("holdout_opened") is True
+                  and data.get("production_benchmark_run") is True
+                  and bool(data.get("evaluator_freeze_commit"))
+              )
+              if not required:
+                  raise SystemExit("formal v0.3 release blocked: Tier B expert attestation is incomplete or negative")
           PY
       - name: Run deterministic release gates
         run: |
@@ -80,9 +108,17 @@ jobs:
           cp literature/manifest.yaml dist/literature-manifest.yaml
           cp THIRD_PARTY_NOTICES.md dist/THIRD_PARTY_NOTICES.md
           cp docs/source-selection-and-exclusion-log.md dist/source-selection-and-exclusion-log.md
-          cp docs/v0.2-evaluation-methodology.md dist/EVALUATION-METHODOLOGY.md
           if [[ "$version" == "0.2.0-beta" ]]; then
+            cp docs/v0.2-evaluation-methodology.md dist/EVALUATION-METHODOLOGY.md
             cp docs/v0.2-evaluation-report.md dist/EVALUATION-SUMMARY.md
+          elif [[ "$version" == 0.3.0-experimental.* ]]; then
+            cp docs/automated-triangulation-methodology.md dist/EVALUATION-METHODOLOGY.md
+            cp docs/automated-calibration-results.md dist/EVALUATION-SUMMARY.md
+            cp docs/automated-triangulation-methodology.md dist/AUTOMATED-TRIANGULATION-METHODOLOGY.md
+            cp docs/no-human-validation-policy.md dist/NO-HUMAN-VALIDATION-POLICY.md
+            cp docs/no-human-limitations.md dist/NO-HUMAN-LIMITATIONS.md
+            cp docs/silver-label-protocol.md dist/SILVER-LABEL-PROTOCOL.md
+            cp docs/role-separated-judging.md dist/ROLE-SEPARATED-JUDGING.md
           elif [[ -f "evals/reports/v${version}.md" ]]; then
             cp "evals/reports/v${version}.md" dist/EVALUATION-SUMMARY.md
           fi
