@@ -15,6 +15,27 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 ROOT = Path(__file__).resolve().parents[1]
 LITERATURE = ROOT / "literature"
+CARD_HEADINGS = (
+    "Bibliographic information",
+    "Source tier",
+    "Authority rationale",
+    "Inclusion rationale",
+    "Problem addressed",
+    "Central contribution",
+    "Supported framing principles",
+    "What it does not establish",
+    "DFC-12 relevance",
+    "Managerial-framing implications",
+    "Scholarly-positioning implications",
+    "Relevant output modes",
+    "Candidate Skill rules",
+    "Anti-patterns",
+    "Counterconditions",
+    "Exact evidence locations",
+    "Access and license status",
+    "Extraction confidence",
+    "Independent audit result",
+)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -36,6 +57,13 @@ def card_frontmatter(path: Path) -> dict[str, Any]:
     if not isinstance(value, dict):
         raise ValueError("frontmatter must be a mapping")
     return value
+
+
+def card_headings(path: Path) -> list[str]:
+    text = path.read_text(encoding="utf-8")
+    parts = text.split("---", 2)
+    body = parts[2] if len(parts) == 3 else ""
+    return [line[3:].strip() for line in body.splitlines() if line.startswith("## ")]
 
 
 def schema_errors(instance: Any, schema: dict[str, Any], label: str) -> list[str]:
@@ -82,6 +110,11 @@ def validate(root: Path = ROOT, require_complete: bool = False) -> list[str]:
             errors.append(f"{relative_card.as_posix()}: {exc}")
             continue
         errors.extend(schema_errors(card, card_schema, relative_card.as_posix()))
+        headings = card_headings(card_path)
+        if headings != list(CARD_HEADINGS):
+            errors.append(
+                f"{relative_card.as_posix()}: level-two headings must be the nineteen required sections in order"
+            )
         for field in (
             "source_id", "verification_status", "access_status", "content_reviewed", "license",
             "redistribution_status",
