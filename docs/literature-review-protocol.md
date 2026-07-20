@@ -38,10 +38,12 @@ Set `verification_status: verified` only when both passes succeed and the manife
 
 ## Access and licensing
 
-Access and redistribution are separate. Public web access is not a redistribution license. Default to `license: unknown` or `all_rights_reserved` and `redistribution_status: metadata_and_notes_only`. Commit a full source only after an explicit permissible license or public-domain status is independently verified and checksum, attribution, manifest, notice, and license records agree.
+Access and redistribution are separate. Public web access is not a redistribution license. Default to `license: unknown` or `all_rights_reserved` and `redistribution_status: metadata_and_original_notes_only`. Commit a full source only after an explicit permissible license or public-domain status is independently verified and checksum, attribution, manifest, notice, and license records agree.
 
 Do not use shadow libraries, access-control bypasses, shared credentials, or extracted browser cookies. Keep lawfully accessed nonredistributable sources and substantial annotations under ignored `research-private/literature/` only.
 
 ## Card method
 
-Every card must contain the schema-validated frontmatter and the required original-paraphrase sections. Do not paste long quotations. Distinguish what the reviewed material supports from candidate rules, counterconditions, and limitations. A source can be bibliographically verified while substantive claims remain limited to its accessible abstract or official summary.
+Every card must contain schema-validated frontmatter and nineteen explicit sections: Bibliographic information; Source tier; Authority rationale; Inclusion rationale; Problem addressed; Central contribution; Supported framing principles; What it does not establish; DFC-12 relevance; Managerial-framing implications; Scholarly-positioning implications; Relevant output modes; Candidate Skill rules; Anti-patterns; Counterconditions; Exact evidence locations; Access and license status; Extraction confidence; and Independent audit result.
+
+Do not paste long quotations. Distinguish what the reviewed material supports from candidate rules, counterconditions, and limitations. A source can be bibliographically verified while substantive claims remain limited to its accessible abstract or official summary.
