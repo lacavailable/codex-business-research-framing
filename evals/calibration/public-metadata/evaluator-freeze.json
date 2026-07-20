@@ -1,0 +1,17 @@
+{
+  "schema_version": "3.0.0",
+  "freeze_commit": "fa5206a",
+  "frozen_on": "2026-07-20",
+  "scope": "public synthetic evaluator code, rubric, preregistration, split manifest, and packet harness",
+  "files": {
+    "tools/evaluator_calibration.py": "355483817a04a5621cf2c03210c1fc4bd76c7ae1b99f1cfe58e82620a413a516",
+    "tools/calibration_harness.py": "4cf3784df73d4a6f7140ab2767154f1141bf04570e80965856b23b572e60373b",
+    "tools/generate_public_calibration.py": "60bb299d355b94f3f4e2051c4b19f40f5e0d7784a5eb5bc488190912ddeed71e",
+    "evals/calibration/rubrics/business-framing-v3.json": "11ecf295830715739c606daa47621132b188ae29cab61406eece97ee4df27369",
+    "evals/calibration/public-metadata/synthetic-suite-manifest.json": "5ae82921cdf013aa789288d1b9cef9bbc9edd9c6111d00a9bc0701bcc5ead085",
+    "evals/calibration/preregistration.json": "19b206d1debab71e1f604c860d920de4a5f9bd29ef53b8b0db8304225529e0eb"
+  },
+  "private_expert_calibration_frozen": false,
+  "holdout_unlock_authorized": false,
+  "note": "This records a reproducible public-infrastructure freeze. It does not unlock holdout because lawful passages and real expert annotations are absent."
+}

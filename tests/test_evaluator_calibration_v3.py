@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import copy
 import json
+import sys
 from pathlib import Path
 
 import pytest
@@ -10,7 +11,9 @@ from conftest import ROOT, import_file
 
 
 CAL = import_file("evaluator_calibration_v3", ROOT / "tools/evaluator_calibration.py")
+sys.modules.setdefault("evaluator_calibration", CAL)
 GEN = import_file("generate_public_calibration_v3", ROOT / "tools/generate_public_calibration.py")
+HARNESS = import_file("calibration_harness_v3", ROOT / "tools/calibration_harness.py")
 RUBRIC = CAL.load_rubric()
 WEIGHTS = {item["id"]: item["weight"] for item in RUBRIC["categories"]}
 
@@ -192,3 +195,15 @@ def test_generated_suite_counts_and_clustered_splits() -> None:
 def test_generated_files_are_current_and_leak_free() -> None:
     assert GEN.main.__module__
     assert CAL.validate_suite(ROOT / "evals/calibration")["cases"] == 168
+
+
+def test_default_packets_leave_holdout_locked(tmp_path: Path) -> None:
+    result = HARNESS.prepare(tmp_path, 21, {"development", "validation"})
+    manifest = json.loads((tmp_path / "packet-manifest.json").read_text(encoding="utf-8"))
+    selected = {case for packet in manifest["judges"]["judge_a"] for case in packet["case_ids"]}
+    gold = {
+        record["case_id"]: record
+        for record in json.loads((ROOT / "evals/calibration/public-metadata/synthetic-suite-manifest.json").read_text(encoding="utf-8"))["records"]
+    }
+    assert result["cases"] == 112
+    assert {gold[case]["split"] for case in selected} == {"development", "validation"}

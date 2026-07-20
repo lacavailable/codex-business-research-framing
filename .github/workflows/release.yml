@@ -33,11 +33,29 @@ jobs:
             echo "Unsupported tag: $GITHUB_REF_NAME" >&2
             exit 1
           fi
+      - name: Enforce v0.3 calibration attestation
+        if: startsWith(github.ref_name, 'v0.3.')
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path("evals/calibration/public-metadata/private-calibration-attestation.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+          required = (data.get("release_eligible") is True and data.get("holdout_opened") is True
+                      and data.get("production_benchmark_run") is True
+                      and bool(data.get("evaluator_freeze_commit")))
+          if not required:
+              raise SystemExit("v0.3 release blocked: calibration attestation is incomplete or negative")
+          PY
       - name: Run deterministic release gates
         run: |
           pytest
           python tools/generate_rubric.py --check
           python tools/generate_rule_matrix.py --check
+          python tools/generate_public_calibration.py --check
+          python tools/evaluator_calibration.py validate-suite evals/calibration
+          python tools/verify_calibration_freeze.py
+          python tools/audit_calibration_copyright.py
           python tools/validate_literature.py --require-complete
           python tools/evaluate_benchmark.py validate
           python tools/evaluate_benchmark.py validate-artifacts
