@@ -4,8 +4,8 @@ title: "Codex Business Research Framing"
 type: software
 authors:
   - name: "Codex Business Research Framing Contributors"
-version: 0.1.0-alpha
-date-released: 2026-07-19
+version: 0.2.0-beta
+date-released: 2026-07-20
 license: MIT
 repository-code: "https://github.com/lacavailable/codex-business-research-framing"
 keywords:
