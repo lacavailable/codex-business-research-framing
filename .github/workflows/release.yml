@@ -53,6 +53,7 @@ jobs:
           python tools/generate_rubric.py --check
           python tools/generate_rule_matrix.py --check
           python tools/generate_public_calibration.py --check
+          python tools/generate_bias_diagnostics.py --check
           python tools/evaluator_calibration.py validate-suite evals/calibration
           python tools/verify_calibration_freeze.py
           python tools/audit_calibration_copyright.py

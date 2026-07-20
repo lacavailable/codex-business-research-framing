@@ -13,7 +13,9 @@ from conftest import ROOT, import_file
 CAL = import_file("evaluator_calibration_v3", ROOT / "tools/evaluator_calibration.py")
 sys.modules.setdefault("evaluator_calibration", CAL)
 GEN = import_file("generate_public_calibration_v3", ROOT / "tools/generate_public_calibration.py")
+sys.modules.setdefault("generate_public_calibration", GEN)
 HARNESS = import_file("calibration_harness_v3", ROOT / "tools/calibration_harness.py")
+BIAS = import_file("generate_bias_diagnostics_v3", ROOT / "tools/generate_bias_diagnostics.py")
 RUBRIC = CAL.load_rubric()
 WEIGHTS = {item["id"]: item["weight"] for item in RUBRIC["categories"]}
 
@@ -207,3 +209,14 @@ def test_default_packets_leave_holdout_locked(tmp_path: Path) -> None:
     }
     assert result["cases"] == 112
     assert {gold[case]["split"] for case in selected} == {"development", "validation"}
+
+
+def test_bias_diagnostics_are_paired_and_randomized() -> None:
+    records = BIAS.build()["records"]
+    assert len(records) == 120
+    pairs: dict[str, list[dict]] = {}
+    for record in records:
+        pairs.setdefault(record["pair_id"], []).append(record)
+    assert len(pairs) == 60
+    assert all(sorted(item["randomized_order"] for item in pair) == [0, 1] for pair in pairs.values())
+    assert {item["diagnostic"] for item in records} == set(BIAS.DIAGNOSTICS)
