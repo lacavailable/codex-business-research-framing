@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C436328cc96f629fa",
+  "domain": "IS",
+  "anonymized_passage": "before classifying a new content item, before the item's harmfulness and classifier error is known, an outside observer who cannot make the decision sets a review threshold using privacy-permitted signals using approved signal features, error costs, and reviewer capacity. The stated objective is to minimize expected moderation harm and review cost, subject to the condition that privacy-restricted attributes are unavailable unless consent and policy permit their use. The threshold routes uncertain items to review and changes false-positive and false-negative exposure. More review reduces classification harm but consumes scarce reviewer attention. The proposal does not treat revenue as welfare or assume unrestricted access to sensitive data. The study asks how privacy limits alter the value of selective human review.",
+  "passage_function": "research_opportunity",
+  "context": {
+    "model_or_study_facts": [
+      "privacy-restricted attributes are unavailable unless consent and policy permit their use",
+      "the item's harmfulness and classifier error"
+    ],
+    "actor": "a moderation policy owner",
+    "decisions": [
+      "sets a review threshold using privacy-permitted signals"
+    ],
+    "objective": "minimize expected moderation harm and review cost",
+    "timing": "before classifying a new content item",
+    "decision_time_information": [
+      "approved signal features, error costs, and reviewer capacity"
+    ],
+    "constraints": [
+      "privacy-restricted attributes are unavailable unless consent and policy permit their use"
+    ],
+    "mechanism": "The threshold routes uncertain items to review and changes false-positive and false-negative exposure",
+    "supplied_evidence": [
+      "Synthetic illustration; no external empirical evidence supplied."
+    ]
+  },
+  "intended_audience": "business and research readers",
+  "requested_evaluation_profile": "standard"
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C173fc82e7195049f",
+  "domain": "MGMT",
+  "passage_function": "phenomenon_motivation",
+  "group": "contrast",
+  "control_origin": "derived_contrast",
+  "split": "development",
+  "applicable_categories": {
+    "fidelity": "optional",
+    "managerial_framing": "optional",
+    "scholarly_positioning": "optional",
+    "evidence_discipline": "required",
+    "prose_clarity": "required"
+  },
+  "gold_fidelity_facts": [
+    "a business-unit leader",
+    "chooses whether and how to adapt the practice",
+    "improve unit performance without disrupting complementary routines",
+    "the leader cannot assume that surface similarity preserves the causal mechanism"
+  ],
+  "acceptable_interpretations": [
+    "Equivalent concise wording is acceptable.",
+    "Explicit rubric labels are unnecessary."
+  ],
+  "prohibited_model_changes": [
+    "Do not add unavailable future facts.",
+    "Do not replace the stated objective."
+  ],
+  "evidence_boundaries": [
+    "Synthetic case only.",
+    "No field outcome is supplied."
+  ],
+  "expected_strengths": [
+    "Concrete decision structure.",
+    "Bounded claim."
+  ],
+  "expected_weaknesses": [
+    "Incomplete mechanism and scope."
+  ],
+  "case_specific_anchors": {
+    "high": "Faithful and functionally complete.",
+    "medium": "Competent but incomplete.",
+    "low": "Material defect or generic framing."
+  },
+  "expert_quality_level": "low",
+  "expert_review_status": "pending",
+  "contrast": {
+    "original_case_id": "Cabef43cef957de90",
+    "changed_construct": "timing",
+    "expected_declines": {
+      "fidelity": 9
+    },
+    "expected_stable": {
+      "prose_clarity": 1
+    },
+    "expected_hard_failure": "timing_gate_failure",
+    "minimum_total_reduction": 9,
+    "acceptable_alternatives": [
+      "A stricter deduction is acceptable when specifically justified."
+    ]
+  }
+}

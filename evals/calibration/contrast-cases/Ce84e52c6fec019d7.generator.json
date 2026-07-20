@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Ce84e52c6fec019d7",
+  "domain": "OR",
+  "anonymized_passage": "when a schedule must be released for the next shift, before none in the scheduling model is known, a production scheduler chooses between an exact solver incumbent and a heuristic schedule using jobs, processing times, machine availability, costs, and the release deadline. The stated objective is to minimize tardiness and setup cost, subject to the condition that only solutions available before release can affect operations. The exact method may improve bounds and incumbents with time, while the heuristic returns feasible schedules quickly without a certificate. Waiting can improve objective quality but risks missing the release time. The analysis therefore provides a broadly useful conclusion for managers. The study distinguishes mathematical solution quality from the value of having a usable schedule on time.",
+  "passage_function": "managerial_implications",
+  "context": {
+    "model_or_study_facts": [
+      "only solutions available before release can affect operations",
+      "none in the scheduling model"
+    ],
+    "actor": "a production scheduler",
+    "decisions": [
+      "chooses between an exact solver incumbent and a heuristic schedule"
+    ],
+    "objective": "minimize tardiness and setup cost",
+    "timing": "when a schedule must be released for the next shift",
+    "decision_time_information": [
+      "jobs, processing times, machine availability, costs, and the release deadline"
+    ],
+    "constraints": [
+      "only solutions available before release can affect operations"
+    ],
+    "mechanism": "The exact method may improve bounds and incumbents with time, while the heuristic returns feasible schedules quickly without a certificate",
+    "supplied_evidence": [
+      "Synthetic illustration; no external empirical evidence supplied."
+    ]
+  },
+  "intended_audience": "business and research readers",
+  "requested_evaluation_profile": "standard"
+}

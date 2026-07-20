@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C4fa2f112dbfbeb6d",
+  "domain": "IS",
+  "anonymized_passage": "before publishing a recommendation list, before future engagement and prediction error is known, a ranking-system owner selects a ranking rule subject to an exposure constraint using predicted relevance, the approved group indicator, and the exposure requirement, the future realized outcome, and any latent type. The stated objective is to maximize expected relevance subject to the stated exposure constraint, subject to the condition that the system cannot use attributes that are unavailable or prohibited at ranking time. The constraint reallocates exposure across eligible items and can displace higher predicted-relevance positions. Tighter exposure balance can improve representation while reducing predicted relevance under the model. The result concerns the specified exposure metric and does not establish broader social welfare. The study shows when the operational cost of the exposure requirement is concentrated in a few ranking positions.",
+  "passage_function": "managerial_implications",
+  "context": {
+    "model_or_study_facts": [
+      "the system cannot use attributes that are unavailable or prohibited at ranking time",
+      "future engagement and prediction error"
+    ],
+    "actor": "a ranking-system owner",
+    "decisions": [
+      "selects a ranking rule subject to an exposure constraint"
+    ],
+    "objective": "maximize expected relevance subject to the stated exposure constraint",
+    "timing": "before publishing a recommendation list",
+    "decision_time_information": [
+      "predicted relevance, the approved group indicator, and the exposure requirement"
+    ],
+    "constraints": [
+      "the system cannot use attributes that are unavailable or prohibited at ranking time"
+    ],
+    "mechanism": "The constraint reallocates exposure across eligible items and can displace higher predicted-relevance positions",
+    "supplied_evidence": [
+      "Synthetic illustration; no external empirical evidence supplied."
+    ]
+  },
+  "intended_audience": "business and research readers",
+  "requested_evaluation_profile": "standard"
+}

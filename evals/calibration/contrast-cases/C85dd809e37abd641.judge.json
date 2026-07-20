@@ -1,0 +1,63 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C85dd809e37abd641",
+  "domain": "OR",
+  "passage_function": "managerial_implications",
+  "group": "contrast",
+  "control_origin": "derived_contrast",
+  "split": "holdout",
+  "applicable_categories": {
+    "fidelity": "required",
+    "managerial_framing": "required",
+    "scholarly_positioning": "not_applicable",
+    "evidence_discipline": "required",
+    "prose_clarity": "required"
+  },
+  "gold_fidelity_facts": [
+    "a production scheduler",
+    "chooses between an exact solver incumbent and a heuristic schedule",
+    "minimize tardiness and setup cost",
+    "only solutions available before release can affect operations"
+  ],
+  "acceptable_interpretations": [
+    "Equivalent concise wording is acceptable.",
+    "Explicit rubric labels are unnecessary."
+  ],
+  "prohibited_model_changes": [
+    "Do not add unavailable future facts.",
+    "Do not replace the stated objective."
+  ],
+  "evidence_boundaries": [
+    "Synthetic case only.",
+    "No field outcome is supplied."
+  ],
+  "expected_strengths": [
+    "Concrete decision structure.",
+    "Bounded claim."
+  ],
+  "expected_weaknesses": [
+    "Incomplete mechanism and scope."
+  ],
+  "case_specific_anchors": {
+    "high": "Faithful and functionally complete.",
+    "medium": "Competent but incomplete.",
+    "low": "Material defect or generic framing."
+  },
+  "expert_quality_level": "low",
+  "expert_review_status": "pending",
+  "contrast": {
+    "original_case_id": "C01d9a605b24c22f7",
+    "changed_construct": "information",
+    "expected_declines": {
+      "fidelity": 9
+    },
+    "expected_stable": {
+      "prose_clarity": 1
+    },
+    "expected_hard_failure": "information_gate_failure",
+    "minimum_total_reduction": 9,
+    "acceptable_alternatives": [
+      "A stricter deduction is acceptable when specifically justified."
+    ]
+  }
+}

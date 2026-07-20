@@ -1,0 +1,64 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cd6b011e32300dfcc",
+  "domain": "OM",
+  "passage_function": "managerial_implications",
+  "group": "contrast",
+  "control_origin": "derived_contrast",
+  "split": "holdout",
+  "applicable_categories": {
+    "fidelity": "required",
+    "managerial_framing": "required",
+    "scholarly_positioning": "not_applicable",
+    "evidence_discipline": "required",
+    "prose_clarity": "required"
+  },
+  "gold_fidelity_facts": [
+    "a service-operations manager",
+    "sets staffing for the window",
+    "minimize expected staffing and delay cost",
+    "staff cannot be added after the cutoff in the stated model"
+  ],
+  "acceptable_interpretations": [
+    "Equivalent concise wording is acceptable.",
+    "Explicit rubric labels are unnecessary."
+  ],
+  "prohibited_model_changes": [
+    "Do not add unavailable future facts.",
+    "Do not replace the stated objective."
+  ],
+  "evidence_boundaries": [
+    "Synthetic case only.",
+    "No field outcome is supplied."
+  ],
+  "expected_strengths": [
+    "Concrete decision structure.",
+    "Bounded claim."
+  ],
+  "expected_weaknesses": [
+    "Incomplete mechanism and scope."
+  ],
+  "case_specific_anchors": {
+    "high": "Faithful and functionally complete.",
+    "medium": "Competent but incomplete.",
+    "low": "Material defect or generic framing."
+  },
+  "expert_quality_level": "low",
+  "expert_review_status": "pending",
+  "contrast": {
+    "original_case_id": "C6696d9894278f594",
+    "changed_construct": "trade_off",
+    "expected_declines": {
+      "managerial_framing": 4
+    },
+    "expected_stable": {
+      "fidelity": 1,
+      "evidence_discipline": 1
+    },
+    "expected_hard_failure": null,
+    "minimum_total_reduction": 4,
+    "acceptable_alternatives": [
+      "A stricter deduction is acceptable when specifically justified."
+    ]
+  }
+}

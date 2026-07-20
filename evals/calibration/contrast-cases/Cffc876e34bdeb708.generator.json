@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Cffc876e34bdeb708",
+  "domain": "OR",
+  "anonymized_passage": "when same-day routes must be released, before none in the stated deterministic instance is known, a dispatch planner selects a feasible routing plan before the dispatch deadline using orders, travel times, vehicle capacities, and the release deadline. The stated objective is to maximize a different social-welfare objective that the model does not measure, subject to the condition that an optimality certificate arriving after release cannot guide the decision. The algorithm trades additional search time for better incumbents and stronger bounds. Longer search may improve cost but can make the certified plan operationally late. Computational value is limited to tested instances, hardware, and the specified deadline. The study connects solution quality and certificate timing to the actual release decision.",
+  "passage_function": "model_setting",
+  "context": {
+    "model_or_study_facts": [
+      "an optimality certificate arriving after release cannot guide the decision",
+      "none in the stated deterministic instance"
+    ],
+    "actor": "a dispatch planner",
+    "decisions": [
+      "selects a feasible routing plan before the dispatch deadline"
+    ],
+    "objective": "minimize routing cost while meeting service constraints",
+    "timing": "when same-day routes must be released",
+    "decision_time_information": [
+      "orders, travel times, vehicle capacities, and the release deadline"
+    ],
+    "constraints": [
+      "an optimality certificate arriving after release cannot guide the decision"
+    ],
+    "mechanism": "The algorithm trades additional search time for better incumbents and stronger bounds",
+    "supplied_evidence": [
+      "Synthetic illustration; no external empirical evidence supplied."
+    ]
+  },
+  "intended_audience": "business and research readers",
+  "requested_evaluation_profile": "standard"
+}

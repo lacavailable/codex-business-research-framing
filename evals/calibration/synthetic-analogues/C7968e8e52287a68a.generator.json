@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C7968e8e52287a68a",
+  "domain": "MGMT",
+  "anonymized_passage": "when a proven practice is transferred to a different unit, before whether the practice's mechanism survives the new context is known, a business-unit leader chooses whether and how to adapt the practice using local routines, resource limits, and observed prior outcomes. The stated objective is to improve unit performance without disrupting complementary routines, subject to the condition that the leader cannot assume that surface similarity preserves the causal mechanism. Transfer succeeds when the receiving unit recreates the complementary routines that produced the original effect. Closer imitation preserves tested elements but may fit the receiving unit poorly. The universally superior policy will transform the market and guarantee better performance. The study shifts attention from copying practices to preserving their enabling mechanism.",
+  "passage_function": "phenomenon_motivation",
+  "context": {
+    "model_or_study_facts": [
+      "the leader cannot assume that surface similarity preserves the causal mechanism",
+      "whether the practice's mechanism survives the new context"
+    ],
+    "actor": "a business-unit leader",
+    "decisions": [
+      "chooses whether and how to adapt the practice"
+    ],
+    "objective": "improve unit performance without disrupting complementary routines",
+    "timing": "when a proven practice is transferred to a different unit",
+    "decision_time_information": [
+      "local routines, resource limits, and observed prior outcomes"
+    ],
+    "constraints": [
+      "the leader cannot assume that surface similarity preserves the causal mechanism"
+    ],
+    "mechanism": "Transfer succeeds when the receiving unit recreates the complementary routines that produced the original effect",
+    "supplied_evidence": [
+      "Synthetic illustration; no external empirical evidence supplied."
+    ]
+  },
+  "intended_audience": "business and research readers",
+  "requested_evaluation_profile": "standard"
+}

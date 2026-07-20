@@ -10,11 +10,10 @@ import math
 import re
 import sys
 from collections.abc import Iterable
-from dataclasses import dataclass
 from decimal import Decimal, ROUND_HALF_UP
 from difflib import SequenceMatcher
 from pathlib import Path
-from typing import Any
+from typing import Any, NamedTuple
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -129,8 +128,7 @@ def ngrams(tokens: list[str], width: int = 5) -> set[tuple[str, ...]]:
     return {tuple(tokens[index:index + width]) for index in range(max(0, len(tokens) - width + 1))}
 
 
-@dataclass(frozen=True)
-class LeakageFinding:
+class LeakageFinding(NamedTuple):
     kind: str
     judge_field: str
     detail: str
@@ -372,7 +370,7 @@ def unicode_errors(text: str) -> list[str]:
     errors: list[str] = []
     if "\ufffd" in text:
         errors.append("Unicode replacement character U+FFFD")
-    if any(marker in text for marker in ("鈥", "锟", "闁")):
+    if any(chr(codepoint) in text for codepoint in (0x9225, 0x951F, 0x95C1)):
         errors.append("common mojibake marker")
     return errors
 

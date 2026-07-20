@@ -1,0 +1,63 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "Ce2adc948d3122b61",
+  "domain": "IS",
+  "passage_function": "business_problem",
+  "group": "contrast",
+  "control_origin": "derived_contrast",
+  "split": "development",
+  "applicable_categories": {
+    "fidelity": "required",
+    "managerial_framing": "required",
+    "scholarly_positioning": "optional",
+    "evidence_discipline": "required",
+    "prose_clarity": "required"
+  },
+  "gold_fidelity_facts": [
+    "a platform access manager",
+    "sets one threshold on a noisy risk score",
+    "maximize expected platform value net of malicious harm and rejection loss",
+    "true account type is not observed at admission"
+  ],
+  "acceptable_interpretations": [
+    "Equivalent concise wording is acceptable.",
+    "Explicit rubric labels are unnecessary."
+  ],
+  "prohibited_model_changes": [
+    "Do not add unavailable future facts.",
+    "Do not replace the stated objective."
+  ],
+  "evidence_boundaries": [
+    "Synthetic case only.",
+    "No field outcome is supplied."
+  ],
+  "expected_strengths": [
+    "Concrete decision structure.",
+    "Bounded claim."
+  ],
+  "expected_weaknesses": [
+    "Incomplete mechanism and scope."
+  ],
+  "case_specific_anchors": {
+    "high": "Faithful and functionally complete.",
+    "medium": "Competent but incomplete.",
+    "low": "Material defect or generic framing."
+  },
+  "expert_quality_level": "low",
+  "expert_review_status": "pending",
+  "contrast": {
+    "original_case_id": "C4edddd89dc02c4d0",
+    "changed_construct": "actor",
+    "expected_declines": {
+      "fidelity": 9
+    },
+    "expected_stable": {
+      "prose_clarity": 1
+    },
+    "expected_hard_failure": "actor_gate_failure",
+    "minimum_total_reduction": 9,
+    "acceptable_alternatives": [
+      "A stricter deduction is acceptable when specifically justified."
+    ]
+  }
+}

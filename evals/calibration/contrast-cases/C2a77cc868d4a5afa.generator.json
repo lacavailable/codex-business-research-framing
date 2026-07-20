@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C2a77cc868d4a5afa",
+  "domain": "OR",
+  "anonymized_passage": "before uncertain demand is realized, before future demand by market is known, a capacity planner chooses first-stage capacity and a recourse policy using capacity costs and the demand distribution. The stated objective is to minimize capacity, recourse, and unmet-demand cost, subject to the condition that recourse actions occur only after demand is observed and must respect installed capacity. First-stage capacity changes the feasible and costly adjustments available after demand realization. More advance capacity is expensive but reduces shortage and emergency recourse exposure. The analysis therefore provides a broadly useful conclusion for managers. The analysis isolates when flexible recourse substitutes for advance capacity.",
+  "passage_function": "model_setting",
+  "context": {
+    "model_or_study_facts": [
+      "recourse actions occur only after demand is observed and must respect installed capacity",
+      "future demand by market"
+    ],
+    "actor": "a capacity planner",
+    "decisions": [
+      "chooses first-stage capacity and a recourse policy"
+    ],
+    "objective": "minimize capacity, recourse, and unmet-demand cost",
+    "timing": "before uncertain demand is realized",
+    "decision_time_information": [
+      "capacity costs and the demand distribution"
+    ],
+    "constraints": [
+      "recourse actions occur only after demand is observed and must respect installed capacity"
+    ],
+    "mechanism": "First-stage capacity changes the feasible and costly adjustments available after demand realization",
+    "supplied_evidence": [
+      "Synthetic illustration; no external empirical evidence supplied."
+    ]
+  },
+  "intended_audience": "business and research readers",
+  "requested_evaluation_profile": "standard"
+}

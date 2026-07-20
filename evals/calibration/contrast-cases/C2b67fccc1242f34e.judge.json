@@ -1,0 +1,64 @@
+{
+  "schema_version": "3.0.0",
+  "case_id": "C2b67fccc1242f34e",
+  "domain": "OM",
+  "passage_function": "model_setting",
+  "group": "contrast",
+  "control_origin": "derived_contrast",
+  "split": "validation",
+  "applicable_categories": {
+    "fidelity": "required",
+    "managerial_framing": "required",
+    "scholarly_positioning": "not_applicable",
+    "evidence_discipline": "required",
+    "prose_clarity": "required"
+  },
+  "gold_fidelity_facts": [
+    "an assortment planner",
+    "selects products under a fixed display-slot limit",
+    "maximize expected assortment revenue",
+    "display capacity is distinct from inventory and fulfillment capacity"
+  ],
+  "acceptable_interpretations": [
+    "Equivalent concise wording is acceptable.",
+    "Explicit rubric labels are unnecessary."
+  ],
+  "prohibited_model_changes": [
+    "Do not add unavailable future facts.",
+    "Do not replace the stated objective."
+  ],
+  "evidence_boundaries": [
+    "Synthetic case only.",
+    "No field outcome is supplied."
+  ],
+  "expected_strengths": [
+    "Concrete decision structure.",
+    "Bounded claim."
+  ],
+  "expected_weaknesses": [
+    "Incomplete mechanism and scope."
+  ],
+  "case_specific_anchors": {
+    "high": "Faithful and functionally complete.",
+    "medium": "Competent but incomplete.",
+    "low": "Material defect or generic framing."
+  },
+  "expert_quality_level": "low",
+  "expert_review_status": "pending",
+  "contrast": {
+    "original_case_id": "Ca1e4974bfb3df807",
+    "changed_construct": "verbosity",
+    "expected_declines": {
+      "prose_clarity": 2
+    },
+    "expected_stable": {
+      "fidelity": 1,
+      "evidence_discipline": 1
+    },
+    "expected_hard_failure": null,
+    "minimum_total_reduction": 2,
+    "acceptable_alternatives": [
+      "A stricter deduction is acceptable when specifically justified."
+    ]
+  }
+}

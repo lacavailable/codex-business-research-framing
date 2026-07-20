@@ -3,13 +3,14 @@
   "$id": "https://example.org/frame-business-research-problem/calibration/judge-only.schema.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "case_id", "domain", "passage_function", "group", "split", "applicable_categories", "gold_fidelity_facts", "acceptable_interpretations", "prohibited_model_changes", "evidence_boundaries", "expected_strengths", "expected_weaknesses", "case_specific_anchors", "expert_quality_level", "expert_review_status", "contrast"],
+  "required": ["schema_version", "case_id", "domain", "passage_function", "group", "control_origin", "split", "applicable_categories", "gold_fidelity_facts", "acceptable_interpretations", "prohibited_model_changes", "evidence_boundaries", "expected_strengths", "expected_weaknesses", "case_specific_anchors", "expert_quality_level", "expert_review_status", "contrast"],
   "properties": {
     "schema_version": {"const": "3.0.0"},
     "case_id": {"type": "string", "pattern": "^C[0-9a-f]{16}$"},
     "domain": {"enum": ["OM", "IS", "OR", "MGMT"]},
     "passage_function": {"enum": ["phenomenon_motivation", "business_problem", "model_setting", "research_opportunity", "contribution", "managerial_implications"]},
     "group": {"enum": ["positive", "intermediate", "negative", "contrast"]},
+    "control_origin": {"enum": ["expert_confirmed_source", "synthetic_analogue", "original_negative", "derived_contrast"]},
     "split": {"enum": ["development", "validation", "holdout"]},
     "applicable_categories": {
       "type": "object",
