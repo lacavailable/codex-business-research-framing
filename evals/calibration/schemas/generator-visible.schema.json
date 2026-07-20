@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/calibration/generator-visible.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "domain", "anonymized_passage", "passage_function", "context", "intended_audience", "requested_evaluation_profile"],
+  "properties": {
+    "schema_version": {"const": "3.0.0"},
+    "case_id": {"type": "string", "pattern": "^C[0-9a-f]{16}$"},
+    "domain": {"enum": ["OM", "IS", "OR", "MGMT"]},
+    "anonymized_passage": {"type": "string", "minLength": 80},
+    "passage_function": {"enum": ["phenomenon_motivation", "business_problem", "model_setting", "research_opportunity", "contribution", "managerial_implications"]},
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model_or_study_facts", "actor", "decisions", "objective", "timing", "decision_time_information", "constraints", "mechanism", "supplied_evidence"],
+      "properties": {
+        "model_or_study_facts": {"type": "array", "items": {"type": "string"}},
+        "actor": {"type": ["string", "null"]},
+        "decisions": {"type": "array", "items": {"type": "string"}},
+        "objective": {"type": ["string", "null"]},
+        "timing": {"type": ["string", "null"]},
+        "decision_time_information": {"type": "array", "items": {"type": "string"}},
+        "constraints": {"type": "array", "items": {"type": "string"}},
+        "mechanism": {"type": ["string", "null"]},
+        "supplied_evidence": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "intended_audience": {"type": "string", "minLength": 3},
+    "requested_evaluation_profile": {"enum": ["compact", "standard", "full_audit"]}
+  }
+}

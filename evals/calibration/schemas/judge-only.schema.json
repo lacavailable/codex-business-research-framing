@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/calibration/judge-only.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "domain", "passage_function", "group", "split", "applicable_categories", "gold_fidelity_facts", "acceptable_interpretations", "prohibited_model_changes", "evidence_boundaries", "expected_strengths", "expected_weaknesses", "case_specific_anchors", "expert_quality_level", "expert_review_status", "contrast"],
+  "properties": {
+    "schema_version": {"const": "3.0.0"},
+    "case_id": {"type": "string", "pattern": "^C[0-9a-f]{16}$"},
+    "domain": {"enum": ["OM", "IS", "OR", "MGMT"]},
+    "passage_function": {"enum": ["phenomenon_motivation", "business_problem", "model_setting", "research_opportunity", "contribution", "managerial_implications"]},
+    "group": {"enum": ["positive", "intermediate", "negative", "contrast"]},
+    "split": {"enum": ["development", "validation", "holdout"]},
+    "applicable_categories": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fidelity", "managerial_framing", "scholarly_positioning", "evidence_discipline", "prose_clarity"],
+      "properties": {
+        "fidelity": {"enum": ["required", "optional", "not_applicable"]},
+        "managerial_framing": {"enum": ["required", "optional", "not_applicable"]},
+        "scholarly_positioning": {"enum": ["required", "optional", "not_applicable"]},
+        "evidence_discipline": {"enum": ["required", "optional", "not_applicable"]},
+        "prose_clarity": {"enum": ["required", "optional", "not_applicable"]}
+      }
+    },
+    "gold_fidelity_facts": {"type": "array", "items": {"type": "string"}},
+    "acceptable_interpretations": {"type": "array", "items": {"type": "string"}},
+    "prohibited_model_changes": {"type": "array", "items": {"type": "string"}},
+    "evidence_boundaries": {"type": "array", "items": {"type": "string"}},
+    "expected_strengths": {"type": "array", "items": {"type": "string"}},
+    "expected_weaknesses": {"type": "array", "items": {"type": "string"}},
+    "case_specific_anchors": {"type": "object", "additionalProperties": {"type": "string"}},
+    "expert_quality_level": {"enum": ["high", "medium", "low", "pending"]},
+    "expert_review_status": {"enum": ["pending", "one_review", "confirmed", "excluded"]},
+    "contrast": {
+      "oneOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["original_case_id", "changed_construct", "expected_declines", "expected_stable", "expected_hard_failure", "minimum_total_reduction", "acceptable_alternatives"],
+          "properties": {
+            "original_case_id": {"type": "string", "pattern": "^C[0-9a-f]{16}$"},
+            "changed_construct": {"enum": ["actor", "timing", "information", "objective", "mechanism", "trade_off", "unsupported_hype", "contribution", "boundaries", "verbosity"]},
+            "expected_declines": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0}},
+            "expected_stable": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0}},
+            "expected_hard_failure": {"type": ["string", "null"]},
+            "minimum_total_reduction": {"type": "number", "minimum": 0},
+            "acceptable_alternatives": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      ]
+    }
+  }
+}
