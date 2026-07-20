@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B702ea084246a",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 9
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly keeps zone slot limits as pre-window decisions, later orders and overtime as outcomes, courier-hour capacity and zone bounds intact, and the objective as expected same-day margin net of overtime cost.",
+    "managerial_framing": "Provides the operator, cutoff trigger, choices, stakes, slot-exposure mechanism, margin-versus-overtime trade-off, feasible counterfactual, and operational implications in concrete terms.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed; the response stays within the operational problem and avoids an unsupported literature claim.",
+    "evidence_discipline": "Explicitly rejects the loyalty causal claim, explains the evidence and design needed to test it, and bounds the formulation to conditional one-window comparisons rather than realized effects.",
+    "prose_clarity": "Well organized and precise, though the repeated gate and mapping sections add slight length beyond what the prompt requires.",
+    "overall": "A comprehensive, faithful capacity-trade-off framing with strong evidence boundaries and no hard failure."
+  },
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

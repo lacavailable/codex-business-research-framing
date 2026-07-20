@@ -1,0 +1,580 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark": "business-framing-v2",
+  "seed": "v0.2.0-beta",
+  "status": "complete",
+  "expected_primary_scores": 252,
+  "received_primary_scores": 252,
+  "missing_output_pairs": 0,
+  "adjudicated_outputs": 35,
+  "rubric_version": "2.0.0",
+  "cells": {
+    "OM:no_skill": {
+      "n": 14,
+      "mean_raw_total": 95.214,
+      "mean_capped_total": 95.214,
+      "pass_rate": 1.0,
+      "hard_failure_rate": 0.0,
+      "category_means": {
+        "fidelity": 29.929,
+        "managerial_framing": 22.571,
+        "scholarly_positioning": 18.357,
+        "evidence_discipline": 14.429,
+        "prose_clarity": 9.929
+      }
+    },
+    "OM:v0_1_0_alpha": {
+      "n": 14,
+      "mean_raw_total": 96.0,
+      "mean_capped_total": 96.0,
+      "pass_rate": 1.0,
+      "hard_failure_rate": 0.0,
+      "category_means": {
+        "fidelity": 30.0,
+        "managerial_framing": 24.0,
+        "scholarly_positioning": 18.214,
+        "evidence_discipline": 15.0,
+        "prose_clarity": 8.786
+      }
+    },
+    "OM:v0_2_0_beta": {
+      "n": 14,
+      "mean_raw_total": 95.5,
+      "mean_capped_total": 95.5,
+      "pass_rate": 1.0,
+      "hard_failure_rate": 0.0,
+      "category_means": {
+        "fidelity": 30.0,
+        "managerial_framing": 23.857,
+        "scholarly_positioning": 18.643,
+        "evidence_discipline": 14.857,
+        "prose_clarity": 8.143
+      }
+    },
+    "IS:no_skill": {
+      "n": 14,
+      "mean_raw_total": 97.214,
+      "mean_capped_total": 97.214,
+      "pass_rate": 1.0,
+      "hard_failure_rate": 0.0,
+      "category_means": {
+        "fidelity": 29.929,
+        "managerial_framing": 23.071,
+        "scholarly_positioning": 19.714,
+        "evidence_discipline": 14.5,
+        "prose_clarity": 10.0
+      }
+    },
+    "IS:v0_1_0_alpha": {
+      "n": 14,
+      "mean_raw_total": 97.929,
+      "mean_capped_total": 97.929,
+      "pass_rate": 1.0,
+      "hard_failure_rate": 0.0,
+      "category_means": {
+        "fidelity": 30.0,
+        "managerial_framing": 25.0,
+        "scholarly_positioning": 20.0,
+        "evidence_discipline": 15.0,
+        "prose_clarity": 7.929
+      }
+    },
+    "IS:v0_2_0_beta": {
+      "n": 14,
+      "mean_raw_total": 97.786,
+      "mean_capped_total": 97.786,
+      "pass_rate": 1.0,
+      "hard_failure_rate": 0.0,
+      "category_means": {
+        "fidelity": 30.0,
+        "managerial_framing": 24.857,
+        "scholarly_positioning": 19.929,
+        "evidence_discipline": 15.0,
+        "prose_clarity": 8.0
+      }
+    },
+    "OR:no_skill": {
+      "n": 14,
+      "mean_raw_total": 95.571,
+      "mean_capped_total": 95.571,
+      "pass_rate": 1.0,
+      "hard_failure_rate": 0.0,
+      "category_means": {
+        "fidelity": 30.0,
+        "managerial_framing": 23.143,
+        "scholarly_positioning": 17.786,
+        "evidence_discipline": 14.714,
+        "prose_clarity": 9.929
+      }
+    },
+    "OR:v0_1_0_alpha": {
+      "n": 14,
+      "mean_raw_total": 94.571,
+      "mean_capped_total": 93.286,
+      "pass_rate": 0.929,
+      "hard_failure_rate": 0.071,
+      "category_means": {
+        "fidelity": 29.286,
+        "managerial_framing": 24.143,
+        "scholarly_positioning": 18.643,
+        "evidence_discipline": 14.929,
+        "prose_clarity": 7.571
+      }
+    },
+    "OR:v0_2_0_beta": {
+      "n": 14,
+      "mean_raw_total": 92.643,
+      "mean_capped_total": 92.643,
+      "pass_rate": 1.0,
+      "hard_failure_rate": 0.0,
+      "category_means": {
+        "fidelity": 29.929,
+        "managerial_framing": 22.929,
+        "scholarly_positioning": 17.071,
+        "evidence_discipline": 14.857,
+        "prose_clarity": 7.857
+      }
+    }
+  },
+  "paired_case_comparisons": [
+    {
+      "case_id": "is-01",
+      "v0_2_minus_no_skill": 1,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "is-02",
+      "v0_2_minus_no_skill": 0,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "is-03",
+      "v0_2_minus_no_skill": -1,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "is-04",
+      "v0_2_minus_no_skill": 1,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "is-05",
+      "v0_2_minus_no_skill": 1,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "is-06",
+      "v0_2_minus_no_skill": 1,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "is-07",
+      "v0_2_minus_no_skill": 1,
+      "v0_2_minus_v0_1": -1,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "is-08",
+      "v0_2_minus_no_skill": 1,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "is-09",
+      "v0_2_minus_no_skill": -1,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "is-10",
+      "v0_2_minus_no_skill": -1,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "is-11",
+      "v0_2_minus_no_skill": 1,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "is-12",
+      "v0_2_minus_no_skill": -1,
+      "v0_2_minus_v0_1": 1,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "is-13",
+      "v0_2_minus_no_skill": 1,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "is-14",
+      "v0_2_minus_no_skill": 4,
+      "v0_2_minus_v0_1": -2,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "om-01",
+      "v0_2_minus_no_skill": 2,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "om-02",
+      "v0_2_minus_no_skill": 10,
+      "v0_2_minus_v0_1": -2,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "om-03",
+      "v0_2_minus_no_skill": -1,
+      "v0_2_minus_v0_1": 2,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "om-04",
+      "v0_2_minus_no_skill": -7,
+      "v0_2_minus_v0_1": -5,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "om-05",
+      "v0_2_minus_no_skill": 2,
+      "v0_2_minus_v0_1": -1,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "om-06",
+      "v0_2_minus_no_skill": -4,
+      "v0_2_minus_v0_1": -3,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "om-07",
+      "v0_2_minus_no_skill": 0,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "om-08",
+      "v0_2_minus_no_skill": 3,
+      "v0_2_minus_v0_1": -1,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "om-09",
+      "v0_2_minus_no_skill": -2,
+      "v0_2_minus_v0_1": 1,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "om-10",
+      "v0_2_minus_no_skill": -1,
+      "v0_2_minus_v0_1": 6,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "om-11",
+      "v0_2_minus_no_skill": 1,
+      "v0_2_minus_v0_1": -2,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "om-12",
+      "v0_2_minus_no_skill": -3,
+      "v0_2_minus_v0_1": 1,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "om-13",
+      "v0_2_minus_no_skill": 8,
+      "v0_2_minus_v0_1": -1,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "om-14",
+      "v0_2_minus_no_skill": -4,
+      "v0_2_minus_v0_1": -2,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "or-01",
+      "v0_2_minus_no_skill": 0,
+      "v0_2_minus_v0_1": -6,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "or-02",
+      "v0_2_minus_no_skill": -7,
+      "v0_2_minus_v0_1": -5,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "or-03",
+      "v0_2_minus_no_skill": -8,
+      "v0_2_minus_v0_1": -7,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "or-04",
+      "v0_2_minus_no_skill": 0,
+      "v0_2_minus_v0_1": 1,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "or-05",
+      "v0_2_minus_no_skill": 1,
+      "v0_2_minus_v0_1": 1,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "or-06",
+      "v0_2_minus_no_skill": 2,
+      "v0_2_minus_v0_1": -3,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "or-07",
+      "v0_2_minus_no_skill": -3,
+      "v0_2_minus_v0_1": 26,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [
+          "undeclared_model_change"
+        ],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "or-08",
+      "v0_2_minus_no_skill": -1,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "or-09",
+      "v0_2_minus_no_skill": -4,
+      "v0_2_minus_v0_1": -3,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "or-10",
+      "v0_2_minus_no_skill": -4,
+      "v0_2_minus_v0_1": -1,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "or-11",
+      "v0_2_minus_no_skill": -10,
+      "v0_2_minus_v0_1": -8,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "or-12",
+      "v0_2_minus_no_skill": -3,
+      "v0_2_minus_v0_1": 4,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "or-13",
+      "v0_2_minus_no_skill": -1,
+      "v0_2_minus_v0_1": -8,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    },
+    {
+      "case_id": "or-14",
+      "v0_2_minus_no_skill": -3,
+      "v0_2_minus_v0_1": 0,
+      "hard_failures": {
+        "no_skill": [],
+        "v0_1_0_alpha": [],
+        "v0_2_0_beta": []
+      }
+    }
+  ],
+  "inter_judge_agreement": {
+    "mean_absolute_category_differences": {
+      "fidelity": 0.262,
+      "managerial_framing": 0.675,
+      "scholarly_positioning": 2.183,
+      "evidence_discipline": 0.286,
+      "prose_clarity": 0.516
+    },
+    "total_score_correlation": 0.151,
+    "hard_failure_agreement": 0.992
+  },
+  "limitations": [
+    "Language-model generation and judging are nondeterministic even when prompts and seeds are fixed.",
+    "A same-family or same-model judge may favor familiar response patterns.",
+    "Residual condition contamination may remain despite blind IDs; judges can infer styles.",
+    "This benchmark measures framing quality on synthetic cases, not downstream business outcomes."
+  ]
+}

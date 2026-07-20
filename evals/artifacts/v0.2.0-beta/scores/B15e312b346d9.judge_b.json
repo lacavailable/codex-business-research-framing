@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B15e312b346d9",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 23, "scholarly_positioning": 20, "evidence_discipline": 14, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly distinguishes an executable incumbent from gap closure and certification while retaining assignment, sequencing, eligibility, nonoverlap, and makespan minimization.",
+    "managerial_framing": "Clearly explains why schedule quality and proof have different managerial uses, though the comparator and exact operational approval pathway remain somewhat generic.",
+    "scholarly_positioning": "No literature or scholarly-contribution claim is requested or made, so this conditional category is not applicable.",
+    "evidence_discipline": "Refuses to promise certification by a deadline and identifies the runtime and deadline evidence required.",
+    "prose_clarity": "Economical and especially clear about the distinction between a usable schedule and a certificate.",
+    "overall": "A precise and practical explanation that avoids the central certification overclaim, with only minor managerial-specificity limits."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

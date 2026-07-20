@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B8e4606703a92",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 23, "scholarly_positioning": 14, "evidence_discipline": 14, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {"fidelity": "It cleanly identifies advance allocations as decisions, demand as an exogenous later state, served demand as an outcome, and preserves the expected-value objective and constraints.", "managerial_framing": "The actor, advance timing, scarcity trade-off, mechanism, and policy comparison are concrete, though broader operational stakes are only implicit.", "scholarly_positioning": "No unsupported novelty or literature claim is introduced, consistent with the prompt's scope.", "evidence_discipline": "The demand distribution is correctly labeled a model assumption requiring validation, and no control or perfect-information claim is made.", "prose_clarity": "The answer is concise, direct, accessible, and technically precise.", "overall": "A compact, faithful repair of the state-versus-decision error with no hard failure; only minor deductions reflect limited scholarly and operational elaboration."},
+  "raw_total": 91,
+  "capped_total": 91,
+  "pass": true
+}

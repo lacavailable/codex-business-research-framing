@@ -1,0 +1,12 @@
+{
+    "schema_version":  "1.0.0",
+    "run_id":  "is-04.no_skill",
+    "blind_id":  "Be342c1bd665e",
+    "case_id":  "is-04",
+    "response":  "Research problem: What single moderation-score threshold should a platform choose to minimize expected immediate loss from falsely removing benign posts and retaining harmful posts? At decision time the platform observes a noisy classifier score, not the latent content class. Moving the threshold trades the two classification errors according to the estimated conditional score distributions and loss weights, so neither error is assumed to disappear. The scope is immediate classification loss. The claim that moderation improves long-run community health or trust is unsupported because no such outcome or causal pathway appears in the model; establishing it would require additional measures and causal evidence.",
+    "generator":  {
+                      "model":  "gpt-5.6",
+                      "temperature":  0,
+                      "completed_at":  "2026-07-19T16:53:54Z"
+                  }
+}

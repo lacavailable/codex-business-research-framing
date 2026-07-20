@@ -1,0 +1,12 @@
+{
+    "schema_version":  "1.0.0",
+    "run_id":  "is-03.no_skill",
+    "blind_id":  "B7b6f39d71358",
+    "case_id":  "is-03",
+    "response":  "Research problem: What single access-friction level should a digital service set to maximize platform payoff from benign participation net of malicious harm when user type is private and users choose strategically whether to participate? A common friction level changes participation incentives differently across latent benign and malicious types, creating a deterrence-versus-participation trade-off. The policy cannot condition on a user\u0027s true type or assume that malicious users are identified before access. Differences in friction sensitivity are part of the modeled type-dependent payoff structure, not an observed classification fact. Nor does the model establish that increasing friction always improves safety; its net effect depends on both types\u0027 participation responses and the modeled payoffs.",
+    "generator":  {
+                      "model":  "gpt-5.6",
+                      "temperature":  0,
+                      "completed_at":  "2026-07-19T16:53:54Z"
+                  }
+}

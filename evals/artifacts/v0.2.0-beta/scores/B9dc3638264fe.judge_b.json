@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B9dc3638264fe",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Correctly makes the five-minute incumbent the executable plan while retaining routing, timing, constraints, and the routing-plus-lateness objective.", "managerial_framing": "Fully connects early search progress to a fixed release deadline and supplies a matched-method counterfactual and latency-quality trade-off.", "scholarly_positioning": "No unsupported scholarly claim is made; the research question is bounded rather than cast as established contribution.", "evidence_discipline": "Explicitly treats better early quality as unestablished and specifies matched testing and uncertainty requirements.", "prose_clarity": "Accurate and well organized but much longer than the prompt requires, with repeated mappings and garbled punctuation.", "overall": "Substantively excellent and operationally concrete, though needlessly elaborate."},
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

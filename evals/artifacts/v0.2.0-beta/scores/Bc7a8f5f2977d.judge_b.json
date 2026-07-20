@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bc7a8f5f2977d",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly diagnoses unavailable sensitive information and the consent and privacy-budget constraints, then restores the staged acquisition-and-recommendation policy and net-utility objective.",
+    "managerial_framing": "The repair makes the actor, acquisition trigger, contingent choices, scarce budget, consent uncertainty, mechanism, trade-off, and feasible counterfactual concrete.",
+    "scholarly_positioning": "No literature or novelty claim is advanced, and the response accurately says scholarly novelty cannot be assessed from the case.",
+    "evidence_discipline": "Behavioral models and free universal access are correctly separated as assumptions versus unsupported claims, with clear validation needs and boundaries.",
+    "prose_clarity": "Substantively clear and well organized, but overlong and marred by corrupted dash characters.",
+    "overall": "The response both catches the proposed story's gate failures and supplies a fully faithful repair; the repaired response has no hard failure and passes all thresholds."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

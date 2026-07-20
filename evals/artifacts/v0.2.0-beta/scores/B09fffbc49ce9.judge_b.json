@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B09fffbc49ce9",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Fully preserves mandatory review, signal timing, latent reply safety, binary approve/refuse action, signal-updating mechanism, and the specified expected-utility objective.",
+    "managerial_framing": "Actor, trigger, feasible choices, stakes, friction, trade-off, threshold counterfactual, and operational exclusions are explicit.",
+    "scholarly_positioning": "No unsupported contribution is claimed, and the response correctly bounds novelty in the absence of literature or results.",
+    "evidence_discipline": "It labels signal informativeness as an assumption, identifies calibration needs, and avoids empirical safety or causal-harm claims.",
+    "prose_clarity": "Precise and structured, though unnecessarily long and affected by corrupted dash characters.",
+    "overall": "A complete, faithful framing with no hard failure; all category minima and the overall passing standard are satisfied."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

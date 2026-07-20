@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bac142f1203ae",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 23, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Correctly limits decisions to cutoff orders, retains batching, routing, capacity, assignment, continuity, and the distance objective.", "managerial_framing": "Makes the actor, choices, mechanism, and operating burden concrete, though the counterfactual and trigger are only implicit.", "scholarly_positioning": "No scholarly positioning is requested or claimed, and no unsupported novelty assertion appears.", "evidence_discipline": "Explicitly bounds distance as modeled burden and withholds claims about labor time, cost, congestion, and learning.", "prose_clarity": "Concise, direct, and accessible with no unnecessary structure.", "overall": "An excellent compact explanation that satisfies the requested boundaries and computational mechanism."},
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

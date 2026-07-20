@@ -1,0 +1,12 @@
+{
+    "schema_version":  "1.0.0",
+    "run_id":  "is-08.no_skill",
+    "blind_id":  "B2c9be61ababb",
+    "case_id":  "is-08",
+    "response":  "Research problem: Should a platform impose a binary mandatory-disclosure rule to maximize transaction revenue when seller quality is uncertain and users respond strategically? The sequence is essential: the platform commits to disclose or not disclose before observing seller quality; sellers then decide whether to participate; buyers update beliefs from disclosure and participation and decide whether to transact. The rule therefore affects revenue through seller participation incentives and buyers\u0027 equilibrium inferences. The analysis assumes that participants follow the modeled equilibrium and that the stated prior, payoffs, and signal structure are valid. It must not imply that the platform observes seller quality when setting the rule.",
+    "generator":  {
+                      "model":  "gpt-5.6",
+                      "temperature":  0,
+                      "completed_at":  "2026-07-19T16:53:54Z"
+                  }
+}

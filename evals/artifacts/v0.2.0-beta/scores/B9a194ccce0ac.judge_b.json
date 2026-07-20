@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B9a194ccce0ac",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Faithfully retains pre-shift binary inclusion, both shelf and pick-slot capacities, uncertain arrivals and choices, modeled substitution, and expected contribution margin while keeping delivery speed and welfare outside the model.",
+    "managerial_framing": "Specifies the assortment manager, cutoff, product choices, scarce capacity stakes, breadth-versus-substitution trade-off, operating mechanism, feasible counterfactual, and research question concretely.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed, and the response does not imply unsupported novelty.",
+    "evidence_discipline": "Labels choice-based substitution as an assumption, rejects named-firm realized-profit, faster-delivery, customer-effect, and welfare inferences, and conditions results on parameter validity.",
+    "prose_clarity": "Clear headings and economical explanations support accessibility, with only modest repetition in the explicit mapping.",
+    "overall": "A highly faithful and evidence-disciplined assortment framing that directly addresses every prompt restriction."
+  },
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

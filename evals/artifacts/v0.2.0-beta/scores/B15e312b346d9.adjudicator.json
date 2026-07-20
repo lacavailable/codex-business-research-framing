@@ -1,0 +1,27 @@
+{
+    "schema_version":  "1.0.0",
+    "blind_id":  "B15e312b346d9",
+    "judge_id":  "adjudicator",
+    "rubric_version":  "2.0.0",
+    "category_scores":  {
+                            "fidelity":  29,
+                            "managerial_framing":  22,
+                            "scholarly_positioning":  9,
+                            "evidence_discipline":  15,
+                            "prose_clarity":  10
+                        },
+    "hard_failures":  [
+
+                      ],
+    "rationale":  {
+                      "fidelity":  "The response preserves assignments, sequences, eligibility, nonoverlap, makespan minimization, and the conditional nature of a branch-and-bound certificate; it only loosely describes runtime as confidence rather than explicitly as solver uncertainty.",
+                      "managerial_framing":  "It gives management a useful distinction between an executable incumbent and proof, while appropriately making approval and risk relevance conditional.",
+                      "scholarly_positioning":  "The prompt does not request literature positioning and the response makes no novelty claim.",
+                      "evidence_discipline":  "It directly identifies deadline certification as unsupported and asks for deadline and runtime evidence.",
+                      "prose_clarity":  "The explanation is clear and avoids promising certification.",
+                      "overall":  "The response clears the total-score, fidelity, managerial, evidence, and prose requirements but does not meet the universal scholarly-positioning minimum; therefore the rubric-derived result is fail."
+                  },
+    "raw_total":  85,
+    "capped_total":  85,
+    "pass":  false
+}

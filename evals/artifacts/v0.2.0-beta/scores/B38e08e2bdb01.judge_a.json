@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0", "blind_id": "B38e08e2bdb01", "judge_id": "judge_a", "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 23, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly limits capacity to twelve display positions, retains the common display-set decision and expected-margin objective, and keeps visitor choice uncertain.",
+    "managerial_framing": "Explains the screen-position resource and purchase-or-exit mechanism well, though the within-assortment trade-off and counterfactual are only implicit.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed; no novelty assertion is made.",
+    "evidence_discipline": "Explicitly identifies the twelve-position limit as an assumption and rejects unsupported congestion, inventory, and fulfillment interpretations.",
+    "prose_clarity": "Concise, concrete, and logically ordered.",
+    "overall": "A faithful and disciplined diagnosis with no hard failure; only a small deduction for limited articulation of the assortment trade-off."
+  },
+  "raw_total": 98, "capped_total": 98, "pass": true
+}

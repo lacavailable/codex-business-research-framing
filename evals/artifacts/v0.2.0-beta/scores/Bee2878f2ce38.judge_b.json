@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bee2878f2ce38",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 21, "scholarly_positioning": 15, "evidence_discipline": 14, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {"fidelity": "The stronger formulation is correctly represented as preserving the feasible integer set, objective, optimum, decisions, and constraints while tightening only the relaxation.", "managerial_framing": "The computational pathway to potential value is sound, but the operational trigger, deadline, scale threshold, and changed managerial action remain hypothetical.", "scholarly_positioning": "It accurately identifies a possible methodological contribution while withholding novelty absent prior-art and comparative evidence.", "evidence_discipline": "Faster solving and realized firm value are explicitly treated as unestablished and tied to controlled computational evidence.", "prose_clarity": "The core distinction is clear, though repeated diagnostic layers and encoding artifacts reduce economy.", "overall": "Technically faithful and appropriately cautious with no hard failure; managerial value remains only a bounded potential pathway."},
+  "raw_total": 88,
+  "capped_total": 88,
+  "pass": true
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bf087de9fa6ac",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Restricts the decision to cutoff orders, preserves batching-routing coupling and feasibility constraints, and keeps distance as the sole objective.",
+    "managerial_framing": "Actor, trigger, coupled choices, capacity trade-off, counterfactual, and computational challenge are all concrete.",
+    "scholarly_positioning": "Not requested or claimed; no unsupported novelty assertion appears.",
+    "evidence_discipline": "Clearly marks the distance-to-burden link as inferential and excludes congestion, learning, later arrivals, and cost-savings claims.",
+    "prose_clarity": "Accurate and accessible, though somewhat overstructured.",
+    "overall": "A highly faithful explanation of the joint warehouse decision and its computational difficulty."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

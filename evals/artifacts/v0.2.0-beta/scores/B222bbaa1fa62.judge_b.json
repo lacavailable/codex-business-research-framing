@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B222bbaa1fa62",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 23, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly diagnoses competitor search as a behavior-gate mismatch and restores the single-store Markov substitution process, pre-demand assortment decision, focal capacity, uncertain path, and expected store-revenue objective.",
+    "managerial_framing": "Identifies the retailer, assortment choice, focal-store mechanism, capacity, consequences, and the required repair, though the stakes, trade-off, and explicit feasible counterfactual receive less development.",
+    "scholarly_positioning": "Appropriately states that novelty cannot be assessed without literature and makes no unsupported literature-relative contribution claim.",
+    "evidence_discipline": "Labels within-store substitution as an assumption, separates the unsupported nearest-store claim from the supplied model, and identifies validation of the transition matrix as the evidence weakness.",
+    "prose_clarity": "The diagnosis and repair are clear and well mapped; readiness and gate terminology introduce minor process-oriented clutter.",
+    "overall": "A faithful mechanism-mismatch diagnosis and repair with strong boundaries and no hard failure in the submitted response."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

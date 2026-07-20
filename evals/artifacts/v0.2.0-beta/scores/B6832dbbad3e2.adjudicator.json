@@ -1,0 +1,27 @@
+{
+    "schema_version":  "1.0.0",
+    "blind_id":  "B6832dbbad3e2",
+    "judge_id":  "adjudicator",
+    "rubric_version":  "2.0.0",
+    "category_scores":  {
+                            "fidelity":  30,
+                            "managerial_framing":  24,
+                            "scholarly_positioning":  9,
+                            "evidence_discipline":  15,
+                            "prose_clarity":  10
+                        },
+    "hard_failures":  [
+
+                      ],
+    "rationale":  {
+                      "fidelity":  "It rejects the welfare substitution, restores vendor revenue as the sole objective, and accurately maps offered products, capacity, choice parameters, and realized choice.",
+                      "managerial_framing":  "The vendor, timing, scarce-capacity trade-off, choice mechanism, feasible-set comparison, and limits are concrete; only a fuller managerial counterfactual is missing.",
+                      "scholarly_positioning":  "No scholarly positioning is requested or claimed, and the response does not manufacture one.",
+                      "evidence_discipline":  "The welfare claim is explicitly unsupported, needed welfare constructs and evidence are named, and realized-revenue and calibration limits are stated.",
+                      "prose_clarity":  "The diagnosis, rewrite, mapping, and audit are clear and efficiently structured.",
+                      "overall":  "The response clears the total-score, fidelity, managerial, evidence, and prose requirements but does not meet the universal scholarly-positioning minimum; therefore the rubric-derived result is fail."
+                  },
+    "raw_total":  88,
+    "capped_total":  88,
+    "pass":  false
+}

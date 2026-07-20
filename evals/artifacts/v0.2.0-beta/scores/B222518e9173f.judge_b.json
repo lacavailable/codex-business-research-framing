@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B222518e9173f",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 23, "scholarly_positioning": 14, "evidence_discipline": 14, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Only released orders are optimized, batching and routing remain the choices, all constraints are retained, and distance remains the sole objective.", "managerial_framing": "The cutoff trigger, joint-decision mechanism, cart-capacity tension, and feasible benchmark idea are clearly stated, with operating burden properly separated from the model.", "scholarly_positioning": "It correctly abstains from a paper-level contribution claim because no literature or comparative evidence is supplied.", "evidence_discipline": "Distance-to-burden is labeled an inference, while congestion, later arrivals, learning, and direct cost effects are explicitly excluded.", "prose_clarity": "The core explanation is clear but the extended pass/fail template, repetition, and encoding artifacts are needlessly cumbersome.", "overall": "A fully faithful and carefully bounded framing with no hard failure; deductions mainly concern verbose presentation rather than substance."},
+  "raw_total": 88,
+  "capped_total": 88,
+  "pass": true
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0", "blind_id": "B7c501128c2f7", "judge_id": "judge_a", "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "The response diagnoses rather than commits the stated gate failures, then correctly retains only display positions, product inclusion, uncertain visitor choice, and expected displayed-set margin.",
+    "managerial_framing": "Provides the merchant, decision inputs, scarce-position trade-off, purchase-or-exit mechanism, and implications of adding genuine fulfillment resources.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed; novelty is properly left unassessed.",
+    "evidence_discipline": "Labels the twelve-item fit as simplifying, rejects congestion causality, and makes clear that inventory or fulfillment would be an evidenced model extension.",
+    "prose_clarity": "Precise and well organized, but the gate terminology and extensive mapping make the answer longer than necessary.",
+    "overall": "A comprehensive, faithful repair that avoids the capacity conflation and all corresponding hard-failure traps."
+  },
+  "raw_total": 97, "capped_total": 97, "pass": true
+}

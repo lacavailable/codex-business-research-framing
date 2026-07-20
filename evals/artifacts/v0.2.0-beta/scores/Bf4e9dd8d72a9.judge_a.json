@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bf4e9dd8d72a9",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 7
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves ex ante commitment, two messages, Bayes plausibility, posterior-driven receiver action, and transaction count as the sole objective.",
+    "managerial_framing": "Makes the intermediary's policy choice, sequence, mechanism, feasibility trade-off, and alternative policies decision-relevant and concrete.",
+    "scholarly_positioning": "No scholarly contribution is requested or asserted, so no unsupported literature claim is introduced.",
+    "evidence_discipline": "Explicitly marks receiver threshold behavior as an assumption and carefully excludes accuracy, surplus, and welfare conclusions.",
+    "prose_clarity": "Readable and precise, but substantially repetitive across narrative, DFC, gates, mapping, claims, and boundaries.",
+    "overall": "Substantively complete and trap-safe; verbosity is the only material weakness."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

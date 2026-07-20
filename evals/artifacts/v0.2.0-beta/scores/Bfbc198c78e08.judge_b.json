@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bfbc198c78e08",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Preserves the original decisions, constraints, cost objective, feasible integer set, and role of valid inequalities.", "managerial_framing": "Directly states why computation can matter and enumerates the missing action pathways, though the actor-level trade-off is somewhat implicit.", "scholarly_positioning": "No literature positioning is requested or claimed, and the computational result is narrowly characterized.", "evidence_discipline": "Confines the benchmark evidence to faster solution of supplied instances and rejects optimal-cost and profit extrapolations.", "prose_clarity": "Concise, cohesive, and precise aside from one garbled dash sequence.", "overall": "An excellent bounded framing that cleanly separates computational evidence from managerial value."},
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

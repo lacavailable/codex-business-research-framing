@@ -1,0 +1,12 @@
+{
+    "schema_version":  "1.0.0",
+    "run_id":  "is-05.no_skill",
+    "blind_id":  "B4f3ba54a7294",
+    "case_id":  "is-05",
+    "response":  "Research problem: Which flagged items should a trust-and-safety team select for at most 200 manual reviews in a shift to maximize expected prevented harm? At selection time, true violation status is unknown; the manager uses risk scores and expected-harm estimates. Reviewing an item reveals its status and permits removal if it is violating, while unselected items receive no intervention and remain online. The scarce resource is review capacity, so prioritization should compare expected prevented harm across flags without assuming that scores rank violations perfectly. Score calibration is a model assumption, and no claim that the manager already knows which flags are violations is supported.",
+    "generator":  {
+                      "model":  "gpt-5.6",
+                      "temperature":  0,
+                      "completed_at":  "2026-07-19T16:53:54Z"
+                  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B7c501128c2f7",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 23,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 14,
+    "prose_clarity": 9
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Diagnoses the capacity conflation and restores exactly the merchant's at-most-twelve display-set decision, visitor-choice uncertainty, and expected-margin objective without adding inventory or fulfillment decisions.",
+    "managerial_framing": "Makes the display-position opportunity cost and choice-set mechanism concrete and explains why warehouse resources would constitute an extension; the explicit operational counterfactual is somewhat terse.",
+    "scholarly_positioning": "No scholarly contribution is claimed, and the absence of supplied literature is explicitly bounded.",
+    "evidence_discipline": "Correctly labels the twelve-position fit as simplifying, rejects the congestion claim, and notes missing calibration evidence; calling all position effects unspecified is appropriately cautious.",
+    "prose_clarity": "The diagnosis and repair are precise and navigable, though the stage and gate terminology is slightly technical and repetitive.",
+    "overall": "A strong adversarial diagnosis that catches both the constraint and unsupported causal-story traps, with no fidelity hard failure in the repaired response."
+  },
+  "raw_total": 96,
+  "capped_total": 96,
+  "pass": true
+}

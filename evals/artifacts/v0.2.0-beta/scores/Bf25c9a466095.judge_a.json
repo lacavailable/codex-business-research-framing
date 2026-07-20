@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bf25c9a466095",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 8
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly rejects observed-type and type-specific thresholds, then restores one common score threshold with latent account type and the stated net-value objective.",
+    "managerial_framing": "Provides a complete actor-to-counterfactual decision structure and clearly explains the false-rejection versus malicious-admission mechanism.",
+    "scholarly_positioning": "No scholarly positioning is required; the response appropriately says novelty is not established.",
+    "evidence_discipline": "Labels conditional score distributions as assumptions and identifies calibration, payoff, and stability validation needs.",
+    "prose_clarity": "Clear and structured, with some repetitive gate and mapping language beyond what the diagnosis requires.",
+    "overall": "A fully faithful repair of the hidden-information error with strong evidentiary boundaries."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

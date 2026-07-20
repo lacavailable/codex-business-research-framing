@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Be342c1bd665e",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 29,
+    "managerial_framing": 23,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves the single-threshold decision, imperfect classification, immediate-loss objective, and uncertainty about latent content class.",
+    "managerial_framing": "States the platform choice, stakes, error trade-off, and operational scope clearly; alternative thresholds are implicit rather than developed as a counterfactual.",
+    "scholarly_positioning": "No scholarly contribution is requested or claimed, and the response appropriately makes no novelty assertion.",
+    "evidence_discipline": "Explicitly rejects unsupported long-run causal claims and identifies the additional evidence such claims would require.",
+    "prose_clarity": "Concise, coherent, and precise.",
+    "overall": "A faithful and disciplined decision narrative with no hard failure."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

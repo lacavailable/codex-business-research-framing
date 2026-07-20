@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "om-06.no_skill",
+  "blind_id": "Bb20cc322fde7",
+  "case_id": "om-06",
+  "response": "The operator must set zone-level same-day order-slot limits at the start of the service window, before actual orders and service times are known. Exposing more slots can admit more profitable orders, but the resulting spatial load may exceed regular courier-hour capacity and generate overtime cost. Tighter limits protect capacity and reduce expected overtime exposure but can forgo same-day margin. The model therefore allocates stochastic delivery capacity by choosing slot limits within zone bounds to maximize expected same-day margin net of overtime cost, using regular capacity, zone forecasts, margins, and overtime rates. Realized orders and overtime are outcomes, not advance choices. The formulation contains no customer-lifetime-value or retention term, and the supplied material provides no evidence that same-day promises improve loyalty. Accordingly, the study can make claims about the modeled margin-overtime trade-off, but not that exposing more slots causes retention or other downstream loyalty benefits.",
+  "generator": {
+    "model": "gpt-5.6",
+    "temperature": 0,
+    "completed_at": "2026-07-19T16:31:26Z"
+  }
+}

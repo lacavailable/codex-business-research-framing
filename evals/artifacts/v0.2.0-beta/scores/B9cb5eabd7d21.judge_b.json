@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B9cb5eabd7d21",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 22,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves the ex ante binary assortment decision, both capacity constraints, uncertain arrivals and choices, substitution mechanism, and expected contribution-margin objective.",
+    "managerial_framing": "Clearly states the actor, next-shift trigger, capacity trade-off, and substitution pathway, though the counterfactual and downstream operating use remain mostly implicit.",
+    "scholarly_positioning": "The response makes no novelty or literature claim, so scholarly positioning is not triggered and no unsupported contribution is introduced.",
+    "evidence_discipline": "Properly treats substitution as model-based, rejects named-firm profit, faster-delivery, and welfare claims, and states that empirical evidence would be required.",
+    "prose_clarity": "Concise, accessible, and precise without unnecessary structure or jargon.",
+    "overall": "An excellent compact framing that is fully faithful and carefully bounded; only the managerial counterfactual and operational implications could be made more explicit."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

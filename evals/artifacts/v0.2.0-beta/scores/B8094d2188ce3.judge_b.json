@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B8094d2188ce3",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Precisely preserves integer hourly staffing before arrivals, shift coverage, fixed service rates, queues and waits as outcomes, and the expected labor-plus-waiting-cost objective.",
+    "managerial_framing": "Clearly supplies the clinic actor, scheduling trigger, roster choices, labor-versus-delay stakes, congestion mechanism, coverage-feasible counterfactual, and operational implications.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed, and the response stays appropriately within the model-grounded managerial problem.",
+    "evidence_discipline": "Labels waiting-cost weights as assumptions, conditions conclusions on forecasts and rates, rejects direct control and guaranteed savings, and names the required validation work.",
+    "prose_clarity": "The prose is precise and easy to navigate, with only slight repetition across the canvas and mapping sections.",
+    "overall": "A complete, faithful, and disciplined explanation of the staffing-delay trade-off with no hard failure."
+  },
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

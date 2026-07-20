@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B4fba756cc515",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly diagnoses timing and information failures in the proposed story while preserving routes, service times, constraints, objective, and solver dynamics.",
+    "managerial_framing": "Fully specifies the dispatch actor, hard release trigger, executable choice, cost stakes, wait-versus-release trade-off, matched pre-deadline comparator, and retrospective boundary.",
+    "scholarly_positioning": "No scholarly literature or novelty claim is in scope, so this conditional category is not applicable.",
+    "evidence_discipline": "Labels routine certification and causal improvement claims as unsupported and states the representative runtime evidence needed.",
+    "prose_clarity": "Accurate and navigable but repetitive across diagnosis, DFC mapping, gates, claims, boundaries, and repair sections.",
+    "overall": "A comprehensive and correct diagnosis with excellent evidence boundaries; no response-level hard failure remains after the explicit repair."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

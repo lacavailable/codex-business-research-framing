@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bbf8b3ea630d9",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly separates advance reservations from demand-observing, capacity-limited recourse and retains the objective and all material constraints.",
+    "managerial_framing": "The planner, stakes, hedge-versus-recourse trade-off, mechanism, and a feasible counterfactual are concrete; operational setting details remain unspecified.",
+    "scholarly_positioning": "Not requested or claimed, so this conditional category is treated as not applicable rather than penalized.",
+    "evidence_discipline": "Explicitly labels scenario probabilities as a model assumption and bounds calibration, service, profit, and welfare claims.",
+    "prose_clarity": "Precise and well organized, though the layered diagnosis repeats points later in the repaired frame.",
+    "overall": "A fully faithful and evidence-bounded two-stage framing; minor deductions reflect repetition and limited operational specificity, not model error."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0", "blind_id": "Bc4993a0aa8c7", "judge_id": "judge_a", "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Exactly distinguishes pre-demand inventory allocation from realized demand, stockouts, and substitutions while preserving the shared budget, assumed switching mechanism, and expected-profit objective.",
+    "managerial_framing": "Clearly explains the own-demand versus spillover-capacity trade-off and how allocation affects later stockout and substitution outcomes.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed, and no unsupported contribution claim appears.",
+    "evidence_discipline": "Explicitly labels the fixed substitution fraction a model assumption rather than causal evidence and avoids claims of control over stockouts.",
+    "prose_clarity": "Concise, accessible, and technically precise.",
+    "overall": "A near-ideal response that meets the prompt directly with complete fidelity, strong evidence discipline, and no hard failure."
+  },
+  "raw_total": 99, "capped_total": 99, "pass": true
+}

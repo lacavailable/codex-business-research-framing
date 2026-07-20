@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0.0",
+  "release": "v0.2.0-beta",
+  "status": "complete",
+  "outputs": 126,
+  "primary_scores": 252,
+  "adjudicator_scores": 35
+}

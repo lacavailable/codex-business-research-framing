@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bd653e9dde36d",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 23, "scholarly_positioning": 14, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {"fidelity": "It correctly diagnoses the proposed objective failure and repairs the frame without changing the routes, monetary objective, mechanism, or feasibility constraints.", "managerial_framing": "The planner, trigger, routing choices, capacity tension, and same-objective counterfactual are concrete and faithful.", "scholarly_positioning": "No scholarly contribution is asserted, appropriately reflecting the absence of literature evidence.", "evidence_discipline": "Both emissions reduction and broader sustainability claims are explicitly unsupported, and the required modeling or empirical additions are identified as extensions.", "prose_clarity": "The answer is structured but much longer than necessary, repeats mappings across sections, and contains pervasive encoding artifacts.", "overall": "Substantively excellent and free of hard failures; presentation is the clear limiting factor."},
+  "raw_total": 89,
+  "capped_total": 89,
+  "pass": true
+}

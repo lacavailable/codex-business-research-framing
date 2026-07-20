@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B014386601ee0",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 8
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves one common threshold, latent seller type, noisy observed score, error mechanism, and expected platform-payoff objective.",
+    "managerial_framing": "Clearly specifies the policy owner, trigger, choice, information, stakes, trade-off, counterfactual, and implementation boundary.",
+    "scholarly_positioning": "Not requested or claimed; no unsupported contribution claim appears.",
+    "evidence_discipline": "Distinguishes modeled score distributions from established facts and removes perfect-intent and unconditional-safety claims.",
+    "prose_clarity": "Highly structured and understandable, with minor encoding artifacts and some excess length.",
+    "overall": "A comprehensive and faithful threshold-screening formulation with strong evidence boundaries."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

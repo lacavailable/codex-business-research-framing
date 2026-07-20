@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B826f1d147e97",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 29, "managerial_framing": 23, "scholarly_positioning": 14, "evidence_discipline": 14, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {"fidelity": "The response keeps crew assignments, coverage, rest, availability, and the staffing-plus-penalty objective, and correctly denies any certificate or optimality guarantee.", "managerial_framing": "It makes the deadline value, speed-quality trade-off, outputs, and need for a comparator concrete, while acknowledging that the actual operational deadline is unspecified.", "scholarly_positioning": "It avoids claiming novelty or general contribution, but offers no traceable positioning because none is supplied.", "evidence_discipline": "Synthetic-test evidence is carefully bounded and live-deadline performance is explicitly unsupported; the phrase performed well is retained only within the supplied scope.", "prose_clarity": "The content is understandable but substantially overformatted, repetitive, and marred by encoding artifacts.", "overall": "Strong fidelity and bounded claims with no hard failure; deductions are for absent scholarly grounding and a verbose, mechanically templated presentation."},
+  "raw_total": 87,
+  "capped_total": 87,
+  "pass": true
+}

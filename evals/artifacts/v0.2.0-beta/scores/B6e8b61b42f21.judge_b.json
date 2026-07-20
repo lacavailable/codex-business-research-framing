@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B6e8b61b42f21",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 14, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Explicitly diagnoses availability as an exogenous state and restores nonanticipative first-stage assignments plus observed, limited, scenario-feasible reassignment.",
+    "managerial_framing": "Provides a concrete actor, trigger, two choices, cost stakes, hedge-and-recourse mechanism, trade-off, and no-recourse or alternate-policy counterfactual.",
+    "scholarly_positioning": "No scholarly positioning is requested or claimed; this conditional category is not applicable.",
+    "evidence_discipline": "Labels failure-scenario representativeness as an unvalidated model assumption and avoids performance claims beyond the model.",
+    "prose_clarity": "Precise but substantially longer and more repetitive than needed to diagnose the state-as-decision error.",
+    "overall": "A rigorous repair of both stages with no actual hard failure in the submitted answer; deductions concern economy and limited validation detail."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

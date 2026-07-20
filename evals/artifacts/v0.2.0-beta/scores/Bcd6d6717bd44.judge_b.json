@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bcd6d6717bd44",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 24,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Retains the two-message, Bayes-plausible signal policy, noisy test, posterior response, and transaction-count objective without substituting welfare or accuracy.",
+    "managerial_framing": "Makes the commitment choice, mechanism, constraints, stakes, and limits concrete; the counterfactual policy comparison is only implicit.",
+    "scholarly_positioning": "No scholarly positioning is requested or claimed, and the response avoids an unsupported contribution claim.",
+    "evidence_discipline": "Clearly labels receiver threshold behavior as an assumption and bounds all welfare, surplus, and accuracy interpretations.",
+    "prose_clarity": "Economical and accessible while retaining technical precision.",
+    "overall": "Fully faithful information-design framing with strong evidence boundaries and no hard failure."
+  },
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

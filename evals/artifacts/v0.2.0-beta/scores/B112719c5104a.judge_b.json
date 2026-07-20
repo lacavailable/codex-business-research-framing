@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B112719c5104a",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly retains one epsilon in the approved interval, the utility-minus-privacy-loss objective, and the stated inverse privacy-utility mechanism without adding churn or regulatory penalties.",
+    "managerial_framing": "The platform owner, configuration trigger, feasible epsilon alternatives, stakes, mechanism, constraint, and core trade-off are explicit.",
+    "scholarly_positioning": "No unsupported novelty is claimed, and the response accurately notes that literature or results would be needed.",
+    "evidence_discipline": "It distinguishes modeled relationships from user evidence and correctly treats retention and compliance as unsupported or externally analyzed outcomes.",
+    "prose_clarity": "Conceptually clear and well structured, but overlong and affected by corrupted glyphs.",
+    "overall": "The response remains tightly bounded to the supplied privacy-utility model; no hard failure applies and all passing requirements are met."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

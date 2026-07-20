@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "om-03.no_skill",
+  "blind_id": "Bc4993a0aa8c7",
+  "case_id": "om-03",
+  "response": "The merchant must divide a shared inventory budget between two substitute products before joint demand is realized. The decision variables are the initial units allocated to each product. After demand occurs, an item may stock out; under the model, a fixed fraction of its unmet requests then switches to available inventory of the other product. This mechanism creates a trade-off between stocking each product for its own demand and preserving substitute capacity for spillover demand, with expected profit accounting for unit economics, holding costs, and shortage costs. Realized demand, stockouts, and substitutions are outcomes of the allocation and demand realization, not quantities selected by the merchant. The fixed substitution fraction is a model assumption supplied to the optimization, not causal evidence about customer behavior. The case therefore supports evaluating allocations under that assumed mechanism, but not claiming that the merchant controls stockout events or that observed substitution proves a causal response.",
+  "generator": {
+    "model": "gpt-5.6",
+    "temperature": 0,
+    "completed_at": "2026-07-19T16:31:26Z"
+  }
+}

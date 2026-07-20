@@ -1,0 +1,12 @@
+{
+    "schema_version":  "1.0.0",
+    "run_id":  "is-01.no_skill",
+    "blind_id":  "B3a05fae9da76",
+    "case_id":  "is-01",
+    "response":  "Research problem: What single risk-score threshold should a marketplace use for new-seller admission to maximize expected platform payoff from admissions and harms when seller type and the score signal are uncertain? A stricter threshold blocks more modeled malicious sellers but also rejects more benign sellers; because no downstream review resource is modeled, the decision is purely a screening trade-off. The platform observes the noisy score, not true intent or latent seller type, and must apply one common threshold. Differences in score distributions by type are a model assumption. The framing should therefore discuss false-positive and false-negative consequences rather than claim that the score perfectly measures malicious intent.",
+    "generator":  {
+                      "model":  "gpt-5.6",
+                      "temperature":  0,
+                      "completed_at":  "2026-07-19T16:53:54Z"
+                  }
+}

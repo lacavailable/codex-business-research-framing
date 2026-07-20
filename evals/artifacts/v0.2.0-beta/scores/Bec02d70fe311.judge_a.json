@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bec02d70fe311",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 22, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Compares both methods on the same routing choices, constraints, and objective and accurately distinguishes incumbents, bounds, and certificates.",
+    "managerial_framing": "Makes the latency-quality-assurance trade-off concrete and ties preferences to conditional deadlines or actions, but cannot complete the pathway because the case supplies none.",
+    "scholarly_positioning": "Not requested or claimed; it expressly notes that literature position and study results are absent.",
+    "evidence_discipline": "Treats both operational-value pathways as hypotheses and rejects unconditional method superiority.",
+    "prose_clarity": "Clear and logically organized, with modest excess diagnostic framing.",
+    "overall": "A rigorous method comparison that correctly stops short of managerial superiority."
+  },
+  "raw_total": 96,
+  "capped_total": 96,
+  "pass": true
+}

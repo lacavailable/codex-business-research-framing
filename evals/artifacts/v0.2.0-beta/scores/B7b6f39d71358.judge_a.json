@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B7b6f39d71358",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 24,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly retains one common friction level, private type, strategic participation, and platform payoff from benign participation net of malicious harm.",
+    "managerial_framing": "The actor, policy choice, stakes, response mechanism, and deterrence-participation trade-off are concrete; another feasible friction level is only implicit as the counterfactual.",
+    "scholarly_positioning": "No scholarly claim is made or requested.",
+    "evidence_discipline": "It labels differential friction sensitivity as modeled structure and rejects both observed-type and monotone-safety inferences.",
+    "prose_clarity": "Concise, fluent, and complete.",
+    "overall": "A compact, faithful strategic-participation framing that avoids both adversarial traps."
+  },
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

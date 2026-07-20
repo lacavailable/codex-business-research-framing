@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Ba4aec500e20b",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true,
+  "rationale": {
+    "fidelity": "Preserves the single common epsilon decision, approved interval, timing, noise mechanism, and utility-minus-privacy-cost objective while excluding churn and legal penalties.",
+    "managerial_framing": "Makes the owner, trigger, choice, stakes, mechanism, trade-off, and feasible counterfactuals concrete.",
+    "scholarly_positioning": "No scholarly contribution is requested or claimed, and the response introduces no novelty assertion.",
+    "evidence_discipline": "Explicitly labels retention and compliance claims unsupported and bounds the privacy interpretation to the supplied mechanism.",
+    "prose_clarity": "Precise and well organized, though substantially more elaborate than needed and marred by minor encoding artifacts.",
+    "overall": "A fully faithful and evidence-disciplined explanation with only an economy-of-expression deduction; no hard failure applies."
+  }
+}

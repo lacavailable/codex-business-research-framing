@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B508b20e13423",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 23, "scholarly_positioning": 20, "evidence_discipline": 14, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Accurately preserves the unchanged deterministic model and correctly confines decomposition to the offline solution process.",
+    "managerial_framing": "Explains scale, bounds, incumbents, and planning relevance, but leaves the comparator, planning trigger, and operational threshold only implicit.",
+    "scholarly_positioning": "No scholarly claim is requested or made; the conditional category is therefore not applicable.",
+    "evidence_discipline": "Labels scalability as inference and asks for increasing-size comparisons under common conditions while acknowledging missing scale and time limits.",
+    "prose_clarity": "Concise, cohesive, and technically accessible.",
+    "overall": "A clean and faithful computational-value framing, with small deductions for managerial elements that remain implicit."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

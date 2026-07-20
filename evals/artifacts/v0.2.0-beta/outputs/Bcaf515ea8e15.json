@@ -1,0 +1,12 @@
+{
+    "schema_version":  "1.0.0",
+    "run_id":  "is-11.no_skill",
+    "blind_id":  "Bcaf515ea8e15",
+    "case_id":  "is-11",
+    "response":  "The proposed type-specific policy uses hidden information: benign or malicious type is latent at admission, so the platform cannot assign thresholds after directly observing it. The implementable research problem is to choose one common risk-score threshold that maximizes expected platform value from benign admissions net of malicious harm and rejection loss. The observed noisy score changes posterior risk, and the common threshold trades false rejection of benign accounts against admission of malicious accounts. The analysis may assume type-specific conditional score distributions, but it must not treat true type as observed or make type itself a decision variable. Its validity depends on the supplied score distributions and payoff weights.",
+    "generator":  {
+                      "model":  "gpt-5.6",
+                      "temperature":  0,
+                      "completed_at":  "2026-07-19T16:53:54Z"
+                  }
+}

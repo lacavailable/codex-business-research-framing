@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B13b75a654765",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 14, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly makes the 08:00 incumbent the only executable route decision and the 08:30 certificate post-decision information with no retroactive effect.",
+    "managerial_framing": "The dispatch trigger, route choice, stakes, computational mechanism, and distinct operational and retrospective outcomes are concrete; the comparator is implicit.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed and is treated as not applicable.",
+    "evidence_discipline": "Rejects the temporally invalid causal story and bounds claims about routine pre-release certification pending instance evidence.",
+    "prose_clarity": "Exceptionally concise and clear about the deadline and the difference between solution quality and proof.",
+    "overall": "A fully faithful diagnosis of the timing error with clear managerial interpretation and appropriately qualified evidence claims."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

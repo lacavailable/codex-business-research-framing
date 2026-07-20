@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "is-11.v0_2_0_beta",
+  "blind_id": "Bf25c9a466095",
+  "case_id": "is-11",
+  "response": "Mode: diagnose. Readiness: Stage 2 (model-grounded); the threshold model is specified, but its distributions and payoff weights lack empirical validation. Verdict on the proposed type-specific policy: ineligible. The information gate fails because true benign or malicious type is latent at admission, and the constraints gate fails because the model permits only one common threshold. The proposal also changes the supplied Bayesian score-screening mechanism into clairvoyant classification.\n\nFaithful repair: The platform sets one common risk-score threshold and applies it using each account's observed noisy score, not its true type. Conditional score distributions and payoff weights determine the posterior-risk trade-off. The implementable question is which threshold maximizes expected platform value from benign admissions net of malicious harm and rejection loss. The structural tension is false rejection of benign accounts versus admission of malicious accounts under overlapping, type-conditional score distributions.\n\nDFC-12 for the repair: Actor—platform admission-policy owner. Trigger—setting an admission rule before account types are known. Choices—one common threshold. Decision-time information—score, conditional score distributions, and payoff weights; true account type remains latent. Stakes—expected platform value net of the stated harms/losses. Frictions—one threshold for all accounts. Mechanism—the score updates posterior risk and thresholding produces admission outcomes. Trade-off—benign rejection versus malicious admission. Counterfactual—another feasible common threshold. Mapping—threshold is the decision; type is latent uncertainty; score is the observation; admission is the outcome; expected net platform value is the objective. Evidence—type-conditional score distributions are model assumptions. Boundaries—no type-specific threshold, direct type observation, or perfect classification is supported. The repaired framing passes all six gates.\n\nEvidence and scholarly limits: Validate distribution estimates, score calibration, payoff weights, and population stability before operational claims. No literature or results establish novelty. Primary remaining weakness: the original policy is infeasible because it requires hidden type information.",
+  "generator": {
+    "model": "gpt-5.6",
+    "temperature": 0,
+    "completed_at": "2026-07-19T17:07:19Z"
+  }
+}

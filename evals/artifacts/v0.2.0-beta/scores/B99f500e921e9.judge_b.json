@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B99f500e921e9",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 22, "scholarly_positioning": 14, "evidence_discipline": 14, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {"fidelity": "The response accurately distinguishes a usable incumbent, a bound, a gap, and a certificate while preserving assignments, sequences, constraints, and makespan.", "managerial_framing": "It explains the confidence-versus-latency trade-off and managerial meaning of the outputs, but the actual release trigger and action changed by proof remain unspecified.", "scholarly_positioning": "It appropriately avoids a contribution claim in the absence of literature and comparative evidence.", "evidence_discipline": "Certification is correctly made conditional on gap closure, and deadline performance is labeled unsupported and tied to needed runtime evidence.", "prose_clarity": "The explanation is clear and precise, with minor deductions for repetitive diagnostic scaffolding and encoding artifacts.", "overall": "A strong and faithful explanation of solution quality versus certification, with no hard failure and only limited operational specificity."},
+  "raw_total": 88,
+  "capped_total": 88,
+  "pass": true
+}

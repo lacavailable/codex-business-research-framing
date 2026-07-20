@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B5f5e6f6303e5",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 23, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 10},
+  "hard_failures": [],
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true,
+  "rationale": {
+    "fidelity": "Correctly restores consent requests, the privacy-acquisition budget, acquired-signal availability, the recommendation rule, and the stated net-utility objective.",
+    "managerial_framing": "Clearly states the joint choices, constraint, mechanism, and operational implication, though trigger and explicit counterfactual language are compact.",
+    "scholarly_positioning": "No literature or novelty positioning is requested or claimed.",
+    "evidence_discipline": "Distinguishes supplied response models as assumptions and costless sensitive-signal use as unsupported.",
+    "prose_clarity": "Concise, direct, and accessible.",
+    "overall": "An excellent diagnosis that directly repairs both the information and constraint violations without changing the model; no hard failure applies."
+  }
+}

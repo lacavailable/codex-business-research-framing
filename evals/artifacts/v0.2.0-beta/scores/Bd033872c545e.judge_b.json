@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bd033872c545e",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Correctly restores first-stage assignments, exogenous availability realization, and constrained second-stage reassignment under the stated cost objective.", "managerial_framing": "Makes the advance-positioning and limited-recourse problem concrete, though the explicit counterfactual is only implied.", "scholarly_positioning": "No scholarly contribution or novelty claim is made.", "evidence_discipline": "Accurately labels scenario representativeness as an assumption requiring calibration and avoids treating availability as controllable.", "prose_clarity": "Concise, coherent, and easy to follow.", "overall": "An excellent direct correction of the state-as-decision and timing errors."},
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B09fffbc49ce9",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true,
+  "rationale": {
+    "fidelity": "Preserves mandatory review, the post-signal binary approval decision, latent safety, noisy-signal mechanism, and the exact expected-net-utility objective without adding edit or escalation actions.",
+    "managerial_framing": "Makes the reviewer, trigger, feasible rule, information, stakes, trade-off, and alternative thresholds operationally concrete.",
+    "scholarly_positioning": "No novelty claim is made; the response appropriately says scholarly novelty is unassessed without literature or results.",
+    "evidence_discipline": "Treats signal informativeness as an assumption, calls for calibration, and avoids claims of actual safety performance or causal harm reduction.",
+    "prose_clarity": "Clear and well structured, with modest excess framing and minor encoding artifacts.",
+    "overall": "Near-complete execution of the requested signal-contingent approval framing, with no model, information, or objective hard failure."
+  }
+}

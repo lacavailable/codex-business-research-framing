@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bf834a7a03f2d",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Correctly preserves the production decisions, deterministic inputs, constraints, cost objective, and equivalence of the strengthened formulation.", "managerial_framing": "Clearly separates computational speed from profit and identifies the missing deadline, cadence, scale, or decision-quality pathway.", "scholarly_positioning": "No scholarly positioning or novelty claim is requested or asserted, and the computational contribution is appropriately bounded.", "evidence_discipline": "Accurately labels benchmark speed as supplied evidence and profit impact as unsupported without inventing a causal link.", "prose_clarity": "The answer is precise but substantially longer and more repetitive than needed, with some garbled punctuation.", "overall": "A fully faithful and evidence-disciplined diagnosis whose only material weakness is template-heavy presentation."},
+  "raw_total": 96,
+  "capped_total": 96,
+  "pass": true
+}

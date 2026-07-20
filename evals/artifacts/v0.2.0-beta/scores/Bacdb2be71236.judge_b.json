@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bacdb2be71236",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 14, "evidence_discipline": 14, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {"fidelity": "The two decision stages, information sets, exogenous demand state, expected-cost objective, and both reservation and recourse limits are mapped exactly.", "managerial_framing": "The actor, trigger, advance-versus-recourse trade-off, hedge mechanism, and feasible policy counterfactual are concrete and decision relevant.", "scholarly_positioning": "No literature or contribution claim is made, appropriately matching the absence of scholarly evidence.", "evidence_discipline": "Scenario probabilities are explicitly labeled assumptions requiring calibration and stress testing, and no out-of-model performance claim is made.", "prose_clarity": "The explanation is precise and well organized, though longer and more templated than the task requires and contains encoding noise.", "overall": "An excellent, fully faithful two-stage framing with no hard failure; only presentation economy and unavailable scholarly grounding limit the score."},
+  "raw_total": 90,
+  "capped_total": 90,
+  "pass": true
+}

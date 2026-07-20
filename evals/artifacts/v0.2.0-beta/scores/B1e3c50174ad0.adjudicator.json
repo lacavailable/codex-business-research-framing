@@ -1,0 +1,27 @@
+{
+    "schema_version":  "1.0.0",
+    "blind_id":  "B1e3c50174ad0",
+    "judge_id":  "adjudicator",
+    "rubric_version":  "2.0.0",
+    "category_scores":  {
+                            "fidelity":  30,
+                            "managerial_framing":  22,
+                            "scholarly_positioning":  10,
+                            "evidence_discipline":  15,
+                            "prose_clarity":  8
+                        },
+    "hard_failures":  [
+
+                      ],
+    "rationale":  {
+                      "fidelity":  "It correctly keeps valid inequalities as a computational strengthening of the same feasible integer set and objective, and refuses to turn runtime into profit.",
+                      "managerial_framing":  "It identifies plausible deadline, cadence, scale, and incumbent-quality pathways while clearly stating that none is supplied; this is the right managerial diagnosis for the prompt.",
+                      "scholarly_positioning":  "It explicitly leaves scholarly positioning unassessed and does not invent a literature relationship; no positioning was requested.",
+                      "evidence_discipline":  "The benchmark speed result is narrowly scoped as supplied evidence, while profit, universality, hardware, solver, and pathway limits are made explicit.",
+                      "prose_clarity":  "The layered structure is useful, but encoding corruption and some repetition reduce polish and readability.",
+                      "overall":  "The response clears the total-score, fidelity, managerial, evidence, and prose requirements but does not meet the universal scholarly-positioning minimum; therefore the rubric-derived result is fail."
+                  },
+    "raw_total":  85,
+    "capped_total":  85,
+    "pass":  false
+}

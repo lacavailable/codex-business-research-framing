@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bfe328a5fac0a",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 29, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Accurately maps the advance slot decisions, later arrivals and overtime, zone bounds, and net-margin objective. The phrase 'within regular capacity' is slightly imprecise because overtime is an allowed costly outcome rather than all accepted load being strictly confined to regular hours, but the surrounding explanation preserves that mechanism.",
+    "managerial_framing": "Fully develops the cutoff, operator choice, scarce capacity stakes, margin-versus-overtime trade-off, operational mechanism, bounded question, and alternative zone-limit policies.",
+    "scholarly_positioning": "It explicitly avoids an unverified novelty claim, which is appropriate because no scholarly positioning was requested or supported.",
+    "evidence_discipline": "Rejects retention as unsupported, specifies the customer-level evidence and model extension needed, states conditionality, and identifies calibration and omitted recourse counterconditions.",
+    "prose_clarity": "Accurate and readable, but the mode/readiness declaration, gate inventory, and repeated mappings make the response more process-heavy than necessary.",
+    "overall": "A strong and well-bounded capacity framing with one minor wording ambiguity about regular capacity and some avoidable meta-language."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bf2bb17670ad4",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 19, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "raw_total": 96,
+  "capped_total": 96,
+  "pass": true,
+  "rationale": {
+    "fidelity": "Preserves the single-threshold model, latent creator quality, noisy score mechanism, error-loss objective, and absence of perfect screening.",
+    "managerial_framing": "Covers the decision structure and operational trade-off thoroughly, with slightly less concrete implementation detail than a full managerial brief.",
+    "scholarly_positioning": "Rejects label-only novelty and specifies credible mechanism, method, data-identification, or implementation additions, while correctly requiring comparison with prior work.",
+    "evidence_discipline": "Clearly separates missing literature, empirical calibration, and implementation evidence from supplied model structure.",
+    "prose_clarity": "Accurate and organized but dense, repetitive, and affected by encoding artifacts.",
+    "overall": "A highly faithful diagnosis with a defensible bounded account of what a real contribution would require; no hard failure applies."
+  }
+}

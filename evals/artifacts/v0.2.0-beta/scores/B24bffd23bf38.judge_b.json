@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B24bffd23bf38",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Faithfully maps binary product inclusion before arrivals, shelf and pick-slot limits, uncertain arrivals and choices, modeled substitution, and expected contribution margin without importing delivery speed or welfare.",
+    "managerial_framing": "Clearly develops the shift trigger, dark-store actor, assortment choices, scarce-capacity stakes, breadth and substitution trade-off, operational mechanism, and feasible offered-set comparisons.",
+    "scholarly_positioning": "No scholarly contribution is requested, and the response appropriately marks literature-relative novelty as provisional rather than asserting it.",
+    "evidence_discipline": "Labels substitution as a model assumption, refuses firm-specific realized-profit and measured-customer-effect claims, states counterconditions, and identifies empirical validation needs.",
+    "prose_clarity": "Accurate and organized, but the mode/readiness and all-gates framing creates extra process language and repetition.",
+    "overall": "A complete and disciplined assortment framing that avoids every named inference trap."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

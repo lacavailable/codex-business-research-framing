@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bf2b86abf8cdd",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Accurately keeps both methods on the same routing model, feasible set, constraints, and travel-plus-penalty objective.", "managerial_framing": "Clearly states the speed-quality-certification trade-off and conditions any recommendation on deadline, cadence, scale, or changed action.", "scholarly_positioning": "No scholarly claim is made, and the proposed comparison is bounded to relevant instances and common conditions.", "evidence_discipline": "Explicitly rejects unsupported claims of field improvement or universal managerial value of exactness.", "prose_clarity": "Compact and readable, with only slight density in the comparison-metrics sentence.", "overall": "A near-ideal bounded managerial framing of the exact-versus-heuristic comparison."},
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

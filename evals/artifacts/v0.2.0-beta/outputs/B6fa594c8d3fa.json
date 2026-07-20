@@ -1,0 +1,12 @@
+{
+    "schema_version":  "1.0.0",
+    "run_id":  "is-02.no_skill",
+    "blind_id":  "B6fa594c8d3fa",
+    "case_id":  "is-02",
+    "response":  "Research problem: After receiving an LLM-drafted reply and its observed risk signal, when should a mandatory intermediary approve versus refuse the reply to maximize expected utility from approved replies minus harm from unsafe approvals? Latent safety is uncertain, and the noisy signal updates the intermediary\u0027s belief and therefore the approval threshold. Review is not a decision or modeled cost because every reply is already inspected. The feasible action set is binary: approve or refuse. The model does not support editing refused replies, automated escalation, or choosing whether review occurs. The informativeness of risk signals is a model assumption that would need validation for an empirical application.",
+    "generator":  {
+                      "model":  "gpt-5.6",
+                      "temperature":  0,
+                      "completed_at":  "2026-07-19T16:53:54Z"
+                  }
+}

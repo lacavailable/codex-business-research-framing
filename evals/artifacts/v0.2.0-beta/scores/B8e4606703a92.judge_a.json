@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B8e4606703a92",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 23, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Directly repairs the state-versus-decision error, places allocation before demand, and preserves constraints, served-demand outcome, and expected-value objective.",
+    "managerial_framing": "Identifies the planner's actual choice, scarcity, information set, policy comparison, and decision consequence; the trade-off is mostly implicit.",
+    "scholarly_positioning": "Not requested or claimed; no literature or novelty assertion is made.",
+    "evidence_discipline": "Treats distributional fit as an unsupported model assumption and makes no claim of demand control or perfect foresight.",
+    "prose_clarity": "Exceptionally concise and precise.",
+    "overall": "A complete, economical repair of the proposed narrative."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

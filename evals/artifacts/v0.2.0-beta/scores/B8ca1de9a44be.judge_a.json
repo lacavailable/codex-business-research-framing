@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B8ca1de9a44be",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 23, "scholarly_positioning": 20, "evidence_discipline": 14, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Cleanly separates advance reservations from demand-observing recourse and retains both recourse capacity and flow balance.",
+    "managerial_framing": "Identifies the planner, two-stage trigger, cost stakes, hedging-versus-correction trade-off, and an appropriate policy comparison.",
+    "scholarly_positioning": "Not requested or claimed; the response stays at the bounded research-problem level.",
+    "evidence_discipline": "Treats scenario probabilities as an assumption requiring calibration, though other parameter assumptions are only implicit.",
+    "prose_clarity": "Economical, coherent, and precise.",
+    "overall": "A strong, faithful two-stage framing with only a minor evidence-detail omission."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

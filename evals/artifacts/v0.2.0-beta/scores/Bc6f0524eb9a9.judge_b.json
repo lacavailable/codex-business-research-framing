@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bc6f0524eb9a9",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Precisely keeps binary assortment membership as the pre-demand control, customer starting states and paths as uncertainty, category capacity on selected products, purchase or exit as outcomes, and expected assortment revenue as the objective.",
+    "managerial_framing": "Clearly identifies the retailer, timing, capacity-feasible choice, scarce-capacity stakes, Markov substitution mechanism, breadth-versus-revenue tension, and bounded alternative assortments.",
+    "scholarly_positioning": "Appropriately treats scholarly novelty as provisional because no literature is supplied and makes no unsupported contribution claim.",
+    "evidence_discipline": "Labels the transition interpretation as a model assumption, rejects path steering and guaranteed revenue improvement, states calibration counterconditions, and identifies missing units and validation.",
+    "prose_clarity": "Substantively clear and accurate, though the mode/readiness preamble, gate checklist, and repeated boundary language are more procedural than necessary.",
+    "overall": "A fully faithful and well-bounded Markov-chain assortment framing with only minor presentational overhead."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

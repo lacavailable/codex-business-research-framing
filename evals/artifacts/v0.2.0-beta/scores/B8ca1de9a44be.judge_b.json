@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B8ca1de9a44be",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 23, "scholarly_positioning": 20, "evidence_discipline": 14, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Precisely preserves first-stage nonanticipativity, exogenous realized demand, limited second-stage recourse, constraints, and the stated cost objective.",
+    "managerial_framing": "The decision, stakes, and hedge-versus-correction mechanism are concrete, but the counterfactual and downstream operational use are only implicit.",
+    "scholarly_positioning": "Scholarly positioning is neither requested nor claimed and is treated as not applicable.",
+    "evidence_discipline": "Correctly identifies scenario probabilities as an assumption needing calibration; evidence boundaries are accurate but brief.",
+    "prose_clarity": "Concise, cohesive, and accessible without sacrificing the two-stage distinction.",
+    "overall": "A compact, fully faithful response with strong evidence discipline; small deductions concern omitted managerial details rather than correctness."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

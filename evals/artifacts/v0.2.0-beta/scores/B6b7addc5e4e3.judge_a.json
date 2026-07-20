@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B6b7addc5e4e3",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true,
+  "rationale": {
+    "fidelity": "Explicitly diagnoses the objective substitution and repairs it to advertising revenue net of direct moderation cost while retaining the common threshold mechanism and uncertainty.",
+    "managerial_framing": "The repaired actor, trigger, choice, inputs, stakes, mechanism, trade-off, and threshold counterfactual are all concrete.",
+    "scholarly_positioning": "No novelty is claimed, and the response correctly bounds scholarly conclusions in the absence of literature and results.",
+    "evidence_discipline": "Clearly marks welfare, safety, fairness, and community-health claims as unsupported extensions and calls for operational input validation.",
+    "prose_clarity": "Clear and disciplined, though slightly longer than necessary and affected by minor encoding artifacts.",
+    "overall": "An exemplary diagnosis and repair of the objective mismatch; references to failed gates describe the proposed narrative, not an error in the response, so no hard failure applies."
+  }
+}

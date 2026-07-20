@@ -1,9 +1,15 @@
 {
-  "version": "1.0.0",
-  "shared_task": "Create a concrete, managerially meaningful business-problem framing from the benchmark case. Preserve the supplied model. Return a concise diagnosis or brief, a proposed narrative, a model-to-reality mapping, unverified claims, boundary conditions, and the most important remaining weakness.",
+  "version": "2.0.0",
+  "shared_task": "Help frame the research described in the benchmark case as a concrete business-research problem. Preserve the supplied model and identify claims or information that remain unsupported.",
   "conditions": {
-    "no_skill": {"instruction": "Complete the task using only the case material below. Do not assume facts not supplied in the case."},
-    "generic_business_writing": {"instruction": "Write for a managerial research audience. Be concrete, concise, engaging, and organized around a practical problem, decision maker, stakes, and implications. Avoid jargon and unsupported factual claims. Use only the case material below."},
-    "full_skill": {"instruction": "Use the installed `frame-business-research-problem` Skill at `skills/frame-business-research-problem/`. Follow its fidelity gates, evidence labels, boundaries, and output contract. Use only the case material below."}
+    "no_skill": {
+      "instruction": "Respond as you normally would to this user request using only the serialized case material. Do not assume facts that are not supplied."
+    },
+    "v0_1_0_alpha": {
+      "instruction": "Use only the archived frame-business-research-problem Skill materialized from Git tag v0.1.0-alpha at the path supplied by the evaluation runner. Use only the serialized case material."
+    },
+    "v0_2_0_beta": {
+      "instruction": "Use the current frame-business-research-problem Skill at skills/frame-business-research-problem/. Follow its readiness, fidelity, managerial-framing, scholarly-positioning, evidence, boundary, and mode instructions. Use only the serialized case material."
+    }
   }
 }

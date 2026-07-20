@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bb543b8bee876",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Keeps realized demand exogenous, orders as advance decisions, supplier capacity and in-set coverage as constraints, and limits the guarantee to the chosen uncertainty set.",
+    "managerial_framing": "Clearly frames the protection-versus-cost trade-off and a nominal or smaller-budget counterfactual, though operational implementation details remain abstract.",
+    "scholarly_positioning": "No scholarly positioning is requested or asserted; this conditional category is not applicable.",
+    "evidence_discipline": "Correctly treats set calibration as unverified and sharply bounds resilience, service, profit, and out-of-set claims.",
+    "prose_clarity": "Precise and well organized but repeats the same calibration and boundary points in multiple sections.",
+    "overall": "A faithful robust-optimization framing that squarely exposes conservatism and the in-set guarantee boundary."
+  },
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true
+}

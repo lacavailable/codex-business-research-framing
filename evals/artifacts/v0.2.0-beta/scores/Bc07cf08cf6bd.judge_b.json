@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bc07cf08cf6bd",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 21,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 10
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves the vendor, capacity-feasible product-set decision, modeled consumer choice mechanism, and expected vendor-revenue objective while unequivocally rejecting welfare as an inferred objective or outcome.",
+    "managerial_framing": "States the actor, choice, capacity, uncertain choice mechanism, and decision criterion clearly, but gives less detail on the decision trigger, concrete stakes, trade-off, and explicit counterfactual than a full managerial frame.",
+    "scholarly_positioning": "No scholarly novelty or literature relationship is requested or asserted, so the response appropriately makes no unsupported contribution claim.",
+    "evidence_discipline": "Accurately identifies welfare and access claims as unsupported and states the additional welfare measure and evidence that would be required.",
+    "prose_clarity": "Exceptionally concise, direct, and accessible prose diagnoses the mismatch and supplies a faithful rewrite without clutter.",
+    "overall": "A precise objective-mismatch diagnosis and faithful revenue framing; only the managerial decision canvas is somewhat terse."
+  },
+  "raw_total": 96,
+  "capped_total": 96,
+  "pass": true
+}

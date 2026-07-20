@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0", "blind_id": "B9a194ccce0ac", "judge_id": "judge_a", "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly assigns binary pre-shift inclusion, fixed shelf and pick-slot constraints, uncertain arrivals and choices, substitution, and expected contribution margin.",
+    "managerial_framing": "Clearly identifies the actor, cutoff, breadth-versus-capacity trade-off, modeled substitution pathway, and feasible alternative assortments.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed, and no novelty claim is introduced.",
+    "evidence_discipline": "Labels substitution as modeled, uses a synthetic setting, and rejects unsupported firm, delivery-speed, realized-profit, and welfare effects.",
+    "prose_clarity": "Readable and organized, though the canvas-and-gates format is longer and more technical than needed.",
+    "overall": "A comprehensive, model-faithful framing with excellent claim boundaries and no hard failure."
+  },
+  "raw_total": 97, "capped_total": 97, "pass": true
+}

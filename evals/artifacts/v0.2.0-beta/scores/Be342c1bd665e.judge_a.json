@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Be342c1bd665e",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 29, "managerial_framing": 23, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 10},
+  "hard_failures": [],
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true,
+  "rationale": {
+    "fidelity": "Correctly retains one threshold, latent class, observed noisy score, asymmetric immediate losses, and expected-loss minimization; some full mapping details remain implicit.",
+    "managerial_framing": "Clearly states the platform choice, stakes, classification mechanism, and error trade-off, while trigger and explicit counterfactual are implicit.",
+    "scholarly_positioning": "No scholarly claim is requested or made.",
+    "evidence_discipline": "Explicitly rejects long-run community-health and trust effects absent modeled outcomes and causal evidence.",
+    "prose_clarity": "Compact, precise, and highly accessible.",
+    "overall": "A concise, decision-focused narrative that respects both classification uncertainty and causal boundaries; no hard failure applies."
+  }
+}

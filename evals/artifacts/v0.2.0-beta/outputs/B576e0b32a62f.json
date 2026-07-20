@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "om-07.no_skill",
+  "blind_id": "B576e0b32a62f",
+  "case_id": "om-07",
+  "response": "The buyer must choose one nonnegative integer order quantity for a short-life seasonal product before seasonal demand is observed, subject to a budget ceiling. That single advance order must cover every possible demand outcome; there is no later replenishment or recovery of lost sales. Ordering too much ties up purchasing budget and leaves units that can only be sold at the salvage value, while ordering too little forgoes the margin on unmet demand. The research problem is therefore to use the demand distribution together with purchase price, selling price, salvage value, and budget to select the quantity that maximizes expected profit across this overage-versus-underage trade-off. Realized demand, leftovers, and lost sales are outcomes, not decision inputs. The demand distribution is treated as calibrated in the model, but the supplied material offers no separate evidence for its calibration and does not support assuming demand is known when the order is placed.",
+  "generator": {
+    "model": "gpt-5.6",
+    "temperature": 0,
+    "completed_at": "2026-07-19T16:31:26Z"
+  }
+}

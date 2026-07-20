@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B6034422ba837",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true,
+  "rationale": {
+    "fidelity": "Maintains selection before status revelation, the at-most-200 capacity, review-dependent revelation and removal, and expected prevented harm.",
+    "managerial_framing": "Fully specifies actor, shift trigger, scarce-capacity choice, stakes, mechanism, trade-off, and alternative review sets.",
+    "scholarly_positioning": "No scholarly positioning is requested or asserted.",
+    "evidence_discipline": "Treats score calibration as an assumption and rejects perfect knowledge and guaranteed prevention.",
+    "prose_clarity": "Clear and precise but considerably longer and more repetitive than the prompt requires, with minor encoding artifacts.",
+    "overall": "A complete, model-faithful framing of scarce review attention with no information leakage or other hard failure."
+  }
+}

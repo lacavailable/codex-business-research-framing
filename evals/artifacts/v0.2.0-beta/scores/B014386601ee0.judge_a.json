@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B014386601ee0",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true,
+  "rationale": {
+    "fidelity": "Fully preserves the common threshold, latent seller type, noisy observed score, classification-error mechanism, payoff objective, and absence of review capacity.",
+    "managerial_framing": "Makes the admission owner, trigger, decision, information, stakes, trade-off, and alternative thresholds concrete.",
+    "scholarly_positioning": "No scholarly positioning is requested or claimed.",
+    "evidence_discipline": "Labels score distributions as assumptions and rejects perfect intent measurement and unmodeled safety claims.",
+    "prose_clarity": "Accurate and structured but considerably more verbose than needed, with minor encoding artifacts.",
+    "overall": "A complete and model-faithful screening narrative with no hard failure."
+  }
+}

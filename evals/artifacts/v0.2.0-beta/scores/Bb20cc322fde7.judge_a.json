@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0", "blind_id": "Bb20cc322fde7", "judge_id": "judge_a", "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 10},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves start-of-window zone slot limits, uncertain later demand and service times, courier-hour capacity, overtime, and the exact margin-net-of-overtime objective.",
+    "managerial_framing": "Clearly explains the admission-versus-overtime tension, spatial load mechanism, advance trigger, and capacity-protecting counterfactual.",
+    "scholarly_positioning": "Scholarly positioning is not requested or claimed, and the response makes no novelty assertion.",
+    "evidence_discipline": "Explicitly excludes customer lifetime value and treats loyalty and retention effects as unsupported rather than smuggling them into the objective.",
+    "prose_clarity": "Concise, accessible, and cohesive.",
+    "overall": "A nearly ideal framing: precise, managerially concrete, fully bounded, and free of hard failures."
+  },
+  "raw_total": 99, "capped_total": 99, "pass": true
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B8c4e4394ed31",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 19, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "raw_total": 97,
+  "capped_total": 97,
+  "pass": true,
+  "rationale": {
+    "fidelity": "Faithfully retains the common noisy-score threshold, latent quality, overlapping distributions, and expected weighted error loss.",
+    "managerial_framing": "Provides a concrete platform decision, trigger, mechanism, error trade-off, and threshold counterfactual.",
+    "scholarly_positioning": "Correctly rejects context-only novelty and names bounded theoretical, design, data-identification, and implementation contribution routes; literature remains to be traced.",
+    "evidence_discipline": "Labels priority and changed-mechanism claims unsupported and calls for calibration and literature verification.",
+    "prose_clarity": "Well structured and precise, but overextended for the requested diagnosis and affected by minor encoding artifacts.",
+    "overall": "A strong faithful framing and contribution diagnosis; the only deductions concern concision and the necessarily untraced literature relationship."
+  }
+}

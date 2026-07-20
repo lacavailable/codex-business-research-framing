@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bf087de9fa6ac",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Faithfully maps released orders, batching and routing decisions, capacity and continuity constraints, and distance objective while explicitly excluding all three unmodeled mechanisms.",
+    "managerial_framing": "Specifies the cutoff trigger, joint decision, batching-routing mechanism, capacity trade-off, sequential-policy counterfactual, and relevant planning burden.",
+    "scholarly_positioning": "The response makes no scholarly novelty claim and none is requested, so the category is not applicable.",
+    "evidence_discipline": "Distinguishes modeled travel distance from inferential operating burden and clearly labels excluded mechanisms and unmeasured cost savings.",
+    "prose_clarity": "Clear and comprehensive, though repetitive scaffolding reduces economy without adding substantive precision.",
+    "overall": "A complete and boundary-conscious warehouse framing; the only meaningful deduction is for excessive structure and repetition."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

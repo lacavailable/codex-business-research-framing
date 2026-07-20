@@ -1,0 +1,12 @@
+{
+    "schema_version":  "1.0.0",
+    "run_id":  "is-09.no_skill",
+    "blind_id":  "Bcd6d6717bd44",
+    "case_id":  "is-09",
+    "response":  "Research problem: How should an intermediary commit to Bayes-plausible disclosure probabilities for two messages, based on a noisy quality test, to maximize expected completed transactions? The policy maps test information into messages; receivers update posterior beliefs and transact according to the modeled posterior thresholds. The decision uses the prior, test accuracy, and receiver payoff model and must satisfy Bayes plausibility. Its scope is transaction volume. More transactions do not by themselves imply more accurate receiver beliefs, higher receiver surplus, or greater welfare, because none of those is the objective. Receiver threshold behavior is a model assumption rather than an externally established fact.",
+    "generator":  {
+                      "model":  "gpt-5.6",
+                      "temperature":  0,
+                      "completed_at":  "2026-07-19T16:53:54Z"
+                  }
+}

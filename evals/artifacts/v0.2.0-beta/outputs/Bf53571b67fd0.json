@@ -1,0 +1,12 @@
+{
+    "schema_version":  "1.0.0",
+    "run_id":  "is-07.no_skill",
+    "blind_id":  "Bf53571b67fd0",
+    "case_id":  "is-07",
+    "response":  "Research problem: How should a platform choose ranking weights to maximize predicted engagement while meeting a minimum exposure requirement for two creator groups and respecting weight bounds? Predicted scores and group labels are available at ranking time; the weights reallocate positions and predicted attention, while realized engagement remains uncertain. Fairness is operationalized only as the specified exposure constraint, and treating exposure as a fairness proxy is a model assumption. Because creator utility or welfare is absent, satisfying the constraint does not establish that creator welfare improves, nor may the engagement objective be reinterpreted as a welfare objective.",
+    "generator":  {
+                      "model":  "gpt-5.6",
+                      "temperature":  0,
+                      "completed_at":  "2026-07-19T16:53:54Z"
+                  }
+}

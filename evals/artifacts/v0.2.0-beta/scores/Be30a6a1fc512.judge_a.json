@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Be30a6a1fc512",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true,
+  "rationale": {
+    "fidelity": "Correctly keeps one common friction level, private user types, subsequent strategic participation, and platform payoff from benign participation net of malicious harm.",
+    "managerial_framing": "Fully articulates actor, commitment timing, information, strategic mechanism, deterrence-participation trade-off, and alternative friction levels.",
+    "scholarly_positioning": "No scholarly positioning is requested or claimed.",
+    "evidence_discipline": "Labels heterogeneous sensitivity as assumed and rejects observed types, universal safety gains, welfare equivalence, and unmodeled responses.",
+    "prose_clarity": "Precise and navigable, but overlong and repetitive for the prompt, with minor encoding artifacts.",
+    "overall": "A complete and faithful strategic-participation framing with no hard failure."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bf834a7a03f2d",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves all production decisions, constraints, integer equivalence, objective, and formulation-strength mechanism while separating runtime from profit.",
+    "managerial_framing": "Provides actor, trigger, stakes, search-overhead trade-off, matched counterfactual, and the exact missing deadline, cadence, scale, or incumbent pathway.",
+    "scholarly_positioning": "Not requested or claimed; the bounded computational contribution is stated without novelty inflation.",
+    "evidence_discipline": "Correctly accepts supplied benchmark speed only within test conditions and rejects the unsupported profit conversion.",
+    "prose_clarity": "Thorough and precise, with some unnecessary template overhead.",
+    "overall": "A complete diagnosis that cleanly separates computational evidence from managerial impact."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

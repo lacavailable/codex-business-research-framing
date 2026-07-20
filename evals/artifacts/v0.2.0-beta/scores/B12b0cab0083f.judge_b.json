@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B12b0cab0083f",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 25, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 9},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Keeps the roster locked before the window, integer hourly staffing as the decision, arrivals, service times, queues and waits as later uncertainty and outcomes, coverage rules intact, and the exact expected-cost objective.",
+    "managerial_framing": "Fully specifies the recurring trigger, manager, roster choices, labor-versus-delay stakes, queueing mechanism, coverage-feasible counterfactual, and managerial significance.",
+    "scholarly_positioning": "The response makes no novelty or literature claim, which is appropriate because scholarly positioning was not requested or supported.",
+    "evidence_discipline": "Carefully limits the log to evidence from recorded windows, distinguishes conditional model predictions from causal implementation effects, and rejects transport beyond the supplied scope.",
+    "prose_clarity": "Strong headings and concise explanations make the evidence boundary especially clear, with only minor repetition in the model mapping.",
+    "overall": "An exemplary model-grounded and evidence-bounded account of why the staffing decision matters."
+  },
+  "raw_total": 99,
+  "capped_total": 99,
+  "pass": true
+}

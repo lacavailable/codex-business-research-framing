@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B6034422ba837",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 8
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly maps selection, latent violation status, later review finding, binding capacity, mechanism, and expected-harm objective.",
+    "managerial_framing": "Actor, shift trigger, feasible choices, stakes, scarce-capacity trade-off, counterfactual, and operational implications are all concrete.",
+    "scholarly_positioning": "Not requested or claimed; no novelty assertion is introduced.",
+    "evidence_discipline": "Labels calibration as an assumption, rejects perfect violation knowledge, and states important model boundaries.",
+    "prose_clarity": "Well structured and precise, with minor encoding artifacts and more detail than necessary.",
+    "overall": "An exceptionally complete, implementable framing that preserves uncertainty and the review-capacity constraint."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bd65ce0c5fe74",
+  "judge_id": "judge_a",
+  "rubric_version": "2.0.0",
+  "category_scores": {
+    "fidelity": 30,
+    "managerial_framing": 25,
+    "scholarly_positioning": 20,
+    "evidence_discipline": 15,
+    "prose_clarity": 8
+  },
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Preserves one noisy-score threshold, latent content class, imperfect classification, and immediate weighted false-removal and harmful-retention loss.",
+    "managerial_framing": "Clearly develops the platform choice, timing, error trade-off, mechanism, alternative threshold, and immediate operational scope.",
+    "scholarly_positioning": "No scholarly contribution is required; the answer properly limits any novelty statement.",
+    "evidence_discipline": "It identifies long-run community health as unsupported and distinguishes empirical validation needs from the supplied model.",
+    "prose_clarity": "Well structured and exact, though longer and more repetitive than necessary for the prompt.",
+    "overall": "A high-fidelity decision narrative that avoids the causal-outcome trap."
+  },
+  "raw_total": 98,
+  "capped_total": 98,
+  "pass": true
+}

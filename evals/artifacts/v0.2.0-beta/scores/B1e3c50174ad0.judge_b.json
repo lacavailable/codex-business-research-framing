@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "B1e3c50174ad0",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 22, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 8},
+  "hard_failures": [],
+  "rationale": {
+    "fidelity": "Correctly preserves the production decisions, constraints, feasible integer set, and cost objective while treating runtime solely as a computational outcome.",
+    "managerial_framing": "States the plausible deadline, cadence, scale, and incumbent pathways but correctly cannot make one concrete because none is supplied; the actual managerial trigger and counterfactual remain underdeveloped.",
+    "scholarly_positioning": "No defensible literature relationship is requested or claimed, so this conditional category is not applicable.",
+    "evidence_discipline": "Accurately scopes faster runtime to the supplied benchmarks and rejects universal speed, lower true optimum, realized profit, and unsupported causal value.",
+    "prose_clarity": "Clear and careful, though the diagnostic layers repeat the same missing-pathway conclusion several times.",
+    "overall": "A correct computational framing and strong diagnosis of the absent profit pathway; lower managerial specificity is appropriate to the missing case evidence."
+  },
+  "raw_total": 95,
+  "capped_total": 95,
+  "pass": true
+}

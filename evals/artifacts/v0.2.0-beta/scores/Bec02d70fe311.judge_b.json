@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "blind_id": "Bec02d70fe311",
+  "judge_id": "judge_b",
+  "rubric_version": "2.0.0",
+  "category_scores": {"fidelity": 30, "managerial_framing": 24, "scholarly_positioning": 20, "evidence_discipline": 15, "prose_clarity": 7},
+  "hard_failures": [],
+  "rationale": {"fidelity": "Preserves the shared maintenance-routing decisions, feasible set, objective, and distinct heuristic and exact outputs.", "managerial_framing": "States the latency-quality-assurance tension and missing deadline and certificate-action pathway, though some details are repeated and the operational counterfactual is not crisply stated.", "scholarly_positioning": "No scholarly claim is made, and absent literature and experimental support are acknowledged.", "evidence_discipline": "Treats both managerial value pathways as conditional hypotheses and rejects field-performance and universal-exactness claims.", "prose_clarity": "The core answer is clear but buried in repetitive diagnostic scaffolding and affected by encoding artifacts.", "overall": "A strong, cautious same-model comparison whose main deficiencies are verbosity and slight managerial diffuseness."},
+  "raw_total": 96,
+  "capped_total": 96,
+  "pass": true
+}
