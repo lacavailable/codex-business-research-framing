@@ -1,0 +1,563 @@
+manifest_version: "1.0"
+redistribution_default: metadata_and_original_notes_only
+sources:
+  - source_id: hbr-contributor-guidelines
+    complete_citation: "Harvard Business Review. 2026. Contributor Guidelines for Harvard Business Review Authors. Last updated June 10, 2026."
+    authors: [Harvard Business Review]
+    title: Contributor Guidelines for Harvard Business Review Authors
+    year: 2026
+    outlet: Harvard Business Review
+    doi: null
+    official_url: https://hbr.org/guidelines-for-authors
+    source_type: official_contributor_guideline
+    domain: practitioner_guidance
+    source_tier: tier_a_official_guidance_or_editorial
+    inclusion_rationale: Defines the publisher's current contributor-facing expectations for useful management writing.
+    authority_rationale: The official publisher guideline is authoritative only for that publisher's stated submission expectations.
+    access_status: official_page_available
+    access_date: "2026-07-19"
+    content_reviewed: official_guideline
+    copyright_holder: Harvard Business School Publishing
+    license: all_rights_reserved
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/hbr-contributor-guidelines.md
+    coded_concepts: [managerial-clarity, audience-fit]
+    supported_rule_ids: [MGR-001, EVD-001]
+    limitations: [Publisher-specific guidance is not a universal scholarly standard.]
+    verification_status: verified
+  - source_id: thomke-manzi-2014
+    complete_citation: "Thomke, Stefan, and Jim Manzi. 2014. The Discipline of Business Experimentation. Harvard Business Review."
+    authors: [Stefan Thomke, Jim Manzi]
+    title: The Discipline of Business Experimentation
+    year: 2014
+    outlet: Harvard Business Review
+    doi: null
+    official_url: https://hbr.org/2014/12/the-discipline-of-business-experimentation
+    source_type: practitioner_article
+    domain: practitioner_guidance
+    source_tier: tier_c_exemplar_execution
+    inclusion_rationale: Provides practitioner-oriented observations about disciplined business experimentation and decision use.
+    authority_rationale: A named HBR practitioner article can inform execution framing but does not independently establish empirical generality.
+    access_status: official_page_available
+    access_date: "2026-07-19"
+    content_reviewed: publisher_summary_only
+    copyright_holder: Harvard Business Publishing
+    license: all_rights_reserved
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/thomke-manzi-2014.md
+    coded_concepts: [experimentation, decision-use]
+    supported_rule_ids: [PRAC-001]
+    limitations: [Only the material exposed on the official publisher page may support the card.]
+    verification_status: verified
+  - source_id: rawson-duncan-jones-2013
+    complete_citation: "Rawson, Alex, Ewan Duncan, and Conor Jones. 2013. The Truth About Customer Experience. Harvard Business Review."
+    authors: [Alex Rawson, Ewan Duncan, Conor Jones]
+    title: The Truth About Customer Experience
+    year: 2013
+    outlet: Harvard Business Review
+    doi: null
+    official_url: https://hbr.org/2013/09/the-truth-about-customer-experience
+    source_type: practitioner_article
+    domain: practitioner_guidance
+    source_tier: tier_c_exemplar_execution
+    inclusion_rationale: Supplies practitioner observations about end-to-end customer journeys and managerial problem scope.
+    authority_rationale: A named practitioner article is useful as execution evidence but is not treated as peer-reviewed causal evidence.
+    access_status: official_page_available
+    access_date: "2026-07-19"
+    content_reviewed: publisher_summary_only
+    copyright_holder: Harvard Business School Publishing
+    license: all_rights_reserved
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/rawson-duncan-jones-2013.md
+    coded_concepts: [customer-journey, problem-scope]
+    supported_rule_ids: [PRAC-001]
+    limitations: [Journey observations require contextual validation before transfer to a research setting.]
+    verification_status: verified
+  - source_id: drucker-2002
+    complete_citation: "Drucker, Peter F. 2002. The Discipline of Innovation. Harvard Business Review, August 2002."
+    authors: [Peter F. Drucker]
+    title: The Discipline of Innovation
+    year: 2002
+    outlet: Harvard Business Review
+    doi: null
+    official_url: https://hbr.org/2002/08/the-discipline-of-innovation
+    source_type: practitioner_article
+    domain: practitioner_guidance
+    source_tier: tier_c_exemplar_execution
+    inclusion_rationale: Provides a bounded practitioner account of systematic innovation opportunities and execution.
+    authority_rationale: A classic practitioner essay can motivate framing heuristics but cannot alone validate scholarly mechanisms.
+    access_status: official_page_available
+    access_date: "2026-07-19"
+    content_reviewed: publisher_summary_only
+    copyright_holder: Harvard Business School Publishing
+    license: all_rights_reserved
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/drucker-2002.md
+    coded_concepts: [innovation, systematic-practice]
+    supported_rule_ids: [PRAC-001]
+    limitations: [Only the official publisher summary and metadata were reviewed; no article-body prescriptions, evidence, or boundary conditions were established.]
+    verification_status: verified
+  - source_id: davis-1971
+    complete_citation: "Davis, Murray S. 1971. That's Interesting!: Towards a Phenomenology of Sociology and a Sociology of Phenomenology. Philosophy of the Social Sciences 1 (2): 309-344. https://doi.org/10.1177/004839317100100211."
+    authors: [Murray S. Davis]
+    title: "That's Interesting!: Towards a Phenomenology of Sociology and a Sociology of Phenomenology"
+    year: 1971
+    outlet: Philosophy of the Social Sciences
+    doi: 10.1177/004839317100100211
+    official_url: https://doi.org/10.1177/004839317100100211
+    source_type: peer_reviewed_article
+    domain: management_and_organization
+    source_tier: tier_b_peer_reviewed_foundational
+    inclusion_rationale: Retained as a bibliographic candidate because its title explicitly concerns interestingness, phenomenology, and sociology; no substantive claim is admitted.
+    authority_rationale: The official Sage publisher record is authoritative for the listed bibliographic metadata only; article content and influence were not reviewed.
+    access_status: official_page_available
+    access_date: "2026-07-20"
+    content_reviewed: metadata_only
+    copyright_holder: SAGE Publications or respective rights holder
+    license: unknown
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/davis-1971.md
+    coded_concepts: [interestingness]
+    supported_rule_ids: []
+    limitations: [Only official Sage bibliographic metadata was reviewed; article text, substantive claims, influence, boundary conditions, Skill rules, and licensing terms remain unreviewed.]
+    verification_status: verified
+  - source_id: whetten-1989
+    complete_citation: "Whetten, David A. 1989. What Constitutes a Theoretical Contribution? Academy of Management Review 14 (4): 490-495. Publisher DOI: 10.5465/amr.1989.4308371; legacy DOI: 10.2307/258554."
+    authors: [David A. Whetten]
+    title: What Constitutes a Theoretical Contribution?
+    year: 1989
+    outlet: Academy of Management Review
+    doi: 10.5465/amr.1989.4308371
+    official_url: https://journals.aom.org/doi/abs/10.5465/amr.1989.4308371
+    source_type: peer_reviewed_article
+    domain: management_and_organization
+    source_tier: tier_b_peer_reviewed_foundational
+    inclusion_rationale: The official publisher abstract directly concerns theoretical contribution, developing theory, and parsimony versus comprehensiveness.
+    authority_rationale: The official Academy of Management record supports its metadata and abstract, but not unreviewed article-body details or a universal scoring law.
+    access_status: official_page_available
+    access_date: "2026-07-20"
+    content_reviewed: abstract_only
+    copyright_holder: Academy of Management or respective rights holder
+    license: unknown
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/whetten-1989.md
+    coded_concepts: [theoretical-contribution]
+    supported_rule_ids: []
+    limitations: [Only official publisher metadata and the publisher abstract were reviewed; the article body, detailed framework, prescriptions, evidence, Skill rules, and license permission remain unestablished. The publisher DOI is 10.5465/amr.1989.4308371, while 10.2307/258554 is retained as the legacy DOI resolving to the JSTOR title record.]
+    verification_status: verified
+  - source_id: sutton-staw-1995
+    complete_citation: "Sutton, Robert I., and Barry M. Staw. 1995. What Theory Is Not. Administrative Science Quarterly 40 (3): 371-384. https://doi.org/10.2307/2393788."
+    authors: [Robert I. Sutton, Barry M. Staw]
+    title: What Theory Is Not
+    year: 1995
+    outlet: Administrative Science Quarterly
+    doi: 10.2307/2393788
+    official_url: https://doi.org/10.2307/2393788
+    source_type: peer_reviewed_article
+    domain: management_and_organization
+    source_tier: tier_b_peer_reviewed_foundational
+    inclusion_rationale: Helps separate theory and mechanism from citations, data, variables, diagrams, and hypotheses alone.
+    authority_rationale: A peer-reviewed conceptual article is authoritative for its stated distinctions when the underlying content is audited.
+    access_status: metadata_available
+    access_date: "2026-07-19"
+    content_reviewed: metadata_only
+    copyright_holder: Cornell University or respective rights holder
+    license: unknown
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/sutton-staw-1995.md
+    coded_concepts: [theory, mechanism]
+    supported_rule_ids: []
+    limitations: [The independent official-page check verified only the DOI redirect target and displayed title; the remaining citation fields and all substantive content were not independently verified from the accessible material.]
+    verification_status: verified
+  - source_id: locke-golden-biddle-1997
+    complete_citation: "Locke, Karen, and Karen Golden-Biddle. 1997. Constructing Opportunities for Contribution: Structuring Intertextual Coherence and Problematizing in Organizational Studies. Academy of Management Journal 40 (5): 1023-1062. https://doi.org/10.5465/256926. Legacy DOI: https://doi.org/10.2307/256926."
+    authors: [Karen Locke, Karen Golden-Biddle]
+    title: "Constructing Opportunities for Contribution: Structuring Intertextual Coherence and Problematizing in Organizational Studies"
+    year: 1997
+    outlet: Academy of Management Journal
+    doi: 10.5465/256926
+    official_url: https://journals.aom.org/doi/10.5465/256926
+    source_type: peer_reviewed_article
+    domain: management_and_organization
+    source_tier: tier_b_peer_reviewed_foundational
+    inclusion_rationale: The publisher abstract directly concerns how journal articles construct opportunities for contribution and claims of uniqueness, making it relevant to scholarly positioning at abstract-only scope.
+    authority_rationale: The official Academy of Management record supports the bibliographic metadata and bounded publisher-abstract claims, but not article-body details or prescriptive effectiveness claims.
+    access_status: official_page_available
+    access_date: "2026-07-20"
+    content_reviewed: abstract_only
+    copyright_holder: Academy of Management or respective rights holder
+    license: unknown
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/locke-golden-biddle-1997.md
+    coded_concepts: [problematization, intertextual-positioning]
+    supported_rule_ids: [SCH-001]
+    limitations: [Only the official publisher metadata and abstract were reviewed; SCH-001 is limited to the abstract-supported observation that contribution claims are constructed relative to prior literature, and no detailed process, effectiveness, or transferability is established.]
+    verification_status: verified
+  - source_id: alvesson-sandberg-2011
+    complete_citation: "Alvesson, Mats, and Jörgen Sandberg. 2011. Generating Research Questions Through Problematization. Academy of Management Review. https://doi.org/10.5465/amr.2009.0188."
+    authors: [Mats Alvesson, Jörgen Sandberg]
+    title: Generating Research Questions Through Problematization
+    year: 2011
+    outlet: Academy of Management Review
+    doi: 10.5465/amr.2009.0188
+    official_url: https://doi.org/10.5465/amr.2009.0188
+    source_type: peer_reviewed_article
+    domain: management_and_organization
+    source_tier: tier_b_peer_reviewed_foundational
+    inclusion_rationale: The official publisher abstract presents problematization as challenging assumptions to formulate influential research questions.
+    authority_rationale: The official publisher record supports the bibliographic metadata and its abstract's bounded description of problematization, not article-body details or effectiveness.
+    access_status: official_page_available
+    access_date: "2026-07-19"
+    content_reviewed: abstract_only
+    copyright_holder: Academy of Management Review
+    license: unknown
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/alvesson-sandberg-2011.md
+    coded_concepts: [problematization, assumptions]
+    supported_rule_ids: [SCH-002]
+    limitations: [Only official publisher metadata and the abstract were reviewed; detailed procedures, comparisons, boundary conditions, effectiveness, and article-body claims remain unestablished.]
+    verification_status: verified
+  - source_id: corley-gioia-2011
+    complete_citation: "Corley, Kevin G., and Dennis A. Gioia. 2011. Building Theory about Theory Building: What Constitutes a Theoretical Contribution? Academy of Management Review 36 (1): 12-32. https://doi.org/10.5465/amr.2009.0486."
+    authors: [Kevin G. Corley, Dennis A. Gioia]
+    title: "Building Theory about Theory Building: What Constitutes a Theoretical Contribution?"
+    year: 2011
+    outlet: Academy of Management Review
+    doi: 10.5465/amr.2009.0486
+    official_url: https://doi.org/10.5465/amr.2009.0486
+    source_type: peer_reviewed_article
+    domain: management_and_organization
+    source_tier: tier_b_peer_reviewed_foundational
+    inclusion_rationale: The official publisher abstract connects originality and utility in its account of theoretical contribution.
+    authority_rationale: The official publisher record supports bibliographic facts and the abstract's bounded account, not unreviewed article-body claims.
+    access_status: official_page_available
+    access_date: "2026-07-19"
+    content_reviewed: abstract_only
+    copyright_holder: Academy of Management Review
+    license: unknown
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/corley-gioia-2011.md
+    coded_concepts: [originality, utility]
+    supported_rule_ids: [SCH-001]
+    limitations: [Only official publisher metadata and the abstract were reviewed; no article-body reasoning, scoring procedure, thresholds, empirical effectiveness, or universal rule was established.]
+    verification_status: verified
+  - source_id: gregor-hevner-2013
+    complete_citation: "Gregor, Shirley, and Alan R. Hevner. 2013. Positioning and Presenting Design Science Research for Maximum Impact. MIS Quarterly 37 (2): 337-355."
+    authors: [Shirley Gregor, Alan R. Hevner]
+    title: Positioning and Presenting Design Science Research for Maximum Impact
+    year: 2013
+    outlet: MIS Quarterly
+    doi: null
+    official_url: https://aisel.aisnet.org/misq/vol37/iss2/3/
+    source_type: peer_reviewed_article
+    domain: information_systems
+    source_tier: tier_b_peer_reviewed_foundational
+    inclusion_rationale: The official abstract covers artifact abstraction, knowledge consumption and production, contribution positioning through problem and solution knowledge, and a design-science-research communication schema.
+    authority_rationale: The official AIS eLibrary record supports the bibliographic facts and its publisher abstract's bounded description of the article; it does not support article-body details or effectiveness claims.
+    access_status: official_page_available
+    access_date: "2026-07-19"
+    content_reviewed: abstract_only
+    copyright_holder: Association for Information Systems or respective rights holder
+    license: unknown
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/gregor-hevner-2013.md
+    coded_concepts: [design-science, artifact-abstraction, knowledge-contribution, scholarly-communication]
+    supported_rule_ids: []
+    limitations: [Only the official publisher metadata and abstract were reviewed; no full-text details, operational prescriptions, effectiveness claims, or permissive redistribution license were established.]
+    verification_status: verified
+  - source_id: rai-type-iii-errors
+    complete_citation: "Rai, Arun. 2017. Editor's Comments: Avoiding Type III Errors: Formulating IS Research Problems that Matter. MIS Quarterly 41 (2): iii-vii."
+    authors: [Arun Rai]
+    title: "Editor's Comments: Avoiding Type III Errors: Formulating IS Research Problems that Matter"
+    year: 2017
+    outlet: MIS Quarterly
+    doi: null
+    official_url: https://aisel.aisnet.org/misq/vol41/iss2/2/
+    source_type: editorial
+    domain: information_systems
+    source_tier: tier_a_official_guidance_or_editorial
+    inclusion_rationale: The title makes this editorial a relevant candidate source on Type III errors and the formulation of IS research problems that matter; no substantive content was reviewed.
+    authority_rationale: The official AIS eLibrary item record supports the bibliographic metadata, and the official issue table of contents supports the June 2017 date and editorial classification only.
+    access_status: official_page_available
+    access_date: "2026-07-19"
+    content_reviewed: metadata_only
+    copyright_holder: MIS Quarterly or respective rights holder
+    license: unknown
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/rai-type-iii-errors.md
+    coded_concepts: [type-iii-error, problem-formulation]
+    supported_rule_ids: []
+    limitations: [Only official item metadata and the issue table of contents were reviewed; no abstract, substantive article text, detailed author claim, Skill rule, or license permission was established.]
+    verification_status: verified
+  - source_id: straub-ang-rigor-relevance
+    complete_citation: "Straub, Detmar W., and Soon Ang. 2011. Rigor and Relevance in IS Research: Redefining the Debate and a Call for Future Research. MIS Quarterly 35 (1): iii-xi."
+    authors: [Detmar Straub, Soon Ang]
+    title: "Rigor and Relevance in IS Research: Redefining the Debate and a Call for Future Research"
+    year: 2011
+    outlet: MIS Quarterly
+    doi: null
+    official_url: https://aisel.aisnet.org/misq/vol35/iss1/1/
+    source_type: editorial
+    domain: information_systems
+    source_tier: tier_a_official_guidance_or_editorial
+    inclusion_rationale: The title makes this editorial a candidate source for examining rigor and relevance in information-systems research.
+    authority_rationale: The official AIS eLibrary record and issue table of contents are authoritative for bibliographic identity and editorial classification only.
+    access_status: official_page_available
+    access_date: "2026-07-19"
+    content_reviewed: metadata_only
+    copyright_holder: MIS Quarterly or respective rights holder
+    license: unknown
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/straub-ang-rigor-relevance.md
+    coded_concepts: [rigor, relevance]
+    supported_rule_ids: []
+    limitations: [Only official item metadata and the issue table of contents were reviewed; no abstract, substantive article text, detailed author claim, Skill rule, or license permission was established.]
+    verification_status: verified
+  - source_id: tang-2016
+    complete_citation: "Tang, Christopher S. 2016. OM Forum—Making OM Research More Relevant: “Why?” and “How?” Manufacturing & Service Operations Management 18 (2): 178-183. https://doi.org/10.1287/msom.2015.0553."
+    authors: [Christopher S. Tang]
+    title: "OM Forum—Making OM Research More Relevant: “Why?” and “How?”"
+    year: 2016
+    outlet: Manufacturing & Service Operations Management
+    doi: 10.1287/msom.2015.0553
+    official_url: https://doi.org/10.1287/msom.2015.0553
+    source_type: peer_reviewed_article
+    domain: operations_management
+    source_tier: tier_b_peer_reviewed_foundational
+    inclusion_rationale: The official abstract directly presents the author's perspective on operations-management research relevance and announces practical ideas.
+    authority_rationale: The INFORMS journal page is authoritative for the article metadata and abstract, but not for unreviewed article-body details.
+    access_status: official_page_available
+    access_date: "2026-07-19"
+    content_reviewed: abstract_only
+    copyright_holder: INFORMS
+    license: all_rights_reserved
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/tang-2016.md
+    coded_concepts: [om-relevance]
+    supported_rule_ids: []
+    limitations: [Only the official abstract and publisher metadata were reviewed; the practical ideas and all article-body details remain unreviewed, so no Skill rule is supported.]
+    verification_status: verified
+  - source_id: cachon-girotra-netessine-2020
+    complete_citation: "Cachon, Gérard P., Karan Girotra, and Serguei Netessine. 2020. Interesting, Important, and Impactful Operations Management. Manufacturing & Service Operations Management 22 (1): 214-222. https://doi.org/10.1287/msom.2019.0813."
+    authors: [Gérard P. Cachon, Karan Girotra, Serguei Netessine]
+    title: Interesting, Important, and Impactful Operations Management
+    year: 2020
+    outlet: Manufacturing & Service Operations Management
+    doi: 10.1287/msom.2019.0813
+    official_url: https://doi.org/10.1287/msom.2019.0813
+    source_type: peer_reviewed_article
+    domain: operations_management
+    source_tier: tier_b_peer_reviewed_foundational
+    inclusion_rationale: The official publisher abstract addresses how important questions, interesting answers, specificity, audience engagement, and new inquiry relate to operations-management impact.
+    authority_rationale: The INFORMS article page is authoritative for bibliographic metadata and the publisher abstract, but not for unreviewed article-body details.
+    access_status: official_page_available
+    access_date: "2026-07-19"
+    content_reviewed: abstract_only
+    copyright_holder: INFORMS
+    license: all_rights_reserved
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/cachon-girotra-netessine-2020.md
+    coded_concepts: [importance, impact]
+    supported_rule_ids: []
+    limitations: [Only the complete official abstract and publisher metadata were reviewed; no article-body claim is attributed to the source.]
+    verification_status: verified
+  - source_id: swaminathan-2023
+    complete_citation: "Swaminathan, Jayashankar M. 2024. OM Forum—Operations Management Research: Relevance and Impact. Manufacturing & Service Operations Management 27 (1): 1-7. https://doi.org/10.1287/msom.2023.0691."
+    authors: [Jayashankar M. Swaminathan]
+    title: "OM Forum—Operations Management Research: Relevance and Impact"
+    year: 2024
+    outlet: Manufacturing & Service Operations Management
+    doi: 10.1287/msom.2023.0691
+    official_url: https://doi.org/10.1287/msom.2023.0691
+    source_type: peer_reviewed_article
+    domain: operations_management
+    source_tier: tier_b_peer_reviewed_foundational
+    inclusion_rationale: Supplies a recent field-level discussion of relevance and impact in operations-management research.
+    authority_rationale: The journal's MSOM Fellow forum article offers a field-level perspective; only its official abstract has been reviewed.
+    access_status: official_page_available
+    access_date: "2026-07-19"
+    content_reviewed: abstract_only
+    copyright_holder: INFORMS
+    license: all_rights_reserved
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/swaminathan-2023.md
+    coded_concepts: [om-relevance, impact]
+    supported_rule_ids: []
+    limitations: [Only the complete official abstract and publisher metadata were reviewed; the announced menu of approaches and all article-body reasoning remain unreviewed.]
+    verification_status: verified
+  - source_id: management-science-om-editorial-statement
+    complete_citation: "Management Science. 2024. Editorial Statement—Operations Management. Management Science 70 (5): vii. https://doi.org/10.1287/mnsc.2024.opmstmt.v70.n5."
+    authors: [Karan Girotra, Elena Katok, Victor Martínez-de-Albéniz, Jeannette Song, Jayashankar Swaminathan]
+    title: Editorial Statement—Operations Management
+    year: 2024
+    outlet: Management Science
+    doi: 10.1287/mnsc.2024.opmstmt.v70.n5
+    official_url: https://pubsonline.informs.org/doi/10.1287/mnsc.2024.opmstmt.v70.n5
+    source_type: official_editorial_statement
+    domain: operations_management
+    source_tier: tier_a_official_guidance_or_editorial
+    inclusion_rationale: Represents the journal's official description of topical and methodological scope for operations-management work.
+    authority_rationale: The official INFORMS article page is authoritative for the statement's expressed scope and expectations.
+    access_status: official_page_available
+    access_date: "2026-07-19"
+    content_reviewed: official_guideline
+    copyright_holder: INFORMS
+    license: all_rights_reserved
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/management-science-om-editorial-statement.md
+    coded_concepts: [journal-scope, om-relevance]
+    supported_rule_ids: []
+    limitations: [Only the official article page was audited; the statement is venue-specific, supplies no detailed review procedure or outcome evidence, and establishes no redistribution license.]
+    verification_status: verified
+  - source_id: landry-malouin-oral-1983
+    complete_citation: "Landry, Maurice, Jean-Louis Malouin, and Muhittin Oral. 1983. Model validation in operations research. European Journal of Operational Research 14 (3), November: 207-220. https://doi.org/10.1016/0377-2217(83)90257-6."
+    authors: [Maurice Landry, Jean-Louis Malouin, Muhittin Oral]
+    title: Model validation in operations research
+    year: 1983
+    outlet: European Journal of Operational Research
+    doi: 10.1016/0377-2217(83)90257-6
+    official_url: https://www.sciencedirect.com/science/article/abs/pii/0377221783902576
+    source_type: peer_reviewed_article
+    domain: operations_research
+    source_tier: tier_b_peer_reviewed_foundational
+    inclusion_rationale: The official abstract addresses changing OR model-validation concerns, shortcomings in validation methodology, and effects of evolving problems and modeling capabilities.
+    authority_rationale: The official ScienceDirect page is authoritative for the displayed article metadata and abstract, but not for unreviewed article-body details.
+    access_status: access_limited
+    access_date: "2026-07-19"
+    content_reviewed: abstract_only
+    copyright_holder: Elsevier or respective rights holder
+    license: unknown
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/landry-malouin-oral-1983.md
+    coded_concepts: [model-validation, methodology]
+    supported_rule_ids: []
+    limitations: [Only the official publisher abstract and metadata were reviewed; the article body, detailed validation framework, evidence, procedures, conclusions, present-day applicability, and any candidate Skill rule remain unestablished.]
+    verification_status: verified
+  - source_id: ackoff-1979
+    complete_citation: "Ackoff, Russell L. 1979. The Future of Operational Research Is Past. Journal of the Operational Research Society 30 (2): 93-104. https://doi.org/10.1057/jors.1979.22."
+    authors: [Russell L. Ackoff]
+    title: The Future of Operational Research Is Past
+    year: 1979
+    outlet: Journal of the Operational Research Society
+    doi: 10.1057/jors.1979.22
+    official_url: https://www.tandfonline.com/doi/abs/10.1057/jors.1979.22
+    source_type: peer_reviewed_article
+    domain: operations_research
+    source_tier: tier_b_peer_reviewed_foundational
+    inclusion_rationale: Adds a historical critical perspective on academic OR's effects on practice, methodological appropriateness, and adaptation to environmental change.
+    authority_rationale: The official Taylor & Francis record is authoritative for the displayed metadata and publisher abstract, but not for unreviewed article-body details.
+    access_status: official_page_available
+    access_date: "2026-07-19"
+    content_reviewed: abstract_only
+    copyright_holder: Operational Research Society or respective rights holder
+    license: unknown
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/ackoff-1979.md
+    coded_concepts: [or-relevance, methodology, interdisciplinarity]
+    supported_rule_ids: []
+    limitations: [Only the official publisher abstract and metadata were reviewed; the historical critique's evidence, detailed reasoning, prescriptions, and present-day generalizability remain unestablished.]
+    verification_status: verified
+  - source_id: swales-1990
+    complete_citation: "Swales, John M. 1990. Genre Analysis: English in Academic and Research Settings. Cambridge Applied Linguistics. Cambridge: Cambridge University Press. 260 pages. ISBN 0521338131; 9780521338134."
+    authors: [John M. Swales]
+    title: "Genre Analysis: English in Academic and Research Settings"
+    year: 1990
+    outlet: Cambridge University Press
+    doi: null
+    official_url: https://shop.cambridge.org/english/product/2700033225
+    source_type: scholarly_book
+    domain: scholarly_rhetoric
+    source_tier: tier_b_peer_reviewed_foundational
+    inclusion_rationale: Retains a foundational scholarly-rhetoric book as a bibliographically identified candidate for later lawful content review.
+    authority_rationale: Google Books publisher metadata and Cambridge publisher frontmatter are authoritative for the recorded bibliographic identity only.
+    access_status: metadata_available
+    access_date: "2026-07-19"
+    content_reviewed: metadata_only
+    copyright_holder: Cambridge University Press or respective rights holder
+    license: unknown
+    license_url: null
+    redistribution_status: metadata_and_original_notes_only
+    committed_source_path: null
+    private_local_path: null
+    checksum: null
+    card_path: literature/source-cards/swales-1990.md
+    coded_concepts: [scholarly-rhetoric]
+    supported_rule_ids: []
+    limitations: [Only bibliographic metadata was reviewed; no book or full text was reviewed, so no substantive content claim or Skill rule is supported.]
+    verification_status: verified
