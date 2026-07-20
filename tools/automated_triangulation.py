@@ -34,6 +34,38 @@ CATEGORIES = (
 )
 APPLICABILITY = {"required", "optional", "not_applicable"}
 APPLICABILITY_DECISIONS = {"accept", "challenge_with_evidence"}
+APPLICABILITY_BY_FUNCTION = {
+    "phenomenon_motivation": {
+        "fidelity": "optional", "managerial_framing": "optional",
+        "scholarly_positioning": "required", "evidence_discipline": "required",
+        "prose_clarity": "required",
+    },
+    "business_problem": {
+        "fidelity": "required", "managerial_framing": "required",
+        "scholarly_positioning": "optional", "evidence_discipline": "required",
+        "prose_clarity": "required",
+    },
+    "model_setting": {
+        "fidelity": "required", "managerial_framing": "optional",
+        "scholarly_positioning": "not_applicable", "evidence_discipline": "required",
+        "prose_clarity": "required",
+    },
+    "research_opportunity": {
+        "fidelity": "optional", "managerial_framing": "optional",
+        "scholarly_positioning": "required", "evidence_discipline": "required",
+        "prose_clarity": "required",
+    },
+    "contribution": {
+        "fidelity": "optional", "managerial_framing": "optional",
+        "scholarly_positioning": "required", "evidence_discipline": "required",
+        "prose_clarity": "required",
+    },
+    "managerial_implications": {
+        "fidelity": "required", "managerial_framing": "required",
+        "scholarly_positioning": "not_applicable", "evidence_discipline": "required",
+        "prose_clarity": "required",
+    },
+}
 ATOMIC_OUTCOMES = {"yes", "no", "uncertain"}
 SILVER_STATUSES = {"silver_high_confidence", "silver_provisional", "unresolved"}
 ATOMIC_CHECKS = (
@@ -195,6 +227,14 @@ def validate_applicability_challenge(record: dict[str, Any]) -> None:
         raise TriangulationError("challenge must provide a different challenged_applicability")
     if not record.get("evidence_span_ids"):
         raise TriangulationError("challenge_with_evidence requires evidence span IDs")
+
+
+def derive_applicability(passage_function: str) -> dict[str, str]:
+    """Return the preregistered default category applicability for a passage function."""
+    try:
+        return dict(APPLICABILITY_BY_FUNCTION[passage_function])
+    except KeyError as exc:
+        raise TriangulationError(f"unknown passage function: {passage_function}") from exc
 
 
 def validate_atomic_checks(record: dict[str, Any]) -> list[str]:

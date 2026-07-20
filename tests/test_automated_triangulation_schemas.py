@@ -10,7 +10,7 @@ from pathlib import Path
 import pytest
 from jsonschema import Draft202012Validator, ValidationError
 
-from conftest import ROOT
+from conftest import ROOT, import_file
 
 
 AUTO = ROOT / "evals" / "automated-triangulation"
@@ -104,6 +104,19 @@ def test_all_automated_schemas_are_draft_2020_12_and_closed() -> None:
         Draft202012Validator.check_schema(schema)
         assert schema["$schema"] == "https://json-schema.org/draft/2020-12/schema"
         assert schema["additionalProperties"] is False
+
+
+def test_passage_function_applicability_is_predetermined() -> None:
+    module = import_file("automated_triangulation_applicability", ROOT / "tools" / "automated_triangulation.py")
+    assert module.derive_applicability("model_setting") == {
+        "fidelity": "required",
+        "managerial_framing": "optional",
+        "scholarly_positioning": "not_applicable",
+        "evidence_discipline": "required",
+        "prose_clarity": "required",
+    }
+    with pytest.raises(module.TriangulationError, match="unknown passage function"):
+        module.derive_applicability("prestige_label")
 
 
 def test_atomic_schema_requires_exactly_the_fifteen_preregistered_checks() -> None:
