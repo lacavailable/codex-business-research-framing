@@ -85,7 +85,7 @@ def test_lean_v1_is_sealed_by_complete_byte_preservation_manifest() -> None:
     repair = repair_module("repair_preservation")
     repair.verify_lean_v1_preservation()
     source_manifest = ROOT / manifest["source_preservation_manifest"]
-    assert manifest["source_preservation_manifest_sha256"] == sha256(source_manifest)
+    assert manifest["source_preservation_manifest_sha256"] == repair.file_sha256(source_manifest)
     assert manifest["historical_artifacts_byte_preserved"] is True
 
     historical = load(LEAN_V1 / "results" / "D2-result.json")

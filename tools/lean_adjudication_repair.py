@@ -6,6 +6,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import argparse
 from copy import deepcopy
 from pathlib import Path
 from typing import Any, Iterable
@@ -90,6 +91,20 @@ def sha256_value(value: Any) -> str:
     return hashlib.sha256(canonical_json(value)).hexdigest()
 
 
+TEXT_SUFFIXES = {".json", ".md", ".py", ".toml", ".txt", ".yaml", ".yml", ".cff"}
+
+
+def canonical_file_bytes(path: Path) -> bytes:
+    data = path.read_bytes()
+    if path.suffix.lower() in TEXT_SUFFIXES:
+        return data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return data
+
+
+def file_sha256(path: Path) -> str:
+    return hashlib.sha256(canonical_file_bytes(path)).hexdigest()
+
+
 def validate_schema(record: Any, schema_name: str) -> None:
     import jsonschema
 
@@ -111,7 +126,7 @@ def verify_lean_v1_preservation(commit: str = SEALED_COMMIT) -> None:
     if current != expected:
         raise RepairError(f"lean-v1 path drift: added={sorted(current-expected)}, missing={sorted(expected-current)}")
     for relative, expected_hash in expected_hashes.items():
-        observed = hashlib.sha256((ROOT / relative).read_bytes()).hexdigest()
+        observed = file_sha256(ROOT / relative)
         if observed != expected_hash:
             raise RepairError(f"sealed lean-v1 bytes changed: {relative}")
 
@@ -119,10 +134,27 @@ def verify_lean_v1_preservation(commit: str = SEALED_COMMIT) -> None:
 def skill_tree_sha256() -> str:
     skill = ROOT / "skills" / "frame-business-research-problem"
     digest = hashlib.sha256()
-    for path in sorted(item for item in skill.rglob("*") if item.is_file()):
+    files = (
+        item for item in skill.rglob("*")
+        if item.is_file() and "__pycache__" not in item.parts and item.suffix.lower() != ".pyc"
+    )
+    for path in sorted(files):
         digest.update(path.relative_to(skill).as_posix().encode("utf-8") + b"\0")
-        digest.update(hashlib.sha256(path.read_bytes()).digest())
+        digest.update(hashlib.sha256(canonical_file_bytes(path)).digest())
     return digest.hexdigest()
+
+
+def refresh_preservation_manifest() -> None:
+    path = REPAIR / "preservation-manifest.json"
+    manifest = json.loads(path.read_text(encoding="utf-8"))
+    manifest["lean_v1_sha256"] = {
+        relative: file_sha256(ROOT / relative)
+        for relative in sorted(manifest["lean_v1_sha256"])
+    }
+    source = ROOT / manifest["source_preservation_manifest"]
+    manifest["source_preservation_manifest_sha256"] = file_sha256(source)
+    manifest["baseline_skill_tree_sha256"] = skill_tree_sha256()
+    path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
 
 def classify_disagreement(
@@ -400,3 +432,16 @@ def evaluate_d2r_gates(metrics: dict[str, Any], policy: dict[str, Any]) -> list[
 
 def development_authorized(gates: list[dict[str, Any]]) -> bool:
     return bool(gates) and all(gate["status"] == "pass" for gate in gates)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--write-preservation", action="store_true")
+    args = parser.parse_args()
+    if not args.write_preservation:
+        parser.error("--write-preservation is required")
+    refresh_preservation_manifest()
+
+
+if __name__ == "__main__":
+    main()
