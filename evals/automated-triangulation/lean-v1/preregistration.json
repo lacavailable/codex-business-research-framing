@@ -1,0 +1,38 @@
+{
+  "schema_version": "3.1.0-lean.1",
+  "method": "automated source-grounded triangulation",
+  "fixed_seed": 20260722,
+  "authoritative_prior_records": false,
+  "stages": {
+    "D0": {"maximum_model_calls": 0, "cases": []},
+    "D1": {"maximum_model_calls": 16, "cases": ["OM-P01", "IS-P01", "OR-P01", "MGMT-P01"], "adjudication_allowed": false},
+    "D2": {"maximum_model_calls": 40, "case_count": 8, "maximum_adjudications": 8},
+    "validation": {"maximum_model_calls": 40, "case_count": 8, "maximum_adjudications": 8}
+  },
+  "silver_thresholds": {"high": 0.80, "provisional": 0.60},
+  "contrast_batch": ["rotating_material_fidelity", "mechanism_or_evidence", "faithful_paraphrase", "prestige_label"],
+  "tolerances": {
+    "paraphrase_nonmaterial_disagreements_max": 1,
+    "paraphrase_fidelity_hard_failure_disagreements_max": 0,
+    "prestige_substantive_effects_max": 0,
+    "unaffected_category_raw_movement": 1.0,
+    "inter_run_normalized_movement": 3.0
+  },
+  "core_gates": [
+    {"id": "privacy-and-holdouts", "metric": "privacy_and_holdouts_valid", "operator": "is", "threshold": true},
+    {"id": "role-separation", "metric": "role_separation_completion", "operator": "=", "threshold": 1.0},
+    {"id": "evidence-spans", "metric": "valid_evidence_span_rate", "operator": ">=", "threshold": 0.95},
+    {"id": "synthetic-applicability", "metric": "synthetic_applicability_accuracy", "operator": ">=", "threshold": 0.95},
+    {"id": "private-applicability", "metric": "private_applicability_agreement", "operator": ">=", "threshold": 0.90},
+    {"id": "material-fidelity-ordering", "metric": "material_fidelity_contrast_ordering", "operator": ">=", "threshold": 0.90},
+    {"id": "fidelity-false-positive", "metric": "fidelity_false_positive_rate", "operator": "<=", "threshold": 0.05},
+    {"id": "category-localization", "metric": "category_localization_accuracy", "operator": ">=", "threshold": 0.80},
+    {"id": "paraphrase-invariance", "metric": "paraphrase_policy_pass", "operator": "is", "threshold": true},
+    {"id": "prestige-invariance", "metric": "prestige_policy_pass", "operator": "is", "threshold": true},
+    {"id": "conditional-adjudication", "metric": "conditional_adjudication_rate", "operator": "<=", "threshold": 0.30},
+    {"id": "validation-structure-high", "metric": "validation_structure_high_count", "operator": ">=", "threshold": 6},
+    {"id": "domain-coverage", "metric": "usable_validation_domains", "operator": "=", "threshold": 4}
+  ],
+  "diagnostics": ["reliability", "score_distributions", "confidence", "inter_run_variation", "unresolved_dimensions", "non_core_perturbations"],
+  "release_boundary": "Tier A authorizes an experimental release only; Tier B continues to require real blinded experts."
+}

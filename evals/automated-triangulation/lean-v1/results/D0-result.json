@@ -1,0 +1,11 @@
+{
+  "schema_version": "3.1.0-lean.1",
+  "stage": "D0",
+  "status": "pass",
+  "model_calls": 0,
+  "schema_count": 9,
+  "core_gate_count": 13,
+  "expert_holdout_unopened": true,
+  "automated_holdout_unopened": true,
+  "private_paths_tracked": false
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "3.1.0-lean.1",
+  "run_id": "LRUN-6e8ab5816041d0f2",
+  "stage": "D1",
+  "status": "paused_resource_limit",
+  "case_count": 4,
+  "calls_completed": 0,
+  "calls_maximum": 16,
+  "role_counts": {},
+  "private_content_excluded": true,
+  "expert_holdout_unopened": true,
+  "automated_holdout_unopened": true,
+  "updated_at": "2026-07-22T04:49:55.835813Z"
+}

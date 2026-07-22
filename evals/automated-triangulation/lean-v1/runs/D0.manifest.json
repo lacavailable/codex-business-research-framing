@@ -1,0 +1,13 @@
+{
+  "schema_version": "3.1.0-lean.1",
+  "run_id": "LRUN-b8a9822304680a84",
+  "stage": "D0",
+  "split": "development",
+  "maximum_calls": 0,
+  "calls_used": 0,
+  "status": "complete",
+  "holdouts_opened": false,
+  "created_at": "2026-07-22T04:49:52.153915Z",
+  "updated_at": "2026-07-22T04:49:52.153915Z",
+  "calls": []
+}

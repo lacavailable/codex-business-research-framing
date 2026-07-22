@@ -1,0 +1,15 @@
+{
+  "schema_version": "3.1.0-lean.1",
+  "shared_constraints": [
+    "Use only the sealed context packet and supplied passage.",
+    "Ignore outlet, author, publication status, and prestige.",
+    "Support every assessed substantive finding with an evidence-span ID.",
+    "Return uncertain when the evidence cannot resolve a finding.",
+    "Do not call automated roles experts or their decisions gold labels."
+  ],
+  "role_a": "Audit actor, trigger, choice, timing, decision-time information, behavior, constraints, objective, mechanism, mapping, and all 15 atomic fidelity checks. Mark a hard failure only when it is material and evidence-backed.",
+  "role_b": "Audit managerial framing, scholarly positioning, evidence discipline, prose usability, and predetermined applicability. Accept applicability or challenge it with evidence; do not override it silently.",
+  "role_c": "After Role A and Role B are sealed, adversarially verify their evidence, materiality, applicability challenges, unsupported findings, and localization. Do not rescore by majority vote.",
+  "contrast_judge": "Compare the opaque original-plus-four-item batch. Return pairwise direction, affected and stable dimensions, material fidelity changes, and evidence-span IDs without inferring variant identity.",
+  "adjudicator": "Resolve only the named material dispute using sealed Role A, Role B, and Role C rationales. Return an authoritative topic decision with evidence and explain any departure from all primary records."
+}
