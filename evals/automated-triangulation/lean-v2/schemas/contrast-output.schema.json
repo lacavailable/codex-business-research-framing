@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "D2R prestige-free contrast judgment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_id", "case_id", "role", "prompt_hash", "model", "fresh_context", "sealed_at", "confidence", "opaque_items", "comparisons"],
+  "properties": {
+    "schema_version": {"const": "3.1.0-lean.2"},
+    "record_id": {"type": "string", "pattern": "^LCJ2-[0-9a-f]{16}$"},
+    "case_id": {"pattern": "^(OM|IS|OR|MGMT)-P[0-9]{2}$"},
+    "role": {"const": "contrast_judge"},
+    "prompt_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "model": {"type": "object"},
+    "fresh_context": {"const": true},
+    "sealed_at": {"type": "string", "format": "date-time"},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "opaque_items": {"type": "array", "minItems": 4, "maxItems": 4, "uniqueItems": true, "items": {"type": "string"}},
+    "comparisons": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["item_id", "direction", "affected_dimensions", "stable_dimensions", "material_fidelity_change", "reason", "evidence_span_ids"],
+        "properties": {
+          "item_id": {"type": "string"},
+          "direction": {"enum": ["better", "equivalent", "worse", "uncertain"]},
+          "affected_dimensions": {"type": "array", "uniqueItems": true, "items": {"enum": ["structure_fidelity", "managerial_framing", "scholarly_positioning", "evidence_discipline", "prose_usability"]}},
+          "stable_dimensions": {"type": "array", "uniqueItems": true, "items": {"enum": ["structure_fidelity", "managerial_framing", "scholarly_positioning", "evidence_discipline", "prose_usability"]}},
+          "material_fidelity_change": {"type": "boolean"},
+          "reason": {"type": "string", "minLength": 1},
+          "evidence_span_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^ES-[0-9]{3}$"}}
+        }
+      }
+    }
+  }
+}

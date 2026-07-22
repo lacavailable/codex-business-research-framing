@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/automated-triangulation/lean-v2/run-manifest.schema.json",
+  "title": "D2R resumable run manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "run_id", "stage", "split", "case_set", "control_cases", "required_call_cap", "conditional_adjudication_cap", "maximum_calls", "calls_used", "attempts_used", "status", "holdout_states", "created_at", "updated_at", "calls"],
+  "properties": {
+    "schema_version": {"const": "3.1.0-lean.2"},
+    "run_id": {"type": "string", "pattern": "^LRUN2-[0-9a-f]{16}$"},
+    "stage": {"const": "D2R"},
+    "split": {"const": "development"},
+    "case_set": {"const": ["OM-P02", "MGMT-P02", "IS-P02", "OR-P01", "IS-P01"]},
+    "control_cases": {"const": ["OR-P01", "IS-P01"]},
+    "required_call_cap": {"const": 20},
+    "conditional_adjudication_cap": {"const": 5},
+    "maximum_calls": {"const": 25},
+    "calls_used": {"type": "integer", "minimum": 0, "maximum": 25},
+    "attempts_used": {"type": "integer", "minimum": 0, "maximum": 25},
+    "status": {"enum": ["planned", "running", "complete", "incomplete", "failed", "paused_resource_limit"]},
+    "holdout_states": {"type": "object", "additionalProperties": false, "required": ["expert_holdout_unopened", "automated_holdout_unopened"], "properties": {"expert_holdout_unopened": {"const": true}, "automated_holdout_unopened": {"const": true}}},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "calls": {"type": "array", "minItems": 25, "maxItems": 25, "items": {"$ref": "#/$defs/call"}}
+  },
+  "$defs": {
+    "call": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["call_id", "call_kind", "case_id", "role", "provider", "model_id", "family_claim", "settings", "status", "attempts", "prompt_hash", "packet_sha256", "output_ref", "output_sha256", "schema_valid", "started_at", "completed_at"],
+      "properties": {
+        "call_id": {"type": "string", "pattern": "^LCALL2-[0-9a-f]{16}$"},
+        "call_kind": {"enum": ["required", "conditional"]},
+        "case_id": {"enum": ["OM-P02", "MGMT-P02", "IS-P02", "OR-P01", "IS-P01"]},
+        "role": {"enum": ["role_a", "role_b", "role_c", "contrast_judge", "adjudicator"]},
+        "provider": {"const": "OpenAI"},
+        "model_id": {"enum": ["gpt-5.6-sol", "gpt-5.6-terra"]},
+        "family_claim": {"const": "same_family"},
+        "settings": {"type": "object", "additionalProperties": false, "required": ["reasoning_effort", "sampling_controls"], "properties": {"reasoning_effort": {"enum": ["high", "xhigh"]}, "sampling_controls": {"const": "unavailable"}}},
+        "status": {"enum": ["planned", "running", "completed", "schema_invalid", "needs_adjudication", "not_required", "paused_resource_limit"]},
+        "attempts": {"type": "integer", "minimum": 0},
+        "prompt_hash": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "packet_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "output_ref": {"type": ["string", "null"]},
+        "output_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "schema_valid": {"type": ["boolean", "null"]},
+        "started_at": {"type": ["string", "null"], "format": "date-time"},
+        "completed_at": {"type": ["string", "null"], "format": "date-time"}
+      }
+    }
+  }
+}

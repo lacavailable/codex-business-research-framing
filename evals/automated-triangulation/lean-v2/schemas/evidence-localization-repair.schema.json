@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/automated-triangulation/lean-v2/evidence-localization-repair.schema.json",
+  "title": "Deterministic evidence-localization repair record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "repair_id", "case_id", "finding_id", "dimension", "agreed_assessment", "role_record_ids", "original_span_ids", "repaired_span_ids", "packet_supports_path", "original_record_sha256", "repaired_record_sha256", "rule_id", "justification", "semantic_content_changed", "status"],
+  "properties": {
+    "schema_version": {"const": "3.1.0-lean.2"},
+    "repair_id": {"type": "string", "pattern": "^ELR-[0-9a-f]{16}$"},
+    "case_id": {"type": "string", "pattern": "^(OM|IS|OR|MGMT)-P[0-9]{2}$"},
+    "finding_id": {"type": "string", "minLength": 1},
+    "dimension": {"enum": ["structure_fidelity", "managerial_framing", "scholarly_positioning", "evidence_discipline", "prose_usability"]},
+    "agreed_assessment": {"enum": ["supported", "not_supported", "uncertain", "not_applicable"]},
+    "role_record_ids": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "original_span_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^ES-[0-9]{3}$"}},
+    "repaired_span_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^ES-[0-9]{3}$"}},
+    "packet_supports_path": {"type": "string", "pattern": "^/supports/"},
+    "original_record_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "repaired_record_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "rule_id": {"const": "compatible-support-span-substitution-v1"},
+    "justification": {"type": "string", "minLength": 1},
+    "semantic_content_changed": {"const": false},
+    "status": {"enum": ["applied", "not_applicable", "rejected_semantic_difference"]}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "applied"}}},
+      "then": {"properties": {"repaired_record_sha256": {"not": {"const": ""}}}}
+    }
+  ]
+}
