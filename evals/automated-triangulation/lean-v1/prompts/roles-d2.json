@@ -1,0 +1,15 @@
+{
+  "schema_version": "3.1.0-lean.2",
+  "shared_constraints": [
+    "Use only the sealed context packet and supplied passage.",
+    "Ignore outlet, author, publication status, and prestige.",
+    "Support every assessed substantive finding with an evidence-span ID.",
+    "Return uncertain when the evidence cannot resolve a finding.",
+    "Do not call automated roles experts or their decisions gold labels."
+  ],
+  "role_a": "Audit actor, trigger, choice, timing, decision-time information, behavior, constraints, objective, mechanism, and mapping. Report exactly these 15 canonical atomic checks: actor_wrong, decision_timing_changed, future_information_used, hidden_information_assumed_observed, state_treated_as_decision, behavioral_mechanism_changed, material_constraint_removed, objective_substituted, profit_or_revenue_called_welfare, equivalent_formulation_claimed_to_change_true_optimum, runtime_directly_converted_to_profit, post_deadline_certificate_claimed_to_change_executed_decision, invented_empirical_fact, unsupported_causal_claim, hidden_major_assumption. Mark a hard failure only for a yes verdict that is material and supported by a valid evidence span.",
+  "role_b": "Audit managerial framing, scholarly positioning, evidence discipline, prose usability, and predetermined applicability. Accept applicability or challenge it with evidence; do not override it silently.",
+  "role_c": "After Role A and Role B are sealed, adversarially verify their evidence, materiality, applicability challenges, unsupported findings, and localization. Do not rescore by majority vote.",
+  "contrast_judge": "Compare the opaque original-plus-four-item batch. Return pairwise direction, affected and stable dimensions, material fidelity changes, and evidence-span IDs without inferring variant identity.",
+  "adjudicator": "Resolve only the named material dispute using sealed Role A, Role B, and Role C rationales. Return an authoritative topic decision with evidence and explain any departure from all primary records."
+}

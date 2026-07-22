@@ -1,0 +1,141 @@
+{
+  "schema_version": "3.1.0-lean.1",
+  "method": "automated source-grounded triangulation",
+  "stage": "D2",
+  "status": "fail",
+  "metrics": {
+    "privacy_and_holdouts_valid": true,
+    "role_separation_completion": 1.0,
+    "valid_evidence_span_rate": 0.976,
+    "combined_applicability_recovery": 1.0,
+    "material_defect_detection": 1.0,
+    "material_fidelity_contrast_ordering": 1.0,
+    "fidelity_false_positive_rate": 0.041666666666666664,
+    "category_localization_accuracy": 0.9375,
+    "paraphrase_policy_pass": true,
+    "prestige_policy_pass": false,
+    "conditional_adjudication_rate": 0.375,
+    "structure_high_count": 8,
+    "usable_domains": 4
+  },
+  "gates": [
+    {
+      "id": "privacy-and-holdouts",
+      "status": "pass",
+      "observed": true,
+      "threshold": true,
+      "classification": "blocking"
+    },
+    {
+      "id": "role-separation",
+      "status": "pass",
+      "observed": 1.0,
+      "threshold": 1.0,
+      "classification": "blocking"
+    },
+    {
+      "id": "evidence-spans",
+      "status": "pass",
+      "observed": 0.976,
+      "threshold": 0.95,
+      "classification": "blocking"
+    },
+    {
+      "id": "combined-applicability",
+      "status": "pass",
+      "observed": 1.0,
+      "threshold": 0.95,
+      "classification": "blocking"
+    },
+    {
+      "id": "material-defect-detection",
+      "status": "pass",
+      "observed": 1.0,
+      "threshold": 0.9,
+      "classification": "blocking"
+    },
+    {
+      "id": "material-fidelity-ordering",
+      "status": "pass",
+      "observed": 1.0,
+      "threshold": 0.9,
+      "classification": "blocking"
+    },
+    {
+      "id": "fidelity-false-positive",
+      "status": "pass",
+      "observed": 0.041666666666666664,
+      "threshold": 0.05,
+      "classification": "blocking"
+    },
+    {
+      "id": "category-localization",
+      "status": "pass",
+      "observed": 0.9375,
+      "threshold": 0.8,
+      "classification": "blocking"
+    },
+    {
+      "id": "paraphrase-invariance",
+      "status": "pass",
+      "observed": true,
+      "threshold": true,
+      "classification": "diagnostic"
+    },
+    {
+      "id": "prestige-invariance",
+      "status": "fail",
+      "observed": false,
+      "threshold": true,
+      "classification": "diagnostic"
+    },
+    {
+      "id": "conditional-adjudication",
+      "status": "fail",
+      "observed": 0.375,
+      "threshold": 0.3,
+      "classification": "blocking"
+    },
+    {
+      "id": "structure-high",
+      "status": "pass",
+      "observed": 8,
+      "threshold": 6,
+      "classification": "blocking"
+    },
+    {
+      "id": "domain-coverage",
+      "status": "pass",
+      "observed": 4,
+      "threshold": 4,
+      "classification": "blocking"
+    }
+  ],
+  "failed_blocking_gates": [
+    "conditional-adjudication"
+  ],
+  "diagnostics": {
+    "mean_role_confidence": 0.91125,
+    "unresolved_topics": {},
+    "paraphrase_disagreements": 1,
+    "prestige_effects": 5
+  },
+  "resource_use": {
+    "authoritative_attempts": 36,
+    "completed_authoritative_records": 35,
+    "schema_invalid_attempts": 1,
+    "adjudications": 3,
+    "unused_call_capacity": 4
+  },
+  "holdouts": {
+    "expert": "unopened",
+    "automated": "unopened"
+  },
+  "private_content_included": false,
+  "skill_development_authorized": false,
+  "limitations": [
+    "No human experts participated.",
+    "Available Codex variants are conservatively reported as same-family.",
+    "D2 uses private source-grounded passages but publishes no passage wording or evidence spans."
+  ]
+}

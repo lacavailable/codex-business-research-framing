@@ -1,0 +1,47 @@
+{
+  "schema_version": "3.1.0-lean.1",
+  "method": "automated source-grounded triangulation",
+  "stage": "D1",
+  "status": "pass",
+  "metrics": {
+    "complete_sentinels": 4,
+    "deterministic_reconciliations": 3,
+    "structure_high": 4,
+    "valid_evidence_span_rate": 1.0,
+    "combined_applicability_recovery": 1.0,
+    "material_fidelity_contrast_ordering": 1.0,
+    "fidelity_false_positive_rate": 0.0,
+    "category_localization_accuracy": 0.875,
+    "intended_contrast_recovery": 0.9375,
+    "conditional_adjudication_rate": 0.25,
+    "paraphrase_disagreements": 0,
+    "prestige_effects": 1
+  },
+  "acceptance": {
+    "complete_sentinels": true,
+    "deterministic_reconciliations": true,
+    "structure_high": true,
+    "intended_contrast_recovery": true,
+    "invariants": true
+  },
+  "dimension_status_counts": {
+    "high": 18,
+    "not_applicable": 1,
+    "unresolved": 1
+  },
+  "resource_use": {
+    "authoritative_attempts": 18,
+    "completed_authoritative_records": 17,
+    "schema_invalid_attempts": 1,
+    "adjudications": 1
+  },
+  "holdouts": {
+    "expert": "unopened",
+    "automated": "unopened"
+  },
+  "private_content_included": false,
+  "limitations": [
+    "Available Codex variants are conservatively treated as same-family.",
+    "D1 is a four-case engineering sentinel stage, not validation."
+  ]
+}

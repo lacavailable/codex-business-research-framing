@@ -2,13 +2,19 @@
   "schema_version": "3.1.0-lean.1",
   "run_id": "LRUN-6e8ab5816041d0f2",
   "stage": "D1",
-  "status": "paused_resource_limit",
+  "status": "complete",
   "case_count": 4,
-  "calls_completed": 0,
-  "calls_maximum": 16,
-  "role_counts": {},
+  "calls_completed": 17,
+  "calls_maximum": 20,
+  "role_counts": {
+    "role_a": 4,
+    "role_b": 4,
+    "role_c": 4,
+    "contrast_judge": 4,
+    "adjudicator": 1
+  },
   "private_content_excluded": true,
   "expert_holdout_unopened": true,
   "automated_holdout_unopened": true,
-  "updated_at": "2026-07-22T04:49:55.835813Z"
+  "updated_at": "2026-07-22T08:10:12.183667Z"
 }
