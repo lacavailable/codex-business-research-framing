@@ -1,0 +1,42 @@
+{
+  "schema_version": "3.1.0-lean.1",
+  "method": "automated source-grounded triangulation",
+  "status": "paused_resource_limit",
+  "development_passed": false,
+  "validation_passed": false,
+  "evaluator_frozen": false,
+  "automated_holdout_opened": false,
+  "expert_holdout_unopened": true,
+  "no_human_experts": true,
+  "experimental_release_eligible": false,
+  "core_gates": [
+    {"id": "privacy-and-holdouts", "status": "pass", "observed": true, "threshold": true},
+    {"id": "role-separation", "status": "not_assessed", "observed": null, "threshold": 1.0},
+    {"id": "evidence-spans", "status": "not_assessed", "observed": null, "threshold": 0.95},
+    {"id": "synthetic-applicability", "status": "not_assessed", "observed": null, "threshold": 0.95},
+    {"id": "private-applicability", "status": "not_assessed", "observed": null, "threshold": 0.9},
+    {"id": "material-fidelity-ordering", "status": "not_assessed", "observed": null, "threshold": 0.9},
+    {"id": "fidelity-false-positive", "status": "not_assessed", "observed": null, "threshold": 0.05},
+    {"id": "category-localization", "status": "not_assessed", "observed": null, "threshold": 0.8},
+    {"id": "paraphrase-invariance", "status": "not_assessed", "observed": null, "threshold": true},
+    {"id": "prestige-invariance", "status": "not_assessed", "observed": null, "threshold": true},
+    {"id": "conditional-adjudication", "status": "not_assessed", "observed": null, "threshold": 0.3},
+    {"id": "validation-structure-high", "status": "not_assessed", "observed": null, "threshold": 6},
+    {"id": "domain-coverage", "status": "not_assessed", "observed": null, "threshold": 4}
+  ],
+  "diagnostics": {
+    "reliability": null,
+    "score_distributions": null,
+    "confidence": null,
+    "inter_run_variation": null,
+    "unresolved_dimensions": null,
+    "non_core_perturbations": null
+  },
+  "freeze_commit": null,
+  "limitations": [
+    "D1 is paused before any authoritative model call because isolated execution capacity is unavailable in this run.",
+    "The 15 PR #3 records are diagnostic only and do not count toward lean gates.",
+    "No human experts participated and no formal validation claim is authorized.",
+    "Neither automated nor expert holdout has been opened."
+  ]
+}
