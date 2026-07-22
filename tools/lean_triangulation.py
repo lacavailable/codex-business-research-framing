@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import subprocess
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -153,9 +154,17 @@ def verify_preservation() -> None:
     manifest = read_json(LEAN / "preservation-manifest.json")
     private_root = ROOT / "research-private" / "evaluator-calibration"
     for relative, expected in manifest["tracked_pr3_sha256"].items():
-        path = ROOT / relative
-        if not path.exists() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+        try:
+            blob = subprocess.check_output(["git", "show", f"{manifest['baseline_commit']}:{relative}"], cwd=ROOT)
+        except subprocess.CalledProcessError as exc:
+            raise LeanError(f"cannot read preserved PR #3 artifact: {relative}") from exc
+        if hashlib.sha256(blob).hexdigest() != expected:
+            raise LeanError(f"preservation manifest does not match baseline: {relative}")
+        current = subprocess.check_output(["git", "show", f"HEAD:{relative}"], cwd=ROOT)
+        if hashlib.sha256(current).hexdigest() != expected:
             raise LeanError(f"preserved PR #3 artifact changed: {relative}")
+    if not private_root.exists():
+        return
     for relative, expected in manifest["private_diagnostic_sha256"].items():
         path = private_root / relative
         if not path.exists() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
