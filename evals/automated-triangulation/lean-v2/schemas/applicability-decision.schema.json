@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/automated-triangulation/lean-v2/applicability-decision.schema.json",
+  "title": "Predetermined applicability with sealed role review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "decision_id", "case_id", "dimension", "precedence_trace", "predetermined", "role_b_review", "role_c_verification", "final_applicability", "material_disagreement"],
+  "properties": {
+    "schema_version": {"const": "3.1.0-lean.2"},
+    "decision_id": {"type": "string", "pattern": "^LAP-[0-9a-f]{16}$"},
+    "case_id": {"type": "string", "pattern": "^(OM|IS|OR|MGMT)-P[0-9]{2}$"},
+    "dimension": {"enum": ["structure_fidelity", "managerial_framing", "scholarly_positioning", "evidence_discipline", "prose_usability"]},
+    "precedence_trace": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source", "value", "decisive", "basis"],
+        "properties": {
+          "source": {"enum": ["explicit_task_requirement", "explicitly_attempted_layer", "passage_function", "supplied_context", "response_profile"]},
+          "value": {"enum": ["required", "optional", "not_applicable", "not_determinative"]},
+          "decisive": {"type": "boolean"},
+          "basis": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "predetermined": {"enum": ["required", "optional", "not_applicable"]},
+    "role_b_review": {"$ref": "#/$defs/review"},
+    "role_c_verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decision", "reason", "evidence_span_ids"],
+      "properties": {
+        "decision": {"enum": ["verify", "reject_with_evidence", "uncertain"]},
+        "reason": {"type": "string", "minLength": 1},
+        "evidence_span_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^ES-[0-9]{3}$"}}
+      }
+    },
+    "final_applicability": {"enum": ["required", "optional", "not_applicable", "unresolved"]},
+    "material_disagreement": {"type": "boolean"}
+  },
+  "$defs": {
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decision", "challenged_value", "reason", "evidence_span_ids"],
+      "properties": {
+        "decision": {"enum": ["accept", "challenge_with_evidence"]},
+        "challenged_value": {"type": ["string", "null"], "enum": ["required", "optional", "not_applicable", null]},
+        "reason": {"type": "string", "minLength": 1},
+        "evidence_span_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^ES-[0-9]{3}$"}}
+      }
+    }
+  }
+}

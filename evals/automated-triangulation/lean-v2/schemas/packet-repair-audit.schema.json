@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/automated-triangulation/lean-v2/packet-repair-audit.schema.json",
+  "title": "Deterministic packet validation and repair audit",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "audit_id", "case_id", "original_packet_ref", "repaired_packet_ref", "original_sha256", "repaired_sha256", "validation_before", "transformations", "validation_after", "substantive_content_changed", "prestige_cues_removed"],
+  "properties": {
+    "schema_version": {"const": "3.1.0-lean.2"},
+    "audit_id": {"type": "string", "pattern": "^PRA-[0-9a-f]{16}$"},
+    "case_id": {"type": "string", "pattern": "^(OM|IS|OR|MGMT)-P[0-9]{2}$"},
+    "original_packet_ref": {"type": "string", "minLength": 1},
+    "repaired_packet_ref": {"type": "string", "minLength": 1},
+    "original_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "repaired_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "validation_before": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "transformations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "json_pointer", "before_sha256", "after_sha256", "reason"],
+        "properties": {
+          "kind": {"enum": ["field_name_normalization", "unicode_normalization", "mojibake_repair", "supports_path_normalization", "prestige_field_removal", "identity_value_redaction"]},
+          "json_pointer": {"type": "string", "pattern": "^/"},
+          "before_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "after_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "reason": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "validation_after": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "substantive_content_changed": {"const": false},
+    "prestige_cues_removed": {"const": true}
+  }
+}

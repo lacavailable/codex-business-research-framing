@@ -1,0 +1,44 @@
+{
+  "schema_version": "3.1.0-lean.2",
+  "method": "automated source-grounded triangulation",
+  "stage": "D2R",
+  "split": "development",
+  "fixed_seed": 20260722,
+  "historical_boundary": {
+    "lean_v1_modified": false,
+    "historical_D2_conditional_adjudication_rate": 0.375,
+    "historical_D2_status": "failed",
+    "retroactive_reclassification_permitted": false
+  },
+  "cases": ["OM-P02", "MGMT-P02", "IS-P02", "OR-P01", "IS-P01"],
+  "controls": ["OR-P01", "IS-P01"],
+  "call_budget": {"required": 20, "conditional_semantic_adjudications": 5, "maximum_attempts": 25, "retries_and_schema_invalid_attempts_count": true},
+  "adjudication_policy": {
+    "material_semantic_adjudication_rate": {"classification": "blocking", "operator": "<=", "threshold": 0.30, "maximum_count_for_five_cases": 1},
+    "procedural_correction_rate": {"classification": "diagnostic"},
+    "deterministic_repairs_run_before_semantic_adjudication": true
+  },
+  "applicability_precedence": ["explicit_task_requirement", "explicitly_attempted_layer", "passage_function", "supplied_context", "response_profile"],
+  "deterministic_prerequisites": [
+    {"id": "lean-v1-immutability", "metric": "lean_v1_hashes_preserved", "operator": "is", "threshold": true},
+    {"id": "packet-validation", "metric": "production_packet_validation_rate", "operator": "=", "threshold": 1.0}
+  ],
+  "core_gates": [
+    {"id": "privacy-and-holdouts", "metric": "privacy_and_holdouts_valid", "operator": "is", "threshold": true},
+    {"id": "required-records-schema-valid", "metric": "required_records_schema_valid_rate", "operator": "=", "threshold": 1.0},
+    {"id": "evidence-spans", "metric": "valid_evidence_span_rate", "operator": ">=", "threshold": 0.95},
+    {"id": "combined-applicability", "metric": "applicability_recovery", "operator": ">=", "threshold": 0.95},
+    {"id": "material-defect-detection", "metric": "material_defect_detection", "operator": ">=", "threshold": 0.90},
+    {"id": "material-fidelity-ordering", "metric": "material_fidelity_contrast_ordering", "operator": ">=", "threshold": 0.90},
+    {"id": "fidelity-false-positive", "metric": "fidelity_false_positive_rate", "operator": "<=", "threshold": 0.05},
+    {"id": "category-localization", "metric": "category_localization_accuracy", "operator": ">=", "threshold": 0.80},
+    {"id": "no-unresolved-material-fidelity", "metric": "unresolved_material_fidelity_disagreements", "operator": "=", "threshold": 0},
+    {"id": "material-semantic-adjudication", "metric": "material_semantic_adjudication_rate", "operator": "<=", "threshold": 0.30, "maximum_count": 1},
+    {"id": "procedural-corrections-valid", "metric": "procedural_corrections_valid", "operator": "is", "threshold": true},
+    {"id": "clean-control-stability", "metric": "controls_without_new_material_disagreement", "operator": "=", "threshold": 2},
+    {"id": "four-domain-coverage", "metric": "combined_d2_d2r_domains", "operator": "=", "threshold": 4},
+    {"id": "prestige-exclusion", "metric": "production_packets_without_prestige_cues", "operator": "=", "threshold": 1.0}
+  ],
+  "diagnostics": ["procedural_correction_rate", "paraphrase_sensitivity", "prestige_diagnostic_effects", "reliability", "score_distributions", "confidence", "unresolved_dimensions"],
+  "authorization": {"on_all_gates_pass": {"experimental_skill_development": true}, "does_not_authorize": ["validation_claim", "holdout_claim", "release", "formal_scholarly_validation"]}
+}

@@ -13,12 +13,17 @@ ROOT = Path(__file__).resolve().parents[1]
 FREEZE = ROOT / "evals" / "calibration" / "public-metadata" / "evaluator-freeze.json"
 
 
+def canonical_bytes(path: Path) -> bytes:
+    """Hash tracked text consistently across Git LF and Windows CRLF checkouts."""
+    return path.read_bytes().replace(b"\r\n", b"\n")
+
+
 def main() -> int:
     record = json.loads(FREEZE.read_text(encoding="utf-8"))
     errors = []
     for relative, expected in record["files"].items():
         path = ROOT / relative
-        actual = hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else "missing"
+        actual = hashlib.sha256(canonical_bytes(path)).hexdigest() if path.is_file() else "missing"
         if actual != expected:
             errors.append(f"{relative}: expected {expected}, got {actual}")
     if errors:

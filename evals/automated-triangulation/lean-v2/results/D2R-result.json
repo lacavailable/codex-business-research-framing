@@ -1,0 +1,176 @@
+{
+  "schema_version": "3.1.0-lean.2",
+  "method": "automated source-grounded triangulation",
+  "stage": "D2R",
+  "status": "fail",
+  "metrics": {
+    "privacy_and_holdouts_valid": true,
+    "required_records_schema_valid_rate": 1.0,
+    "valid_evidence_span_rate": 0.9213483146067416,
+    "applicability_recovery": 1.0,
+    "material_defect_detection": 0.8,
+    "material_fidelity_contrast_ordering": 0.8,
+    "fidelity_false_positive_rate": 0.0,
+    "category_localization_accuracy": 0.8,
+    "unresolved_material_fidelity_disagreements": 0,
+    "material_semantic_adjudication_rate": 0.0,
+    "procedural_corrections_valid": true,
+    "controls_without_new_material_disagreement": 2,
+    "combined_d2_d2r_domains": 4,
+    "production_packets_without_prestige_cues": 1.0
+  },
+  "gates": [
+    {
+      "id": "privacy-and-holdouts",
+      "metric": "privacy_and_holdouts_valid",
+      "operator": "is",
+      "threshold": true,
+      "observed": true,
+      "status": "pass"
+    },
+    {
+      "id": "required-records-schema-valid",
+      "metric": "required_records_schema_valid_rate",
+      "operator": "=",
+      "threshold": 1.0,
+      "observed": 1.0,
+      "status": "pass"
+    },
+    {
+      "id": "evidence-spans",
+      "metric": "valid_evidence_span_rate",
+      "operator": ">=",
+      "threshold": 0.95,
+      "observed": 0.9213483146067416,
+      "status": "fail"
+    },
+    {
+      "id": "combined-applicability",
+      "metric": "applicability_recovery",
+      "operator": ">=",
+      "threshold": 0.95,
+      "observed": 1.0,
+      "status": "pass"
+    },
+    {
+      "id": "material-defect-detection",
+      "metric": "material_defect_detection",
+      "operator": ">=",
+      "threshold": 0.9,
+      "observed": 0.8,
+      "status": "fail"
+    },
+    {
+      "id": "material-fidelity-ordering",
+      "metric": "material_fidelity_contrast_ordering",
+      "operator": ">=",
+      "threshold": 0.9,
+      "observed": 0.8,
+      "status": "fail"
+    },
+    {
+      "id": "fidelity-false-positive",
+      "metric": "fidelity_false_positive_rate",
+      "operator": "<=",
+      "threshold": 0.05,
+      "observed": 0.0,
+      "status": "pass"
+    },
+    {
+      "id": "category-localization",
+      "metric": "category_localization_accuracy",
+      "operator": ">=",
+      "threshold": 0.8,
+      "observed": 0.8,
+      "status": "pass"
+    },
+    {
+      "id": "no-unresolved-material-fidelity",
+      "metric": "unresolved_material_fidelity_disagreements",
+      "operator": "=",
+      "threshold": 0,
+      "observed": 0,
+      "status": "pass"
+    },
+    {
+      "id": "material-semantic-adjudication",
+      "metric": "material_semantic_adjudication_rate",
+      "operator": "<=",
+      "threshold": 0.3,
+      "maximum_count": 1,
+      "observed": 0.0,
+      "status": "pass"
+    },
+    {
+      "id": "procedural-corrections-valid",
+      "metric": "procedural_corrections_valid",
+      "operator": "is",
+      "threshold": true,
+      "observed": true,
+      "status": "pass"
+    },
+    {
+      "id": "clean-control-stability",
+      "metric": "controls_without_new_material_disagreement",
+      "operator": "=",
+      "threshold": 2,
+      "observed": 2,
+      "status": "pass"
+    },
+    {
+      "id": "four-domain-coverage",
+      "metric": "combined_d2_d2r_domains",
+      "operator": "=",
+      "threshold": 4,
+      "observed": 4,
+      "status": "pass"
+    },
+    {
+      "id": "prestige-exclusion",
+      "metric": "production_packets_without_prestige_cues",
+      "operator": "=",
+      "threshold": 1.0,
+      "observed": 1.0,
+      "status": "pass"
+    }
+  ],
+  "diagnostics": {
+    "procedural_correction_rate": 0.4,
+    "procedural_correction_count": 2,
+    "historical_prestige_effects": 5,
+    "original_hard_failures": {
+      "OM-P02": [
+        "material_constraint_removed",
+        "hidden_major_assumption"
+      ]
+    },
+    "gate_thresholds_passed": false
+  },
+  "resource_use": {
+    "required_calls": 20,
+    "attempts_used": 22,
+    "schema_invalid_attempts": 1,
+    "dependent_invalid_attempts": 1,
+    "semantic_adjudications": 0,
+    "remaining_capacity": 3
+  },
+  "experimental_skill_development": false,
+  "validation_authorized": false,
+  "automated_holdout_authorized": false,
+  "release_authorized": false,
+  "holdouts": {
+    "expert": "unopened",
+    "automated": "unopened"
+  },
+  "private_content_included": false,
+  "protocol_deviations": [
+    "The exact metric summarizer was implemented after authoritative calls began rather than included in freeze commit 817dfe2.",
+    "The frozen contrast-output schema allowed arbitrary item_id strings; MGMT-P02 returned evidence IDs where construction item IDs were required, preventing one-construct mapping."
+  ],
+  "limitations": [
+    "No human experts participated.",
+    "Automated roles are same-family and are not experts.",
+    "D2R is development authorization only; validation and both holdout claims remain unavailable.",
+    "Strict evidence-span validity counts assessed uncertainty and verification records without spans as invalid; no alternative denominator is substituted after results."
+  ]
+}

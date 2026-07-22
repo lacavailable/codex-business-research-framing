@@ -3,11 +3,13 @@
   "run_id": "LRUN-b8a9822304680a84",
   "stage": "D0",
   "split": "development",
+  "required_call_cap": 0,
+  "conditional_adjudication_cap": 0,
   "maximum_calls": 0,
   "calls_used": 0,
   "status": "complete",
   "holdouts_opened": false,
-  "created_at": "2026-07-22T04:49:52.153915Z",
-  "updated_at": "2026-07-22T04:49:52.153915Z",
+  "created_at": "2026-07-22T06:17:02.656338Z",
+  "updated_at": "2026-07-22T06:17:02.656338Z",
   "calls": []
 }

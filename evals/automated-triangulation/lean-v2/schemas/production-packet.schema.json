@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/automated-triangulation/lean-v2/production-packet.schema.json",
+  "title": "Prestige-free D2R production packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "opaque_case_id", "domain", "passage_function", "requested_task", "attempted_layers", "response_profile", "anonymized_context", "passage", "evidence_spans", "supports", "applicability_ref", "source_content_sha256", "packet_sha256", "prestige_cues_absent"],
+  "properties": {
+    "schema_version": {"const": "3.1.0-lean.2"},
+    "opaque_case_id": {"type": "string", "pattern": "^D2R-[0-9a-f]{16}$"},
+    "domain": {"enum": ["OM", "IS", "OR", "MGMT"]},
+    "passage_function": {"type": "string", "minLength": 1},
+    "requested_task": {"type": "string", "minLength": 1},
+    "attempted_layers": {"type": "array", "uniqueItems": true, "items": {"enum": ["structure_fidelity", "managerial_framing", "scholarly_positioning", "evidence_discipline", "prose_usability"]}},
+    "response_profile": {"enum": ["compact", "standard", "full_audit", "not_specified"]},
+    "anonymized_context": {"type": "object", "additionalProperties": {"type": ["string", "number", "boolean", "null", "array", "object"]}},
+    "passage": {"type": "string", "minLength": 1},
+    "evidence_spans": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false, "required": ["span_id", "text"], "properties": {"span_id": {"type": "string", "pattern": "^ES-[0-9]{3}$"}, "text": {"type": "string", "minLength": 1}}}},
+    "supports": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^ES-[0-9]{3}$"}}},
+    "applicability_ref": {"type": "string", "pattern": "^LAP-[0-9a-f]{16}$"},
+    "source_content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "packet_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "prestige_cues_absent": {"const": true}
+  }
+}

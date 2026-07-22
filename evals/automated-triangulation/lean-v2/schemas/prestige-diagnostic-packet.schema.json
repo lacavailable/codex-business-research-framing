@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/automated-triangulation/lean-v2/prestige-diagnostic-packet.schema.json",
+  "title": "Prestige-label diagnostic packet kept outside production evaluation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "diagnostic_id", "production_packet_sha256", "arm", "label_text", "randomized_order", "excluded_from_production_metrics"],
+  "properties": {
+    "schema_version": {"const": "3.1.0-lean.2"},
+    "diagnostic_id": {"type": "string", "pattern": "^PDG-[0-9a-f]{16}$"},
+    "production_packet_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "arm": {"enum": ["prestige_label", "neutral_label"]},
+    "label_text": {"type": "string", "minLength": 1},
+    "randomized_order": {"type": "integer", "minimum": 0},
+    "excluded_from_production_metrics": {"const": true}
+  }
+}
