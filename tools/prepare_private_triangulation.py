@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PRIVATE = ROOT / "research-private" / "evaluator-calibration"
 PUBLIC = ROOT / "evals" / "automated-triangulation"
 LEGACY = ROOT / "evals" / "calibration"
+EXPERT_BASELINE_COMMIT = "540e72071ea35be228ef4c72c1b3276223631a44"
 
 SPLITS = {
     "OM-P01": "development", "OM-P02": "development",
@@ -46,6 +47,13 @@ class PreparationError(RuntimeError):
 
 def sha256_bytes(raw: bytes) -> str:
     return hashlib.sha256(raw).hexdigest()
+
+
+def git_blob_bytes(revision: str, relative: str) -> bytes:
+    try:
+        return subprocess.check_output(["git", "show", f"{revision}:{relative}"], cwd=ROOT)
+    except subprocess.CalledProcessError as exc:
+        raise PreparationError(f"cannot read tracked blob {revision}:{relative}") from exc
 
 
 def write_json(path: Path, data: object) -> None:
@@ -179,12 +187,14 @@ def legacy_holdout_files() -> list[Path]:
 
 def record_expert_holdout() -> dict:
     files = {
-        path.relative_to(ROOT).as_posix(): sha256_bytes(path.read_bytes())
+        relative: sha256_bytes(git_blob_bytes(EXPERT_BASELINE_COMMIT, relative))
         for path in legacy_holdout_files()
+        for relative in [path.relative_to(ROOT).as_posix()]
     }
     record = {
         "schema_version": "1.0.0",
-        "baseline_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
+        "baseline_commit": EXPERT_BASELINE_COMMIT,
+        "hash_scope": "canonical_git_blob_bytes",
         "expert_holdout_unopened": True,
         "files": files,
     }
@@ -197,8 +207,11 @@ def verify() -> dict:
     baseline = json.loads(baseline_path.read_text(encoding="utf-8"))
     errors = []
     for relative, expected in baseline["files"].items():
-        path = ROOT / relative
-        if not path.is_file() or sha256_bytes(path.read_bytes()) != expected:
+        try:
+            actual = sha256_bytes(git_blob_bytes("HEAD", relative))
+        except PreparationError:
+            actual = None
+        if actual != expected:
             errors.append(f"expert holdout changed: {relative}")
     tracked = subprocess.check_output(["git", "ls-files", "research-private"], cwd=ROOT, text=True).strip()
     if tracked:

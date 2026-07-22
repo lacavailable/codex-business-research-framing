@@ -62,6 +62,11 @@ def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def git_blob_digest(revision: str, relative: str) -> str:
+    raw = subprocess.check_output(["git", "show", f"{revision}:{relative}"], cwd=ROOT)
+    return hashlib.sha256(raw).hexdigest()
+
+
 def evidence_check(
     verdict: str = "no", *, material: bool = False, hard_failure: bool = False, evidence: list[str] | None = None
 ) -> dict:
@@ -261,12 +266,11 @@ def test_private_anchor_manifest_is_balanced_and_public_safe() -> None:
 def test_recorded_expert_holdout_hashes_are_immutable() -> None:
     baseline = load_json(MANIFESTS / "expert-holdout-baseline.json")
     assert baseline["baseline_commit"] == "540e72071ea35be228ef4c72c1b3276223631a44"
+    assert baseline["hash_scope"] == "canonical_git_blob_bytes"
     assert baseline["expert_holdout_unopened"] is True
     assert len(baseline["files"]) == 114
     for relative, expected in baseline["files"].items():
-        path = ROOT / relative
-        assert path.is_file(), relative
-        assert digest(path) == expected, relative
+        assert git_blob_digest("HEAD", relative) == expected, relative
 
 
 def test_private_preparation_verify_reports_all_holdout_states() -> None:
