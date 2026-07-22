@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.1.0-lean.1",
+  "run_id": "LRUN-bc7a6f98ae123938",
+  "stage": "D2",
+  "status": "complete",
+  "case_count": 8,
+  "calls_completed": 35,
+  "calls_maximum": 40,
+  "role_counts": {
+    "role_a": 8,
+    "role_b": 8,
+    "role_c": 8,
+    "contrast_judge": 8,
+    "adjudicator": 3
+  },
+  "private_content_excluded": true,
+  "expert_holdout_unopened": true,
+  "automated_holdout_unopened": true,
+  "updated_at": "2026-07-22T09:44:00.848048Z"
+}

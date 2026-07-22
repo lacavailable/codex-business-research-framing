@@ -1,7 +1,7 @@
 {
   "schema_version": "3.1.0-lean.1",
   "method": "automated source-grounded triangulation",
-  "status": "paused_resource_limit",
+  "status": "fail",
   "development_passed": false,
   "validation_passed": false,
   "evaluator_frozen": false,
@@ -11,32 +11,33 @@
   "experimental_release_eligible": false,
   "core_gates": [
     {"id": "privacy-and-holdouts", "status": "pass", "observed": true, "threshold": true},
-    {"id": "role-separation", "status": "not_assessed", "observed": null, "threshold": 1.0},
-    {"id": "evidence-spans", "status": "not_assessed", "observed": null, "threshold": 0.95},
-    {"id": "synthetic-applicability", "status": "not_assessed", "observed": null, "threshold": 0.95},
-    {"id": "private-applicability", "status": "not_assessed", "observed": null, "threshold": 0.9},
-    {"id": "material-fidelity-ordering", "status": "not_assessed", "observed": null, "threshold": 0.9},
-    {"id": "fidelity-false-positive", "status": "not_assessed", "observed": null, "threshold": 0.05},
-    {"id": "category-localization", "status": "not_assessed", "observed": null, "threshold": 0.8},
-    {"id": "paraphrase-invariance", "status": "not_assessed", "observed": null, "threshold": true},
-    {"id": "prestige-invariance", "status": "not_assessed", "observed": null, "threshold": true},
-    {"id": "conditional-adjudication", "status": "not_assessed", "observed": null, "threshold": 0.3},
-    {"id": "validation-structure-high", "status": "not_assessed", "observed": null, "threshold": 6},
-    {"id": "domain-coverage", "status": "not_assessed", "observed": null, "threshold": 4}
+    {"id": "role-separation", "status": "pass", "observed": 1.0, "threshold": 1.0},
+    {"id": "evidence-spans", "status": "pass", "observed": 0.976, "threshold": 0.95},
+    {"id": "combined-applicability", "status": "pass", "observed": 1.0, "threshold": 0.95},
+    {"id": "material-defect-detection", "status": "pass", "observed": 1.0, "threshold": 0.9},
+    {"id": "material-fidelity-ordering", "status": "pass", "observed": 1.0, "threshold": 0.9},
+    {"id": "fidelity-false-positive", "status": "pass", "observed": 0.041666666666666664, "threshold": 0.05},
+    {"id": "category-localization", "status": "pass", "observed": 0.9375, "threshold": 0.8},
+    {"id": "paraphrase-invariance", "status": "pass", "observed": true, "threshold": true},
+    {"id": "prestige-invariance", "status": "fail", "observed": false, "threshold": true},
+    {"id": "conditional-adjudication", "status": "fail", "observed": 0.375, "threshold": 0.3},
+    {"id": "structure-high", "status": "pass", "observed": 8, "threshold": 6},
+    {"id": "domain-coverage", "status": "pass", "observed": 4, "threshold": 4}
   ],
   "diagnostics": {
-    "reliability": null,
-    "score_distributions": null,
-    "confidence": null,
-    "inter_run_variation": null,
-    "unresolved_dimensions": null,
-    "non_core_perturbations": null
+    "mean_role_confidence": 0.91125,
+    "paraphrase_disagreements": 1,
+    "prestige_effects": 5,
+    "unresolved_material_topics": 0,
+    "authoritative_attempts": 36,
+    "adjudications": 3
   },
   "freeze_commit": null,
   "limitations": [
-    "D1 is paused before any authoritative model call because isolated execution capacity is unavailable in this run.",
-    "The 15 PR #3 records are diagnostic only and do not count toward lean gates.",
+    "The D2 conditional-adjudication rate was 37.5%, above the preregistered 30% blocking ceiling.",
+    "Prestige-label sensitivity failed as a nonblocking diagnostic.",
     "No human experts participated and no formal validation claim is authorized.",
-    "Neither automated nor expert holdout has been opened."
+    "Neither automated nor expert holdout was opened.",
+    "Skill development, validation, evaluator freeze, tagging, and release remain unauthorized."
   ]
 }
