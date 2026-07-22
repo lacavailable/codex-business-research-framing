@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/frame-business-research-problem/automated-triangulation/role-output.schema.json",
+  "title": "Role-separated automated annotation output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "output_id", "packet_id", "case_id", "role", "model", "prompt_hash", "fresh_context", "assessment_status", "findings", "uncertainties"],
+  "properties": {
+    "schema_version": {"const": "3.0.0-automated.1"},
+    "output_id": {"type": "string", "pattern": "^ARO-[0-9a-f]{16}$"},
+    "packet_id": {"type": "string", "pattern": "^ACP-[0-9a-f]{16}$"},
+    "case_id": {"type": "string", "pattern": "^AC[0-9a-f]{16}$"},
+    "role": {"enum": ["model_structure", "passage_function", "fidelity", "managerial_framing", "scholarly_positioning", "evidence", "prose_usability", "adversarial_review", "meta_adjudication"]},
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provider", "model_id", "family_claim", "settings"],
+      "properties": {
+        "provider": {"type": "string", "minLength": 1},
+        "model_id": {"type": "string", "minLength": 1},
+        "family_claim": {"enum": ["same_family", "different_family_verified", "not_established"]},
+        "settings": {"type": "object"}
+      }
+    },
+    "prompt_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "fresh_context": {"const": true},
+    "assessment_status": {"enum": ["assessed", "not_assessed", "not_applicable"]},
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["finding_id", "decision", "rationale", "evidence_span_ids"],
+        "properties": {
+          "finding_id": {"type": "string", "pattern": "^F-[0-9]{3}$"},
+          "decision": {"enum": ["supported", "not_supported", "uncertain"]},
+          "rationale": {"type": "string", "minLength": 1},
+          "evidence_span_ids": {"type": "array", "items": {"type": "string", "pattern": "^ES-[0-9]{3}$"}, "uniqueItems": true}
+        }
+      }
+    },
+    "uncertainties": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "primary_role_output_ids": {"type": "array", "items": {"type": "string", "pattern": "^ARO-[0-9a-f]{16}$"}, "minItems": 2, "uniqueItems": true}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"role": {"const": "meta_adjudication"}}, "required": ["role"]},
+      "then": {"required": ["primary_role_output_ids"]},
+      "else": {"not": {"required": ["primary_role_output_ids"]}}
+    }
+  ]
+}

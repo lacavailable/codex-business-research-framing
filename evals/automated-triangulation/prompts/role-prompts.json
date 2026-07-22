@@ -1,0 +1,22 @@
+{
+  "schema_version": "3.0.0-automated.1",
+  "method": "automated source-grounded triangulation",
+  "shared_constraints": [
+    "Use only the supplied passage and context packet.",
+    "Do not infer quality from outlet, publication status, author, or prestige.",
+    "Cite traceable evidence spans for every substantive finding.",
+    "Return uncertain when the supplied evidence cannot resolve an atomic check.",
+    "Do not call automated roles experts or their decisions gold labels."
+  ],
+  "roles": [
+    {"id": "model_structure", "scope": "Identify actor, decision, timing, information, states, behavior, constraints, objective, and model mapping only."},
+    {"id": "passage_function", "scope": "Classify the passage function and evaluate predetermined applicability using accept or challenge_with_evidence only."},
+    {"id": "fidelity", "scope": "Evaluate all 15 atomic fidelity checks independently; material yes findings require evidence spans."},
+    {"id": "managerial_framing", "scope": "Evaluate actor, trigger, choice, stakes, mechanism, trade-off, counterfactual, and operational pathway only when applicable."},
+    {"id": "scholarly_positioning", "scope": "Evaluate relationship to prior knowledge, changed assumption or mechanism, contribution, and boundary only when applicable."},
+    {"id": "evidence", "scope": "Separate established facts, model assumptions, simplifying assumptions, inferences, and unsupported claims."},
+    {"id": "prose_usability", "scope": "Evaluate clarity, economy, repetition, audience fit, and information density without changing substantive scores for style alone."},
+    {"id": "adversarial_review", "scope": "Search for unsupported findings, missing context, evidence-span mismatch, prestige influence, and construct leakage."},
+    {"id": "meta_adjudication", "scope": "Inspect completed independent role records and their evidence; resolve substantive disagreements, never by majority vote alone."}
+  ]
+}

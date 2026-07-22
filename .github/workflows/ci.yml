@@ -40,10 +40,38 @@ jobs:
           python tools/validate_literature.py --require-complete
           python tools/evaluate_benchmark.py validate
           python tools/evaluate_benchmark.py validate-artifacts
-      - name: Check public calibration copyright and release gate
+      - name: Check public calibration copyright and authorization attestations
         run: |
           python tools/audit_calibration_copyright.py
-          python -c "import json; p=json.load(open('evals/calibration/public-metadata/private-calibration-attestation.json', encoding='utf-8')); assert p['release_eligible'] is False and p['holdout_opened'] is False"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          tier_a = json.loads(Path("evals/automated-triangulation/results/tier-a-attestation.json").read_text(encoding="utf-8"))
+          assert tier_a["authorization_tier"] == "tier_a"
+          assert tier_a["no_human_experts"] is True
+          assert tier_a["expert_holdout_unopened"] is True
+          assert isinstance(tier_a["limitations"], list) and tier_a["limitations"]
+          if tier_a["experimental_release_eligible"]:
+              assert tier_a["status"] == "passed"
+              assert tier_a["development_passed"] is True
+              assert tier_a["validation_passed"] is True
+              assert tier_a["evaluator_frozen"] is True
+              assert tier_a["automated_holdout_opened"] is True
+              assert tier_a["production_benchmark_complete"] is True
+              assert tier_a["freeze_commit"]
+
+          tier_b = json.loads(Path("evals/calibration/public-metadata/private-calibration-attestation.json").read_text(encoding="utf-8"))
+          assert isinstance(tier_b["holdout_opened"], bool)
+          assert isinstance(tier_b["production_benchmark_run"], bool)
+          assert isinstance(tier_b["release_eligible"], bool)
+          if tier_b["release_eligible"]:
+              assert tier_b["qualified_reviewers"] > 0
+              assert tier_b["expert_annotations"] > 0
+              assert tier_b["holdout_opened"] is True
+              assert tier_b["production_benchmark_run"] is True
+              assert tier_b["evaluator_freeze_commit"]
+          PY
       - name: Audit tracked publication content
         run: python tools/audit_repository.py --tracked
       - name: Check local Markdown links

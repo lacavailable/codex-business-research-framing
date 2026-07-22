@@ -1,0 +1,107 @@
+{
+  "schema_version": "3.0.0-automated.1",
+  "passage_id": "OM-P01",
+  "variant_count": 14,
+  "variants": [
+    {
+      "variant_type": "actor_perturbation",
+      "variant_case_id": "ACfdaac9b466711377",
+      "contrast_id": "ACT-a803e1f021b07d51",
+      "passage_sha256": "f954e7b67daf9e28e99dd643328a98632dda7de4adb93ede5527b92219fc198a",
+      "word_count": 140
+    },
+    {
+      "variant_type": "boundary_deletion",
+      "variant_case_id": "ACb33ebac9a210a99f",
+      "contrast_id": "ACT-b6f825a33e95f89e",
+      "passage_sha256": "875011e4b0597e398d922c2a2aa92a29f38f8d4c93e486a11fc8ccc8db2c48ec",
+      "word_count": 122
+    },
+    {
+      "variant_type": "faithful_paraphrase",
+      "variant_case_id": "ACbecc77710a0f14cb",
+      "contrast_id": "ACT-abcc00513a1c535f",
+      "passage_sha256": "6aafaf1cb62b1659ce9a1554bb92d291d8dd2664b600028ad88d916509715b67",
+      "word_count": 138
+    },
+    {
+      "variant_type": "generic_gap_replacement",
+      "variant_case_id": "ACbdc959c3059a4c99",
+      "contrast_id": "ACT-798e8cf2b6beb3e5",
+      "passage_sha256": "e5d49a2a79d186ea9a1f63ab055678bc8dc837470e638cfa0cce7d96733b0d42",
+      "word_count": 128
+    },
+    {
+      "variant_type": "information_perturbation",
+      "variant_case_id": "AC432b3a32e97bd2f6",
+      "contrast_id": "ACT-dba97cdb832ab891",
+      "passage_sha256": "79ddc96f78f9cad677e64061432273654862c4b7c532b9929c3a49b3364aeb9e",
+      "word_count": 141
+    },
+    {
+      "variant_type": "mechanism_deletion",
+      "variant_case_id": "ACeffcbeb9f45a3a6e",
+      "contrast_id": "ACT-49ce019470959df5",
+      "passage_sha256": "e6f1bddf2ed7b40d14c16af13afa20c14c3fc7e0e822e9de3c0a8edeb360e15e",
+      "word_count": 114
+    },
+    {
+      "variant_type": "objective_perturbation",
+      "variant_case_id": "ACb470fb744efe6371",
+      "contrast_id": "ACT-0cdeb359bb882059",
+      "passage_sha256": "cdf37c14cf44674d75b9f484c3684906b77f5b87398168815ccdf1fd1fd16d6a",
+      "word_count": 138
+    },
+    {
+      "variant_type": "prestige_label_manipulation",
+      "variant_case_id": "AC9f61a9279e0fb937",
+      "contrast_id": "ACT-16c878c720f50de3",
+      "passage_sha256": "6de3da5cc3c91f0c34fbb2fec23f9751ad829f3666ba80316f07766e5604da6d",
+      "word_count": 145
+    },
+    {
+      "variant_type": "simplified_concise_rewrite",
+      "variant_case_id": "ACb2db7f4319b8d8a4",
+      "contrast_id": "ACT-2f4cb9f83e3ded80",
+      "passage_sha256": "b44ad8fb88ceb775bde9b5373b2a39bfb8f4ca6aabe45dbe4f603bb513635b8e",
+      "word_count": 98
+    },
+    {
+      "variant_type": "timing_perturbation",
+      "variant_case_id": "ACaf584111693dcb85",
+      "contrast_id": "ACT-6bf4732436b96664",
+      "passage_sha256": "52e722ab9a0ea010df671f585ca1a759c2867ede33992d625cc0bfd3f228516e",
+      "word_count": 138
+    },
+    {
+      "variant_type": "trade_off_deletion",
+      "variant_case_id": "AC531cec1342b9c88e",
+      "contrast_id": "ACT-ea3170faf5fdc119",
+      "passage_sha256": "6440871d721146143ae8a0a2610fc72523da7f942160518a89e62769f4b6f9f3",
+      "word_count": 130
+    },
+    {
+      "variant_type": "unsupported_causal_pathway_insertion",
+      "variant_case_id": "AC5f264e53c782e5f6",
+      "contrast_id": "ACT-d9519e04c2fd6d19",
+      "passage_sha256": "740f0e2cdae1df40ff88d624de7b45b96d7f48507cf167f40c624a12be3b4991",
+      "word_count": 142
+    },
+    {
+      "variant_type": "unsupported_empirical_claim_insertion",
+      "variant_case_id": "AC279d7afeb0c38db3",
+      "contrast_id": "ACT-dfb2bd65e1706d7b",
+      "passage_sha256": "069985da638b4c269ab0d870b0d8e39a9a97e00ccb0876b04cef389e4d103d98",
+      "word_count": 140
+    },
+    {
+      "variant_type": "verbosity_insertion",
+      "variant_case_id": "AC93e9052ba8f175c5",
+      "contrast_id": "ACT-1d7e5cbb77ff95f1",
+      "passage_sha256": "dbbf6afc5aa177f949d25b4093bd9f4a24d04662165f6ae721ec8ece7adfb543",
+      "word_count": 181
+    }
+  ],
+  "private_text_included": false,
+  "human_experts_participated": false
+}

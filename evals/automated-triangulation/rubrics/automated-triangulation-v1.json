@@ -1,0 +1,17 @@
+{
+  "schema_version": "3.0.0-automated.1",
+  "version": "automated-triangulation-v1",
+  "method_label": "automated source-grounded triangulation",
+  "categories": [
+    {"id": "fidelity", "weight": 30, "minimum": 21},
+    {"id": "managerial_framing", "weight": 25, "minimum": 15},
+    {"id": "scholarly_positioning", "weight": 20, "minimum": 12},
+    {"id": "evidence_discipline", "weight": 15, "minimum": 9},
+    {"id": "prose_clarity", "weight": 10, "minimum": 5}
+  ],
+  "applicability_decisions": ["accept", "challenge_with_evidence"],
+  "atomic_outcomes": ["yes", "no", "uncertain"],
+  "hard_failure_policy": "Assign only when an atomic outcome is yes, the case annotation marks it material, and a valid evidence span supports it.",
+  "hard_failure_cap": 69,
+  "passing_score": 70
+}
