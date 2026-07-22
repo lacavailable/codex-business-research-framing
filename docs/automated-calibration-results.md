@@ -6,7 +6,7 @@ _Public status record for `v0.3.0-experimental.1` automated source-grounded tria
 
 ## Current result
 
-**Status: not yet authorized.** No passing Tier A result is recorded at this stage. The replacement automated development and validation study, evaluator freeze, automated holdout, and production benchmark must complete before an experimental release can be eligible.
+**Status: incomplete and not authorized.** The development run stopped when fresh-context automated-role execution became unavailable. This is an execution-capacity blocker, not a passed or failed calibration gate. Validation, evaluator freeze, both holdouts, Skill revision, production benchmarking, tagging, and release remain locked.
 
 | Item | Current public status |
 | --- | --- |
@@ -14,8 +14,10 @@ _Public status record for `v0.3.0-experimental.1` automated source-grounded tria
 | Existing Skill | v0.2 remains unchanged during PR A |
 | Private corpus | 17 retained sources and 24 candidate passage notes; copyrighted text remains ignored |
 | Earlier public-synthetic calibration | Failed its preregistered adjudication-rate gate; diagnostic only |
-| Replacement automated development | Pending |
-| Replacement automated validation | Pending |
+| Replacement automated development | Incomplete: 8 context packets, 15 of 64 primary role records, 1 fully role-annotated case |
+| Private contrast construction | 14 one-construct variants completed for one development case; not scored |
+| Silver labels | 0 high-confidence, 0 provisional, 0 unresolved decisions; meta-adjudication did not complete |
+| Replacement automated validation | Not opened |
 | Evaluator freeze | Not authorized |
 | Automated holdout | Unopened |
 | Original expert holdout | Unopened and unchanged |
@@ -25,12 +27,14 @@ _Public status record for `v0.3.0-experimental.1` automated source-grounded tria
 
 ## Interpretation
 
-Infrastructure checks or synthetic fixture success do not count as calibration success. Source-grounded role records must produce enough `silver_high_confidence` cases, pass development and validation gates, and support an auditable freeze before the automated holdout can be opened.
+The completed records establish that the packet, role, applicability, atomic-fidelity, and contrast interfaces can be exercised while private source text remains ignored. They do not estimate evaluator reliability. The public-safe partial export is recomputable from ignored records and deliberately reports completion counts rather than imputed scores.
 
-When results exist, this document will report confidence counts, domain and split coverage, applicability agreement, atomic fidelity performance, contrast ordering and localization, paraphrase invariance, prestige and style effects, negative-control rejection, inter-run stability, evidence sufficiency, score distributions, adjudication rate, failures, and stop decisions. All findings will be labeled **automated source-grounded triangulation**.
+Development cannot pass until every required fresh-context role, contrast assessment, and meta-adjudication is complete. No missing role is treated as agreement, no provisional record is promoted to `silver_high_confidence`, and no validation or holdout case is opened to compensate for incomplete development.
+
+The current public status is stored in `evals/automated-triangulation/results/development-partial.json`. All findings remain labeled **automated source-grounded triangulation**.
 
 ## Claims not supported
 
 The current work does not support claims of expert validation, scholar approval, external criterion validity, publication readiness, proven superiority, or independent model-family replication. Automated roles are not experts, silver labels are not expert labels, and private journal passages are anchors rather than a representative sample of academic quality.
 
-If any preregistered gate fails, the failure result will replace this pending status, the automated holdout state will be preserved, and no `v0.3.0-experimental.1` tag or release will be created.
+Work may resume from the ignored role records when fresh-context execution is available. Until then, the Tier A attestation remains incomplete and no PR B, tag, or release is authorized.

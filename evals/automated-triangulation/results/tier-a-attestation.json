@@ -13,7 +13,8 @@
   "limitations": [
     "Automated roles are not experts.",
     "No formal human validation claim is authorized.",
-    "The automated holdout remains unopened."
+    "The automated holdout remains unopened.",
+    "Development is incomplete because fresh-context role execution became unavailable after 15 of 64 primary development-role records."
   ],
   "freeze_commit": null
 }

@@ -286,3 +286,29 @@ def test_private_preparation_verify_reports_all_holdout_states() -> None:
         "valid": True,
         "errors": [],
     }
+
+
+def test_partial_development_export_is_public_safe_and_incomplete() -> None:
+    export = load_json(AUTO / "results" / "development-partial.json")
+    validator("aggregate-export.schema.json").validate(export)
+    assert export["claim_label"] == "automated source-grounded triangulation"
+    assert export["human_experts_participated"] is False
+    assert export["expert_holdout_state"] == "expert_holdout_unopened"
+    assert all(export["private_content_excluded"].values())
+    metrics = {item["metric_id"]: item["value"] for item in export["metrics"]}
+    assert metrics["context_packet_count"] == 8
+    assert metrics["primary_role_output_count"] == 15
+    assert metrics["primary_role_completion_rate"] < 1
+    assert metrics["silver_high_confidence_count"] == 0
+
+
+def test_private_contrast_manifest_has_all_variants_without_text() -> None:
+    manifest = load_json(AUTO / "contrast-sets" / "om-p01-private-manifest.json")
+    assert manifest["variant_count"] == 14
+    assert manifest["private_text_included"] is False
+    assert manifest["human_experts_participated"] is False
+    assert len({record["variant_type"] for record in manifest["variants"]}) == 14
+    forbidden = {"passage", "source_text", "evidence_spans", "raw_annotations"}
+    assert not (walk_keys(manifest) & forbidden)
+    for record in manifest["variants"]:
+        assert len(record["passage_sha256"]) == 64

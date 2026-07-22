@@ -16,6 +16,8 @@ from pathlib import Path
 
 import yaml
 
+import automated_triangulation as auto
+
 
 ROOT = Path(__file__).resolve().parents[1]
 PRIVATE = ROOT / "research-private" / "evaluator-calibration"
@@ -215,16 +217,190 @@ def verify() -> dict:
     return result
 
 
+def annotation_status() -> dict:
+    manifest = json.loads(
+        (PUBLIC / "top-journal-private-manifests" / "private-anchor-manifest.json").read_text(encoding="utf-8")
+    )
+    by_id = {record["passage_id"]: record for record in manifest["records"]}
+    role_counts: dict[str, int] = {}
+    silver_counts = {"silver_high_confidence": 0, "silver_provisional": 0, "unresolved": 0}
+    case_counts = {"development": 0, "validation": 0, "holdout": 0}
+    errors: list[str] = []
+    annotated_holdout: list[str] = []
+    for passage_id, public in sorted(by_id.items()):
+        root = PRIVATE / "judge-packets" / "automated" / passage_id
+        context_path = root / "context-packet.json"
+        if not context_path.exists():
+            continue
+        case_counts[public["provisional_split"]] += 1
+        if public["provisional_split"] == "holdout":
+            annotated_holdout.append(passage_id)
+        try:
+            context = json.loads(context_path.read_text(encoding="utf-8"))
+            auto.validate_schema(context, "context-packet.schema.json")
+            for role_path in sorted((root / "roles").glob("*.json")):
+                role = json.loads(role_path.read_text(encoding="utf-8"))
+                auto.validate_role_output(role, context)
+                role_counts[role["role"]] = role_counts.get(role["role"], 0) + 1
+            silver_path = root / "silver-decision.json"
+            if silver_path.exists():
+                silver = json.loads(silver_path.read_text(encoding="utf-8"))
+                auto.validate_silver_decision(silver)
+                silver_counts[silver["silver_status"]] += 1
+        except (ValueError, OSError, json.JSONDecodeError) as exc:
+            errors.append(f"{passage_id}: {exc}")
+    if annotated_holdout:
+        errors.append("automated holdout has been inspected: " + ", ".join(annotated_holdout))
+    result = {
+        "method": "automated source-grounded triangulation",
+        "context_packets": sum(case_counts.values()),
+        "contexts_by_split": case_counts,
+        "role_outputs": role_counts,
+        "silver_statuses": silver_counts,
+        "expert_holdout_unopened": True,
+        "automated_holdout_unopened": not annotated_holdout,
+        "valid": not errors,
+        "errors": errors,
+    }
+    print(json.dumps(result, indent=2))
+    if errors:
+        raise SystemExit(1)
+    return result
+
+
+def finalize_variants(passage_id: str) -> dict:
+    root = PRIVATE / "contrast-variants" / "automated" / passage_id
+    files = sorted(path for path in root.glob("*.json") if path.name != "manifest.json")
+    if not files:
+        raise PreparationError(f"no private variants found for {passage_id}")
+    records: list[dict] = []
+    for path in files:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        text = data.get("passage")
+        metadata = data.get("contrast_metadata")
+        if not isinstance(text, str) or not text.strip() or not isinstance(metadata, dict):
+            raise PreparationError(f"malformed private contrast: {path.name}")
+        auto.validate_schema(metadata, "contrast-metadata.schema.json")
+        digest = sha256_bytes(text.encode("utf-8"))
+        data["passage_sha256"] = digest
+        data["word_count"] = len(re.findall(r"\b\w+\b", text))
+        write_json(path, data)
+        records.append({
+            "variant_type": metadata["variant_type"],
+            "variant_case_id": metadata["variant_case_id"],
+            "contrast_id": metadata["contrast_id"],
+            "passage_sha256": digest,
+            "word_count": data["word_count"],
+        })
+    expected = {
+        "actor_perturbation", "timing_perturbation", "information_perturbation",
+        "objective_perturbation", "mechanism_deletion", "trade_off_deletion",
+        "unsupported_empirical_claim_insertion", "unsupported_causal_pathway_insertion",
+        "generic_gap_replacement", "boundary_deletion", "verbosity_insertion",
+        "prestige_label_manipulation", "faithful_paraphrase", "simplified_concise_rewrite",
+    }
+    actual = {record["variant_type"] for record in records}
+    if actual != expected:
+        raise PreparationError(f"contrast set mismatch; missing={sorted(expected-actual)}, extra={sorted(actual-expected)}")
+    private_manifest = {
+        "schema_version": "3.0.0-automated.1",
+        "passage_id": passage_id,
+        "private_source_derived": True,
+        "variants": records,
+    }
+    write_json(root / "manifest.json", private_manifest)
+    public_path = PUBLIC / "contrast-sets" / f"{passage_id.lower()}-private-manifest.json"
+    write_json(public_path, {
+        "schema_version": "3.0.0-automated.1",
+        "passage_id": passage_id,
+        "variant_count": len(records),
+        "variants": records,
+        "private_text_included": False,
+        "human_experts_participated": False,
+    })
+    result = {"passage_id": passage_id, "variants": len(records), "public_manifest": str(public_path.relative_to(ROOT))}
+    print(json.dumps(result, indent=2))
+    return result
+
+
+def export_partial_status() -> dict:
+    manifest_path = PUBLIC / "top-journal-private-manifests" / "private-anchor-manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    development = [record for record in manifest["records"] if record["provisional_split"] == "development"]
+    counts = {domain: 0 for domain in ("OM", "IS", "OR", "MGMT")}
+    completed_roles = 0
+    complete_cases = 0
+    silver = {"silver_high_confidence": 0, "silver_provisional": 0, "unresolved": 0}
+    primary_roles = {
+        "model_structure", "passage_function", "fidelity", "managerial_framing",
+        "scholarly_positioning", "evidence", "prose_usability", "adversarial_review",
+    }
+    for record in development:
+        root = PRIVATE / "judge-packets" / "automated" / record["passage_id"]
+        if not (root / "context-packet.json").exists():
+            continue
+        counts[record["domain"]] += 1
+        roles = set()
+        for path in (root / "roles").glob("*.json"):
+            role = json.loads(path.read_text(encoding="utf-8")).get("role")
+            if role in primary_roles:
+                roles.add(role)
+        completed_roles += len(roles)
+        complete_cases += roles == primary_roles
+        decision = root / "silver-decision.json"
+        if decision.exists():
+            status = json.loads(decision.read_text(encoding="utf-8"))["silver_status"]
+            silver[status] += 1
+    total = sum(counts.values())
+    expected_roles = total * len(primary_roles)
+    metrics = [
+        {"metric_id": "context_packet_count", "value": total, "unit": "count", "sample_size": total},
+        {"metric_id": "primary_role_output_count", "value": completed_roles, "unit": "count", "sample_size": expected_roles},
+        {"metric_id": "primary_role_completion_rate", "value": completed_roles / expected_roles if expected_roles else None, "unit": "proportion", "sample_size": expected_roles},
+        {"metric_id": "fully_annotated_case_count", "value": complete_cases, "unit": "count", "sample_size": total},
+        {"metric_id": "silver_high_confidence_count", "value": silver["silver_high_confidence"], "unit": "count", "sample_size": total},
+    ]
+    payload = {
+        "schema_version": "3.0.0-automated.1",
+        "export_id": "AAE-" + sha256_bytes(json.dumps(metrics, sort_keys=True).encode("utf-8"))[:16],
+        "claim_label": "automated source-grounded triangulation",
+        "split": "development",
+        "case_counts": {**counts, "total": total},
+        "metrics": metrics,
+        "private_content_excluded": {
+            "passage_text": True, "evidence_spans": True, "pdfs": True,
+            "raw_annotations": True, "expert_identities": True,
+        },
+        "human_experts_participated": False,
+        "expert_holdout_state": "expert_holdout_unopened",
+        "source_manifest_sha256": sha256_bytes(manifest_path.read_bytes()),
+    }
+    auto.validate_schema(payload, "aggregate-export.schema.json")
+    output = PUBLIC / "results" / "development-partial.json"
+    write_json(output, payload)
+    print(json.dumps({"output": str(output.relative_to(ROOT)), "completed_roles": completed_roles, "expected_roles": expected_roles}, indent=2))
+    return payload
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("command", choices=("prepare", "verify"))
+    parser.add_argument("command", choices=("prepare", "verify", "annotation-status", "finalize-variants", "export-partial-status"))
+    parser.add_argument("--passage-id")
     args = parser.parse_args()
     if args.command == "prepare":
         records = prepare_private_packets()
         baseline = record_expert_holdout()
         print(json.dumps({"private_packets": len(records), "expert_holdout_files": len(baseline["files"])}, indent=2))
-    else:
+    elif args.command == "verify":
         verify()
+    elif args.command == "annotation-status":
+        annotation_status()
+    elif args.command == "finalize-variants":
+        if not args.passage_id:
+            parser.error("finalize-variants requires --passage-id")
+        finalize_variants(args.passage_id)
+    else:
+        export_partial_status()
 
 
 if __name__ == "__main__":
