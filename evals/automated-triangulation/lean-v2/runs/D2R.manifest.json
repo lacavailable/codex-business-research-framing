@@ -17,15 +17,15 @@
   "required_call_cap": 20,
   "conditional_adjudication_cap": 5,
   "maximum_calls": 25,
-  "calls_used": 0,
-  "attempts_used": 0,
-  "status": "planned",
+  "calls_used": 22,
+  "attempts_used": 22,
+  "status": "complete",
   "holdout_states": {
     "expert_holdout_unopened": true,
     "automated_holdout_unopened": true
   },
   "created_at": "2026-07-22T11:28:23.744919Z",
-  "updated_at": "2026-07-22T11:28:23.744919Z",
+  "updated_at": "2026-07-22T13:21:16.289040Z",
   "calls": [
     {
       "call_id": "LCALL2-70589bf8b6aa7c91",
@@ -40,14 +40,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "ecff37eea4a703a3b867e233f1cc7f20dd17ac4ba7b9d2ce759e7f3a912538f1",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-70589bf8b6aa7c91",
+      "output_sha256": "4f749e356c29b4e9599a79f410652464a093480d6ea93119b08c41283c815fc2",
+      "schema_valid": true,
+      "started_at": "2026-07-22T11:33:22.947163Z",
+      "completed_at": "2026-07-22T11:38:43.450287Z"
     },
     {
       "call_id": "LCALL2-c72f5e7ed451eefa",
@@ -62,14 +62,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "ecff37eea4a703a3b867e233f1cc7f20dd17ac4ba7b9d2ce759e7f3a912538f1",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-c72f5e7ed451eefa",
+      "output_sha256": "36a1729ca48b30e97c74bf3c8e7719bc41325fd8702adbd37c6b2292bc8bb9aa",
+      "schema_valid": true,
+      "started_at": "2026-07-22T11:33:23.826292Z",
+      "completed_at": "2026-07-22T11:38:45.748403Z"
     },
     {
       "call_id": "LCALL2-74ef087a249be289",
@@ -84,14 +84,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "ecff37eea4a703a3b867e233f1cc7f20dd17ac4ba7b9d2ce759e7f3a912538f1",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-74ef087a249be289",
+      "output_sha256": "9f3ace8a49c550cb897a6ff573144cab57c050a3b1891f298c7c9207d8bcb1a9",
+      "schema_valid": true,
+      "started_at": "2026-07-22T11:38:50.328264Z",
+      "completed_at": "2026-07-22T11:43:26.513279Z"
     },
     {
       "call_id": "LCALL2-33850bde53a9713f",
@@ -106,14 +106,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "ecff37eea4a703a3b867e233f1cc7f20dd17ac4ba7b9d2ce759e7f3a912538f1",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-33850bde53a9713f",
+      "output_sha256": "1fdd05b97bdac641b9829b9ee10571986c1023ae9ac48c02962c04f28a7c7314",
+      "schema_valid": true,
+      "started_at": "2026-07-22T11:33:24.961924Z",
+      "completed_at": "2026-07-22T11:38:49.419469Z"
     },
     {
       "call_id": "LCALL2-7d05f344dff1e13b",
@@ -150,14 +150,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "cdc544f4179cb90dcbd8f74e321c92a9528513e6cf7f08c1ac07ed68ad1e14b9",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-e267613b2925e6e0",
+      "output_sha256": "152a59a3590e61887b5a13e400a35f9cfa542d442a8f5eb526753380061d9c16",
+      "schema_valid": true,
+      "started_at": "2026-07-22T11:39:24.270373Z",
+      "completed_at": "2026-07-22T11:46:55.185199Z"
     },
     {
       "call_id": "LCALL2-9b7ce6374f04a084",
@@ -172,14 +172,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "cdc544f4179cb90dcbd8f74e321c92a9528513e6cf7f08c1ac07ed68ad1e14b9",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-9b7ce6374f04a084",
+      "output_sha256": "f5b2308107ee18549de25946c27dda2cafc88547215e832334a76c16481f0359",
+      "schema_valid": true,
+      "started_at": "2026-07-22T11:39:24.957135Z",
+      "completed_at": "2026-07-22T11:46:13.027865Z"
     },
     {
       "call_id": "LCALL2-6ad73f59d6704429",
@@ -194,14 +194,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "cdc544f4179cb90dcbd8f74e321c92a9528513e6cf7f08c1ac07ed68ad1e14b9",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-6ad73f59d6704429",
+      "output_sha256": "413ec64e4645a5d1939c5febc9fec5da457e2ad2b9fbc27c45d40472d9f70298",
+      "schema_valid": true,
+      "started_at": "2026-07-22T11:46:55.681243Z",
+      "completed_at": "2026-07-22T11:51:47.156551Z"
     },
     {
       "call_id": "LCALL2-a7505a63641e8444",
@@ -216,14 +216,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "cdc544f4179cb90dcbd8f74e321c92a9528513e6cf7f08c1ac07ed68ad1e14b9",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-a7505a63641e8444",
+      "output_sha256": "0f2f7fcbf4d4f5e7aa628d3a6cbe197f04370769d5b76d7bd078c080d6ea739b",
+      "schema_valid": true,
+      "started_at": "2026-07-22T11:42:17.241149Z",
+      "completed_at": "2026-07-22T11:46:14.216302Z"
     },
     {
       "call_id": "LCALL2-8e97335a1e95528c",
@@ -260,14 +260,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 2,
       "packet_sha256": "515791b17366dcefbfafafc460d93fcce22ef2b4747512b44cc968e035e29026",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-be445f5381a70659",
+      "output_sha256": "7804b22c057223c206ded7ac2aad3f09c747d7bf63e1ad22c5d59e4af3701dff",
+      "schema_valid": true,
+      "started_at": "2026-07-22T12:04:37.713009Z",
+      "completed_at": "2026-07-22T13:14:47.438869Z"
     },
     {
       "call_id": "LCALL2-e14dbcb1374dc311",
@@ -282,14 +282,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "515791b17366dcefbfafafc460d93fcce22ef2b4747512b44cc968e035e29026",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-e14dbcb1374dc311",
+      "output_sha256": "df4e8feb5caa442ff9c8010fd723fa39870b4a13fe917c275c18866f3a7cf0d9",
+      "schema_valid": true,
+      "started_at": "2026-07-22T11:46:15.224878Z",
+      "completed_at": "2026-07-22T11:49:57.269773Z"
     },
     {
       "call_id": "LCALL2-b50d399f764dcc38",
@@ -304,14 +304,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 2,
       "packet_sha256": "515791b17366dcefbfafafc460d93fcce22ef2b4747512b44cc968e035e29026",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-b50d399f764dcc38",
+      "output_sha256": "ce0ab553a66b418a2160e76c5ecb98ca884d58b5ffd1acbd0b8ed231548e3114",
+      "schema_valid": true,
+      "started_at": "2026-07-22T13:14:47.994415Z",
+      "completed_at": "2026-07-22T13:21:16.289040Z"
     },
     {
       "call_id": "LCALL2-ace17622a566a5ee",
@@ -326,14 +326,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "515791b17366dcefbfafafc460d93fcce22ef2b4747512b44cc968e035e29026",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-ace17622a566a5ee",
+      "output_sha256": "b529f4432a6e053d99c5f7ae625b35d8f3d3cc160ea9f172b72096d40f7a8fa6",
+      "schema_valid": true,
+      "started_at": "2026-07-22T11:49:57.812710Z",
+      "completed_at": "2026-07-22T11:52:40.604138Z"
     },
     {
       "call_id": "LCALL2-9313fe2c9f08d9ba",
@@ -370,14 +370,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "5e7ce8db1c134d82cc70649e437d392d5266ec1266b84259127d1142c76278b1",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-7e4faa0ccd23d18b",
+      "output_sha256": "3deff9331a514601beb442e998018745892d52400842fe7ad38ada009a9222ee",
+      "schema_valid": true,
+      "started_at": "2026-07-22T11:50:37.761613Z",
+      "completed_at": "2026-07-22T11:57:13.591938Z"
     },
     {
       "call_id": "LCALL2-99861dcbdd20825a",
@@ -392,14 +392,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "5e7ce8db1c134d82cc70649e437d392d5266ec1266b84259127d1142c76278b1",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-99861dcbdd20825a",
+      "output_sha256": "93a8bd8df7bf775df6da38468ff36c76acdf2bfde97bb71ddc764f31c9d4d397",
+      "schema_valid": true,
+      "started_at": "2026-07-22T11:52:41.018912Z",
+      "completed_at": "2026-07-22T11:57:14.419848Z"
     },
     {
       "call_id": "LCALL2-f5a12d13c1a02bf8",
@@ -414,14 +414,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "5e7ce8db1c134d82cc70649e437d392d5266ec1266b84259127d1142c76278b1",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-f5a12d13c1a02bf8",
+      "output_sha256": "1a3340f686ad6e808398e30d13f5ce55b8444e5012533ac40bc0976833c74864",
+      "schema_valid": true,
+      "started_at": "2026-07-22T11:57:14.811378Z",
+      "completed_at": "2026-07-22T12:01:02.091923Z"
     },
     {
       "call_id": "LCALL2-dd52dbf33bca9e47",
@@ -436,14 +436,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "5e7ce8db1c134d82cc70649e437d392d5266ec1266b84259127d1142c76278b1",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-dd52dbf33bca9e47",
+      "output_sha256": "7fc8992500fda8da24687f1d18387d4b5b586ffd1f8d6a7babd7572a811543cd",
+      "schema_valid": true,
+      "started_at": "2026-07-22T11:57:16.389669Z",
+      "completed_at": "2026-07-22T12:00:10.077262Z"
     },
     {
       "call_id": "LCALL2-69170babba70860d",
@@ -480,14 +480,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "5b4fe62e9e522ca00902fe61370a46321fe9f580d09f34dde81d9187e3a7dcca",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-11177d19843a4b0f",
+      "output_sha256": "f0b08beda78e93ef366cc14542fdd8c7adb5a8686253bd2c928bb787060ae0e4",
+      "schema_valid": true,
+      "started_at": "2026-07-22T12:00:10.713514Z",
+      "completed_at": "2026-07-22T12:04:55.440027Z"
     },
     {
       "call_id": "LCALL2-62abff7b3c88c3f5",
@@ -502,14 +502,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "5b4fe62e9e522ca00902fe61370a46321fe9f580d09f34dde81d9187e3a7dcca",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-62abff7b3c88c3f5",
+      "output_sha256": "2f2923cbfbb3e62bc5ac3f68777f3ccdc943aee88c212c2354033a3a5fd834c4",
+      "schema_valid": true,
+      "started_at": "2026-07-22T12:01:16.330468Z",
+      "completed_at": "2026-07-22T12:05:49.769939Z"
     },
     {
       "call_id": "LCALL2-a0283ed8a164ef2a",
@@ -524,14 +524,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "5b4fe62e9e522ca00902fe61370a46321fe9f580d09f34dde81d9187e3a7dcca",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-a0283ed8a164ef2a",
+      "output_sha256": "ee4411acab7ef3c1e283fd22f3314d8cf8dc221d30c57c3acd879b53a1c13fd6",
+      "schema_valid": true,
+      "started_at": "2026-07-22T12:06:13.003342Z",
+      "completed_at": "2026-07-22T13:14:31.611161Z"
     },
     {
       "call_id": "LCALL2-42511db86b1b7b47",
@@ -546,14 +546,14 @@
         "reasoning_effort": "high",
         "sampling_controls": "unavailable"
       },
-      "status": "planned",
-      "attempts": 0,
+      "status": "completed",
+      "attempts": 1,
       "packet_sha256": "5b4fe62e9e522ca00902fe61370a46321fe9f580d09f34dde81d9187e3a7dcca",
-      "output_ref": null,
-      "output_sha256": null,
-      "schema_valid": null,
-      "started_at": null,
-      "completed_at": null
+      "output_ref": "private-record:LCALL2-42511db86b1b7b47",
+      "output_sha256": "9127311fdd030748dee885b0433082c741ead35be5e1cb3ff8ac99f5bf03cac1",
+      "schema_valid": true,
+      "started_at": "2026-07-22T12:04:55.910015Z",
+      "completed_at": "2026-07-22T13:12:23.840599Z"
     },
     {
       "call_id": "LCALL2-1addad4678394e8a",

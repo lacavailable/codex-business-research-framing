@@ -317,3 +317,28 @@ def test_public_repair_area_contains_no_private_paths_or_passage_text() -> None:
             text = path.read_text(encoding="utf-8")
             assert "research-private/evaluator-calibration" not in text
             assert "private passage text" not in text.lower()
+
+
+def test_d2r_failure_blocks_skill_and_preserves_holdouts() -> None:
+    result = load(LEAN_V2 / "results" / "D2R-result.json")
+    assert result["status"] == "fail"
+    assert result["experimental_skill_development"] is False
+    assert result["validation_authorized"] is False
+    assert result["automated_holdout_authorized"] is False
+    assert result["release_authorized"] is False
+    assert result["holdouts"] == {"expert": "unopened", "automated": "unopened"}
+    failed = {gate["id"] for gate in result["gates"] if gate["status"] == "fail"}
+    assert failed == {"evidence-spans", "material-defect-detection", "material-fidelity-ordering"}
+    assert result["resource_use"]["attempts_used"] == 22
+    assert result["resource_use"]["semantic_adjudications"] == 0
+    assert len(result["protocol_deviations"]) == 2
+
+
+def test_repair_branch_has_no_skill_changes() -> None:
+    import subprocess
+
+    diff = subprocess.run(
+        ["git", "diff", "--quiet", "0ad46b2cee197175cd549a51b003f695627724b1", "--", "skills"],
+        cwd=ROOT,
+    )
+    assert diff.returncode == 0

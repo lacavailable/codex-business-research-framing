@@ -184,6 +184,14 @@ def complete_call(manifest: dict[str, Any], call_id: str, output: Path) -> dict[
             schema_path = REPAIR / "schemas" / "repair-adjudication.schema.json"
         schema = json.loads(schema_path.read_text(encoding="utf-8"))
         jsonschema.Draft202012Validator(schema, format_checker=jsonschema.FormatChecker()).validate(record)
+        if call["role"] in {"role_a", "role_b", "role_c"}:
+            import importlib.util
+            spec = importlib.util.spec_from_file_location("sealed_lean_validators", ROOT / "tools" / "lean_triangulation.py")
+            if spec is None or spec.loader is None:
+                raise RunPlanError("sealed lean semantic validators unavailable")
+            lean = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(lean)
+            getattr(lean, f"validate_{call['role']}")(record)
         if record.get("case_id") != call["case_id"]:
             raise RunPlanError("output case does not match call")
         if record.get("prompt_hash") not in {None, call["prompt_hash"]}:
@@ -205,6 +213,31 @@ def complete_call(manifest: dict[str, Any], call_id: str, output: Path) -> dict[
     return call
 
 
+def revalidate_call(manifest: dict[str, Any], call_id: str, output: Path) -> dict[str, Any]:
+    call = next((item for item in manifest["calls"] if item["call_id"] == call_id), None)
+    if call is None or call["status"] != "completed":
+        raise RunPlanError("only a completed call may be revalidated")
+    call["status"] = "running"
+    try:
+        return complete_call(manifest, call_id, output)
+    except Exception:
+        # Revalidation does not spend another attempt; the next fresh retry does.
+        call["status"] = "schema_invalid"
+        call["schema_valid"] = False
+        raise
+
+
+def invalidate_dependency(manifest: dict[str, Any], call_id: str) -> dict[str, Any]:
+    call = next((item for item in manifest["calls"] if item["call_id"] == call_id), None)
+    if call is None or call["status"] != "completed":
+        raise RunPlanError("only a completed dependent call may be invalidated")
+    call["status"] = "schema_invalid"
+    call["schema_valid"] = False
+    manifest["status"] = "running"
+    manifest["updated_at"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    return call
+
+
 def atomic_write(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_suffix(path.suffix + ".tmp")
@@ -214,7 +247,7 @@ def atomic_write(path: Path, value: Any) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("command", choices=("create", "verify", "start", "complete", "activate-adjudication", "pause", "remaining"))
+    parser.add_argument("command", choices=("create", "verify", "start", "complete", "revalidate", "invalidate-dependency", "activate-adjudication", "pause", "remaining"))
     parser.add_argument("--manifest", type=Path, default=REPAIR / "runs" / "D2R.manifest.json")
     parser.add_argument("--call-id")
     parser.add_argument("--case-id")
@@ -240,6 +273,18 @@ def main() -> None:
                 complete_call(manifest, args.call_id, args.output if args.output.is_absolute() else ROOT / args.output)
             finally:
                 atomic_write(path, manifest)
+        elif args.command == "revalidate":
+            if not args.call_id or not args.output:
+                parser.error("revalidate requires --call-id and --output")
+            try:
+                revalidate_call(manifest, args.call_id, args.output if args.output.is_absolute() else ROOT / args.output)
+            finally:
+                atomic_write(path, manifest)
+        elif args.command == "invalidate-dependency":
+            if not args.call_id:
+                parser.error("invalidate-dependency requires --call-id")
+            invalidate_dependency(manifest, args.call_id)
+            atomic_write(path, manifest)
         elif args.command == "activate-adjudication":
             if not args.case_id:
                 parser.error("activate-adjudication requires --case-id")

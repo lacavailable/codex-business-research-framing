@@ -1,0 +1,11 @@
+{
+  "schema_version": "3.1.0-lean.2",
+  "method": "automated source-grounded triangulation",
+  "status": "fail",
+  "experimental_skill_development": false,
+  "validation_passed": false,
+  "automated_holdout_opened": false,
+  "expert_holdout_opened": false,
+  "release_authorized": false,
+  "result_sha256": "650499eedbc0b425c47e5108db4ff6c7b736d1cc882b5676f06af8db0e1a4905"
+}
