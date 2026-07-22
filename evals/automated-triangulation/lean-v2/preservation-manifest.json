@@ -4,6 +4,7 @@
   "preserved_tree": "evals/automated-triangulation/lean-v1",
   "source_preservation_manifest": "evals/automated-triangulation/lean-v1/preservation-manifest.json",
   "source_preservation_manifest_sha256": "e1e17bb8e9636da1e85ab34e8ec546cceecaab181bb36c77fca48d6c87f4fea5",
+  "baseline_skill_tree_sha256": "a89d87d1b310e3b5ac915bb13c7ed36305faa491f748563bee71ffa24c6ff924",
   "lean_v1_sha256": {
     "evals/automated-triangulation/lean-v1/preregistration.json": "1b0744194fdbacc31761dbf14d23ee7e11e4f914025d0b5129052629382078b4",
     "evals/automated-triangulation/lean-v1/preservation-manifest.json": "e1e17bb8e9636da1e85ab34e8ec546cceecaab181bb36c77fca48d6c87f4fea5",

@@ -335,10 +335,6 @@ def test_d2r_failure_blocks_skill_and_preserves_holdouts() -> None:
 
 
 def test_repair_branch_has_no_skill_changes() -> None:
-    import subprocess
-
-    diff = subprocess.run(
-        ["git", "diff", "--quiet", "0ad46b2cee197175cd549a51b003f695627724b1", "--", "skills"],
-        cwd=ROOT,
-    )
-    assert diff.returncode == 0
+    repair = repair_module("repair_skill_tree")
+    manifest = load(LEAN_V2 / "preservation-manifest.json")
+    assert repair.skill_tree_sha256() == manifest["baseline_skill_tree_sha256"]

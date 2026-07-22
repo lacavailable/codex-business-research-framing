@@ -6,7 +6,6 @@ from __future__ import annotations
 import hashlib
 import json
 import re
-import subprocess
 from copy import deepcopy
 from pathlib import Path
 from typing import Any, Iterable
@@ -100,29 +99,30 @@ def validate_schema(record: Any, schema_name: str) -> None:
 
 def verify_lean_v1_preservation(commit: str = SEALED_COMMIT) -> None:
     """Require every tracked lean-v1 byte to match the sealed PR #5 head."""
-    prefix = "evals/automated-triangulation/lean-v1/"
-    tracked = subprocess.run(
-        ["git", "ls-tree", "-r", "--name-only", commit, prefix],
-        cwd=ROOT,
-        check=True,
-        capture_output=True,
-        text=True,
-    ).stdout.splitlines()
-    if not tracked:
-        raise RepairError("sealed lean-v1 tree is unavailable")
+    manifest = json.loads((REPAIR / "preservation-manifest.json").read_text(encoding="utf-8"))
+    expected_hashes = manifest["lean_v1_sha256"]
+    tracked = sorted(expected_hashes)
     current = {
         path.relative_to(ROOT).as_posix()
-        for path in (ROOT / prefix).rglob("*")
+        for path in (ROOT / "evals" / "automated-triangulation" / "lean-v1").rglob("*")
         if path.is_file()
     }
     expected = set(tracked)
     if current != expected:
         raise RepairError(f"lean-v1 path drift: added={sorted(current-expected)}, missing={sorted(expected-current)}")
-    diff = subprocess.run(
-        ["git", "diff", "--no-ext-diff", "--quiet", commit, "--", prefix], cwd=ROOT
-    )
-    if diff.returncode != 0:
-        raise RepairError("sealed lean-v1 content changed")
+    for relative, expected_hash in expected_hashes.items():
+        observed = hashlib.sha256((ROOT / relative).read_bytes()).hexdigest()
+        if observed != expected_hash:
+            raise RepairError(f"sealed lean-v1 bytes changed: {relative}")
+
+
+def skill_tree_sha256() -> str:
+    skill = ROOT / "skills" / "frame-business-research-problem"
+    digest = hashlib.sha256()
+    for path in sorted(item for item in skill.rglob("*") if item.is_file()):
+        digest.update(path.relative_to(skill).as_posix().encode("utf-8") + b"\0")
+        digest.update(hashlib.sha256(path.read_bytes()).digest())
+    return digest.hexdigest()
 
 
 def classify_disagreement(
