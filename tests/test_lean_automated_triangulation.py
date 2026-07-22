@@ -51,15 +51,17 @@ def test_pr3_partial_records_are_explicitly_non_authoritative() -> None:
 
 def test_call_plans_match_hard_budgets_and_ordering() -> None:
     planner = import_file("lean_planner", ROOT / "tools/plan_triangulation_run.py")
-    expected = {"D0": 0, "D1": 16, "D2": 40, "validation": 40}
-    for stage, budget in expected.items():
+    expected = {"D0": (0, 0), "D1": (16, 4), "D2": (32, 8), "validation": (32, 8)}
+    for stage, (required_cap, conditional_cap) in expected.items():
         manifest = planner.build_manifest(stage, "2026-07-22T00:00:00Z")
         planner.validate_manifest(manifest)
-        assert manifest["maximum_calls"] == budget
-        assert len(manifest["calls"]) == budget
+        assert manifest["required_call_cap"] == required_cap
+        assert manifest["conditional_adjudication_cap"] == conditional_cap
+        assert manifest["maximum_calls"] == required_cap + conditional_cap
+        assert len(manifest["calls"]) == required_cap + conditional_cap
         roles = [call["role"] for call in manifest["calls"]]
         if stage == "D1":
-            assert roles.count("adjudicator") == 0
+            assert roles.count("adjudicator") == 4
         if stage in {"D2", "validation"}:
             assert roles.count("adjudicator") == 8
 
@@ -81,6 +83,52 @@ def test_pause_is_not_failure_and_preserves_exact_resume_point() -> None:
     assert paused["calls"][0]["status"] == "completed"
     assert paused["calls"][1]["status"] == "paused_resource_limit"
     planner.validate_manifest(paused)
+
+
+def test_start_counts_attempts_and_conditional_slots_require_activation() -> None:
+    planner = import_file("lean_planner_start", ROOT / "tools/plan_triangulation_run.py")
+    manifest = planner.build_manifest("D1", "2026-07-22T00:00:00Z")
+    required = next(call for call in manifest["calls"] if call["call_kind"] == "required")
+    planner.start_call(manifest, required["call_id"])
+    assert manifest["calls_used"] == 1
+    assert required["attempts"] == 1
+    conditional = next(call for call in manifest["calls"] if call["call_kind"] == "conditional")
+    with pytest.raises(planner.RunPlanError, match="not activated"):
+        planner.start_call(manifest, conditional["call_id"])
+    planner.activate_adjudication(manifest, conditional["case_id"])
+    planner.start_call(manifest, conditional["call_id"])
+    assert manifest["calls_used"] == 2
+
+
+def test_completed_call_can_be_revalidated_without_spending_an_attempt(tmp_path: Path) -> None:
+    planner = import_file("lean_planner_revalidate", ROOT / "tools/plan_triangulation_run.py")
+    manifest = planner.build_manifest("D1", "2026-07-22T00:00:00Z")
+    call = next(item for item in manifest["calls"] if item["role"] == "role_a")
+    planner.start_call(manifest, call["call_id"])
+    output = ROOT / "research-private/evaluator-calibration/lean-v1/test-revalidation-role-a.json"
+    output.parent.mkdir(parents=True, exist_ok=True)
+    record = role_a()
+    record["case_id"] = call["case_id"]
+    record["prompt_hash"] = call["prompt_hash"]
+    record["model"] = {
+        "provider": call["provider"],
+        "model_id": call["model_id"],
+        "family_claim": call["family_claim"],
+        "settings": call["settings"],
+    }
+    output.write_text(json.dumps(record), encoding="utf-8")
+    try:
+        planner.complete_call(manifest, call["call_id"], output)
+        first_completed_at = call["completed_at"]
+        first_attempts = call["attempts"]
+        record["confidence"] = 0.91
+        output.write_text(json.dumps(record), encoding="utf-8")
+        planner.complete_call(manifest, call["call_id"], output)
+        assert call["attempts"] == first_attempts
+        assert manifest["calls_used"] == 1
+        assert call["completed_at"] == first_completed_at
+    finally:
+        output.unlink(missing_ok=True)
 
 
 def role_a() -> dict:
@@ -125,10 +173,14 @@ def test_role_order_atomic_materiality_and_conditional_adjudication() -> None:
     a, b, c = role_a(), role_b(), role_c()
     lean.validate_role_a(a)
     lean.validate_role_b(b)
+    b["applicability_reviews"][0]["evidence_span_ids"] = ["ES-001"]
+    lean.validate_role_b(b)
     lean.validate_role_c(c)
     assert lean.adjudication_topics(a, b, c) == []
     c["verifications"][0].update({"decision": "challenge_with_evidence", "material": True})
     assert lean.adjudication_topics(a, b, c) == ["fidelity"]
+    c["verifications"][0]["topic"] = "role_b.prose_usability_finding"
+    assert lean.adjudication_topics(a, b, c) == ["category_localization"]
     c["started_at"] = "2026-07-22T00:00:01Z"
     with pytest.raises(lean.LeanError, match="before"):
         lean.validate_role_c(c)
@@ -146,8 +198,22 @@ def test_dimension_thresholds_are_noncompensatory() -> None:
 def test_policy_has_exact_core_gates_and_separate_diagnostics() -> None:
     policy = load(LEAN / "preregistration.json")
     assert len(policy["core_gates"]) == 13
+    classifications = {gate["id"]: gate["classification"] for gate in policy["core_gates"]}
+    assert classifications["paraphrase-invariance"] == "diagnostic"
+    assert classifications["prestige-invariance"] == "diagnostic"
+    assert all(value == "blocking" for key, value in classifications.items() if key not in {"paraphrase-invariance", "prestige-invariance"})
+    assert policy["D1_acceptance"] == {
+        "complete_sentinels": 4,
+        "minimum_deterministic_reconciliations": 2,
+        "minimum_structure_high": 3,
+        "minimum_intended_contrast_recovery": 0.75,
+        "require_all_invariants": True,
+    }
+    assert "combined-applicability" in classifications
+    assert "material-defect-detection" in classifications
     assert set(policy["diagnostics"]) == {"reliability", "score_distributions", "confidence", "inter_run_variation", "unresolved_dimensions", "non_core_perturbations"}
-    assert policy["stages"]["D1"]["adjudication_allowed"] is False
+    assert policy["stages"]["D1"]["adjudication_allowed"] == "conditional_only"
+    assert policy["stages"]["D1"]["maximum_model_calls"] == 20
 
 
 def test_d0_preserves_private_boundary_and_uses_no_model_calls() -> None:
@@ -157,3 +223,42 @@ def test_d0_preserves_private_boundary_and_uses_no_model_calls() -> None:
     assert result["model_calls"] == 0
     assert result["expert_holdout_unopened"] is True
     assert result["automated_holdout_unopened"] is True
+
+
+def test_d2_failure_blocks_freeze_validation_and_skill_development() -> None:
+    result = load(LEAN / "results/D2-result.json")
+    assert result["status"] == "fail"
+    assert result["failed_blocking_gates"] == ["conditional-adjudication"]
+    assert result["metrics"]["conditional_adjudication_rate"] == 3 / 8
+    assert result["metrics"]["prestige_policy_pass"] is False
+    assert result["skill_development_authorized"] is False
+    assert result["holdouts"] == {"expert": "unopened", "automated": "unopened"}
+    manifest = load(LEAN / "runs/D2.manifest.json")
+    assert manifest["status"] == "complete"
+    assert manifest["calls_used"] == 36
+    assert sum(call["status"] == "completed" for call in manifest["calls"] if call["call_kind"] == "required") == 32
+    assert sum(call["status"] == "completed" for call in manifest["calls"] if call["role"] == "adjudicator") == 3
+
+
+def test_failed_tier_a_attestation_is_schema_valid_and_conservative() -> None:
+    attestation = load(LEAN / "results/tier-a-lean-attestation.json")
+    Draft202012Validator(load(SCHEMAS / "tier-a-lean-attestation.schema.json")).validate(attestation)
+    assert attestation["status"] == "fail"
+    assert attestation["development_passed"] is False
+    assert attestation["validation_passed"] is False
+    assert attestation["evaluator_frozen"] is False
+    assert attestation["experimental_release_eligible"] is False
+    assert attestation["automated_holdout_opened"] is False
+
+
+def test_d2_role_a_prompt_names_the_frozen_atomic_registry() -> None:
+    prompt = load(LEAN / "prompts/roles-d2.json")["role_a"]
+    assert all(name in prompt for name in ATOMIC)
+
+
+def test_public_freeze_verification_is_line_ending_stable(tmp_path: Path) -> None:
+    verifier = import_file("freeze_line_endings", ROOT / "tools/verify_calibration_freeze.py")
+    fixture = tmp_path / "fixture.txt"
+    fixture.write_bytes(b"alpha\r\nbeta\r\n")
+    assert verifier.canonical_bytes(fixture) == b"alpha\nbeta\n"
+    assert verifier.main() == 0
