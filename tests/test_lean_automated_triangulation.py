@@ -262,3 +262,12 @@ def test_public_freeze_verification_is_line_ending_stable(tmp_path: Path) -> Non
     fixture.write_bytes(b"alpha\r\nbeta\r\n")
     assert verifier.canonical_bytes(fixture) == b"alpha\nbeta\n"
     assert verifier.main() == 0
+
+
+def test_private_preservation_allows_absent_public_corpus_but_rejects_partial(tmp_path: Path) -> None:
+    lean = import_file("lean_private_presence", ROOT / "tools/lean_triangulation.py")
+    expected = {"one.json": "a" * 64, "two.json": "b" * 64}
+    lean.verify_private_diagnostics(tmp_path, expected)
+    (tmp_path / "one.json").write_text("private", encoding="utf-8")
+    with pytest.raises(lean.LeanError, match="partial"):
+        lean.verify_private_diagnostics(tmp_path, expected)

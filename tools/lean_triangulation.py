@@ -432,11 +432,20 @@ def verify_preservation() -> None:
             raise LeanError(f"cannot read preserved PR #3 artifact: {relative}") from exc
         if hashlib.sha256(current).hexdigest() != expected:
             raise LeanError(f"preserved PR #3 artifact changed: {relative}")
-    if not private_root.exists():
+    verify_private_diagnostics(private_root, manifest["private_diagnostic_sha256"])
+
+
+def verify_private_diagnostics(private_root: Path, expected_hashes: dict[str, str]) -> None:
+    """Allow a public checkout with no private corpus, but reject partial or changed corpora."""
+    paths = {relative: private_root / relative for relative in expected_hashes}
+    present = {relative for relative, path in paths.items() if path.is_file()}
+    if not present:
         return
-    for relative, expected in manifest["private_diagnostic_sha256"].items():
-        path = private_root / relative
-        if not path.exists() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+    if present != set(paths):
+        missing = sorted(set(paths) - present)
+        raise LeanError(f"preserved private diagnostic set is partial; missing: {', '.join(missing)}")
+    for relative, expected in expected_hashes.items():
+        if hashlib.sha256(paths[relative].read_bytes()).hexdigest() != expected:
             raise LeanError(f"preserved private diagnostic changed: {relative}")
 
 
