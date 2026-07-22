@@ -138,7 +138,9 @@ def skill_tree_sha256() -> str:
         item for item in skill.rglob("*")
         if item.is_file() and "__pycache__" not in item.parts and item.suffix.lower() != ".pyc"
     )
-    for path in sorted(files):
+    # Path ordering follows host-platform semantics.  Sort normalized relative
+    # names explicitly so Windows and POSIX runners hash the same sequence.
+    for path in sorted(files, key=lambda item: item.relative_to(skill).as_posix().casefold()):
         digest.update(path.relative_to(skill).as_posix().encode("utf-8") + b"\0")
         digest.update(hashlib.sha256(canonical_file_bytes(path)).digest())
     return digest.hexdigest()
