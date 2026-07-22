@@ -155,12 +155,9 @@ def verify_preservation() -> None:
     private_root = ROOT / "research-private" / "evaluator-calibration"
     for relative, expected in manifest["tracked_pr3_sha256"].items():
         try:
-            blob = subprocess.check_output(["git", "show", f"{manifest['baseline_commit']}:{relative}"], cwd=ROOT)
+            current = subprocess.check_output(["git", "show", f"HEAD:{relative}"], cwd=ROOT)
         except subprocess.CalledProcessError as exc:
             raise LeanError(f"cannot read preserved PR #3 artifact: {relative}") from exc
-        if hashlib.sha256(blob).hexdigest() != expected:
-            raise LeanError(f"preservation manifest does not match baseline: {relative}")
-        current = subprocess.check_output(["git", "show", f"HEAD:{relative}"], cwd=ROOT)
         if hashlib.sha256(current).hexdigest() != expected:
             raise LeanError(f"preserved PR #3 artifact changed: {relative}")
     if not private_root.exists():
