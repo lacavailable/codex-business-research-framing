@@ -1,5 +1,9 @@
 # {{decision-focused title}}
 
+> Use this template only for requested structured or full-audit output.
+> Compact and standard Markdown should follow the response-profile contract and
+> put usable prose first.
+
 **BusinessBrief schema:** `2.0`
 
 **Mode:** `{{mode}}`

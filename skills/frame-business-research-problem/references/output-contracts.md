@@ -1,6 +1,10 @@
 # Output Contracts
 
-Use the shared envelope in [business-brief-schema.md](business-brief-schema.md) for every mode. New work uses version `2.0`; version `1.0` briefs retain the original contracts listed at the end.
+Use the shared envelope in [business-brief-schema.md](business-brief-schema.md)
+for requested structured records. New structured work uses version `2.0`;
+version `1.0` briefs retain the original contracts listed at the end. Ordinary
+Markdown follows [response-profiles.md](response-profiles.md) and need not show
+the envelope.
 
 ## Version 2.0 contracts
 
@@ -51,18 +55,21 @@ Preserve these keys for v1 briefs:
 | `draft-introduction` | `introduction`, `claim_checklist` |
 | `draft-managerial-implications` | `implications`, `qualification_checklist` |
 
-## Presentation order
+## Visible Markdown contract
 
-When emitting Markdown, use this order:
+Put the usable answer or manuscript-ready prose first. Follow it only as needed
+with a fidelity warning, one essential evidence gap, and one principal boundary.
+Do not require the reader to pass through readiness, DFC-12, gate, or layer
+tables before reaching the answer.
 
-1. Input readiness and eligibility.
-2. Diagnosis or business brief.
-3. Proposed narrative.
-4. Mode-specific result.
-5. Layer audits.
-6. Model-to-reality mapping, when applicable.
-7. Unsupported or unverified claims.
-8. Boundary conditions.
-9. Most important remaining weakness.
+Use `supported`, `conditionally_supported`, `unsupported`, `contradicted`,
+`not_supplied`, `not_assessed`, and `not_applicable` for visible support
+statements. Do not use `fail` for missing or nonapplicable material; reserve it
+for a material internal gate contradiction.
 
-Prefer short prose and tables over marketing language. Make failure and non-assessment visible.
+State each substantive conclusion, limitation, unsupported pathway, and
+evidence need once. Full-audit and machine-readable records may repeat a fact
+only where schema compatibility requires it.
+
+Prefer short prose over marketing language. Make a material failure or
+non-assessment visible without exposing every passing check.

@@ -2,7 +2,11 @@
 
 `frame-business-research-problem` is an open-source Codex Agent Skill that helps Operations Management (OM), Information Systems (IS), and Operations Research (OR) researchers turn models and early ideas into concrete, defensible business-research problems.
 
-> **v0.3 calibration work is preliminary and release-blocked.** The public evaluator infrastructure and synthetic controls are available on the calibration branch, but no real expert annotations or lawful private passage corpus are present. The locked holdout, Skill revision, tag, and release therefore remain intentionally undone. See the [v0.3 calibration results](docs/top-journal-calibration-results.md) and [evaluation report](docs/v0.3-evaluation-report.md).
+> **Skill 2.1 is experimental development work, not a release.** It improves
+> response routing and visible concision under a bounded synthetic canary while
+> preserving the v0.2 fidelity safeguards. Evaluator validation, both holdouts,
+> a release tag, and performance claims remain intentionally unavailable. See
+> the [development authorization](docs/skill-development-without-evaluator-freeze.md).
 
 ## Contents
 
@@ -150,7 +154,9 @@ Draft implications for these comparative statics and identify the data and autho
 
 ## 9. How the Skill works
 
-The mandatory order is: extract model invariants; classify decisions, states, parameters, observations, uncertainty, outcomes, and derived variables; complete DFC-12; run all six gates; reject or repair inconsistent scenarios; apply managerial framing; apply scholarly positioning when appropriate; draft; audit evidence and boundaries; and state the primary remaining weakness.
+Internally, the mandatory order remains: extract model invariants; classify decisions, states, parameters, observations, uncertainty, outcomes, and derived variables; complete DFC-12; run all six gates; reject or repair inconsistent scenarios; apply managerial framing; apply scholarly positioning when appropriate; draft; and audit evidence and boundaries.
+
+Visible output uses one of three profiles. `compact` produces a 120–220-word usable answer with at most three material caveats. `standard` produces a 250–500-word diagnosis and manuscript-ready framing with only the essential evidence need and principal boundary. `full-audit` exposes the complete framework only for an explicit audit, comparison, mapping, review, or machine-readable request. Ordinary writing begins with usable prose rather than internal scaffolding, suppresses nonapplicable layers, and states each substantive issue once.
 
 Later layers cannot compensate for earlier failures. A clear introduction cannot rescue hidden future information, and an important practical topic cannot rescue the wrong objective.
 
@@ -325,6 +331,11 @@ The v0.2 benchmark has 42 synthetic cases—14 each for OM, IS, and OR—and com
 The canonical 100-point rubric scores fidelity (30), managerial framing (25), scholarly positioning (20), evidence discipline (15), and prose clarity (10). Success requires 70 points, all applicable layer minima, and no fidelity hard failure; raw scores remain visible and hard failures cap totals at 69.
 
 Read the [methodology](docs/v0.2-evaluation-methodology.md), [report](docs/v0.2-evaluation-report.md), committed synthetic artifacts under `evals/`, and [limitations](docs/limitations.md). Language-model evaluation is not rerun in required CI; deterministic CI validates artifact completeness and integrity.
+
+Skill 2.1 direct development uses a separate eight-task, 24-call synthetic
+canary. Passing that canary can authorize only an experimental development
+merge. It cannot establish evaluator validity, expert validation, general
+superiority, or release eligibility.
 
 ## 18. Copyright and affiliation
 
