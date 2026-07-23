@@ -15,6 +15,11 @@ def text(name: str) -> str:
     return (SKILL / name).read_text(encoding="utf-8")
 
 
+def canonical_text_sha256(path: Path) -> str:
+    data = path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(data).hexdigest()
+
+
 def test_profile_routing_and_output_first_contract() -> None:
     skill = text("SKILL.md")
     profiles = text("references/response-profiles.md")
@@ -72,8 +77,8 @@ def test_original_examples_cover_ten_scenarios() -> None:
 def test_businessbrief_validator_and_openai_metadata_are_unchanged() -> None:
     validator = SKILL / "scripts" / "validate_brief.py"
     metadata = SKILL / "agents" / "openai.yaml"
-    assert hashlib.sha256(validator.read_bytes()).hexdigest() == "f70ea4a143554ac1988d0c2c9fe47015cf536ff5db2bc3b1d06d38692f09a63e"
-    assert hashlib.sha256(metadata.read_bytes()).hexdigest() == "328b01e677e136412eefc54de4b3d802bcc83b75cb499a7a774a494563faf1f3"
+    assert canonical_text_sha256(validator) == "e238906e3a1861a75327348194f52898482ec0d59d3d311daa6f7f3b356eaecc"
+    assert canonical_text_sha256(metadata) == "3d747031fadb49b13236da80f16b6de40f1b342d61116b8fbaac443b113ef213"
 
 
 def test_canary_static_contract() -> None:
