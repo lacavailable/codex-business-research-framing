@@ -104,3 +104,41 @@ def test_canary_has_exact_call_budget() -> None:
 def test_holdouts_are_outside_canary() -> None:
     paths = [path.relative_to(CANARY).as_posix().casefold() for path in CANARY.rglob("*")]
     assert not any("holdout" in path for path in paths)
+
+
+def test_canary_artifacts_are_complete_and_schema_valid() -> None:
+    tool = import_file("skill_canary_artifacts", ROOT / "tools" / "skill_canary.py")
+    tool.validate_freeze()
+    outputs = sorted((CANARY / "outputs").glob("GEN-*.json"))
+    judgments = sorted((CANARY / "judgments").glob("JUDGE-*.json"))
+    pairs = sorted((CANARY / "blinded-pairs").glob("PAIR-*.json"))
+    assert len(outputs) == 16
+    assert len(judgments) == len(pairs) == 8
+    for path in outputs:
+        tool.validate_schema(json.loads(path.read_text(encoding="utf-8")), "generation-result.schema.json")
+    for path in judgments:
+        tool.validate_schema(json.loads(path.read_text(encoding="utf-8")), "judge-result.schema.json")
+    for path in pairs:
+        tool.validate_schema(json.loads(path.read_text(encoding="utf-8")), "blinded-pair.schema.json")
+
+
+def test_canary_result_records_failed_merge_gate() -> None:
+    result = json.loads((CANARY / "results" / "canary-result.json").read_text(encoding="utf-8"))
+    assert result["status"] == "fail"
+    assert result["experimental_merge_authorized"] is False
+    assert result["validation_authorized"] is False
+    assert result["release_authorized"] is False
+    assert result["authoritative_calls_used"] == 24
+    assert result["automated_holdout_opened"] is False
+    assert result["expert_holdout_opened"] is False
+    assert result["no_human_experts"] is True
+
+
+def test_product_owner_package_is_blinded() -> None:
+    packets = sorted((CANARY / "user-acceptance" / "pairs").glob("UAT-*.md"))
+    assert len(packets) == 8
+    assert (CANARY / "user-acceptance" / "review-form.md").is_file()
+    combined = "\n".join(path.read_text(encoding="utf-8") for path in packets)
+    assert "Skill 2.1" not in combined
+    assert "v0.2" not in combined
+    assert not (CANARY / "user-acceptance" / "condition-key.json").exists()

@@ -21,7 +21,9 @@ All notable changes are documented here. This project follows Semantic Versionin
 ### Release status
 
 - Skill 2.1 is experimental development work. Evaluator validation, both
-  holdouts, formal performance claims, a tag, and a release remain blocked.
+  holdouts, formal performance claims, a tag, and a release remain blocked. Its
+  direct eight-task canary failed the frozen word-profile, repetition, and
+  unsupported-fact gates, so the candidate is not merge-authorized.
 
 ## [0.2.0-beta] - 2026-07-20
 

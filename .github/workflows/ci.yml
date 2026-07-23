@@ -76,6 +76,14 @@ jobs:
         run: python tools/audit_repository.py --tracked
       - name: Check local Markdown links
         run: python tools/check_links.py
+      - name: Recompute bounded Skill canary
+        run: |
+          python tools/skill_canary.py validate
+          python tools/skill_canary.py validate-freeze
+          mkdir -p .local-eval/skill-2.1-canary
+          cp evals/skill-2.1-canary/blinded-pairs/condition-key.json .local-eval/skill-2.1-canary/pair-key.json
+          python tools/skill_canary.py summarize
+          git diff --exit-code -- evals/skill-2.1-canary/results/canary-result.json
       - name: Run pinned official Skill validation
         run: python .official-skills/skills/.system/skill-creator/scripts/quick_validate.py skills/frame-business-research-problem
       - name: Build and verify installable Skill

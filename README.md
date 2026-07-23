@@ -2,11 +2,13 @@
 
 `frame-business-research-problem` is an open-source Codex Agent Skill that helps Operations Management (OM), Information Systems (IS), and Operations Research (OR) researchers turn models and early ideas into concrete, defensible business-research problems.
 
-> **Skill 2.1 is experimental development work, not a release.** It improves
-> response routing and visible concision under a bounded synthetic canary while
-> preserving the v0.2 fidelity safeguards. Evaluator validation, both holdouts,
-> a release tag, and performance claims remain intentionally unavailable. See
-> the [development authorization](docs/skill-development-without-evaluator-freeze.md).
+> **Skill 2.1 is a failed experimental candidate, not a release.** Its bounded
+> canary found no judged fidelity regression but failed the frozen length,
+> repetition, profile-compliance, and unsupported-fact gates. The branch is not
+> merge-authorized. Evaluator validation, both holdouts, a release tag, and
+> performance claims remain unavailable. See the
+> [development authorization](docs/skill-development-without-evaluator-freeze.md)
+> and [candid results](docs/skill-2.1-direct-experimental-results.md).
 
 ## Contents
 
@@ -332,10 +334,11 @@ The canonical 100-point rubric scores fidelity (30), managerial framing (25), sc
 
 Read the [methodology](docs/v0.2-evaluation-methodology.md), [report](docs/v0.2-evaluation-report.md), committed synthetic artifacts under `evals/`, and [limitations](docs/limitations.md). Language-model evaluation is not rerun in required CI; deterministic CI validates artifact completeness and integrity.
 
-Skill 2.1 direct development uses a separate eight-task, 24-call synthetic
-canary. Passing that canary can authorize only an experimental development
-merge. It cannot establish evaluator validity, expert validation, general
-superiority, or release eligibility.
+Skill 2.1 direct development used a separate eight-task, 24-call synthetic
+canary. The candidate failed its frozen acceptance policy and is not
+merge-authorized. Even a passing result could have authorized only an
+experimental development merge, not evaluator validity, expert validation,
+general superiority, or release eligibility.
 
 ## 18. Copyright and affiliation
 
