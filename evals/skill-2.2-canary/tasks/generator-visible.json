@@ -1,0 +1,30 @@
+{
+  "schema_version": "skill-canary-tasks-2.0",
+  "tasks": [
+    {
+      "task_id": "OM-C11",
+      "domain": "OM",
+      "profile": "compact",
+      "request": "Rewrite this as one manuscript-ready paragraph of at most 90 words. A hospital schedules nurses before uncertain arrivals. The draft says patients choose staffing after observing the queue and calls treated patients the decision variable. Preserve the hospital as decision maker, the pre-arrival timing, uncertain arrivals, and treatment as an outcome. Do not add empirical facts."
+    },
+    {
+      "task_id": "IS-C12",
+      "domain": "IS",
+      "profile": "compact",
+      "request": "Write one platform-governance paragraph of at most 110 words. A platform observes a noisy account score, allocates a fixed review budget, and then chooses an action after review. True account type is latent. The model optimizes platform payoff, not social welfare. Preserve those boundaries without adding prevalence, fairness, safety, or performance facts."
+    },
+    {
+      "task_id": "OR-S11",
+      "domain": "OR",
+      "profile": "standard",
+      "request": "In 220 to 320 words, frame this computational result for an operational audience. Formulation B is equivalent to Formulation A and solved the supplied benchmark instances 42% faster. A feasible route must be committed by 15 minutes; the optimality certificate arrives later. Explain the valid contribution, what the structural numbers mean, and what evidence would be needed for a profit or service claim. Do not imply that equivalence changes the true optimum or that post-deadline proof improves the executed route."
+    },
+    {
+      "task_id": "XD-F11",
+      "domain": "cross-domain",
+      "profile": "full-audit",
+      "request": "Produce a full audit using BusinessBrief 2.0 terminology, the unchanged DFC-12, and all six fidelity gates. A regional authority allocates inspections to minimize a supplied harm objective. The proposed story instead makes a merchant choose advertising to maximize revenue; advertising is not a model decision and revenue is not the objective. Map the mismatch, give only model-preserving repairs, and do not invent empirical magnitudes or a literature gap."
+    }
+  ]
+}
+
