@@ -10,27 +10,31 @@ Preserve research meaning before improving narrative appeal. Treat every plausib
 ## Execute internally
 
 1. Select one mode: `create`, `diagnose`, `rewrite`, `compare-scenarios`, `map-model-to-business`, `audit-assumptions`, `draft-introduction`, or `draft-managerial-implications`.
-2. Select `compact`, `standard`, or `full-audit` with [response-profiles.md](references/response-profiles.md). Do not default to `full-audit`.
-3. Classify readiness with [input-readiness.md](references/input-readiness.md). Record missing information; never invent it.
-4. Freeze objective, decisions, states, parameters, uncertainty, observations, constraints, timing, mechanism, outcomes, and derived quantities.
-5. Complete the unchanged DFC-12 and all six gates using [framework.md](references/framework.md).
-6. Set `ineligible` if any gate fails. Set `not_assessed` if any gate is unknown or unassessed. Continue to later layers only when every gate passes.
-7. Map every supplied model using [model-to-reality-mapping.md](references/model-to-reality-mapping.md).
-8. Apply managerial framing from [literature-grounded-framing.md](references/literature-grounded-framing.md) only after fidelity is eligible.
-9. Apply [scholarly-positioning.md](references/scholarly-positioning.md) only for a paper, research question, introduction, or contribution task.
-10. Apply the domain playbook: [om-framing.md](references/om-framing.md), [is-framing.md](references/is-framing.md), or [or-framing.md](references/or-framing.md). For computational OR claims, also load [or-computational-contribution.md](references/or-computational-contribution.md).
-11. Label claims with [evidence-and-attribution.md](references/evidence-and-attribution.md). Do not invent company, market, performance, causal, or prevalence facts.
-12. Check [anti-patterns.md](references/anti-patterns.md), audit boundaries, and identify the primary remaining weakness.
+2. Select the requested deliverable before selecting a profile. Use [adaptive-output.md](references/adaptive-output.md) for deliverable routing, minimum-sufficient content, table-versus-prose choice, and clarification value.
+3. Select `micro`, `compact`, `standard`, or `full-audit` with [response-profiles.md](references/response-profiles.md). Use `full-audit` only when explicitly requested.
+4. Classify readiness with [input-readiness.md](references/input-readiness.md). Record missing information; never invent it.
+5. Freeze objective, decisions, states, parameters, uncertainty, observations, constraints, timing, mechanism, outcomes, and derived quantities.
+6. Complete the unchanged DFC-12 and all six gates using [framework.md](references/framework.md).
+7. Set `ineligible` if any gate fails. Set `not_assessed` if any gate is unknown or unassessed. Continue to later layers only when every gate passes.
+8. Map every supplied model using [model-to-reality-mapping.md](references/model-to-reality-mapping.md).
+9. For `create` or setting-development work, generate and classify candidate interpretations internally with [setting-construction.md](references/setting-construction.md); show only the strongest eligible candidate unless comparison is requested.
+10. Apply managerial framing from [literature-grounded-framing.md](references/literature-grounded-framing.md) only after fidelity is eligible. Use [managerial-value-pathway.md](references/managerial-value-pathway.md) for operational, managerial, or social outcome claims.
+11. Apply [scholarly-positioning.md](references/scholarly-positioning.md) only for a paper, research question, introduction, or contribution task. Route contribution type with [contribution-types.md](references/contribution-types.md).
+12. Apply the domain playbook: [om-framing.md](references/om-framing.md), [is-framing.md](references/is-framing.md), or [or-framing.md](references/or-framing.md). For computational OR claims, also load [or-computational-contribution.md](references/or-computational-contribution.md).
+13. Label claims with [evidence-and-attribution.md](references/evidence-and-attribution.md). Apply the claim-granularity and status rules in [adaptive-output.md](references/adaptive-output.md). Do not invent company, market, performance, causal, literature, or prevalence facts.
+14. Check [anti-patterns.md](references/anti-patterns.md), audit boundaries, and identify the primary remaining weakness.
 
 ## Render for the user
 
-Follow [output-contracts.md](references/output-contracts.md). For ordinary Markdown, put finished usable prose first, followed only when needed by a concise fidelity warning, one essential evidence gap, and one principal boundary. Suppress nonapplicable layers and internal scaffolding.
+Follow [output-contracts.md](references/output-contracts.md). For ordinary Markdown, put the requested usable deliverable first. Apply the minimum-sufficient-output filter before rendering; expose internal checks only when the deliverable requires them.
 
-State each substantive conclusion, limitation, unsupported pathway, and evidence need once in the user-visible response. Do not repeat the same issue across diagnosis, narrative, mapping, evidence, boundary, and weakness sections. Use headings only when they add information.
+Give each substantive conclusion, limitation, unsupported pathway, evidence need, and boundary one visible home. Merge semantic duplicates, retain the clearest occurrence, and remove later restatements. Necessary repeated technical nouns, table labels, and explicitly requested schema fields are not substantive repetition.
 
 Use exactly these visible support statuses when a status is useful: `supported`, `conditionally_supported`, `unsupported`, `contradicted`, `not_supplied`, `not_assessed`, and `not_applicable`. Reserve internal `fail` for a material gate contradiction.
 
 Produce the full [business-brief-schema.md](references/business-brief-schema.md) record only when the user requests machine-readable output or a full audit. Preserve BusinessBrief 1.0 and 2.0 compatibility.
+
+Before returning, verify singular/plural scope, scenario count, tested conditions, causal strength, decision-time knowledge, private objective versus welfare, and every link in any value pathway. Never describe a `not_supplied` or `not_assessed` element as stated, given, fixed, observed, or specified.
 
 ## Load specialized execution references
 

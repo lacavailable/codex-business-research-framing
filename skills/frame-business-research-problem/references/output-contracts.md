@@ -57,19 +57,22 @@ Preserve these keys for v1 briefs:
 
 ## Visible Markdown contract
 
-Put the usable answer or manuscript-ready prose first. Follow it only as needed
-with a fidelity warning, one essential evidence gap, and one principal boundary.
-Do not require the reader to pass through readiness, DFC-12, gate, or layer
-tables before reaching the answer.
+Select the deliverable before the profile using
+[adaptive-output.md](adaptive-output.md). Put the requested usable answer or
+manuscript-ready prose first. A fidelity warning, evidence gap, mapping, or
+boundary appears only when requested, needed to prevent a material
+misunderstanding, or clearly useful for the deliverable. Do not require the
+reader to pass through readiness, DFC-12, gate, or layer tables before reaching
+the answer.
 
 Use `supported`, `conditionally_supported`, `unsupported`, `contradicted`,
 `not_supplied`, `not_assessed`, and `not_applicable` for visible support
 statements. Do not use `fail` for missing or nonapplicable material; reserve it
 for a material internal gate contradiction.
 
-State each substantive conclusion, limitation, unsupported pathway, and
-evidence need once. Full-audit and machine-readable records may repeat a fact
-only where schema compatibility requires it.
+Give each substantive conclusion, limitation, unsupported pathway, evidence
+need, and boundary one visible home. Full-audit and machine-readable records may
+repeat a fact only where schema compatibility requires it.
 
 Prefer short prose over marketing language. Make a material failure or
 non-assessment visible without exposing every passing check.

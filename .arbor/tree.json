@@ -1,0 +1,70 @@
+{
+  "_counter": 3,
+  "root": "n0",
+  "nodes": {
+    "n0": {
+      "id": "n0",
+      "parent": null,
+      "depth": 0,
+      "status": "root",
+      "hypothesis": "Improve deliverable fit, adaptive concision, organization, claim scope, and evidence boundaries without weakening model fidelity",
+      "insight": "",
+      "metadata": {
+        "dev_score": null,
+        "test_score": null,
+        "result": "",
+        "branch_ref": null
+      },
+      "created_at": 1784812690,
+      "updated_at": 1784812690
+    },
+    "n1": {
+      "id": "n1",
+      "parent": "n0",
+      "depth": 1,
+      "status": "pending",
+      "hypothesis": "Deliverable-first routing plus minimum-sufficient rendering will improve usability and profile compliance without sacrificing fidelity",
+      "insight": "",
+      "metadata": {
+        "dev_score": null,
+        "test_score": null,
+        "result": "",
+        "branch_ref": null
+      },
+      "created_at": 1784812690,
+      "updated_at": 1784812690
+    },
+    "n2": {
+      "id": "n2",
+      "parent": "n0",
+      "depth": 1,
+      "status": "pending",
+      "hypothesis": "Precise status, claim-granularity, contribution, and pathway rules will prevent scope and evidence overclaims",
+      "insight": "",
+      "metadata": {
+        "dev_score": null,
+        "test_score": null,
+        "result": "",
+        "branch_ref": null
+      },
+      "created_at": 1784812690,
+      "updated_at": 1784812690
+    },
+    "n3": {
+      "id": "n3",
+      "parent": "n0",
+      "depth": 1,
+      "status": "pending",
+      "hypothesis": "Semantic single-home repetition control and adaptive table selection will improve organization without deleting high-value mappings",
+      "insight": "",
+      "metadata": {
+        "dev_score": null,
+        "test_score": null,
+        "result": "",
+        "branch_ref": null
+      },
+      "created_at": 1784812690,
+      "updated_at": 1784812690
+    }
+  }
+}

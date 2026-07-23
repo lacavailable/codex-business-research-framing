@@ -36,6 +36,17 @@ bounds, or certificates.
 5. A post-deadline certificate cannot improve a decision already executed.
 6. Computational value requires an explicit operational pathway.
 7. Do not claim realized financial or operational value without evidence.
+8. Use singular “instance” unless multiple instances are supplied.
+9. Distinguish observed runtime from expected runtime.
+10. Distinguish incumbent feasibility from incumbent quality.
+11. Distinguish later proof from decision-time quality knowledge.
+12. Do not call a later proof operationally valuable for the completed
+    decision. Retrospective assurance requires an explicit future audit,
+    validation, or process-design pathway.
+13. A benchmark result is conditional on supplied hardware, solver settings,
+    instance, comparator, and time limit.
+14. Do not invent repeated-run robustness or generalize one scenario into
+    tested instances.
 
 Valid pathways include meeting a decision deadline, enabling more frequent
 reoptimization, solving larger instances, evaluating more scenarios, producing

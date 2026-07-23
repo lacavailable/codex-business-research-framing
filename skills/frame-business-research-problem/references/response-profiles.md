@@ -1,56 +1,73 @@
 # Response Profiles
 
-Select the smallest profile that satisfies the request. Run fidelity checks
-internally for every profile.
+Select the requested deliverable first, then the smallest profile that satisfies
+it. Run fidelity checks internally for every profile. Ranges are typical, not
+minimums; never pad an answer to enter a range.
+
+## Micro
+
+Use for a one-sentence correction, email wording, interview-ready short answer,
+brief definition, one contribution statement, or explicitly very short
+rewrite.
+
+- Typical range: 35–100 words.
+- Soft maximum: 120 words.
+- Include the central corrected claim and one essential qualification when
+  material.
+- Do not add headings.
 
 ## Compact
 
-Use for one paragraph, a brief rewrite, an introduction opening, a short
-business-problem statement, interview-ready framing, a concise managerial
-implication, or another explicitly brief answer.
+Use for a manuscript-ready business-problem paragraph, introduction opening,
+concise managerial implication, one-paragraph model interpretation, or brief
+but complete research framing.
 
-- Target 120–220 words.
+- Typical range: 80–180 words.
+- Soft maximum: 220 words.
 - Put finished usable text first.
-- Add zero to three short caveats only when material.
-- Omit DFC-12, gate lists, layer audits, readiness sections, and repeated
-  mappings.
-- Omit headings when they consume more attention than they save.
+- A business-problem paragraph normally covers actor, decision, central
+  friction or uncertainty, mechanism or trade-off, and consequence or research
+  question.
+- Do not pad to a minimum. Omit headings and internal audit scaffolding.
 
 ## Standard
 
 Use for ordinary research assistance when neither brevity nor a complete audit
 is explicitly requested.
 
-- Target 250–500 words.
-- Give a concise diagnosis and manuscript-ready framing.
-- Add a short model mapping only when it resolves a material ambiguity.
-- State one essential evidence need and one principal boundary.
-- Suppress nonapplicable scholarly or managerial layers.
+- Typical range: 180–450 words.
+- Soft maximum: 500 words.
+- Include only the task-relevant subset of diagnosis, finished replacement
+  prose, compact mapping, essential evidence need, and principal boundary.
+- Use a compact mapping table when timing, information, or three or more model
+  objects would be clearer than prose.
 
 ## Full audit
 
-Use only for an explicit strict review, complete assumption audit, full model
-mapping, scenario comparison, detailed mathematical consistency check, or
-machine-readable record.
+Use only when the user explicitly requests a full audit, complete assumption
+audit, full manuscript audit, or machine-readable complete record.
 
-Expose readiness, DFC-12, six gates, mappings, layer audits, evidence, and
-boundaries as the requested task requires. Structured repetition is permitted
-only when the BusinessBrief schema requires the same fact in separate fields.
+Do not impose a universal word range. Expose only the task-relevant subset of
+readiness, DFC-12, six gates, mappings, layer audits, evidence, and boundaries.
+Apply the minimum-sufficient-output filter first. Structured repetition is
+permitted only when the BusinessBrief schema requires the same fact in separate
+fields.
 
 ## Rendering precedence
 
-An explicit profile request controls. Otherwise, an explicit length or format
-request controls. Otherwise, use `full-audit` only for the full-audit triggers
-above and use `standard` for ordinary assistance.
+An explicit deliverable controls required content. An explicit profile, length,
+or format controls rendering. Otherwise, route the deliverable to the smallest
+sufficient profile; use `full-audit` only when explicitly requested.
 
-For writing tasks, order visible content as:
+For writing tasks, order visible content as needed:
 
 1. usable prose;
 2. necessary fidelity warning;
 3. essential evidence gap;
 4. principal boundary.
 
-Do not expose a layer merely because the framework contains it. A model-setting
+These are content slots, not mandatory sections. Do not expose a layer merely
+because the framework contains it. A model-setting
 explanation does not need visible managerial implications; a short rewrite does
 not need scholarly positioning; a computational result does not need an
 invented literature contribution.

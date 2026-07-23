@@ -1,0 +1,137 @@
+{
+  "schema_version": "skill-2.2-canary-audit-1.0",
+  "tasks": [
+    {
+      "task_id": "OM-C01",
+      "profile": "compact",
+      "deliverable": "manuscript-ready business-problem paragraph",
+      "required_invariants": [
+        "retailer is actor",
+        "choice precedes demand",
+        "capacity is retained",
+        "Markov substitution is retained"
+      ],
+      "task_supplied_numbers": [],
+      "prohibited_overclaims": [],
+      "full_audit": false,
+      "is_standard_mapping_task": false,
+      "is_or_standard_task": false
+    },
+    {
+      "task_id": "OM-S02",
+      "profile": "standard",
+      "deliverable": "diagnosis and replacement framing",
+      "required_invariants": [
+        "staffing is chosen",
+        "staffing precedes demand",
+        "fulfillment is an outcome"
+      ],
+      "task_supplied_numbers": [],
+      "prohibited_overclaims": [],
+      "full_audit": false,
+      "is_standard_mapping_task": false,
+      "is_or_standard_task": false
+    },
+    {
+      "task_id": "IS-C01",
+      "profile": "compact",
+      "deliverable": "manuscript-ready platform-governance paragraph",
+      "required_invariants": [
+        "review budget is fixed",
+        "risk score is noisy",
+        "review precedes action"
+      ],
+      "task_supplied_numbers": [],
+      "prohibited_overclaims": [],
+      "full_audit": false,
+      "is_standard_mapping_task": false,
+      "is_or_standard_task": false
+    },
+    {
+      "task_id": "IS-S02",
+      "profile": "standard",
+      "deliverable": "diagnosis, compact mapping, and replacement framing",
+      "required_invariants": [
+        "type is latent",
+        "platform observes noisy signal",
+        "revenue is not welfare"
+      ],
+      "task_supplied_numbers": [],
+      "prohibited_overclaims": [],
+      "full_audit": false,
+      "is_standard_mapping_task": true,
+      "is_or_standard_task": false
+    },
+    {
+      "task_id": "OR-C01",
+      "profile": "compact",
+      "deliverable": "computational-contribution paragraph",
+      "required_invariants": [
+        "formulations are equivalent",
+        "true optimum is unchanged",
+        "runtime evidence is benchmark-bounded"
+      ],
+      "task_supplied_numbers": [
+        "40"
+      ],
+      "prohibited_overclaims": [
+        "runtime_to_profit",
+        "equivalent_formulation_changes_optimum"
+      ],
+      "full_audit": false,
+      "is_standard_mapping_task": false,
+      "is_or_standard_task": false
+    },
+    {
+      "task_id": "OR-S02",
+      "profile": "standard",
+      "deliverable": "computational-contribution explanation",
+      "required_invariants": [
+        "incumbent arrives before deadline",
+        "certificate arrives after deadline",
+        "executed decision cannot change"
+      ],
+      "task_supplied_numbers": [
+        "10",
+        "35"
+      ],
+      "prohibited_overclaims": [
+        "post_deadline_value"
+      ],
+      "full_audit": false,
+      "is_standard_mapping_task": false,
+      "is_or_standard_task": true
+    },
+    {
+      "task_id": "XD-F01",
+      "profile": "full-audit",
+      "deliverable": "full fidelity and framing audit",
+      "required_invariants": [
+        "regulator is actor",
+        "inspection allocation is choice",
+        "system harm is objective",
+        "commercial story is ineligible"
+      ],
+      "task_supplied_numbers": [],
+      "prohibited_overclaims": [],
+      "full_audit": true,
+      "is_standard_mapping_task": false,
+      "is_or_standard_task": false
+    },
+    {
+      "task_id": "XD-F02",
+      "profile": "full-audit",
+      "deliverable": "full contribution-framing audit",
+      "required_invariants": [
+        "capacity constraint retained",
+        "information delay retained",
+        "allocation rule is decision"
+      ],
+      "task_supplied_numbers": [],
+      "prohibited_overclaims": [],
+      "full_audit": true,
+      "is_standard_mapping_task": false,
+      "is_or_standard_task": false
+    }
+  ]
+}

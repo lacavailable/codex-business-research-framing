@@ -1,0 +1,90 @@
+{
+  "schema_version": "skill-2.2-preregistration-1.0",
+  "frozen_before_generation": true,
+  "candidate_name": "Skill 2.2 adaptive experimental",
+  "source_pr_7_commit": "323ea17b8f98059b71801b6a1bf9241188be4fee",
+  "generator_model": "gpt-5.6-terra",
+  "generator_reasoning": "high",
+  "judge_model": "gpt-5.6-sol",
+  "judge_reasoning": "high",
+  "model_relationship": "same-family variants; independence not established",
+  "required_candidate_generation_calls": 8,
+  "required_blind_judge_calls": 8,
+  "maximum_authoritative_calls": 16,
+  "pair_seed": "skill-2.2-adaptive-pairs-2026-07-23",
+  "uat_seed": "skill-2.2-adaptive-product-owner-2026-07-23",
+  "acceptance_rules": {
+    "1_new_material_fidelity_contradictions": {
+      "operator": "==",
+      "threshold": 0
+    },
+    "2_new_unsupported_factual_claims": {
+      "operator": "==",
+      "threshold": 0
+    },
+    "3_runtime_to_profit_conversions": {
+      "operator": "==",
+      "threshold": 0
+    },
+    "4_post_deadline_same_cycle_value_claims": {
+      "operator": "==",
+      "threshold": 0
+    },
+    "5_scope_or_generalization_errors": {
+      "operator": "==",
+      "threshold": 0
+    },
+    "6_candidate_visible_nonapplicable_layers": {
+      "operator": "==",
+      "threshold": 0
+    },
+    "7_adaptive_contract_compliance": {
+      "operator": ">=",
+      "threshold": 7,
+      "denominator": 8
+    },
+    "8_outputs_without_avoidable_repetition": {
+      "operator": ">=",
+      "threshold": 5,
+      "denominator": 8
+    },
+    "9_non_full_audit_candidate_wins": {
+      "operator": ">=",
+      "threshold": 4,
+      "denominator": 6
+    },
+    "10_full_audit_fidelity_or_safeguard_losses": {
+      "operator": "==",
+      "threshold": 0
+    },
+    "11_full_audit_simplification": {
+      "operator": ">=",
+      "threshold": 1,
+      "denominator": 2
+    },
+    "12_or_standard_safeguards": {
+      "operator": "==",
+      "threshold": true
+    },
+    "13_is_standard_mapping_fit": {
+      "operator": "==",
+      "threshold": true
+    },
+    "14_deterministic_checks": {
+      "operator": "==",
+      "threshold": true
+    }
+  },
+  "scope": "public product-development iteration; not independent validation",
+  "prohibited_actions": [
+    "v0.2 regeneration",
+    "retry or replacement call",
+    "adjudication",
+    "additional model role",
+    "calibration evaluator modification or rerun",
+    "validation or holdout access",
+    "silver labels",
+    "expert-validation or superiority claim",
+    "tag or release"
+  ]
+}

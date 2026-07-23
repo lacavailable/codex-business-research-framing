@@ -1,148 +1,158 @@
-# Original Rendering Examples
+# Original Adaptive Examples
 
-All examples are synthetic. Use them as structural demonstrations, not as
-empirical evidence or prose to copy mechanically.
+All examples are synthetic. They demonstrate structure and boundaries; they are
+not empirical evidence and must not be copied mechanically.
 
-## 1. One model in three profiles
+## 1. Micro versus compact versus standard
 
-**Supplied model.** A retailer chooses an assortment of at most six products
-before demand. Customers transition among offered alternatives under a
-Markov-chain choice model. The objective is expected margin.
+**Supplied model:** A retailer chooses at most six products before demand.
+Customers substitute among offered products under a Markov-chain choice model;
+the objective is expected margin.
 
-### Compact
+**Micro:** The retailer chooses a capacity-limited assortment before demand,
+accounting for how unavailable products redirect demand among offered items;
+the model compares feasible assortments by expected margin, not by observed
+individual customer paths.
 
-The retailer must choose a limited assortment before demand is realized, knowing
-that removing one product can redirect rather than eliminate customer demand.
-Because only six products can be offered, adding an item creates a trade-off:
-it may capture direct demand while displacing an item that attracts profitable
-substitution. The Markov-chain choice model represents these transitions and
-lets the retailer compare feasible assortments by expected margin. The business
-problem is therefore not simply which products are popular, but which
-capacity-constrained set best manages substitution across the offered
-portfolio.
+**Compact:** The retailer must select at most six products before demand is
+realized. Because removing an item can redirect rather than eliminate demand,
+each slot has both direct-demand and substitution value. The Markov-chain
+choice model captures those interactions and compares feasible assortments by
+expected margin. The business problem is therefore to choose the limited
+portfolio that best manages substitution, subject to the supplied transition
+parameters; the model does not establish that individual customer paths are
+observed.
 
-Boundary: the framing assumes the supplied transition parameters describe
-choice among offered products; it does not establish that individual customer
-paths are observed.
+**Standard:** Diagnose the draft first if it names the wrong actor or changes
+timing, then provide the compact paragraph. Add a short object mapping only if
+the draft confuses product inclusion, realized demand, and expected margin.
+State one evidence need—the basis for transition parameters—and one boundary:
+individual paths are not observed unless supplied.
 
-### Standard
+## 2. Compact can be complete below its typical range
 
-The retailer chooses which products to offer before demand is realized, subject
-to a six-product capacity limit. Demand for an omitted item may move to another
-offered item, so product values are interdependent rather than separable. The
-Markov-chain choice model captures that substitution mechanism, and the
-objective compares feasible assortments by expected margin.
+**Request:** Correct one manuscript sentence that treats realized waiting time
+as the staffing decision.
 
-This creates a concrete operating tension. Expanding variety can retain demand,
-but every slot devoted to one item excludes another item whose direct demand or
-substitution role may be more valuable. A faithful research question is:
-which capacity-feasible assortment maximizes expected margin when customer
-substitution depends on the complete offered set?
+**Answer:** The service operator chooses staffing before uncertain requests
+arrive; waiting time is an outcome jointly determined by that staffing choice
+and realized demand, not a decision variable.
 
-The decision variable maps to product availability, not display prominence or
-inventory after demand. The essential evidence need is support for the
-transition parameters in the intended setting. The principal boundary is that
-the model represents aggregate substitution; it does not show that managers
-observe each customer's transition path.
+The answer is complete without padding to a minimum word count.
 
-### Full audit
+## 3. Standard mapping where a table is better
 
-- **Actor:** retailer.
-- **Timing:** assortment selected before demand.
-- **Choice:** binary product inclusion, with at most six included products.
-- **Information:** supplied demand and transition parameters, not realized
-  customer paths.
-- **Mechanism:** omitted or unavailable alternatives redirect choice according
-  to the Markov chain.
-- **Objective:** expected margin.
-- **Trade-off:** direct demand and substitution value versus scarce assortment
-  capacity.
-- **Eligibility:** supported if the mathematical formulation has these
-  variables, constraint, timing, transitions, and objective.
-- **Evidence:** transition estimates are `not_supplied` unless a source or
-  estimation design is provided.
-- **Boundary:** display, inventory, and fulfillment effects are
-  `not_applicable` unless modeled.
+A platform observes a noisy score, allocates scarce human review, then chooses
+a moderation action after review. A compact mapping prevents the true latent
+type from being moved into the decision-time information set:
 
-The manuscript-ready framing is the compact paragraph above. The full audit
-does not authorize individual-path observability or empirical performance
-claims.
+| Object | Role | When known or chosen | Boundary |
+|---|---|---|---|
+| Latent type | state | not directly observed at allocation | not the score |
+| Risk score | signal | observed before allocation | noisy proxy |
+| Review allocation | decision | chosen from the fixed budget | not moderation |
+| Moderation action | later action | chosen after review | depends on review |
 
-## 2. OM business-problem framing
+The essential evidence need is the score/review process in the intended
+setting. Platform revenue is not social welfare.
 
-A service operator schedules agents before uncertain requests arrive. Higher
-staffing reduces delay but raises labor cost and may leave paid capacity idle.
-The research problem is to choose a schedule that balances service and cost
-under the supplied arrival and service assumptions. Realized waiting time is an
-outcome of staffing and demand, not a decision the operator directly chooses.
+## 4. Explicit mismatch is contradicted
 
-## 3. IS platform-governance framing
+If a regulator allocates inspections to minimize system harm, a story in which
+a vendor chooses prices to maximize profit is `contradicted`: actor, decision,
+feasible action, and objective conflict with the supplied model. The repair is
+to retain regulator inspection allocation, not to label the commercial story
+unknown.
 
-A platform allocates a fixed review budget using noisy risk signals, then takes
-action after review. Stricter targeting can concentrate scarce review on risky
-cases but may exclude benign users when signals are imperfect. The model can
-study the platform's allocation rule and induced user response; it cannot treat
-latent malicious type as already observed or call platform revenue social
-welfare.
+## 5. Missing information is not supplied
 
-## 4. OR computational-contribution framing
+A scheduling description identifies the actor and decision but says nothing
+about which forecasts are available before scheduling. Decision-time forecast
+availability is `not_supplied`; it is not `contradicted` unless the proposed
+story explicitly gives the actor information that the model withholds.
 
-The operational problem requires a feasible routing plan before a dispatch
-deadline. The proposed formulation preserves the same feasible routes and true
-optimum but yields stronger relaxation bounds on the tested instances. Its
-potential operational value depends on whether those bounds produce a better
-incumbent or a useful certificate before dispatch. Benchmark improvement alone
-does not establish realized service or financial value.
+## 6. One scenario remains singular
 
-## 5. Runtime-versus-profit correction
+**Supplied:** One routing scenario on one stated machine reaches a feasible
+incumbent at minute eight.
 
-**Unsupported:** “The algorithm is 30% faster, so profit rises 30%.”
+**Faithful:** “On the supplied scenario, the solver found a feasible incumbent
+at minute eight.”
 
-**Repair:** “The algorithm reduced runtime by 30% on the tested instances. This
-could matter if the reduction enables a better feasible plan before the
-decision deadline, more frequent reoptimization, or larger scenario sets.
-Realized profit effects are `not_supplied` and require a modeled or empirical
-link from computation to executed decisions.”
+Do not write “across the tested instances,” “robustly,” or “in repeated runs.”
 
-## 6. Post-deadline certificate correction
+## 7. One benchmark cannot be generalized
 
-An incumbent available at minute eight can affect a decision executed at minute
-ten. A proof of optimality arriving at minute thirty cannot improve that
-already executed decision. The later certificate can support retrospective
-assessment or future method development, but current operational value must be
-based on the pre-deadline incumbent and information.
+An equivalent formulation ran 40% faster for the supplied benchmark instance.
+That observation is conditional on the stated instance, hardware, solver,
+settings, and limit. It does not establish expected runtime, general solver
+performance, a changed optimum, or realized profit.
 
-## 7. Rejecting an unsuitable commercial setting
+## 8. Three internal settings, one visible recommendation
 
-If a regulator chooses inspections to minimize system harm, a story about a
-vendor choosing price to maximize profit is `contradicted`: it changes the
-actor, decision, and objective. Do not repair it with more persuasive prose.
-Either retain the regulator-inspection setting or declare a new commercial
-extension and modify the model explicitly.
+For a model that allocates inspections under noisy risk signals, the Skill may
+consider internally: regulator safety inspection (`direct_interpretation`),
+platform account review (`plausible_application`), and vendor price targeting
+(`model_extension`). If the regulator interpretation best preserves actor,
+decision, timing, information, and objective, show only that framing and its
+main boundary. Do not expose the rejected list unless comparison is requested.
 
-## 8. Refusing to invent empirical facts
+## 9. Computational value pathway
 
-**Request:** “Explain that online fraud is rapidly increasing and costs firms
-billions.”
+`faster runtime`
+→ `incumbent available before dispatch` (`requires operational evidence`)
+→ `more frequent reoptimization` (`logically plausible`)
+→ `potential service or cost improvement` (`requires empirical evidence`)
 
-**Response:** Those prevalence and magnitude claims are `not_supplied`. Frame
-the decision problem without them, or provide traceable evidence specifying the
-population, period, measure, and source. Do not turn the model's motivation into
-an empirical fact.
+The benchmark supports only the first object unless the later links are
+supplied. A certificate after dispatch cannot improve the completed dispatch;
+future audit value would need a separate process pathway.
 
-## 9. Scholarly positioning when applicable
+## 10. Contribution-type routing
 
-For an introduction or contribution paragraph, position the work around the
-specific relation the model clarifies: a capacity constraint and delayed
-information jointly change the optimal allocation rule. State the mechanism,
-the bounded theoretical contrast, and the conditions under which it holds.
-Literature novelty remains `not_assessed` until relevant prior work is supplied
-or reviewed.
+For an equivalent MILP with a tighter relaxation, use the formulation route:
+explain equivalence, relaxation strength, computational consequence, unchanged
+true optimum, and a conditional deadline pathway. Do not use an empirical
+causal template or a generic managerial-benefit narrative.
 
-## 10. Scholarly positioning when not applicable
+For a platform governance mechanism with strategic users, use the IS design or
+governance route: identify information, incentives, induced behavior, the
+organizational problem, and implementation boundary.
 
-For a request to explain what a state variable means, answer the mapping
-directly. Describe whether it is observed, when it is realized, and how it
-affects feasible decisions or outcomes. A literature gap, managerial
-implication, and contribution claim are `not_applicable` to that narrow task
-unless the user asks for them.
+## 11. Concise full audit without a repeated boundary
+
+**Eligibility:** `ineligible`.
+
+| Element | Supplied model | Proposed story | Status |
+|---|---|---|---|
+| Actor | regulator | vendor | `contradicted` |
+| Decision | inspection allocation | price | `contradicted` |
+| Objective | system harm | profit | `contradicted` |
+| Timing/information | absent | absent | `not_supplied` |
+
+**Repair:** Frame the problem as regulator inspection allocation that minimizes
+the supplied harm objective. Vendor pricing would be a `model_extension`.
+
+**Boundary:** No vendor profit implication follows from this model.
+
+The boundary appears once rather than in diagnosis, repair, evidence, and
+conclusion sections.
+
+## 12. Clarification is necessary
+
+**Request:** “Frame this allocation model for a business paper.” The materials
+alternately describe the allocator as a hospital and an insurer, and they use
+different objectives.
+
+**Question:** Which actor chooses the allocation, and is its modeled objective
+patient delay or insurer cost?
+
+The answer changes actor and objective, so clarification is worth requesting.
+
+## 13. Clarification should not be asked
+
+**Request:** “Rewrite this supplied queueing model as a concise operating
+problem.” The company name and empirical prevalence are absent.
+
+Draft the model-faithful operating paragraph immediately. Mark company-specific
+scope and prevalence `not_supplied` only if material; do not block on either.

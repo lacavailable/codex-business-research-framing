@@ -1,0 +1,15 @@
+{
+  "objective": "Improve deliverable fit, adaptive concision, organization, claim scope, and evidence boundaries without weakening model fidelity",
+  "metric_direction": "max",
+  "dev_eval": "pytest plus official Skill/package/repository checks; zero authoritative model calls",
+  "test_eval": "one frozen eight-task Skill 2.2 versus frozen v0.2 development canary; exactly 16 authoritative calls",
+  "material": "323ea17b8f98059b71801b6a1bf9241188be4fee",
+  "branching": 3,
+  "max_depth": 2,
+  "budget_cycles": 1,
+  "cycles_used": 0,
+  "best_node": null,
+  "best_test_score": null,
+  "best_branch_ref": null,
+  "created_at": 1784812690
+}
