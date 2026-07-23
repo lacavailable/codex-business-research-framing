@@ -1,0 +1,56 @@
+{
+  "schema_version": "skill-2.2-metrics-1.0",
+  "profile_compliance": {
+    "definition": "required content and deliverable fit from the blind judge, plus prohibited-scaffolding and soft-maximum checks; no minimum word count",
+    "soft_maximums": {
+      "micro": 120,
+      "compact": 220,
+      "standard": 500,
+      "full-audit": null
+    },
+    "compact_prohibited_scaffolding": [
+      "visible DFC-12",
+      "full gate inventory",
+      "BusinessBrief envelope"
+    ]
+  },
+  "unsupported_factual_claim": {
+    "counted": [
+      "empirical magnitude",
+      "prevalence",
+      "market fact",
+      "company fact",
+      "causal effect",
+      "observed performance",
+      "literature fact",
+      "generalized benchmark claim"
+    ],
+    "excluded": [
+      "schema version",
+      "list number",
+      "stage label",
+      "supplied time",
+      "task-supplied quantity",
+      "transparent arithmetic"
+    ]
+  },
+  "repetition": {
+    "definition": "blind-judge finding that the same substantive limitation is avoidably restated or scaffolding can be deleted without changing meaning",
+    "excluded": [
+      "necessary technical nouns",
+      "table labels",
+      "requested schema fields"
+    ]
+  },
+  "structural_complexity": [
+    "word_count",
+    "heading_count",
+    "table_count",
+    "table_data_rows",
+    "bullet_count"
+  ],
+  "nonapplicable_layers": {
+    "absolute_candidate_requirement": 0
+  },
+  "ties": "uncertainty or genuine indistinguishability; no second judge"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "skill-2.2-pair-1.0",
+  "pair_id": "PAIR-05",
+  "task_id": "OR-C01",
+  "profile": "compact",
+  "deliverable": "computational-contribution paragraph",
+  "request": "Rewrite this computational-contribution claim as one concise paragraph: 'Our equivalent MILP formulation solves the tested instances 40% faster, so it changes the optimal objective and raises retailer profit by 40%.' The evidence only supports faster benchmark runtime on the stated instances. Explain the valid contribution and the operational pathway that would need evidence.",
+  "output_a": "For the stated benchmark instances, the equivalent MILP formulation reduces solution time by 40% while preserving the same feasible decisions and optimal objective; its contribution is therefore computational—enabling faster exact solution under the tested solver, hardware, and instance conditions. Any retailer-profit claim would require evidence that the speedup meets a real re-optimization deadline, enables a different implemented decision (for example, using fresher data or evaluating more scenarios), and that this decision change improves profit.",
+  "output_b": "Our computational contribution is an equivalent MILP formulation that preserves the underlying feasible decisions and true optimal objective while solving the stated benchmark instances 40% faster under the tested conditions. This result supports improved computational efficiency, not a change in optimal retailer profit. Operational value would require evidence that the speedup delivers solutions before decision deadlines and enables actions such as more frequent reoptimization, broader scenario evaluation, or better pre-execution incumbents, followed by evidence that those actions improve realized retailer profit.",
+  "pair_sha256": "0f3d781627e9dff65735e28f5e566fb1f2e8a1f768d55daf3e5e0216665e7f9d"
+}

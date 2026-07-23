@@ -1,0 +1,12 @@
+{
+  "schema_version": "skill-2.2-generation-1.0",
+  "call_id": "GEN-01",
+  "task_id": "OM-C01",
+  "condition": "skill-2.2-adaptive",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "eafa7d19a43b8eda6272fa4b29868ad4c0c30eb046955dd0583b4539a144d3e7",
+  "skill_sha256": "72c83a9e9c8db12ec9b67fa78dab36b474589845bdcf9d900832405fd9a84a6d",
+  "status": "complete",
+  "output": "A retailer must select a capacity-constrained product assortment before demand arrives. Once customers face the offered set, their choices and substitution among available products follow the modeled Markov-chain mechanism, so excluding or including a product can redirect demand within the assortment. The operational problem is therefore to determine which products to offer under the capacity limit while accounting for substitution that occurs after the assortment decision."
+}

@@ -1,0 +1,9 @@
+{
+  "schema_version": "skill-canary-judge-1.0",
+  "task_id": "IS-S02",
+  "criteria": {"usability": "A better", "model_fidelity": "tie", "managerial_clarity": "A better", "prose_economy": "B better"},
+  "overall_preference": "A better",
+  "material_fidelity_issue_in_a": false,
+  "material_fidelity_issue_in_b": false,
+  "rationale": "Both correctly restore the information sequence, distinguish private platform revenue from social welfare, and state an appropriate evidence need and boundary. A is more operationally usable: its decision mapping makes observability, timing, decisions, and objectives immediately auditable. B is tighter and equally faithful, but its framing is less scan-friendly for managerial use. Neither has a material fidelity defect."
+}

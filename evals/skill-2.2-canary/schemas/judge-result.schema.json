@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "task_id", "criteria", "overall_preference",
+    "material_fidelity_defect_in_a", "material_fidelity_defect_in_b",
+    "unsupported_factual_claim_in_a", "unsupported_factual_claim_in_b",
+    "scope_generalization_error_in_a", "scope_generalization_error_in_b",
+    "profile_compliant_a", "profile_compliant_b",
+    "avoidable_substantive_repetition_in_a", "avoidable_substantive_repetition_in_b",
+    "visible_nonapplicable_layers_in_a", "visible_nonapplicable_layers_in_b",
+    "missing_required_safeguard_in_a", "missing_required_safeguard_in_b",
+    "or_standard_safeguards_in_a", "or_standard_safeguards_in_b",
+    "is_mapping_fit_in_a", "is_mapping_fit_in_b", "rationale"
+  ],
+  "properties": {
+    "schema_version": {"const": "skill-2.2-judge-1.0"},
+    "task_id": {"type": "string"},
+    "criteria": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model_fidelity", "deliverable_fit", "usability", "information_organization", "prose_economy", "substantive_repetition", "claim_scope", "evidence_boundaries"],
+      "properties": {
+        "model_fidelity": {"enum": ["A better", "B better", "tie"]},
+        "deliverable_fit": {"enum": ["A better", "B better", "tie"]},
+        "usability": {"enum": ["A better", "B better", "tie"]},
+        "information_organization": {"enum": ["A better", "B better", "tie"]},
+        "prose_economy": {"enum": ["A better", "B better", "tie"]},
+        "substantive_repetition": {"enum": ["A better", "B better", "tie"]},
+        "claim_scope": {"enum": ["A better", "B better", "tie"]},
+        "evidence_boundaries": {"enum": ["A better", "B better", "tie"]}
+      }
+    },
+    "overall_preference": {"enum": ["A better", "B better", "tie"]},
+    "material_fidelity_defect_in_a": {"type": "boolean"},
+    "material_fidelity_defect_in_b": {"type": "boolean"},
+    "unsupported_factual_claim_in_a": {"type": "boolean"},
+    "unsupported_factual_claim_in_b": {"type": "boolean"},
+    "scope_generalization_error_in_a": {"type": "boolean"},
+    "scope_generalization_error_in_b": {"type": "boolean"},
+    "profile_compliant_a": {"type": "boolean"},
+    "profile_compliant_b": {"type": "boolean"},
+    "avoidable_substantive_repetition_in_a": {"type": "boolean"},
+    "avoidable_substantive_repetition_in_b": {"type": "boolean"},
+    "visible_nonapplicable_layers_in_a": {"type": "integer", "minimum": 0},
+    "visible_nonapplicable_layers_in_b": {"type": "integer", "minimum": 0},
+    "missing_required_safeguard_in_a": {"type": "boolean"},
+    "missing_required_safeguard_in_b": {"type": "boolean"},
+    "or_standard_safeguards_in_a": {"type": "boolean"},
+    "or_standard_safeguards_in_b": {"type": "boolean"},
+    "is_mapping_fit_in_a": {"type": "boolean"},
+    "is_mapping_fit_in_b": {"type": "boolean"},
+    "rationale": {"type": "string", "minLength": 1, "maxLength": 1200}
+  }
+}

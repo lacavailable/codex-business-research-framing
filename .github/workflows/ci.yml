@@ -15,6 +15,8 @@ jobs:
         python-version: ["3.11", "3.12"]
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Check out pinned official Skill validator
         uses: actions/checkout@v4
         with:
@@ -76,13 +78,22 @@ jobs:
         run: python tools/audit_repository.py --tracked
       - name: Check local Markdown links
         run: python tools/check_links.py
+      - name: Verify historical and recompute current Skill canaries
+        run: |
+          python tools/skill_canary.py validate
+          python tools/skill_adaptive_canary.py validate-freeze
+          python tools/skill_adaptive_canary.py prepare-pairs
+          python tools/skill_adaptive_canary.py summarize --deterministic-checks-passed
+          git diff --exit-code -- \
+            evals/skill-2.1-canary/results/canary-result.json \
+            evals/skill-2.2-canary/results/canary-result.json
       - name: Run pinned official Skill validation
         run: python .official-skills/skills/.system/skill-creator/scripts/quick_validate.py skills/frame-business-research-problem
       - name: Build and verify installable Skill
         run: |
-          python tools/package_skill.py --version 0.2.0-beta --output-dir dist
-          python tools/package_skill.py --verify dist/frame-business-research-problem-v0.2.0-beta.zip
-          python -m zipfile -e dist/frame-business-research-problem-v0.2.0-beta.zip .clean-install
+          python tools/package_skill.py --version 0.3.0-experimental.0 --output-dir dist
+          python tools/package_skill.py --verify dist/frame-business-research-problem-v0.3.0-experimental.0.zip
+          python -m zipfile -e dist/frame-business-research-problem-v0.3.0-experimental.0.zip .clean-install
           python .official-skills/skills/.system/skill-creator/scripts/quick_validate.py .clean-install/frame-business-research-problem
       - name: Upload package smoke-test artifact
         if: matrix.python-version == '3.11'
@@ -90,6 +101,6 @@ jobs:
         with:
           name: frame-business-research-problem-ci
           path: |
-            dist/frame-business-research-problem-v0.2.0-beta.zip
-            dist/frame-business-research-problem-v0.2.0-beta.zip.sha256
+            dist/frame-business-research-problem-v0.3.0-experimental.0.zip
+            dist/frame-business-research-problem-v0.3.0-experimental.0.zip.sha256
           if-no-files-found: error

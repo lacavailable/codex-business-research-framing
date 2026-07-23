@@ -1,0 +1,12 @@
+{
+  "schema_version": "skill-2.2-generation-1.0",
+  "call_id": "GEN-04",
+  "task_id": "IS-S02",
+  "condition": "skill-2.2-adaptive",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "0607c6830d1c8f71f6ae0aa8f45344130e50adb48d8d5c205aeb17e10da75e2b",
+  "skill_sha256": "72c83a9e9c8db12ec9b67fa78dab36b474589845bdcf9d900832405fd9a84a6d",
+  "status": "complete",
+  "output": "### Replacement framing\n\nA platform allocates account reviews under imperfect information. Each account’s benign or malicious type is latent; at allocation time, the platform observes only a noisy signal and selects accounts for review using that signal. It then takes a moderation action using the information available after review, as specified by the model. The platform’s modeled objective is expected platform revenue—not social welfare. The research question is: how should the platform map noisy signals into review allocation and subsequent moderation actions to maximize expected revenue, subject to the model’s review-feasibility constraints?\n\n| Model object | Business meaning | Decision-time status |\n|---|---|---|\n| True user type | Benign or malicious account characteristic | Latent at review allocation |\n| Noisy signal | Imperfect risk indicator available to the platform | Observed before allocation |\n| Review allocation | Accounts selected for review | Platform decision |\n| Moderation action | Enforcement decision after review | Platform decision; review information is not supplied |\n| Revenue | Platform’s private payoff | Objective, not welfare |\n\n### Diagnosis\n\nThe draft is **contradicted** on two material points:\n\n- It leaks information by treating true type as observed when review is allocated; allocation may condition on the noisy signal, not latent type.\n- It inflates the objective by calling platform revenue social welfare. Revenue excludes unmodeled harms to benign users, malicious-user harms, fairness, safety, and other externalities.\n\n### Essential evidence need\n\nEvidence is needed that the proposed signal is meaningfully related to account type in the intended setting, including its error properties and the information produced by review.\n\n### Principal boundary\n\nThis is a revenue-focused platform-governance model. It does not establish welfare, fairness, or safety improvement unless those outcomes are explicitly modeled and evaluated."
+}

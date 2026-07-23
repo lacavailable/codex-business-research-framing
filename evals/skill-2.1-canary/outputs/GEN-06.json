@@ -1,0 +1,12 @@
+{
+  "schema_version": "skill-canary-generation-1.0",
+  "call_id": "GEN-06",
+  "task_id": "IS-C01",
+  "condition": "skill-2.1",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "498d4aa8268036aeb77f26a2020d0070d47d449cf10947ab1ba7396d58679fc2",
+  "skill_sha256": "424650df62fc909e352d1f9dfe1c3dc5b929abdc9b177d3396efbf4d75cfc936",
+  "status": "complete",
+  "output": "A platform must allocate a fixed human-review budget across users ranked by a noisy risk score, then approve or reject those who are reviewed. The governance tension is that concentrating review on higher-scored users may target suspected risk but can also misclassify users because the score is imperfect; approval or rejection follows review rather than being implied by the score itself. This model frames a constrained screening decision, not evidence that harmful content is rapidly increasing, nor a demonstration that the policy improves social welfare."
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "skill-2.2-baselines-1.0",
+  "baseline_commit": "c7a6e0245f682fc0f8609a69e546d7cb39f35e49",
+  "baseline_tag": "v0.2.0-beta",
+  "source_canary": "evals/skill-2.1-canary",
+  "baseline_outputs": [
+    {
+      "task_id": "OM-C01",
+      "condition": "v0.2",
+      "path": "evals/skill-2.1-canary/outputs/GEN-01.json",
+      "file_sha256": "d3c2fb418cd4e54e631681937ebc0e13f69b42c78ecc9edf3426e4da3b2a76bd",
+      "output_sha256": "67a723f20b472b8ad881beba3e4e5b671dcceb795486697c6f76d2fbd772b6f1"
+    },
+    {
+      "task_id": "OM-S02",
+      "condition": "v0.2",
+      "path": "evals/skill-2.1-canary/outputs/GEN-03.json",
+      "file_sha256": "b11d7a717564b05aefb11cdd2bbc151684cf4d60b83e4ce14acf3d3590eec344",
+      "output_sha256": "54f4d0e62f351f00fed32708cdc8c486fbe287e59bf3514a346ae4ba51d9aed4"
+    },
+    {
+      "task_id": "IS-C01",
+      "condition": "v0.2",
+      "path": "evals/skill-2.1-canary/outputs/GEN-05.json",
+      "file_sha256": "96ece8caf2fd365b1d7c14c651088f7c681c53ec4a0e533f1a789c0996641c8b",
+      "output_sha256": "ac443336f45dc381f9f0672d392897b09bad36754576ada679484d574dec2d82"
+    },
+    {
+      "task_id": "IS-S02",
+      "condition": "v0.2",
+      "path": "evals/skill-2.1-canary/outputs/GEN-07.json",
+      "file_sha256": "2e55a33b5810d8e0e84acbea3576e0cfb63f96bcc7c6fedba3e74636f5aabe11",
+      "output_sha256": "5e55594dc7cba99a896dd71d44544059643ea5c5774bd4136178cd5fad3590e2"
+    },
+    {
+      "task_id": "OR-C01",
+      "condition": "v0.2",
+      "path": "evals/skill-2.1-canary/outputs/GEN-09.json",
+      "file_sha256": "81b7af12669b85ea92b442f7e4675f112e15bf6258de83f3475fb7ce0f09889b",
+      "output_sha256": "0dfd076ca8e6461f4196f3f9206192b66995e2f2ebc61de8c0e3d802b794965d"
+    },
+    {
+      "task_id": "OR-S02",
+      "condition": "v0.2",
+      "path": "evals/skill-2.1-canary/outputs/GEN-11.json",
+      "file_sha256": "7db136e21c82f1695a6434e5b59f13eb3f67a712a87c627e030df8fb1dd6b38d",
+      "output_sha256": "af0a3776d34b32c08e47153f2ea260b1b6b8e527cabde2919172f6c3e835331f"
+    },
+    {
+      "task_id": "XD-F01",
+      "condition": "v0.2",
+      "path": "evals/skill-2.1-canary/outputs/GEN-13.json",
+      "file_sha256": "3cb9e993915117717968ac15a7bf9632ad8f239e8a8995bc061a190680d3fc30",
+      "output_sha256": "859c42a0cce7150a9527cf25483dca66f6992c2db53846f793e279b0a4fd5d9f"
+    },
+    {
+      "task_id": "XD-F02",
+      "condition": "v0.2",
+      "path": "evals/skill-2.1-canary/outputs/GEN-15.json",
+      "file_sha256": "8e489ac369df9e13ca3741a0152f74eeb1cd549999d8b06ddf22d9e89c73ac1c",
+      "output_sha256": "9418c3489fead58f7784035caffea1f4a32e4c31a88fa55d7d2742a2e3ae38b6"
+    }
+  ],
+  "skill_2_1_full_audit_references": [
+    {
+      "task_id": "XD-F01",
+      "condition": "skill-2.1-full-audit-reference",
+      "path": "evals/skill-2.1-canary/outputs/GEN-14.json",
+      "file_sha256": "191318da7aab7a54230dd56c00205f4164f2b09ac8b7f5166315967699a09737",
+      "output_sha256": "ccf6ab17d3c577f9b4fb68d6eaaaf96315be856c64fc5d6be526cdb6027652fd"
+    },
+    {
+      "task_id": "XD-F02",
+      "condition": "skill-2.1-full-audit-reference",
+      "path": "evals/skill-2.1-canary/outputs/GEN-16.json",
+      "file_sha256": "ac0272d27252a6e5a5d3ed22f0592e3a9e9968f068e92e682d3302384beca26f",
+      "output_sha256": "260dde003b53227f67b853aba02c58870675248d9756fe2ca59b70683fdd8998"
+    }
+  ]
+}
