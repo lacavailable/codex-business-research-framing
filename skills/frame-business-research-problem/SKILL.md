@@ -26,7 +26,9 @@ Preserve research meaning before improving narrative appeal. Treat every plausib
 
 Follow [output-contracts.md](references/output-contracts.md). For ordinary Markdown, put finished usable prose first, followed only when needed by a concise fidelity warning, one essential evidence gap, and one principal boundary. Suppress nonapplicable layers and internal scaffolding.
 
-State each substantive conclusion, limitation, unsupported pathway, and evidence need once in the user-visible response. Do not repeat the same issue across diagnosis, narrative, mapping, evidence, boundary, and weakness sections. Use headings only when they add information.
+Assign each material issue a single visible home: usable prose, a fidelity warning, the essential evidence gap, or the principal boundary. State each substantive conclusion, limitation, unsupported pathway, and evidence need once in the user-visible response. Do not repeat the same issue across diagnosis, narrative, mapping, evidence, boundary, and weakness sections. Use headings only when they add information.
+
+Before returning, run the final render gate: apply the controlling length or format constraint, allocate only the necessary content slots, render, check the rendered answer against its hard ceiling and visible-block limit, then compress once if it misses. Never pad prose to satisfy a profile minimum.
 
 Use exactly these visible support statuses when a status is useful: `supported`, `conditionally_supported`, `unsupported`, `contradicted`, `not_supplied`, `not_assessed`, and `not_applicable`. Reserve internal `fail` for a material gate contradiction.
 

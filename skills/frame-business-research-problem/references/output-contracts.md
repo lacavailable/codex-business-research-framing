@@ -62,14 +62,19 @@ with a fidelity warning, one essential evidence gap, and one principal boundary.
 Do not require the reader to pass through readiness, DFC-12, gate, or layer
 tables before reaching the answer.
 
+Give every material contradiction, evidence gap, and principal boundary a
+single visible home. Compact output uses one prose block and at most one
+combined caveat; standard output may add one compact diagnosis/boundary block.
+Do not restate an issue in another visible block. Full-audit or machine-readable
+records may repeat an issue only where schema compatibility requires it.
+
 Use `supported`, `conditionally_supported`, `unsupported`, `contradicted`,
 `not_supplied`, `not_assessed`, and `not_applicable` for visible support
 statements. Do not use `fail` for missing or nonapplicable material; reserve it
 for a material internal gate contradiction.
 
 State each substantive conclusion, limitation, unsupported pathway, and
-evidence need once. Full-audit and machine-readable records may repeat a fact
-only where schema compatibility requires it.
+evidence need once.
 
 Prefer short prose over marketing language. Make a material failure or
 non-assessment visible without exposing every passing check.
