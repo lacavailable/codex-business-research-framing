@@ -2,6 +2,21 @@
 
 Use this playbook for platforms, algorithms, digital intermediaries, information design, and strategic users.
 
+## Narrative sequence
+
+Build the visible framing in this order:
+
+1. digital phenomenon;
+2. platform, firm, organization, or user decision;
+3. information or incentive tension;
+4. governance or design mechanism;
+5. behavioral response;
+6. organizational or societal outcome;
+7. research question.
+
+Keep private type, observable signal, inferred score, and verified fact
+separate throughout the sequence.
+
 ## Information and signals
 
 Distinguish private type, observable action, noisy signal, inferred score, and verified fact. Place each on the decision timeline. Never let a screening or moderation policy condition on information the platform cannot observe at that point.

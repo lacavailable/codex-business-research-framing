@@ -1,0 +1,62 @@
+{
+  "schema_version": "skill-canary-audit-2.0",
+  "tasks": [
+    {
+      "task_id": "OM-C11",
+      "profile_constraints": {"minimum_words": null, "maximum_words": 90, "maximum_headings": 0, "maximum_visible_blocks": 1},
+      "answer_first_patterns": ["hospital", "schedul"],
+      "required_invariants": ["hospital", "before", "arrival", "staff", "outcome"],
+      "limitation_families": {
+        "actor": ["patients?.{0,30}(?:do not|cannot|not).{0,30}(?:choose|control)", "hospital.{0,30}(?:decision maker|chooses|selects|schedules)"],
+        "timing": ["(?:before|prior to).{0,40}arrivals?", "arrivals?.{0,40}(?:uncertain|unknown|not observed)"],
+        "outcome": ["treat(?:ed|ment).{0,40}(?:outcome|not a decision|not directly chosen)"]
+      },
+      "supplied_empirical_numbers": [],
+      "unsupported_empirical_patterns": ["widely used", "rapidly growing", "most hospitals", "industry standard"],
+      "prohibited_overclaims": []
+    },
+    {
+      "task_id": "IS-C12",
+      "profile_constraints": {"minimum_words": null, "maximum_words": 110, "maximum_headings": 0, "maximum_visible_blocks": 1},
+      "answer_first_patterns": ["platform", "review"],
+      "required_invariants": ["platform", "noisy", "review", "latent", "payoff"],
+      "limitation_families": {
+        "latent_type": ["type.{0,30}(?:latent|not observed|unknown)", "(?:observes|uses).{0,30}(?:score|signal).{0,30}(?:not|rather than).{0,30}type"],
+        "welfare": ["(?:payoff|revenue).{0,40}(?:not|does not).{0,30}(?:welfare|social)", "(?:welfare|fairness|safety).{0,40}(?:not established|unsupported|not supplied)"]
+      },
+      "supplied_empirical_numbers": [],
+      "unsupported_empirical_patterns": ["rapidly increasing", "widely prevalent", "most platforms", "improves social welfare", "guarantees fairness", "guarantees safety"],
+      "prohibited_overclaims": []
+    },
+    {
+      "task_id": "OR-S11",
+      "profile_constraints": {"minimum_words": 220, "maximum_words": 320, "maximum_headings": 3, "maximum_visible_blocks": 6},
+      "answer_first_patterns": ["formulation", "equivalent"],
+      "required_invariants": ["42%", "15", "equivalent", "runtime", "certificate", "profit"],
+      "limitation_families": {
+        "equivalence": ["equivalent.{0,60}(?:same|unchanged|does not change).{0,30}(?:optimum|objective|feasible)", "(?:optimum|objective).{0,40}(?:not changed|unchanged|preserved)"],
+        "profit": ["(?:runtime|faster|speed).{0,60}(?:does not|cannot|not by itself).{0,40}(?:profit|service)", "(?:profit|service).{0,60}(?:requires|needs).{0,40}evidence"],
+        "deadline": ["(?:certificate|proof).{0,60}(?:after|post-deadline).{0,40}(?:cannot|does not|no direct).{0,40}(?:improve|change|benefit)", "(?:executed|committed).{0,40}route.{0,60}(?:cannot|does not|not).{0,30}(?:change|improve)"]
+      },
+      "supplied_empirical_numbers": ["42%", "15 minutes"],
+      "unsupported_empirical_patterns": ["industry-wide", "all instances", "always faster", "raises profit", "improves service"],
+      "prohibited_overclaims": ["runtime_to_profit", "equivalent_formulation_changes_optimum", "post_deadline_value"]
+    },
+    {
+      "task_id": "XD-F11",
+      "profile_constraints": {"minimum_words": null, "maximum_words": null, "maximum_headings": null, "maximum_visible_blocks": null},
+      "answer_first_patterns": ["ineligible", "regional authority"],
+      "required_invariants": ["actor", "timing", "information", "behavior", "constraint", "objective", "evidence", "boundar", "eligib", "mapping"],
+      "limitation_families": {
+        "actor": ["merchant.{0,40}(?:not|cannot).{0,40}(?:actor|decision maker|choose)", "regional authority.{0,40}(?:actor|decision maker|allocates)"],
+        "choice": ["advertising.{0,40}(?:not|isn't).{0,30}(?:decision|variable|choice)"],
+        "objective": ["revenue.{0,40}(?:not|isn't).{0,30}(?:objective|modeled)", "harm.{0,30}(?:objective|minimi)"]
+      },
+      "supplied_empirical_numbers": [],
+      "unsupported_empirical_patterns": ["widely prevalent", "large effect", "no prior research", "first study", "most authorities"],
+      "prohibited_overclaims": [],
+      "required_structural_labels": ["BusinessBrief 2.0", "DFC-12", "six gates"]
+    }
+  ]
+}
+

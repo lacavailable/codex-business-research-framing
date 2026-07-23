@@ -1,0 +1,13 @@
+{
+  "schema_version": "skill-canary-generation-2.0",
+  "call_id": "GEN-03",
+  "task_id": "IS-C12",
+  "condition": "skill-2.1",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "2954a2e28ef04e1eb018cdbc16d8cbd49c0b24ca898bd7006321ed40d05f71a1",
+  "skill_sha256": "424650df62fc909e352d1f9dfe1c3dc5b929abdc9b177d3396efbf4d75cfc936",
+  "status": "complete",
+  "output": "A platform observes a noisy score for each account while true account type remains latent, allocates a fixed review budget across accounts, and then chooses an action after review. Its decision problem is to use scarce review capacity and subsequent actions to maximize platform payoff. The setting does not establish account prevalence or assess fairness, safety, or social-welfare effects."
+}
+

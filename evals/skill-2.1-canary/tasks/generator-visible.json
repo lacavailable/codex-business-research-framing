@@ -1,0 +1,53 @@
+{
+  "schema_version": "skill-canary-tasks-1.0",
+  "tasks": [
+    {
+      "task_id": "OM-C01",
+      "domain": "OM",
+      "profile": "compact",
+      "request": "Rewrite this as one concise, manuscript-ready business-problem paragraph. A retailer chooses a capacity-constrained assortment before demand arrives. Customers may substitute among offered products according to the supplied Markov-chain choice model. The draft incorrectly calls the supplier the assortment decision maker. Preserve the modeled actor, timing, substitution mechanism, and capacity constraint. Do not add market facts."
+    },
+    {
+      "task_id": "OM-S02",
+      "domain": "OM",
+      "profile": "standard",
+      "request": "Diagnose and repair this operating-setting narrative. A fulfillment manager chooses staffing before uncertain same-day orders arrive. The current story says the manager observes realized demand before choosing staffing and describes fulfilled orders as the decision variable. The model chooses staffing, then demand realizes, and fulfillment follows from staffing and demand. Provide a concise diagnosis and usable replacement framing without inventing empirical facts."
+    },
+    {
+      "task_id": "IS-C01",
+      "domain": "IS",
+      "profile": "compact",
+      "request": "Write one concise platform-governance paragraph. A platform allocates a fixed human-review budget using a noisy risk score, after which reviewed users may be approved or rejected. The supplied model does not establish that harmful content is rapidly increasing or that the policy improves social welfare. Preserve those evidence boundaries and do not invent prevalence, causal, or market claims."
+    },
+    {
+      "task_id": "IS-S02",
+      "domain": "IS",
+      "profile": "standard",
+      "request": "Diagnose and repair this model interpretation. Users have latent benign or malicious types. The platform observes a noisy signal, chooses which accounts receive review, and then takes a moderation action. The draft treats true type as observed at allocation time and calls platform revenue social welfare. Produce a faithful, usable framing and identify the essential evidence need and principal boundary."
+    },
+    {
+      "task_id": "OR-C01",
+      "domain": "OR",
+      "profile": "compact",
+      "request": "Rewrite this computational-contribution claim as one concise paragraph: 'Our equivalent MILP formulation solves the tested instances 40% faster, so it changes the optimal objective and raises retailer profit by 40%.' The evidence only supports faster benchmark runtime on the stated instances. Explain the valid contribution and the operational pathway that would need evidence."
+    },
+    {
+      "task_id": "OR-S02",
+      "domain": "OR",
+      "profile": "standard",
+      "request": "Frame this computational result for an operational audience. A solver produces a feasible incumbent before a 10-minute dispatch deadline and proves its optimality after 35 minutes. The executed dispatch cannot be changed after 10 minutes. Distinguish incumbent quality, certificate timing, benchmark evidence, and any operational value that can or cannot be claimed."
+    },
+    {
+      "task_id": "XD-F01",
+      "domain": "cross-domain",
+      "profile": "full-audit",
+      "request": "Perform a full fidelity and framing audit. A model minimizes regulator-defined system harm by choosing inspection allocations. A proposed commercial story says an individual vendor chooses prices to maximize profit, although price is not a decision variable and profit is not the objective. Assess whether that story is eligible, map the mismatch, and propose only repairs that preserve the supplied model."
+    },
+    {
+      "task_id": "XD-F02",
+      "domain": "cross-domain",
+      "profile": "full-audit",
+      "request": "Perform a full audit of this contribution framing. A stylized analytical model shows how a capacity constraint and an information delay jointly change an organization's optimal allocation rule. No empirical setting, effect magnitude, prevalence claim, or literature gap has been supplied. Develop bounded scholarly positioning where support exists, mark what is not supplied or not applicable, and retain all fidelity safeguards."
+    }
+  ]
+}

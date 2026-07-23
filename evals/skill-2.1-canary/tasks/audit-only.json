@@ -1,0 +1,77 @@
+{
+  "schema_version": "skill-canary-audit-1.0",
+  "tasks": [
+    {
+      "task_id": "OM-C01",
+      "profile": "compact",
+      "required_invariants": ["retailer is actor", "choice precedes demand", "capacity is retained", "Markov substitution is retained"],
+      "issue_patterns": {"actor": ["supplier.*decision maker", "supplier chooses"], "timing": ["after demand", "observes realized demand"]},
+      "nonapplicable_layers": ["scholarly positioning", "literature gap", "full audit", "DFC-12"],
+      "allowed_numbers": [],
+      "prohibited_overclaims": []
+    },
+    {
+      "task_id": "OM-S02",
+      "profile": "standard",
+      "required_invariants": ["staffing is chosen", "staffing precedes demand", "fulfillment is an outcome"],
+      "issue_patterns": {"timing": ["observes realized demand before", "after demand arrives"], "choice": ["chooses fulfilled orders", "fulfillment decision variable"]},
+      "nonapplicable_layers": ["scholarly positioning", "literature gap", "DFC-12"],
+      "allowed_numbers": [],
+      "prohibited_overclaims": []
+    },
+    {
+      "task_id": "IS-C01",
+      "profile": "compact",
+      "required_invariants": ["review budget is fixed", "risk score is noisy", "review precedes action"],
+      "issue_patterns": {"unsupported trend": ["rapidly increasing", "surging", "growing epidemic"], "welfare": ["improves social welfare", "maximizes welfare"]},
+      "nonapplicable_layers": ["scholarly positioning", "literature gap", "full audit", "DFC-12"],
+      "allowed_numbers": [],
+      "prohibited_overclaims": []
+    },
+    {
+      "task_id": "IS-S02",
+      "profile": "standard",
+      "required_invariants": ["type is latent", "platform observes noisy signal", "revenue is not welfare"],
+      "issue_patterns": {"information": ["observes true type", "knows.*malicious"], "objective": ["revenue.*social welfare", "revenue is welfare"]},
+      "nonapplicable_layers": ["literature gap", "DFC-12"],
+      "allowed_numbers": [],
+      "prohibited_overclaims": []
+    },
+    {
+      "task_id": "OR-C01",
+      "profile": "compact",
+      "required_invariants": ["formulations are equivalent", "true optimum is unchanged", "runtime evidence is benchmark-bounded"],
+      "issue_patterns": {"runtime": ["runtime", "faster"], "profit": ["profit", "financial value"], "optimum": ["true optimum", "optimal objective"]},
+      "nonapplicable_layers": ["scholarly positioning", "literature gap", "full audit", "DFC-12"],
+      "allowed_numbers": ["40"],
+      "prohibited_overclaims": ["runtime_to_profit", "equivalent_formulation_changes_optimum"]
+    },
+    {
+      "task_id": "OR-S02",
+      "profile": "standard",
+      "required_invariants": ["incumbent arrives before deadline", "certificate arrives after deadline", "executed decision cannot change"],
+      "issue_patterns": {"deadline": ["10-minute", "10 minute", "deadline"], "certificate": ["35 minutes", "certificate", "optimality proof"]},
+      "nonapplicable_layers": ["scholarly positioning", "literature gap", "DFC-12"],
+      "allowed_numbers": ["10", "35"],
+      "prohibited_overclaims": ["post_deadline_value"]
+    },
+    {
+      "task_id": "XD-F01",
+      "profile": "full-audit",
+      "required_invariants": ["regulator is actor", "inspection allocation is choice", "system harm is objective", "commercial story is ineligible"],
+      "issue_patterns": {"actor": ["vendor chooses", "vendor is the decision maker"], "objective": ["maximize profit", "profit objective"], "choice": ["price.*decision"]},
+      "nonapplicable_layers": [],
+      "allowed_numbers": [],
+      "prohibited_overclaims": []
+    },
+    {
+      "task_id": "XD-F02",
+      "profile": "full-audit",
+      "required_invariants": ["capacity constraint retained", "information delay retained", "allocation rule is decision"],
+      "issue_patterns": {"unsupported evidence": ["empirically proves", "widely prevalent", "large effect"], "unsupported gap": ["no prior research", "first study"]},
+      "nonapplicable_layers": [],
+      "allowed_numbers": [],
+      "prohibited_overclaims": []
+    }
+  ]
+}

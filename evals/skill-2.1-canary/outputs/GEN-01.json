@@ -1,0 +1,12 @@
+{
+  "schema_version": "skill-canary-generation-1.0",
+  "call_id": "GEN-01",
+  "task_id": "OM-C01",
+  "condition": "v0.2",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "1394b26ec0a8f14a22228458761f93c5f297fa69ae83049aa88af9f26da9b9ab",
+  "skill_sha256": "8a59065e4a46403c04afa5a78ff01f388d79a9555fc9a6efce8ef0e929730426",
+  "status": "complete",
+  "output": "A retailer must select a capacity-constrained assortment before demand is realized, balancing product availability within its limited capacity. After the assortment is set, customers choose among the offered products and may substitute according to the specified Markov-chain choice model."
+}

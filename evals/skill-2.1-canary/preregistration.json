@@ -1,0 +1,45 @@
+{
+  "schema_version": "skill-canary-1.0",
+  "frozen_before_generation": true,
+  "baseline_commit": "c7a6e0245f682fc0f8609a69e546d7cb39f35e49",
+  "baseline_skill_tag": "v0.2.0-beta",
+  "candidate_name": "Skill 2.1 experimental",
+  "generator_model": "gpt-5.6-terra",
+  "generator_reasoning": "high",
+  "judge_model": "gpt-5.6-sol",
+  "judge_reasoning": "high",
+  "model_relationship": "same-family variants; independence not established",
+  "sampling_controls": "unavailable",
+  "pair_seed": "skill-2.1-canary-pairs-2026-07-23",
+  "uat_seed": "skill-2.1-product-owner-review-2026-07-23",
+  "required_generation_calls": 16,
+  "maximum_judge_calls": 8,
+  "maximum_authoritative_calls": 24,
+  "profiles": {
+    "compact": {"minimum_words": 120, "maximum_words": 220},
+    "standard": {"minimum_words": 250, "maximum_words": 500},
+    "full-audit": {"minimum_words": null, "maximum_words": null}
+  },
+  "acceptance_gates": {
+    "new_fidelity_contradictions": {"operator": "==", "threshold": 0},
+    "new_unsupported_facts": {"operator": "==", "threshold": 0},
+    "runtime_to_profit_overclaims": {"operator": "==", "threshold": 0},
+    "post_deadline_value_overclaims": {"operator": "==", "threshold": 0},
+    "compact_median_reduction": {"operator": ">=", "threshold": 0.30},
+    "repeated_limitation_reduction": {"operator": ">=", "threshold": 0.40},
+    "profile_compliance": {"operator": ">=", "threshold": 0.90},
+    "visible_nonapplicable_layer_reduction": {"operator": ">=", "threshold": 0.75},
+    "compact_standard_non_tied_win_rate": {"operator": ">=", "threshold": 0.60, "zero_non_ties": "inconclusive"},
+    "full_audit_safeguards_noninferior": {"operator": "==", "threshold": true}
+  },
+  "prohibited_actions": [
+    "evaluator schema changes",
+    "D1, D2, or D2R reruns",
+    "validation access",
+    "automated holdout access",
+    "expert holdout access",
+    "adjudication",
+    "replacement calls",
+    "release tagging"
+  ]
+}

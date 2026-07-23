@@ -1,0 +1,9 @@
+{
+  "schema_version": "skill-canary-judge-1.0",
+  "task_id": "XD-F01",
+  "criteria": {"usability": "B better", "model_fidelity": "tie", "managerial_clarity": "B better", "prose_economy": "B better"},
+  "overall_preference": "B better",
+  "material_fidelity_issue_in_a": false,
+  "material_fidelity_issue_in_b": false,
+  "rationale": "Both correctly reject the story and preserve the regulator, inspection-allocation decision, and system-harm objective. B is easier to use: its side-by-side diagnosis, explicit unsupported-mechanism finding, and compact repair make the managerial implications immediately clear. A is rigorous but more elaborate than needed and labels the behavior gate unknown even though the proposed vendor price-setting behavior is itself an introduced mismatch. Neither output materially alters the supplied model."
+}

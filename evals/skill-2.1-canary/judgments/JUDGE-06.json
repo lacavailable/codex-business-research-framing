@@ -1,0 +1,9 @@
+{
+  "schema_version": "skill-canary-judge-1.0",
+  "task_id": "OR-S02",
+  "criteria": {"usability": "B better", "model_fidelity": "B better", "managerial_clarity": "B better", "prose_economy": "tie"},
+  "overall_preference": "B better",
+  "material_fidelity_issue_in_a": false,
+  "material_fidelity_issue_in_b": false,
+  "rationale": "Both correctly separate timely feasibility, retrospective certification, benchmark limits, and unsupported operational outcomes. B is more usable for managers: its table cleanly distinguishes what was established at 10 versus 35 minutes, and it more precisely limits the benchmark claim to the tested instance and setup. A is substantively sound but slightly muddies incumbent quality with contemporaneous knowledge and refers to tested instances in the plural without support. Both are somewhat repetitive, so prose economy is tied."
+}

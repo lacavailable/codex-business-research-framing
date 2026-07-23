@@ -2,6 +2,21 @@
 
 Use this playbook for operating systems, service systems, supply chains, and marketplace operations.
 
+## Narrative sequence
+
+Build the visible framing in this order:
+
+1. operational setting;
+2. decision maker;
+3. constrained choice;
+4. uncertainty or friction;
+5. mechanism and trade-off;
+6. operational consequence;
+7. research question or model.
+
+Omit a step from the prose when it is not supplied or not relevant; never fill
+the gap with a plausible fact.
+
 ## Capacity and resource allocation
 
 Name the scarce resource, unit, planning horizon, and owner. Distinguish installed capacity, scheduled capacity, and realized availability. Explain whether unused capacity is perishable and whether allocation decisions are reversible.

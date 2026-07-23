@@ -1,0 +1,15 @@
+{
+  "objective": "Improve profile routing, length compliance, non-repetition, and empirical-fact checking without material fidelity regression",
+  "metric_direction": "max",
+  "dev_eval": "python -m pytest tests/test_skill_2_2_routing.py -q",
+  "test_eval": "one-shot frozen evals/skill-2.2-canary, maximum 12 authoritative calls; not an official holdout",
+  "material": "323ea17b8f98059b71801b6a1bf9241188be4fee",
+  "branching": 2,
+  "max_depth": 1,
+  "budget_cycles": 2,
+  "cycles_used": 2,
+  "best_node": null,
+  "best_test_score": null,
+  "best_branch_ref": null,
+  "created_at": 1784808984
+}

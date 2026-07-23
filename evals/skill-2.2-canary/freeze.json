@@ -1,0 +1,14 @@
+{
+  "schema_version": "skill-canary-freeze-2.0",
+  "preregistration_sha256": "bec4da51b1e21aa7674299feae87425f1764956bf15fdb51891e7647af93cefa",
+  "generator_tasks_sha256": "78ce996cfe20501c0b7f5373bd06cd75e3f2f7e24b4d9d7cf9ada1c7ac8e022d",
+  "audit_tasks_sha256": "93b46951868721c82592f322c1d476a5f9f8c4a93b84d1effba3e509b85db936",
+  "call_manifest_sha256": "00aa9c2ff1d73f6fae2c7c68b6c38ec28097bfc4fd2dfa9ab42d14cdb9da8c3a",
+  "tool_sha256": "2a26af19a0a72796ac5759a883aa3da192e4fdd064ee440df6edb7af574f40a3",
+  "candidate_skill_sha256": "e7f42e90aea7335aa20cc82d4a9abc4ab832b1a5a16690ada962d9e071c642c4",
+  "baseline_skill_sha256": "424650df62fc909e352d1f9dfe1c3dc5b929abdc9b177d3396efbf4d75cfc936",
+  "candidate_commit": "3bda103dab5d81d3eb889935a51eeb121dc276b7",
+  "baseline_commit": "323ea17b8f98059b71801b6a1bf9241188be4fee",
+  "automated_holdout_opened": false,
+  "expert_holdout_opened": false
+}

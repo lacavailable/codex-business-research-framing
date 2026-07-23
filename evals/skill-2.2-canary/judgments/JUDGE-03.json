@@ -1,0 +1,20 @@
+{
+  "schema_version": "skill-canary-judge-2.0",
+  "call_id": "JUDGE-03",
+  "pair_id": "PAIR-03",
+  "task_id": "OR-S11",
+  "pair_sha256": "8fb685b36d26ffc3e1b7be3702e64211d4f835a7f80c22204197303e046f6965",
+  "model": "gpt-5.6-sol",
+  "reasoning": "high",
+  "criteria": {
+    "usability": "B better",
+    "model_fidelity": "tie",
+    "managerial_clarity": "B better",
+    "prose_economy": "B better"
+  },
+  "overall_preference": "B better",
+  "material_fidelity_issue_in_a": false,
+  "material_fidelity_issue_in_b": false,
+  "rationale": "Both answers correctly preserve equivalence, distinguish runtime from route quality, respect the 15-minute decision boundary, and identify the evidence needed for profit or service claims. B is more cohesive and manager-facing: it explains each structural number in a compact sequence, states the evidence boundary cleanly, and avoids A’s somewhat mechanical headings and notation-heavy presentation. A also slightly overstates what a later certificate necessarily establishes by saying it proves the already-executed route was optimal; B’s conditional wording is more careful, though the ambiguity is not substantial enough to constitute a material fidelity issue."
+}
+

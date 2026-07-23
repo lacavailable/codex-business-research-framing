@@ -1,0 +1,19 @@
+{
+  "schema_version": "skill-canary-run-2.0",
+  "maximum_authoritative_calls": 12,
+  "replacement_calls_allowed": false,
+  "calls": [
+    {"call_id": "GEN-01", "task_id": "OM-C11", "role": "generation", "condition": "skill-2.1", "model": "gpt-5.6-terra", "reasoning": "high", "status": "planned"},
+    {"call_id": "GEN-02", "task_id": "OM-C11", "role": "generation", "condition": "skill-2.2", "model": "gpt-5.6-terra", "reasoning": "high", "status": "planned"},
+    {"call_id": "GEN-03", "task_id": "IS-C12", "role": "generation", "condition": "skill-2.1", "model": "gpt-5.6-terra", "reasoning": "high", "status": "planned"},
+    {"call_id": "GEN-04", "task_id": "IS-C12", "role": "generation", "condition": "skill-2.2", "model": "gpt-5.6-terra", "reasoning": "high", "status": "planned"},
+    {"call_id": "GEN-05", "task_id": "OR-S11", "role": "generation", "condition": "skill-2.1", "model": "gpt-5.6-terra", "reasoning": "high", "status": "planned"},
+    {"call_id": "GEN-06", "task_id": "OR-S11", "role": "generation", "condition": "skill-2.2", "model": "gpt-5.6-terra", "reasoning": "high", "status": "planned"},
+    {"call_id": "GEN-07", "task_id": "XD-F11", "role": "generation", "condition": "skill-2.1", "model": "gpt-5.6-terra", "reasoning": "high", "status": "planned"},
+    {"call_id": "GEN-08", "task_id": "XD-F11", "role": "generation", "condition": "skill-2.2", "model": "gpt-5.6-terra", "reasoning": "high", "status": "planned"},
+    {"call_id": "JUDGE-01", "task_id": "OM-C11", "role": "blind_pairwise_judge", "condition": "blinded", "model": "gpt-5.6-sol", "reasoning": "high", "status": "planned"},
+    {"call_id": "JUDGE-02", "task_id": "IS-C12", "role": "blind_pairwise_judge", "condition": "blinded", "model": "gpt-5.6-sol", "reasoning": "high", "status": "planned"},
+    {"call_id": "JUDGE-03", "task_id": "OR-S11", "role": "blind_pairwise_judge", "condition": "blinded", "model": "gpt-5.6-sol", "reasoning": "high", "status": "planned"},
+    {"call_id": "JUDGE-04", "task_id": "XD-F11", "role": "blind_pairwise_judge", "condition": "blinded", "model": "gpt-5.6-sol", "reasoning": "high", "status": "planned"}
+  ]
+}

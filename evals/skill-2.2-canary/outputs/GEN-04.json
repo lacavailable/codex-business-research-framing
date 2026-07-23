@@ -1,0 +1,13 @@
+{
+  "schema_version": "skill-canary-generation-2.0",
+  "call_id": "GEN-04",
+  "task_id": "IS-C12",
+  "condition": "skill-2.2",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "bc04c7766f684182bc61f5c5e7f63b1e8e0f4a694ae2f29d417cd3a4fb24ea4c",
+  "skill_sha256": "e7f42e90aea7335aa20cc82d4a9abc4ab832b1a5a16690ada962d9e071c642c4",
+  "status": "complete",
+  "output": "A platform observes a noisy account score but not each account’s true, latent type. It allocates a fixed review budget across accounts and, after reviewing selected accounts, chooses an account action to maximize the platform’s modeled payoff. The governance trade-off is how to direct scarce review capacity using imperfect signals before the platform takes its final action. This framing treats scores as observations, latent type as unobserved, review capacity as a constraint, and post-review action as the platform’s decision; it does not establish prevalence, fairness, safety, performance, or social-welfare effects."
+}
+

@@ -1,0 +1,9 @@
+{
+  "schema_version": "skill-canary-pair-2.0",
+  "pair_id": "PAIR-01",
+  "task_id": "OM-C11",
+  "request": "Rewrite this as one manuscript-ready paragraph of at most 90 words. A hospital schedules nurses before uncertain arrivals. The draft says patients choose staffing after observing the queue and calls treated patients the decision variable. Preserve the hospital as decision maker, the pre-arrival timing, uncertain arrivals, and treatment as an outcome. Do not add empirical facts.",
+  "output_a": "Before patient arrivals are realized, a hospital chooses nurse staffing under uncertainty about incoming demand. This pre-arrival capacity decision shapes the service resources available as patients arrive and, consequently, the number of patients who receive treatment. Thus, staffing is the hospital’s decision variable, whereas realized treatment is an operational outcome of the staffing choice and uncertain arrivals.",
+  "output_b": "Before patient arrivals are realized, the hospital schedules nurses while facing uncertainty in arrivals. This pre-arrival staffing choice determines the staffing available when demand materializes, and the number of patients treated is a resulting operational outcome rather than a decision made by patients. The analysis therefore examines the hospital’s ex ante staffing decision under uncertain arrivals and the treatment realized thereafter.",
+  "pair_sha256": "f8e1e519ae7c746695ac85b2c744c73f04b3df318861ac67aa2e1cd5b159447a"
+}

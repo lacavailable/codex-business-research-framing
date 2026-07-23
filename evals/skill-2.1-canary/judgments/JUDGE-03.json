@@ -1,0 +1,9 @@
+{
+  "schema_version": "skill-canary-judge-1.0",
+  "task_id": "IS-C01",
+  "criteria": {"usability": "tie", "model_fidelity": "A better", "managerial_clarity": "B better", "prose_economy": "tie"},
+  "overall_preference": "tie",
+  "material_fidelity_issue_in_a": false,
+  "material_fidelity_issue_in_b": false,
+  "rationale": "Both are concise, usable, and preserve the stated evidence boundaries. A more cleanly treats the noisy score as an imperfect signal rather than verified harmfulness. B adds useful managerial clarity by stating that approval or rejection follows review and is not implied by the score, though its claim that users may be misclassified because the score is imperfect slightly blurs the distinction between score error and review outcomes. Neither difference is material enough to determine an overall winner."
+}

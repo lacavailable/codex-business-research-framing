@@ -1,0 +1,20 @@
+{
+  "schema_version": "skill-canary-judge-2.0",
+  "call_id": "JUDGE-01",
+  "pair_id": "PAIR-01",
+  "task_id": "OM-C11",
+  "pair_sha256": "f8e1e519ae7c746695ac85b2c744c73f04b3df318861ac67aa2e1cd5b159447a",
+  "model": "gpt-5.6-sol",
+  "reasoning": "high",
+  "criteria": {
+    "usability": "A better",
+    "model_fidelity": "tie",
+    "managerial_clarity": "A better",
+    "prose_economy": "A better"
+  },
+  "overall_preference": "A better",
+  "material_fidelity_issue_in_a": false,
+  "material_fidelity_issue_in_b": false,
+  "rationale": "Both answers faithfully retain the hospital as decision maker, pre-arrival staffing, uncertain arrivals, and treatment as an outcome without adding empirical facts. A is more direct and economical, clearly identifying staffing as the decision variable and treatment as the operational outcome. B is also usable but repeats the ex ante framing and uses the awkward, somewhat tautological phrase that the staffing choice determines the staffing available."
+}
+

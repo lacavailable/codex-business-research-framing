@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "call_id", "pair_id", "task_id", "pair_sha256", "model", "reasoning", "criteria", "overall_preference", "material_fidelity_issue_in_a", "material_fidelity_issue_in_b", "rationale"],
+  "properties": {
+    "schema_version": {"const": "skill-canary-judge-2.0"},
+    "call_id": {"type": "string", "pattern": "^JUDGE-[0-9]{2}$"},
+    "pair_id": {"type": "string", "pattern": "^PAIR-[0-9]{2}$"},
+    "task_id": {"type": "string", "pattern": "^(OM|IS|OR|XD)-[CSF][0-9]{2}$"},
+    "pair_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "model": {"const": "gpt-5.6-sol"},
+    "reasoning": {"const": "high"},
+    "criteria": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["usability", "model_fidelity", "managerial_clarity", "prose_economy"],
+      "properties": {
+        "usability": {"enum": ["A better", "B better", "tie"]},
+        "model_fidelity": {"enum": ["A better", "B better", "tie"]},
+        "managerial_clarity": {"enum": ["A better", "B better", "tie"]},
+        "prose_economy": {"enum": ["A better", "B better", "tie"]}
+      }
+    },
+    "overall_preference": {"enum": ["A better", "B better", "tie"]},
+    "material_fidelity_issue_in_a": {"type": "boolean"},
+    "material_fidelity_issue_in_b": {"type": "boolean"},
+    "rationale": {"type": "string", "minLength": 1, "maxLength": 1200}
+  }
+}

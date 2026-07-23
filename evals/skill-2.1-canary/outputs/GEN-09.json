@@ -1,0 +1,12 @@
+{
+  "schema_version": "skill-canary-generation-1.0",
+  "call_id": "GEN-09",
+  "task_id": "OR-C01",
+  "condition": "v0.2",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "c284c4858cd89e7ea6585a13b6b8c9b3e2e2879f35318d731dfb90a895900259",
+  "skill_sha256": "8a59065e4a46403c04afa5a78ff01f388d79a9555fc9a6efce8ef0e929730426",
+  "status": "complete",
+  "output": "For the stated benchmark instances, the equivalent MILP formulation reduces solution time by 40% while preserving the same feasible decisions and optimal objective; its contribution is therefore computational—enabling faster exact solution under the tested solver, hardware, and instance conditions. Any retailer-profit claim would require evidence that the speedup meets a real re-optimization deadline, enables a different implemented decision (for example, using fresher data or evaluating more scenarios), and that this decision change improves profit."
+}

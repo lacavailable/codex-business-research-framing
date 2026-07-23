@@ -1,0 +1,20 @@
+{
+  "schema_version": "skill-canary-judge-2.0",
+  "call_id": "JUDGE-04",
+  "pair_id": "PAIR-04",
+  "task_id": "XD-F11",
+  "pair_sha256": "f494056ace49e8e7bdf61fe957371baf747957df6b10f53f4e35192a4ef13007",
+  "model": "gpt-5.6-sol",
+  "reasoning": "high",
+  "criteria": {
+    "usability": "B better",
+    "model_fidelity": "B better",
+    "managerial_clarity": "B better",
+    "prose_economy": "A better"
+  },
+  "overall_preference": "B better",
+  "material_fidelity_issue_in_a": true,
+  "material_fidelity_issue_in_b": false,
+  "rationale": "B more completely maps the actor swap, decision substitution, mechanism graft, and objective substitution, and it correctly fails the behavior gate while keeping unsupported timing, information, constraints, and mechanism unknown. Its repairs are explicit and operationally clear. A is somewhat more concise, but its repaired narrative refers to the model’s 'stated feasible set and information structure' after repeatedly acknowledging that neither was supplied; this invents a material evidence boundary concerning the feasible set and decision-time information. B avoids that contradiction by calling the feasible set unspecified."
+}
+
