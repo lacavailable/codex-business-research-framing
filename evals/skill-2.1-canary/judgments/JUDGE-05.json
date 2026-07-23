@@ -5,5 +5,5 @@
   "overall_preference": "A better",
   "material_fidelity_issue_in_a": false,
   "material_fidelity_issue_in_b": false,
-  "rationale": "Both correctly separate benchmark runtime from objective value and profit. B more explicitly limits the computational claim to tested solver, hardware, and instance conditions and states the full decision-to-profit evidence chain. A is nevertheless more usable and managerially clear because its prose is clean and direct, whereas B contains a conspicuous encoding corruption in “computational鈥攅nabling.” A also gives several concrete operational pathways without overstating realized value."
+  "rationale": "Both correctly separate benchmark runtime from objective value and profit. B more explicitly limits the computational claim to tested solver, hardware, and instance conditions and states the full decision-to-profit evidence chain. A is nevertheless more usable and managerially clear because its prose is clean and direct, whereas B contains a conspicuous encoding corruption in “computational—enabling.” A also gives several concrete operational pathways without overstating realized value."
 }

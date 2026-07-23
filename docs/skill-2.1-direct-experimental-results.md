@@ -52,8 +52,9 @@ gate contains no evidence of improvement.
 The blinded judge preferred Skill 2.1 on OM-C01, OM-S02, and OR-C01; preferred
 v0.2 on IS-S02, OR-S02, and XD-F01; and tied IS-C01 and XD-F02. No output was
 assigned a material fidelity issue. The judge noted one perceived encoding
-corruption in a v0.2 OR output; that observation is preserved and not used to
-alter any artifact.
+corruption in a v0.2 OR output. The judge's raw mojibake return is preserved in
+ignored local storage; the public rationale normalizes only that encoding and
+does not alter the preference, meaning, metrics, or decision.
 
 ## Supported and unsupported conclusions
 
