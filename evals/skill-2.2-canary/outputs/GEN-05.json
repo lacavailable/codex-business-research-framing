@@ -1,0 +1,13 @@
+{
+  "schema_version": "skill-canary-generation-2.0",
+  "call_id": "GEN-05",
+  "task_id": "OR-S11",
+  "condition": "skill-2.1",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "4e212a1e0e006fe596e6bad2747a1d53d540614d5f9471382ba57437650d84ff",
+  "skill_sha256": "424650df62fc909e352d1f9dfe1c3dc5b929abdc9b177d3396efbf4d75cfc936",
+  "status": "complete",
+  "output": "For the benchmark-defined routing decision, Formulation B preserves the same feasible routes and the same true optimal objective value as Formulation A. Its valid contribution is computational: it solved the supplied benchmark instances 42% faster. This can matter operationally because a dispatcher must commit a feasible route within 15 minutes. If B reliably returns an acceptable feasible route before that cutoff when A does not, it expands the team’s ability to make a timely, model-consistent decision.\n\nThe structural numbers have distinct meanings. “Equivalent” means B does not create better routes or change the underlying optimum; it is a different representation of the same decision problem. “42% faster” is a benchmark runtime result, not a 42% improvement in route quality, cost, profit, or service. The 15-minute threshold is the decision window: only solution information available before it can affect the executed route. An optimality certificate received afterward can verify that the committed route was optimal under the model, but it cannot improve a route already put into operation.\n\nThe contribution is therefore **supported** as a formulation-level speed improvement on the supplied instances. Its operational value is **conditionally_supported**: it depends on whether the tested speed advantage persists under the actual solver, hardware, time limit, instance mix, and dispatch workflow, and whether it changes the pre-deadline incumbent available to the dispatcher.\n\nA profit or service claim is **not_supplied**. To support one, evidence must link pre-deadline routing choices to observed outcomes—for example, route-level operating costs and margins for profit, or on-time arrival, delay, cancellation, and customer-wait measures for service—against a relevant baseline, ideally through a controlled pilot or credible before/after design. The principal boundary is that benchmark runtime alone does not establish performance beyond the tested computational conditions."
+}
+

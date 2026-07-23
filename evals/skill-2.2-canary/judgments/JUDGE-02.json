@@ -1,0 +1,20 @@
+{
+  "schema_version": "skill-canary-judge-2.0",
+  "call_id": "JUDGE-02",
+  "pair_id": "PAIR-02",
+  "task_id": "IS-C12",
+  "pair_sha256": "6766f1cd06e9111cf85170b81e8b1254ccf0c4ed72f448623f390208137ccf2d",
+  "model": "gpt-5.6-sol",
+  "reasoning": "high",
+  "criteria": {
+    "usability": "A better",
+    "model_fidelity": "tie",
+    "managerial_clarity": "A better",
+    "prose_economy": "B better"
+  },
+  "overall_preference": "A better",
+  "material_fidelity_issue_in_a": false,
+  "material_fidelity_issue_in_b": false,
+  "rationale": "Both answers faithfully preserve the observation, latent type, fixed review budget, post-review action, and platform-payoff objective without inventing prohibited facts. A is more usable and managerially explicit because it clearly identifies the governance trade-off, assigns each model element its role, and expressly preserves the performance evidence boundary. B is tighter and fully serviceable, but its compressed formulation provides less decision-oriented clarification and does not explicitly mention the performance boundary."
+}
+

@@ -1,0 +1,13 @@
+{
+  "schema_version": "skill-canary-generation-2.0",
+  "call_id": "GEN-06",
+  "task_id": "OR-S11",
+  "condition": "skill-2.2",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "1101df411c50f91e6977ed0e2398cd6110d53cba98b1b2b512e197e587984922",
+  "skill_sha256": "e7f42e90aea7335aa20cc82d4a9abc4ab832b1a5a16690ada962d9e071c642c4",
+  "status": "complete",
+  "output": "Formulation B is a computational improvement, not a different operational routing model. Because it is equivalent to Formulation A, both formulations permit the same feasible routes and share the same true optimum for a given instance. Its valid contribution is solver efficiency: on the supplied benchmark instances, B solved 42% faster. That number describes computational performance under the tested instances, solver configuration, hardware, and stopping conditions; it does not mean routes are 42% cheaper, more profitable, or more reliable.\n\nThe relevant operational constraint is the 15-minute commitment deadline. B has operational value if it produces a feasible route by that deadline when A cannot, or if it produces a demonstrably better feasible incumbent by minute 15. Faster solution can also matter if it permits more scenario evaluations or reoptimization cycles before dispatch. The optimality certificate arriving after 15 minutes establishes that the already-executed route was optimal under the model, but it cannot improve that route or its realized outcome after commitment.\n\n**Evidence needed:** A profit or service claim is **not_supplied** by the benchmark result alone. It would require a pre-deadline comparison of the feasible routes available from A and B at minute 15; an explicit, validated mapping from the routing objective to profit, cost, lateness, or service measures; and tests on representative operational instances and conditions. Field pilots or historical back-testing should then measure realized outcomes, including implementation effects such as execution delays, route adherence, and disruptions.\n\n**Boundary:** The 42% result is **conditionally_supported** only for the supplied benchmark environment. It should not be generalized to other instance families, solvers, hardware, time limits, or operating settings without corresponding evidence."
+}
+

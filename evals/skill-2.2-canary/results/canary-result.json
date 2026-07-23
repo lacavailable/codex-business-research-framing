@@ -1,0 +1,243 @@
+{
+  "schema_version": "skill-canary-result-2.0",
+  "status": "fail",
+  "experimental_merge_authorized": false,
+  "validation_authorized": false,
+  "release_authorized": false,
+  "authoritative_calls_used": 12,
+  "observed": {
+    "completed_authoritative_calls": 12,
+    "profile_compliance": 1.0,
+    "usable_answer_first": 1.0,
+    "duplicate_limitation_units": 0,
+    "unsupported_empirical_facts": 0,
+    "prohibited_overclaims": 0,
+    "new_material_fidelity_regressions": 1,
+    "full_audit_safeguards_noninferior": false,
+    "candidate_vs_baseline_word_delta": {
+      "OM-C11": -4,
+      "IS-C12": 34,
+      "OR-S11": -20,
+      "XD-F11": -153
+    },
+    "pairwise_preference": {
+      "skill-2.2": 2,
+      "skill-2.1": 2,
+      "tie": 0
+    }
+  },
+  "gates": {
+    "completed_authoritative_calls": true,
+    "profile_compliance": true,
+    "usable_answer_first": true,
+    "duplicate_limitation_units": true,
+    "unsupported_empirical_facts": true,
+    "prohibited_overclaims": true,
+    "new_material_fidelity_regressions": false,
+    "full_audit_safeguards_noninferior": false
+  },
+  "per_output_metrics": {
+    "OM-C11": {
+      "skill-2.1": {
+        "word_count": 62,
+        "section_count": 0,
+        "visible_block_count": 1,
+        "profile_compliant": true,
+        "usable_answer_first": true,
+        "duplicate_limitation_units": 0,
+        "unsupported_empirical_facts": [],
+        "required_invariants": {
+          "hospital": true,
+          "before": true,
+          "arrival": true,
+          "staff": true,
+          "outcome": true
+        },
+        "required_invariants_present": true,
+        "prohibited_overclaims": {}
+      },
+      "skill-2.2": {
+        "word_count": 58,
+        "section_count": 0,
+        "visible_block_count": 1,
+        "profile_compliant": true,
+        "usable_answer_first": true,
+        "duplicate_limitation_units": 0,
+        "unsupported_empirical_facts": [],
+        "required_invariants": {
+          "hospital": true,
+          "before": true,
+          "arrival": true,
+          "staff": true,
+          "outcome": true
+        },
+        "required_invariants_present": true,
+        "prohibited_overclaims": {}
+      }
+    },
+    "IS-C12": {
+      "skill-2.1": {
+        "word_count": 59,
+        "section_count": 0,
+        "visible_block_count": 1,
+        "profile_compliant": true,
+        "usable_answer_first": true,
+        "duplicate_limitation_units": 0,
+        "unsupported_empirical_facts": [],
+        "required_invariants": {
+          "platform": true,
+          "noisy": true,
+          "review": true,
+          "latent": true,
+          "payoff": true
+        },
+        "required_invariants_present": true,
+        "prohibited_overclaims": {}
+      },
+      "skill-2.2": {
+        "word_count": 93,
+        "section_count": 0,
+        "visible_block_count": 1,
+        "profile_compliant": true,
+        "usable_answer_first": true,
+        "duplicate_limitation_units": 0,
+        "unsupported_empirical_facts": [],
+        "required_invariants": {
+          "platform": true,
+          "noisy": true,
+          "review": true,
+          "latent": true,
+          "payoff": true
+        },
+        "required_invariants_present": true,
+        "prohibited_overclaims": {}
+      }
+    },
+    "OR-S11": {
+      "skill-2.1": {
+        "word_count": 288,
+        "section_count": 0,
+        "visible_block_count": 4,
+        "profile_compliant": true,
+        "usable_answer_first": true,
+        "duplicate_limitation_units": 0,
+        "unsupported_empirical_facts": [],
+        "required_invariants": {
+          "42%": true,
+          "15": true,
+          "equivalent": true,
+          "runtime": true,
+          "certificate": true,
+          "profit": true
+        },
+        "required_invariants_present": true,
+        "prohibited_overclaims": {
+          "runtime_to_profit": false,
+          "equivalent_formulation_changes_optimum": false,
+          "post_deadline_value": false
+        }
+      },
+      "skill-2.2": {
+        "word_count": 268,
+        "section_count": 0,
+        "visible_block_count": 4,
+        "profile_compliant": true,
+        "usable_answer_first": true,
+        "duplicate_limitation_units": 0,
+        "unsupported_empirical_facts": [],
+        "required_invariants": {
+          "42%": true,
+          "15": true,
+          "equivalent": true,
+          "runtime": false,
+          "certificate": true,
+          "profit": true
+        },
+        "required_invariants_present": false,
+        "prohibited_overclaims": {
+          "runtime_to_profit": false,
+          "equivalent_formulation_changes_optimum": false,
+          "post_deadline_value": false
+        }
+      }
+    },
+    "XD-F11": {
+      "skill-2.1": {
+        "word_count": 761,
+        "section_count": 11,
+        "visible_block_count": 23,
+        "profile_compliant": true,
+        "usable_answer_first": true,
+        "duplicate_limitation_units": 9,
+        "unsupported_empirical_facts": [],
+        "required_invariants": {
+          "actor": true,
+          "timing": true,
+          "information": true,
+          "behavior": true,
+          "constraint": true,
+          "objective": true,
+          "evidence": true,
+          "boundar": true,
+          "eligib": true,
+          "mapping": true
+        },
+        "required_invariants_present": true,
+        "prohibited_overclaims": {}
+      },
+      "skill-2.2": {
+        "word_count": 608,
+        "section_count": 11,
+        "visible_block_count": 24,
+        "profile_compliant": true,
+        "usable_answer_first": true,
+        "duplicate_limitation_units": 6,
+        "unsupported_empirical_facts": [],
+        "required_invariants": {
+          "actor": true,
+          "timing": true,
+          "information": true,
+          "behavior": true,
+          "constraint": true,
+          "objective": true,
+          "evidence": true,
+          "boundar": true,
+          "eligib": true,
+          "mapping": true
+        },
+        "required_invariants_present": true,
+        "prohibited_overclaims": {}
+      }
+    }
+  },
+  "decoded_pairwise_results": [
+    {
+      "task_id": "OM-C11",
+      "winner": "skill-2.2",
+      "candidate_material_fidelity_issue": false,
+      "baseline_material_fidelity_issue": false
+    },
+    {
+      "task_id": "IS-C12",
+      "winner": "skill-2.2",
+      "candidate_material_fidelity_issue": false,
+      "baseline_material_fidelity_issue": false
+    },
+    {
+      "task_id": "OR-S11",
+      "winner": "skill-2.1",
+      "candidate_material_fidelity_issue": false,
+      "baseline_material_fidelity_issue": false
+    },
+    {
+      "task_id": "XD-F11",
+      "winner": "skill-2.1",
+      "candidate_material_fidelity_issue": true,
+      "baseline_material_fidelity_issue": false
+    }
+  ],
+  "automated_holdout_opened": false,
+  "expert_holdout_opened": false,
+  "no_human_experts": true,
+  "claim_boundary": "A pass authorizes only an experimental development PR. It does not establish evaluator validity, expert validation, Skill superiority, validation readiness, tag readiness, or release readiness."
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "skill-canary-generation-2.0",
+  "call_id": "GEN-02",
+  "task_id": "OM-C11",
+  "condition": "skill-2.2",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "ab7ae51ff5e8517258700fed182953762701cab2d9b5ddc997edddde97f14662",
+  "skill_sha256": "e7f42e90aea7335aa20cc82d4a9abc4ab832b1a5a16690ada962d9e071c642c4",
+  "status": "complete",
+  "output": "Before patient arrivals are realized, a hospital chooses nurse staffing under uncertainty about incoming demand. This pre-arrival capacity decision shapes the service resources available as patients arrive and, consequently, the number of patients who receive treatment. Thus, staffing is the hospital’s decision variable, whereas realized treatment is an operational outcome of the staffing choice and uncertain arrivals."
+}
+

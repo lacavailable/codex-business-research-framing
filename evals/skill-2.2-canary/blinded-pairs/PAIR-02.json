@@ -1,0 +1,9 @@
+{
+  "schema_version": "skill-canary-pair-2.0",
+  "pair_id": "PAIR-02",
+  "task_id": "IS-C12",
+  "request": "Write one platform-governance paragraph of at most 110 words. A platform observes a noisy account score, allocates a fixed review budget, and then chooses an action after review. True account type is latent. The model optimizes platform payoff, not social welfare. Preserve those boundaries without adding prevalence, fairness, safety, or performance facts.",
+  "output_a": "A platform observes a noisy account score but not each account’s true, latent type. It allocates a fixed review budget across accounts and, after reviewing selected accounts, chooses an account action to maximize the platform’s modeled payoff. The governance trade-off is how to direct scarce review capacity using imperfect signals before the platform takes its final action. This framing treats scores as observations, latent type as unobserved, review capacity as a constraint, and post-review action as the platform’s decision; it does not establish prevalence, fairness, safety, performance, or social-welfare effects.",
+  "output_b": "A platform observes a noisy score for each account while true account type remains latent, allocates a fixed review budget across accounts, and then chooses an action after review. Its decision problem is to use scarce review capacity and subsequent actions to maximize platform payoff. The setting does not establish account prevalence or assess fairness, safety, or social-welfare effects.",
+  "pair_sha256": "6766f1cd06e9111cf85170b81e8b1254ccf0c4ed72f448623f390208137ccf2d"
+}
