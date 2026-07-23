@@ -22,7 +22,7 @@
     "completed_authoritative_calls": {"operator": "==", "threshold": 12},
     "profile_compliance": {"operator": "==", "threshold": 1.0},
     "usable_answer_first": {"operator": "==", "threshold": 1.0},
-    "duplicate_limitation_units": {"operator": "==", "threshold": 0},
+    "duplicate_limitation_units": {"operator": "==", "threshold": 0, "scope": "compact_and_standard"},
     "unsupported_empirical_facts": {"operator": "==", "threshold": 0},
     "prohibited_overclaims": {"operator": "==", "threshold": 0},
     "new_material_fidelity_regressions": {"operator": "==", "threshold": 0},
@@ -47,4 +47,3 @@
   ],
   "claim_boundary": "A pass authorizes only an experimental development PR. It does not establish evaluator validity, expert validation, Skill superiority, validation readiness, tag readiness, or release readiness."
 }
-

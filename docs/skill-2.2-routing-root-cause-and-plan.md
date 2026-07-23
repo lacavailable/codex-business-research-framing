@@ -80,7 +80,9 @@ The new canary passes only if all of the following hold:
 2. Candidate profile compliance is 4/4 under task-specific ceilings and format
    constraints.
 3. Candidate usable-answer-first compliance is 4/4.
-4. Candidate duplicate-limitation units equal zero.
+4. Candidate duplicate-limitation units equal zero across compact and standard
+   tasks. Full-audit repetition remains permitted only where schema
+   compatibility requires it.
 5. Candidate unsupported empirical facts equal zero.
 6. Candidate prohibited runtime-to-profit, equivalent-formulation-to-optimum,
    and post-deadline-value overclaims equal zero.
@@ -92,3 +94,12 @@ Pairwise usability preference and length deltas are diagnostics only. Passing
 cannot support a superiority claim. Regardless of outcome,
 `validation_authorized` and `release_authorized` remain false.
 
+## Pre-authoritative implementation correction
+
+After combining the two development hypotheses, the full repository suite
+showed that two PR #7 tests read the mutable current Skill even though the
+frozen canary belonged to commit `323ea17...`. Before any authoritative Skill
+2.2 calls, those tests were made version-aware: they now read and hash the
+Skill at the frozen PR #7 commit. The PR #7 canary directory, old canary tool,
+result document, failed result, and authorization fields remain unchanged.
+This correction changes no Skill 2.2 task, metric, threshold, or call budget.

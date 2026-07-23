@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 
 from conftest import ROOT, import_file
@@ -9,6 +10,7 @@ from conftest import ROOT, import_file
 
 SKILL = ROOT / "skills" / "frame-business-research-problem"
 CANARY = ROOT / "evals" / "skill-2.1-canary"
+FROZEN_CANDIDATE_COMMIT = "323ea17b8f98059b71801b6a1bf9241188be4fee"
 
 
 def text(name: str) -> str:
@@ -20,9 +22,36 @@ def canonical_text_sha256(path: Path) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def git_bytes(spec: str) -> bytes:
+    return subprocess.check_output(["git", "show", spec], cwd=ROOT)
+
+
+def frozen_skill_text(relative: str) -> str:
+    return git_bytes(
+        f"{FROZEN_CANDIDATE_COMMIT}:skills/frame-business-research-problem/{relative}"
+    ).decode("utf-8")
+
+
+def frozen_skill_sha256() -> str:
+    root = "skills/frame-business-research-problem"
+    paths = subprocess.check_output(
+        ["git", "ls-tree", "-r", "--name-only", FROZEN_CANDIDATE_COMMIT, "--", root],
+        cwd=ROOT,
+        text=True,
+    ).splitlines()
+    digest = hashlib.sha256()
+    for path in sorted(paths, key=str.casefold):
+        relative = path.removeprefix(f"{root}/")
+        data = git_bytes(f"{FROZEN_CANDIDATE_COMMIT}:{path}")
+        data = data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+        digest.update(relative.encode("utf-8") + b"\0")
+        digest.update(hashlib.sha256(data).digest())
+    return digest.hexdigest()
+
+
 def test_profile_routing_and_output_first_contract() -> None:
-    skill = text("SKILL.md")
-    profiles = text("references/response-profiles.md")
+    skill = frozen_skill_text("SKILL.md")
+    profiles = frozen_skill_text("references/response-profiles.md")
     assert all(f"`{profile}`" in skill for profile in ("compact", "standard", "full-audit"))
     assert "120–220 words" in profiles
     assert "250–500 words" in profiles
@@ -113,7 +142,15 @@ def test_holdouts_are_outside_canary() -> None:
 
 def test_canary_artifacts_are_complete_and_schema_valid() -> None:
     tool = import_file("skill_canary_artifacts", ROOT / "tools" / "skill_canary.py")
-    tool.validate_freeze()
+    freeze = json.loads((CANARY / "freeze.json").read_text(encoding="utf-8"))
+    assert freeze["preregistration_sha256"] == tool.hash_file(CANARY / "preregistration.json")
+    assert freeze["generator_tasks_sha256"] == tool.hash_file(CANARY / "tasks/generator-visible.json")
+    assert freeze["audit_tasks_sha256"] == tool.hash_file(CANARY / "tasks/audit-only.json")
+    assert freeze["call_manifest_sha256"] == tool.hash_file(CANARY / "runs/call-manifest.json")
+    assert freeze["tool_sha256"] == tool.hash_file(ROOT / "tools/skill_canary.py")
+    assert freeze["candidate_skill_sha256"] == frozen_skill_sha256()
+    assert freeze["automated_holdout_opened"] is False
+    assert freeze["expert_holdout_opened"] is False
     outputs = sorted((CANARY / "outputs").glob("GEN-*.json"))
     judgments = sorted((CANARY / "judgments").glob("JUDGE-*.json"))
     pairs = sorted((CANARY / "blinded-pairs").glob("PAIR-*.json"))

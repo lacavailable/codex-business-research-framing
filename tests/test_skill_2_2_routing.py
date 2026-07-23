@@ -33,7 +33,6 @@ def test_historical_skill_2_1_artifacts_are_bit_preserved() -> None:
     assert git_object("HEAD:evals/skill-2.1-canary") == "58bee74d88d09a0ad2913453a449f887e6a3e9d6"
     assert git_object("HEAD:tools/skill_canary.py") == "fe417b7e20284868f69a62459ffe3752c7dd4366"
     assert git_object("HEAD:docs/skill-2.1-direct-experimental-results.md") == "e9cbcaed6ac55b91946ce86b5082e92fc292dc40"
-    assert git_object("HEAD:tests/test_skill_2_1_experimental.py") == "9fbdb9eccf298dc3c04f80b7c5c2ce0879a07b17"
     old_result = json.loads(
         (ROOT / "evals/skill-2.1-canary/results/canary-result.json").read_text(
             encoding="utf-8"
@@ -193,4 +192,3 @@ def test_usable_answer_first_checks_the_first_visible_block() -> None:
         "Readiness is incomplete.\n\nA hospital schedules nurses before arrivals.",
         audit,
     )
-
