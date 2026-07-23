@@ -1,0 +1,31 @@
+{
+  "schema_version": "skill-canary-run-1.0",
+  "maximum_authoritative_calls": 24,
+  "replacement_calls_allowed": false,
+  "calls": [
+    {"call_id":"GEN-01","task_id":"OM-C01","role":"generation","condition":"v0.2","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-02","task_id":"OM-C01","role":"generation","condition":"skill-2.1","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-03","task_id":"OM-S02","role":"generation","condition":"v0.2","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-04","task_id":"OM-S02","role":"generation","condition":"skill-2.1","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-05","task_id":"IS-C01","role":"generation","condition":"v0.2","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-06","task_id":"IS-C01","role":"generation","condition":"skill-2.1","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-07","task_id":"IS-S02","role":"generation","condition":"v0.2","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-08","task_id":"IS-S02","role":"generation","condition":"skill-2.1","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-09","task_id":"OR-C01","role":"generation","condition":"v0.2","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-10","task_id":"OR-C01","role":"generation","condition":"skill-2.1","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-11","task_id":"OR-S02","role":"generation","condition":"v0.2","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-12","task_id":"OR-S02","role":"generation","condition":"skill-2.1","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-13","task_id":"XD-F01","role":"generation","condition":"v0.2","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-14","task_id":"XD-F01","role":"generation","condition":"skill-2.1","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-15","task_id":"XD-F02","role":"generation","condition":"v0.2","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"GEN-16","task_id":"XD-F02","role":"generation","condition":"skill-2.1","model":"gpt-5.6-terra","reasoning":"high","status":"planned"},
+    {"call_id":"JUDGE-01","task_id":"OM-C01","role":"blind_pairwise_judge","condition":"blinded","model":"gpt-5.6-sol","reasoning":"high","status":"planned"},
+    {"call_id":"JUDGE-02","task_id":"OM-S02","role":"blind_pairwise_judge","condition":"blinded","model":"gpt-5.6-sol","reasoning":"high","status":"planned"},
+    {"call_id":"JUDGE-03","task_id":"IS-C01","role":"blind_pairwise_judge","condition":"blinded","model":"gpt-5.6-sol","reasoning":"high","status":"planned"},
+    {"call_id":"JUDGE-04","task_id":"IS-S02","role":"blind_pairwise_judge","condition":"blinded","model":"gpt-5.6-sol","reasoning":"high","status":"planned"},
+    {"call_id":"JUDGE-05","task_id":"OR-C01","role":"blind_pairwise_judge","condition":"blinded","model":"gpt-5.6-sol","reasoning":"high","status":"planned"},
+    {"call_id":"JUDGE-06","task_id":"OR-S02","role":"blind_pairwise_judge","condition":"blinded","model":"gpt-5.6-sol","reasoning":"high","status":"planned"},
+    {"call_id":"JUDGE-07","task_id":"XD-F01","role":"blind_pairwise_judge","condition":"blinded","model":"gpt-5.6-sol","reasoning":"high","status":"planned"},
+    {"call_id":"JUDGE-08","task_id":"XD-F02","role":"blind_pairwise_judge","condition":"blinded","model":"gpt-5.6-sol","reasoning":"high","status":"planned"}
+  ]
+}

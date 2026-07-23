@@ -1,0 +1,12 @@
+{
+  "schema_version": "skill-canary-generation-1.0",
+  "call_id": "GEN-05",
+  "task_id": "IS-C01",
+  "condition": "v0.2",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "0c66446b88dd6f203184e96f11c202130697c29dd8a3b8ee7a63f08260213f6a",
+  "skill_sha256": "8a59065e4a46403c04afa5a78ff01f388d79a9555fc9a6efce8ef0e929730426",
+  "status": "complete",
+  "output": "A platform uses a noisy risk score to allocate a fixed human-review budget, then approves or rejects the users selected for review. The governance problem is how to target scarce review capacity while recognizing that the score is an imperfect signal rather than verified harmfulness: allocating more reviews to high-score users may focus scrutiny but can also expose benign users to rejection. This model characterizes that constrained screening decision; it does not establish trends in harmful content or a net social-welfare benefit from the policy."
+}

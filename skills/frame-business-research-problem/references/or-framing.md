@@ -2,6 +2,20 @@
 
 Use this playbook for formulations, algorithms, bounds, decomposition, and computational decision support.
 
+## Narrative sequence
+
+Build the visible framing in this order:
+
+1. operational decision;
+2. mathematical abstraction;
+3. computational obstacle;
+4. formulation or algorithmic contribution;
+5. operational pathway;
+6. evidence boundary.
+
+Load [or-computational-contribution.md](or-computational-contribution.md) for
+runtime, gap, incumbent, certificate, formulation, or solver claims.
+
 ## Formulation semantics
 
 Map every important decision variable to an actionable choice. Translate the objective with its units, horizon, and risk treatment. Describe the feasible region through operational rules, not merely equation names. Keep state, auxiliary, and linearization variables distinct from managerial decisions.

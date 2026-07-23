@@ -1,0 +1,12 @@
+{
+  "schema_version": "skill-canary-generation-1.0",
+  "call_id": "GEN-02",
+  "task_id": "OM-C01",
+  "condition": "skill-2.1",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "8307080299c8b961601c60bdc01a3969166c77bc29a886f61cc0cc5311b99a59",
+  "skill_sha256": "424650df62fc909e352d1f9dfe1c3dc5b929abdc9b177d3396efbf4d75cfc936",
+  "status": "complete",
+  "output": "A retailer selects a capacity-constrained assortment before demand is realized, anticipating that customers may substitute among the offered products according to a Markov-chain choice model."
+}

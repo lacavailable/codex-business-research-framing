@@ -1,0 +1,9 @@
+{
+  "schema_version": "skill-canary-pair-1.0",
+  "pair_id": "PAIR-01",
+  "task_id": "OM-C01",
+  "request": "Rewrite this as one concise, manuscript-ready business-problem paragraph. A retailer chooses a capacity-constrained assortment before demand arrives. Customers may substitute among offered products according to the supplied Markov-chain choice model. The draft incorrectly calls the supplier the assortment decision maker. Preserve the modeled actor, timing, substitution mechanism, and capacity constraint. Do not add market facts.",
+  "output_a": "A retailer must select a capacity-constrained assortment before demand is realized, balancing product availability within its limited capacity. After the assortment is set, customers choose among the offered products and may substitute according to the specified Markov-chain choice model.",
+  "output_b": "A retailer selects a capacity-constrained assortment before demand is realized, anticipating that customers may substitute among the offered products according to a Markov-chain choice model.",
+  "pair_sha256": "09f9f3d1ca10686b860d3af4646b84f39a2ad98d44c5c1c53d45e63ccaa54969"
+}
