@@ -1,0 +1,106 @@
+from __future__ import annotations
+
+import hashlib
+import json
+from pathlib import Path
+
+from conftest import ROOT, import_file
+
+
+SKILL = ROOT / "skills" / "frame-business-research-problem"
+CANARY = ROOT / "evals" / "skill-2.1-canary"
+
+
+def text(name: str) -> str:
+    return (SKILL / name).read_text(encoding="utf-8")
+
+
+def test_profile_routing_and_output_first_contract() -> None:
+    skill = text("SKILL.md")
+    profiles = text("references/response-profiles.md")
+    assert all(f"`{profile}`" in skill for profile in ("compact", "standard", "full-audit"))
+    assert "120–220 words" in profiles
+    assert "250–500 words" in profiles
+    assert "usable prose" in skill
+    assert "Do not default to `full-audit`" in skill
+
+
+def test_nonrepetition_applicability_and_status_vocabulary() -> None:
+    skill = text("SKILL.md")
+    contracts = text("references/output-contracts.md")
+    assert "State each substantive conclusion, limitation, unsupported pathway, and evidence need once" in skill
+    assert "Suppress nonapplicable layers" in skill
+    statuses = {
+        "supported", "conditionally_supported", "unsupported", "contradicted",
+        "not_supplied", "not_assessed", "not_applicable",
+    }
+    assert all(f"`{status}`" in contracts for status in statuses)
+    assert "Reserve internal `fail`" in skill
+
+
+def test_domain_playbooks_have_distinct_sequences() -> None:
+    om = text("references/om-framing.md")
+    is_ = text("references/is-framing.md")
+    or_ = text("references/or-framing.md")
+    assert "operational setting" in om and "constrained choice" in om
+    assert "digital phenomenon" in is_ and "governance or design mechanism" in is_
+    assert "mathematical abstraction" in or_ and "computational obstacle" in or_
+
+
+def test_or_computational_rules_are_directly_routed() -> None:
+    skill = text("SKILL.md")
+    reference = text("references/or-computational-contribution.md")
+    assert "references/or-computational-contribution.md" in skill
+    for phrase in (
+        "Runtime is not profit",
+        "does not change the true optimum",
+        "Fewer nodes do not necessarily imply shorter runtime",
+        "post-deadline certificate cannot improve a decision already executed",
+        "Realized profit",
+    ):
+        assert phrase in reference
+
+
+def test_original_examples_cover_ten_scenarios() -> None:
+    examples = text("references/original-examples.md")
+    assert "references/original-examples.md" in text("SKILL.md")
+    for number in range(1, 11):
+        assert f"## {number}." in examples
+    assert "Compact" in examples and "Standard" in examples and "Full audit" in examples
+
+
+def test_businessbrief_validator_and_openai_metadata_are_unchanged() -> None:
+    validator = SKILL / "scripts" / "validate_brief.py"
+    metadata = SKILL / "agents" / "openai.yaml"
+    assert hashlib.sha256(validator.read_bytes()).hexdigest() == "f70ea4a143554ac1988d0c2c9fe47015cf536ff5db2bc3b1d06d38692f09a63e"
+    assert hashlib.sha256(metadata.read_bytes()).hexdigest() == "328b01e677e136412eefc54de4b3d802bcc83b75cb499a7a774a494563faf1f3"
+
+
+def test_canary_static_contract() -> None:
+    tool = import_file("skill_canary_test", ROOT / "tools" / "skill_canary.py")
+    tool.validate_static()
+    visible, audit = tool.task_maps()
+    assert len(visible) == len(audit) == 8
+    assert all(set(item) == {"task_id", "domain", "profile", "request"} for item in visible.values())
+
+
+def test_canary_metrics_detect_prohibited_or_claims() -> None:
+    tool = import_file("skill_canary_metrics", ROOT / "tools" / "skill_canary.py")
+    assert tool.sentence_overclaim("Faster runtime therefore raises profit.", "runtime_to_profit")
+    assert not tool.sentence_overclaim("Faster runtime does not establish profit.", "runtime_to_profit")
+    assert tool.sentence_overclaim("The post-deadline certificate improves operational value.", "post_deadline_value")
+    assert not tool.sentence_overclaim("The post-deadline certificate cannot improve the executed decision.", "post_deadline_value")
+
+
+def test_canary_has_exact_call_budget() -> None:
+    manifest = json.loads((CANARY / "runs" / "call-manifest.json").read_text(encoding="utf-8"))
+    calls = manifest["calls"]
+    assert len(calls) == 24
+    assert sum(item["role"] == "generation" for item in calls) == 16
+    assert sum(item["role"] == "blind_pairwise_judge" for item in calls) == 8
+    assert len({item["call_id"] for item in calls}) == 24
+
+
+def test_holdouts_are_outside_canary() -> None:
+    paths = [path.relative_to(CANARY).as_posix().casefold() for path in CANARY.rglob("*")]
+    assert not any("holdout" in path for path in paths)

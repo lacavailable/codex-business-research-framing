@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "call_id", "task_id", "condition", "model", "reasoning", "prompt_sha256", "skill_sha256", "status", "output"],
+  "properties": {
+    "schema_version": {"const": "skill-canary-generation-1.0"},
+    "call_id": {"type": "string", "pattern": "^GEN-[0-9]{2}$"},
+    "task_id": {"type": "string"},
+    "condition": {"enum": ["v0.2", "skill-2.1"]},
+    "model": {"const": "gpt-5.6-terra"},
+    "reasoning": {"const": "high"},
+    "prompt_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "skill_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "status": {"const": "complete"},
+    "output": {"type": "string", "minLength": 1}
+  }
+}
