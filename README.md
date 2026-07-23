@@ -2,13 +2,16 @@
 
 `frame-business-research-problem` is an open-source Codex Agent Skill that helps Operations Management (OM), Information Systems (IS), and Operations Research (OR) researchers turn models and early ideas into concrete, defensible business-research problems.
 
-> **Skill 2.1 is a failed experimental candidate, not a release.** Its bounded
-> canary found no judged fidelity regression but failed the frozen length,
-> repetition, profile-compliance, and unsupported-fact gates. The branch is not
-> merge-authorized. Evaluator validation, both holdouts, a release tag, and
-> performance claims remain unavailable. See the
+> **Skill 2.2 is a failed experimental candidate, not a release.** Its bounded
+> routing canary passed the frozen profile, answer-first, non-repetition,
+> empirical-fact, and computational-overclaim gates, but a full-audit output
+> introduced one material fidelity regression by treating unsupplied model
+> semantics as stated. The branch is not merge-authorized. Skill 2.1 also
+> remains a failed, unmerged experimental record. Evaluator validation, both
+> holdouts, a release tag, and performance claims remain unavailable. See the
 > [development authorization](docs/skill-development-without-evaluator-freeze.md)
-> and [candid results](docs/skill-2.1-direct-experimental-results.md).
+> and the candid [Skill 2.1](docs/skill-2.1-direct-experimental-results.md) and
+> [Skill 2.2](docs/skill-2.2-routing-canary-results.md) results.
 
 ## Contents
 

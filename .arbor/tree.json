@@ -8,7 +8,7 @@
       "depth": 0,
       "status": "root",
       "hypothesis": "Improve profile routing, length compliance, non-repetition, and empirical-fact checking without material fidelity regression",
-      "insight": "[from n1] Executable render precedence should be explicit and compact; length minima should not override a user request.\n[from n2] Development metrics must classify claim context, not count raw numerals or topic words.",
+      "insight": "[from n1] Executable render precedence should be explicit and compact; length minima should not override a user request.\n[from n2] Development metrics must classify claim context, not count raw numerals or topic words.\n[from n1] Static routing compliance transferred to the new public tasks, but compression can expose a fidelity defect when a polished repair silently upgrades unknown semantics to stated semantics; full-audit fidelity remains a noncompensatory gate.",
       "metadata": {
         "dev_score": null,
         "test_score": null,
@@ -16,7 +16,7 @@
         "branch_ref": null
       },
       "created_at": 1784808984,
-      "updated_at": 1784809627
+      "updated_at": 1784811028
     },
     "n1": {
       "id": "n1",

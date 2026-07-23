@@ -192,3 +192,59 @@ def test_usable_answer_first_checks_the_first_visible_block() -> None:
         "Readiness is incomplete.\n\nA hospital schedules nurses before arrivals.",
         audit,
     )
+
+
+def test_skill_2_2_artifacts_are_complete_and_schema_valid() -> None:
+    tool = v2_tool()
+    tool.validate_freeze()
+    outputs = sorted((CANARY / "outputs").glob("GEN-*.json"))
+    pairs = sorted((CANARY / "blinded-pairs").glob("PAIR-*.json"))
+    judgments = sorted((CANARY / "judgments").glob("JUDGE-*.json"))
+    assert len(outputs) == 8
+    assert len(pairs) == len(judgments) == 4
+    for path in outputs:
+        tool.validate_schema(
+            json.loads(path.read_text(encoding="utf-8")),
+            "generation-result.schema.json",
+        )
+    for path in pairs:
+        tool.validate_schema(
+            json.loads(path.read_text(encoding="utf-8")),
+            "blinded-pair.schema.json",
+        )
+    for path in judgments:
+        tool.validate_schema(
+            json.loads(path.read_text(encoding="utf-8")),
+            "judge-result.schema.json",
+        )
+
+
+def test_skill_2_2_result_records_failed_noncompensatory_gate() -> None:
+    result = json.loads(
+        (CANARY / "results/canary-result.json").read_text(encoding="utf-8")
+    )
+    assert result["status"] == "fail"
+    assert result["experimental_merge_authorized"] is False
+    assert result["validation_authorized"] is False
+    assert result["release_authorized"] is False
+    assert result["authoritative_calls_used"] == 12
+    assert result["observed"]["profile_compliance"] == 1.0
+    assert result["observed"]["usable_answer_first"] == 1.0
+    assert result["observed"]["duplicate_limitation_units"] == 0
+    assert result["observed"]["unsupported_empirical_facts"] == 0
+    assert result["observed"]["new_material_fidelity_regressions"] == 1
+    assert result["observed"]["full_audit_safeguards_noninferior"] is False
+    assert result["automated_holdout_opened"] is False
+    assert result["expert_holdout_opened"] is False
+    assert result["no_human_experts"] is True
+
+
+def test_actual_full_audit_structural_numbers_are_not_empirical_flags() -> None:
+    tool = v2_tool()
+    _, audit = tool.task_maps()
+    output = json.loads(
+        (CANARY / "outputs/GEN-08.json").read_text(encoding="utf-8")
+    )["output"]
+    assert "BusinessBrief schema" in output
+    assert "DFC-12" in output
+    assert tool.unsupported_empirical_facts(output, audit["XD-F11"]) == []

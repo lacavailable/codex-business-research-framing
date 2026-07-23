@@ -12,6 +12,9 @@ All notable changes are documented here. This project follows Semantic Versionin
   contribution reference, and ten original rendering examples.
 - A bounded eight-task, 24-call direct-development canary and product-owner
   acceptance package.
+- A separately frozen four-task, 12-call routing canary with task-specific
+  length constraints, visible-unit repetition checks, and a context-aware
+  empirical-fact detector.
 - Versioned v3 generator-visible, judge-only, score, candidate, and expert-annotation interfaces.
 - Applicability-aware decimal scoring, deterministic leakage detection, and authoritative adjudication.
 - Ignored private calibration ingestion, hashing, anonymization safeguards, and copyright fingerprint auditing.
@@ -24,6 +27,10 @@ All notable changes are documented here. This project follows Semantic Versionin
   holdouts, formal performance claims, a tag, and a release remain blocked. Its
   direct eight-task canary failed the frozen word-profile, repetition, and
   unsupported-fact gates, so the candidate is not merge-authorized.
+- Skill 2.2 is also experimental development work and is not merge-authorized.
+  Its routing canary passed six of eight blocking gates but failed material
+  fidelity and full-audit noninferiority after a repair called unsupplied model
+  semantics "stated."
 
 ## [0.2.0-beta] - 2026-07-20
 

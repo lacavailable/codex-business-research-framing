@@ -7,7 +7,7 @@
   "branching": 2,
   "max_depth": 1,
   "budget_cycles": 2,
-  "cycles_used": 1,
+  "cycles_used": 2,
   "best_node": null,
   "best_test_score": null,
   "best_branch_ref": null,
