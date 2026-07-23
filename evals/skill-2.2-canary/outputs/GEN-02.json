@@ -1,0 +1,12 @@
+{
+  "schema_version": "skill-2.2-generation-1.0",
+  "call_id": "GEN-02",
+  "task_id": "OM-S02",
+  "condition": "skill-2.2-adaptive",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "fe542a273511925d50b3956970380920ee2baf907afaeca59de6df3e2de22873",
+  "skill_sha256": "72c83a9e9c8db12ec9b67fa78dab36b474589845bdcf9d900832405fd9a84a6d",
+  "status": "complete",
+  "output": "## Diagnosis\n\n**Status: contradicted.** The current story reverses the model’s sequence: it lets the fulfillment manager observe realized same-day demand before setting staffing. It also treats fulfilled orders as a controllable choice, although the model makes staffing the decision and fulfillment an outcome generated after demand realizes. This creates both a timing and information mismatch.\n\n| Model object | Correct business meaning | Timing |\n|---|---|---|\n| Staffing | Manager’s pre-demand staffing choice | Before same-day orders arrive |\n| Same-day demand | Uncertain order volume | Realizes after staffing is set |\n| Fulfilled orders | Resulting operational outcome | Follows from staffing and realized demand |\n\n## Replacement framing\n\nA fulfillment manager must set staffing for the upcoming same-day operating period before the volume of incoming orders is known. After staffing is chosen, same-day demand realizes, and the number of orders fulfilled follows from the interaction between available staffing and realized demand. The model therefore examines how the manager should choose staffing under demand uncertainty, given the model’s stated operational objective and constraints.\n\nThis framing does not establish what costs, service targets, staffing limits, or treatment of unmet orders apply; those elements should be stated only if specified by the model."
+}

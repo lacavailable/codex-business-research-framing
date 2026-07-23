@@ -1,0 +1,12 @@
+{
+  "schema_version": "skill-2.2-generation-1.0",
+  "call_id": "GEN-05",
+  "task_id": "OR-C01",
+  "condition": "skill-2.2-adaptive",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "b65e37488c2dca1815e02e2c22400ea581f345f17a13702d812db3e3780ef3bb",
+  "skill_sha256": "72c83a9e9c8db12ec9b67fa78dab36b474589845bdcf9d900832405fd9a84a6d",
+  "status": "complete",
+  "output": "Our computational contribution is an equivalent MILP formulation that preserves the underlying feasible decisions and true optimal objective while solving the stated benchmark instances 40% faster under the tested conditions. This result supports improved computational efficiency, not a change in optimal retailer profit. Operational value would require evidence that the speedup delivers solutions before decision deadlines and enables actions such as more frequent reoptimization, broader scenario evaluation, or better pre-execution incumbents, followed by evidence that those actions improve realized retailer profit."
+}

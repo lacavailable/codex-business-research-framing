@@ -1,0 +1,12 @@
+{
+  "schema_version": "skill-2.2-generation-1.0",
+  "call_id": "GEN-06",
+  "task_id": "OR-S02",
+  "condition": "skill-2.2-adaptive",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "5cec378827e09036e668015fa65300fac308fa53c6911bc9b513b1f7bb456674",
+  "skill_sha256": "72c83a9e9c8db12ec9b67fa78dab36b474589845bdcf9d900832405fd9a84a6d",
+  "status": "complete",
+  "output": "## Computational contribution\n\nThe solver produces an executable dispatch plan within the 10-minute decision window. This is the decision-relevant result: the plan is feasible and can be executed before dispatch is irrevocably fixed. Its quality at that moment should be reported using its objective value and, if available, its optimality gap relative to a valid bound.\n\nThe proof obtained at 35 minutes establishes that this same plan is optimal for the stated model instance. That certificate is valuable as retrospective validation of the model-based decision, but it arrives too late to improve the dispatch already executed. It therefore must not be described as having improved real-time dispatch quality.\n\n| Object | What is established | Operational interpretation |\n|---|---|---|\n| 10-minute incumbent | A feasible dispatch is available before execution. | `supported`: it can support the fixed dispatch decision. |\n| Incumbent quality | Objective value, and possibly a decision-time gap, characterize how good that plan is under the model. | `conditionally_supported`: meaningful only if the objective, bound, and gap convention are reported. |\n| 35-minute certificate | The incumbent is proven optimal for the modeled instance. | `supported`: retrospective assurance; not a real-time improvement. |\n| Benchmark evidence | The reported timings describe this solver run under its supplied instance, hardware, settings, and time limit. | `not_supplied`: general performance, robustness, or comparison against alternatives cannot be claimed without those details. |\n\nThe operational contribution is thus deadline-feasible decision support with a later exactness certificate—not a claim that the certificate improved an irreversible dispatch, generated profit, or improved service. Those broader outcomes would require evidence linking the pre-deadline incumbent to the dispatch process and realized operational results."
+}

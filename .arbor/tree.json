@@ -8,7 +8,7 @@
       "depth": 0,
       "status": "root",
       "hypothesis": "Improve deliverable fit, adaptive concision, organization, claim scope, and evidence boundaries without weakening model fidelity",
-      "insight": "",
+      "insight": "[from n1] Ordinary-task routing improved, but full-audit rendering must never infer absent scarcity, targets, constraints, or trade-offs and must suppress duplicate scaffolding",
       "metadata": {
         "dev_score": null,
         "test_score": null,
@@ -16,55 +16,58 @@
         "branch_ref": null
       },
       "created_at": 1784812690,
-      "updated_at": 1784812690
+      "updated_at": 1784815827
     },
     "n1": {
       "id": "n1",
       "parent": "n0",
       "depth": 1,
-      "status": "pending",
+      "status": "pruned",
       "hypothesis": "Deliverable-first routing plus minimum-sufficient rendering will improve usability and profile compliance without sacrificing fidelity",
-      "insight": "",
+      "insight": "Deliverable-first routing transfers on ordinary tasks, but full-audit generation still exposes excessive scaffolding and invents structure when semantics are absent",
       "metadata": {
-        "dev_score": null,
+        "dev_score": 64.2857,
         "test_score": null,
-        "result": "",
-        "branch_ref": null
+        "result": "8/8 adaptive contracts and 4/6 non-full wins passed, but full-audit simplification was 0/2 and XD-F01 added a material capacity trade-off",
+        "branch_ref": "skill-v0.3-adaptive-experimental@a5a3695",
+        "prune_reason": "Frozen development merge gate rejected the combined candidate for material full-audit fidelity and no full-audit simplification"
       },
       "created_at": 1784812690,
-      "updated_at": 1784812690
+      "updated_at": 1784815615
     },
     "n2": {
       "id": "n2",
       "parent": "n0",
       "depth": 1,
-      "status": "pending",
+      "status": "pruned",
       "hypothesis": "Precise status, claim-granularity, contribution, and pathway rules will prevent scope and evidence overclaims",
-      "insight": "",
+      "insight": "Explicit claim-scope rules help ordinary OR/IS outputs, but they do not prevent an inferred scarcity mechanism from entering a full audit",
       "metadata": {
-        "dev_score": null,
+        "dev_score": 64.2857,
         "test_score": null,
-        "result": "",
-        "branch_ref": null
+        "result": "OR safeguards, IS mapping, and candidate scope/generalization gates passed; XD-F01 nevertheless introduced one material fidelity defect",
+        "branch_ref": "skill-v0.3-adaptive-experimental@a5a3695",
+        "prune_reason": "Claim routing did not prevent a material inferred capacity trade-off in XD-F01"
       },
       "created_at": 1784812690,
-      "updated_at": 1784812690
+      "updated_at": 1784815615
     },
     "n3": {
       "id": "n3",
       "parent": "n0",
       "depth": 1,
-      "status": "pending",
+      "status": "pruned",
       "hypothesis": "Semantic single-home repetition control and adaptive table selection will improve organization without deleting high-value mappings",
-      "insight": "",
+      "insight": "Single-home rules work in standard outputs but need a stronger full-audit render budget and compact-output final deletion pass",
       "metadata": {
-        "dev_score": null,
+        "dev_score": 64.2857,
         "test_score": null,
-        "result": "",
-        "branch_ref": null
+        "result": "5/8 outputs avoided repetition and standard mappings were useful, but OM-C01 and both full audits repeated substantive content",
+        "branch_ref": "skill-v0.3-adaptive-experimental@a5a3695",
+        "prune_reason": "Semantic repetition remained in OM-C01 and both full audits"
       },
       "created_at": 1784812690,
-      "updated_at": 1784812690
+      "updated_at": 1784815615
     }
   }
 }

@@ -1,0 +1,12 @@
+{
+  "schema_version": "skill-2.2-generation-1.0",
+  "call_id": "GEN-03",
+  "task_id": "IS-C01",
+  "condition": "skill-2.2-adaptive",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "06c5006630aa6577b68258ba6f696f5efdf3a086958422bf5fc0ceb4e0637b0b",
+  "skill_sha256": "72c83a9e9c8db12ec9b67fa78dab36b474589845bdcf9d900832405fd9a84a6d",
+  "status": "complete",
+  "output": "A platform must govern access under limited human-review capacity: before final disposition, it uses a noisy risk score to allocate a fixed review budget, then approves or rejects reviewed users. The central design question is how the platform should target scarce review effort when the score is informative but imperfect, so prioritizing higher-scored users may leave other users unreviewed while broader coverage dilutes attention to those flagged as riskier. The model therefore characterizes a constrained screening-and-review policy and its resulting approval and rejection decisions; it does not establish that harmful content is rapidly increasing, nor that the policy improves social welfare."
+}
