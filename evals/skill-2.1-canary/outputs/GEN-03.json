@@ -1,0 +1,12 @@
+{
+  "schema_version": "skill-canary-generation-1.0",
+  "call_id": "GEN-03",
+  "task_id": "OM-S02",
+  "condition": "v0.2",
+  "model": "gpt-5.6-terra",
+  "reasoning": "high",
+  "prompt_sha256": "4c3d2e51c8012fb42859c3ceb26b805c07cd3ba512ea2d414669f7143eabee64",
+  "skill_sha256": "8a59065e4a46403c04afa5a78ff01f388d79a9555fc9a6efce8ef0e929730426",
+  "status": "complete",
+  "output": "## Input readiness and eligibility\n\n**Readiness:** model-grounded for timing and roles; objective and operational constraints are unspecified.  \n**Current narrative:** **ineligible**.\n\n## Diagnosis\n\nThe story reverses the model’s sequence. Staffing is chosen **before** same-day demand is realized, so realized demand cannot be part of the manager’s decision-time information. It also misclassifies fulfilled orders: they are an **outcome** produced by staffing and realized demand, not a decision the manager directly selects.\n\n| Consistency gate | Status | Reason |\n|---|---|---|\n| Actor | Pass | The fulfillment manager controls staffing. |\n| Timing | Fail | The narrative gives the manager realized demand before staffing is chosen. |\n| Information | Fail | Future demand is treated as observed. |\n| Behavior | Fail | Fulfillment is presented as a controllable choice rather than a resulting operational outcome. |\n| Constraints / objective | Not assessed | Not supplied. |\n\n## Replacement framing\n\nA fulfillment manager must set same-day staffing before the volume of same-day orders is known. The staffing level determines available fulfillment capacity for the operating period. After demand realizes, fulfilled orders follow from the interaction between realized demand and that capacity. The managerial problem is therefore to choose staffing under demand uncertainty, balancing the consequences represented in the model of having too little versus too much capacity.\n\n**Decision:** staffing level chosen before demand realization.  \n**Uncertainty:** same-day order demand, unresolved at the staffing decision.  \n**Outcome:** fulfilled orders, determined after demand realizes by staffing capacity and demand.  \n\n## Boundary\n\nThis framing does not assert a particular staffing cost, service target, demand distribution, backlog rule, or objective; those should be stated only if they are present in the model."
+}

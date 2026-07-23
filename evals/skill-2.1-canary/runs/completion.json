@@ -1,0 +1,22 @@
+{
+  "schema_version": "skill-canary-completion-1.0",
+  "status": "complete",
+  "required_generation_calls": 16,
+  "completed_generation_calls": 16,
+  "required_judge_calls": 8,
+  "completed_judge_calls": 8,
+  "authoritative_calls_used": 24,
+  "retries": 0,
+  "replacement_calls": 0,
+  "adjudication_calls": 0,
+  "generation_call_ids": ["GEN-01", "GEN-02", "GEN-03", "GEN-04", "GEN-05", "GEN-06", "GEN-07", "GEN-08", "GEN-09", "GEN-10", "GEN-11", "GEN-12", "GEN-13", "GEN-14", "GEN-15", "GEN-16"],
+  "judge_call_ids": ["JUDGE-01", "JUDGE-02", "JUDGE-03", "JUDGE-04", "JUDGE-05", "JUDGE-06", "JUDGE-07", "JUDGE-08"],
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-sol",
+  "reasoning": "high",
+  "model_relationship": "same-family variants; independence not established",
+  "sampling_controls": "unavailable",
+  "automated_holdout_opened": false,
+  "expert_holdout_opened": false,
+  "human_experts_participated": false
+}

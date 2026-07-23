@@ -1,0 +1,13 @@
+{
+  "schema_version": "skill-canary-pair-key-1.0",
+  "pairs": [
+    {"pair_id": "PAIR-01", "task_id": "OM-C01", "a": "v0.2", "b": "skill-2.1"},
+    {"pair_id": "PAIR-02", "task_id": "OM-S02", "a": "skill-2.1", "b": "v0.2"},
+    {"pair_id": "PAIR-03", "task_id": "IS-C01", "a": "v0.2", "b": "skill-2.1"},
+    {"pair_id": "PAIR-04", "task_id": "IS-S02", "a": "v0.2", "b": "skill-2.1"},
+    {"pair_id": "PAIR-05", "task_id": "OR-C01", "a": "skill-2.1", "b": "v0.2"},
+    {"pair_id": "PAIR-06", "task_id": "OR-S02", "a": "skill-2.1", "b": "v0.2"},
+    {"pair_id": "PAIR-07", "task_id": "XD-F01", "a": "skill-2.1", "b": "v0.2"},
+    {"pair_id": "PAIR-08", "task_id": "XD-F02", "a": "skill-2.1", "b": "v0.2"}
+  ]
+}

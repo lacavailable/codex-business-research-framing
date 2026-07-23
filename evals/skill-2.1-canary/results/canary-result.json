@@ -1,0 +1,265 @@
+{
+  "schema_version": "skill-canary-result-1.0",
+  "status": "fail",
+  "experimental_merge_authorized": false,
+  "validation_authorized": false,
+  "release_authorized": false,
+  "authoritative_calls_used": 24,
+  "observed": {
+    "new_fidelity_contradictions": 0,
+    "new_unsupported_facts": 6,
+    "runtime_to_profit_overclaims": 0,
+    "post_deadline_value_overclaims": 0,
+    "compact_baseline_median_words": 75,
+    "compact_candidate_median_words": 77,
+    "compact_median_reduction": -0.02666666666666667,
+    "baseline_repeated_limitations": 14,
+    "candidate_repeated_limitations": 14,
+    "repeated_limitation_reduction": 0.0,
+    "profile_compliance": 0.5,
+    "baseline_visible_nonapplicable_layers": 0,
+    "candidate_visible_nonapplicable_layers": 0,
+    "visible_nonapplicable_layer_reduction": 1.0,
+    "compact_standard_non_tied": 5,
+    "compact_standard_candidate_wins": 3,
+    "compact_standard_non_tied_win_rate": 0.6,
+    "full_audit_safeguards_noninferior": true
+  },
+  "gates": {
+    "new_fidelity_contradictions": true,
+    "new_unsupported_facts": false,
+    "runtime_to_profit_overclaims": true,
+    "post_deadline_value_overclaims": true,
+    "compact_median_reduction": false,
+    "repeated_limitation_reduction": false,
+    "profile_compliance": false,
+    "visible_nonapplicable_layer_reduction": true,
+    "compact_standard_non_tied_win_rate": true,
+    "full_audit_safeguards_noninferior": true
+  },
+  "per_output_metrics": {
+    "OM-C01": {
+      "v0.2": {
+        "word_count": 39,
+        "section_count": 0,
+        "profile_compliant": false,
+        "repeated_issue_count": 0,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 0,
+        "prohibited_overclaims": {}
+      },
+      "skill-2.1": {
+        "word_count": 25,
+        "section_count": 0,
+        "profile_compliant": false,
+        "repeated_issue_count": 0,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 0,
+        "prohibited_overclaims": {}
+      }
+    },
+    "OM-S02": {
+      "v0.2": {
+        "word_count": 249,
+        "section_count": 4,
+        "profile_compliant": false,
+        "repeated_issue_count": 0,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 0,
+        "prohibited_overclaims": {}
+      },
+      "skill-2.1": {
+        "word_count": 222,
+        "section_count": 2,
+        "profile_compliant": false,
+        "repeated_issue_count": 0,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 0,
+        "prohibited_overclaims": {}
+      }
+    },
+    "IS-C01": {
+      "v0.2": {
+        "word_count": 85,
+        "section_count": 0,
+        "profile_compliant": false,
+        "repeated_issue_count": 0,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 0,
+        "prohibited_overclaims": {}
+      },
+      "skill-2.1": {
+        "word_count": 85,
+        "section_count": 0,
+        "profile_compliant": false,
+        "repeated_issue_count": 0,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 0,
+        "prohibited_overclaims": {}
+      }
+    },
+    "IS-S02": {
+      "v0.2": {
+        "word_count": 360,
+        "section_count": 5,
+        "profile_compliant": true,
+        "repeated_issue_count": 2,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 0,
+        "prohibited_overclaims": {}
+      },
+      "skill-2.1": {
+        "word_count": 332,
+        "section_count": 0,
+        "profile_compliant": true,
+        "repeated_issue_count": 1,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 0,
+        "prohibited_overclaims": {}
+      }
+    },
+    "OR-C01": {
+      "v0.2": {
+        "word_count": 75,
+        "section_count": 0,
+        "profile_compliant": false,
+        "repeated_issue_count": 1,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 0,
+        "prohibited_overclaims": {
+          "runtime_to_profit": false,
+          "equivalent_formulation_changes_optimum": false
+        }
+      },
+      "skill-2.1": {
+        "word_count": 77,
+        "section_count": 0,
+        "profile_compliant": false,
+        "repeated_issue_count": 1,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 0,
+        "prohibited_overclaims": {
+          "runtime_to_profit": false,
+          "equivalent_formulation_changes_optimum": false
+        }
+      }
+    },
+    "OR-S02": {
+      "v0.2": {
+        "word_count": 431,
+        "section_count": 4,
+        "profile_compliant": true,
+        "repeated_issue_count": 10,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 1,
+        "prohibited_overclaims": {
+          "post_deadline_value": false
+        }
+      },
+      "skill-2.1": {
+        "word_count": 330,
+        "section_count": 1,
+        "profile_compliant": true,
+        "repeated_issue_count": 11,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 0,
+        "prohibited_overclaims": {
+          "post_deadline_value": false
+        }
+      }
+    },
+    "XD-F01": {
+      "v0.2": {
+        "word_count": 610,
+        "section_count": 7,
+        "profile_compliant": true,
+        "repeated_issue_count": 1,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 1,
+        "prohibited_overclaims": {}
+      },
+      "skill-2.1": {
+        "word_count": 664,
+        "section_count": 11,
+        "profile_compliant": true,
+        "repeated_issue_count": 1,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 3,
+        "prohibited_overclaims": {}
+      }
+    },
+    "XD-F02": {
+      "v0.2": {
+        "word_count": 1019,
+        "section_count": 9,
+        "profile_compliant": true,
+        "repeated_issue_count": 0,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 2,
+        "prohibited_overclaims": {}
+      },
+      "skill-2.1": {
+        "word_count": 1064,
+        "section_count": 11,
+        "profile_compliant": true,
+        "repeated_issue_count": 0,
+        "visible_nonapplicable_layers": 0,
+        "unsupported_numbers": 3,
+        "prohibited_overclaims": {}
+      }
+    }
+  },
+  "decoded_pairwise_results": [
+    {
+      "task_id": "OM-C01",
+      "winner": "skill-2.1",
+      "candidate_material_fidelity_issue": false,
+      "baseline_material_fidelity_issue": false
+    },
+    {
+      "task_id": "OM-S02",
+      "winner": "skill-2.1",
+      "candidate_material_fidelity_issue": false,
+      "baseline_material_fidelity_issue": false
+    },
+    {
+      "task_id": "IS-C01",
+      "winner": "tie",
+      "candidate_material_fidelity_issue": false,
+      "baseline_material_fidelity_issue": false
+    },
+    {
+      "task_id": "IS-S02",
+      "winner": "v0.2",
+      "candidate_material_fidelity_issue": false,
+      "baseline_material_fidelity_issue": false
+    },
+    {
+      "task_id": "OR-C01",
+      "winner": "skill-2.1",
+      "candidate_material_fidelity_issue": false,
+      "baseline_material_fidelity_issue": false
+    },
+    {
+      "task_id": "OR-S02",
+      "winner": "v0.2",
+      "candidate_material_fidelity_issue": false,
+      "baseline_material_fidelity_issue": false
+    },
+    {
+      "task_id": "XD-F01",
+      "winner": "v0.2",
+      "candidate_material_fidelity_issue": false,
+      "baseline_material_fidelity_issue": false
+    },
+    {
+      "task_id": "XD-F02",
+      "winner": "tie",
+      "candidate_material_fidelity_issue": false,
+      "baseline_material_fidelity_issue": false
+    }
+  ],
+  "automated_holdout_opened": false,
+  "expert_holdout_opened": false,
+  "no_human_experts": true
+}
