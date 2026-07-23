@@ -78,14 +78,35 @@ jobs:
         run: python tools/audit_repository.py --tracked
       - name: Check local Markdown links
         run: python tools/check_links.py
-      - name: Recompute bounded Skill canary
+      - name: Verify historical and recompute current Skill canaries
         run: |
           python tools/skill_canary.py validate
-          python tools/skill_canary.py validate-freeze
-          mkdir -p .local-eval/skill-2.1-canary
-          cp evals/skill-2.1-canary/blinded-pairs/condition-key.json .local-eval/skill-2.1-canary/pair-key.json
-          python tools/skill_canary.py summarize
-          git diff --exit-code -- evals/skill-2.1-canary/results/canary-result.json
+          python - <<'PY'
+          import importlib.util
+          from pathlib import Path
+
+          path = Path("tools/skill_canary_v2.py")
+          spec = importlib.util.spec_from_file_location("skill_canary_v2_ci", path)
+          canary = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(canary)
+          canary.validate_freeze()
+          visible, _ = canary.task_maps()
+          seed = canary._load(canary.PREREG)["pair_seed"]
+          key = {"schema_version": "skill-canary-key-2.0", "pairs": []}
+          for index, task_id in enumerate(visible, start=1):
+              swap = canary._pair_swap(seed, task_id)
+              key["pairs"].append({
+                  "pair_id": f"PAIR-{index:02d}",
+                  "task_id": task_id,
+                  "a": "skill-2.2" if swap else "skill-2.1",
+                  "b": "skill-2.1" if swap else "skill-2.2",
+              })
+          canary._dump(canary.LOCAL / "pair-key.json", key)
+          canary.score()
+          PY
+          git diff --exit-code -- \
+            evals/skill-2.1-canary/results/canary-result.json \
+            evals/skill-2.2-canary/results/canary-result.json
       - name: Run pinned official Skill validation
         run: python .official-skills/skills/.system/skill-creator/scripts/quick_validate.py skills/frame-business-research-problem
       - name: Build and verify installable Skill
